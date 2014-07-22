@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.submission.xsd" center_name="MBL" accession="" alias="LAM-454-MBL-PALMER-STATION" broker_name="ISAcreator" lab_name="MBL" submission_date="2012-05-15T00:00:00.000+01:00">
+  <CONTACTS>
+    <CONTACT name="Linda Amaral Zettler" inform_on_status="amaral@mbl.edu" inform_on_error="amaral@mbl.edu"/>
+    <CONTACT name="Philippe Rocca-Serra" inform_on_status="proccaserra@gmail.com" inform_on_error="proccaserra@gmail.com"/>
+  </CONTACTS>
+  <ACTIONS>
+    <ACTION>
+      <ADD schema="study" source="study.xml"/>
+    </ACTION>
+    <ACTION>
+      <ADD schema="sample" source="sample_set.xml"/>
+    </ACTION>
+    <ACTION>
+      <ADD schema="experiment" source="experiment_set.xml"/>
+    </ACTION>
+    <ACTION>
+      <ADD schema="run" source="run_set.xml"/>
+    </ACTION>
+  </ACTIONS>
+  <FILES>
+    <FILE filename="PAL_9_1B.sff" checksum_method="MD5" checksum="8309a7208a792654b7a365f1f8d3a0cf"/>
+    <FILE filename="PAL_8_1B.sff" checksum_method="MD5" checksum="882454575e57d3013466180f0a21d12c"/>
+    <FILE filename="PAL_3_2B.sff" checksum_method="MD5" checksum="e3e597b01f3dbf84e241f2a8d15077e6"/>
+    <FILE filename="PAL_1_1B.sff" checksum_method="MD5" checksum="8e03a586312499c31e7e581f9bfec958"/>
+    <FILE filename="PAL_3_1B.sff" checksum_method="MD5" checksum="8fe38207c82a361a364f04019b1f3a86"/>
+    <FILE filename="PAL_1_2B.sff" checksum_method="MD5" checksum="d387c542a3ca3ac08c9193e3a7bdd9d7"/>
+    <FILE filename="PAL_7_1B.sff" checksum_method="MD5" checksum="a63928031ec861559f8593e1e087e58a"/>
+    <FILE filename="PAL_2_1B.sff" checksum_method="MD5" checksum="47805d6daf4def8678a5b3ab8fc73891"/>
+    <FILE filename="PAL_4_1B.sff" checksum_method="MD5" checksum="fe5ce14b2724f220d1fd3f3e2bcc87bd"/>
+    <FILE filename="PAL_5_1B.sff" checksum_method="MD5" checksum="fd9617414c3695c76512f9041a1484ac"/>
+    <FILE filename="PAL_5_2B.sff" checksum_method="MD5" checksum="d91996314b215995a4d0f95d8f1fc6b3"/>
+    <FILE filename="PAL_6_1B.sff" checksum_method="MD5" checksum="4d5f7f12b612152dafd20d21ab632d79"/>
+    <FILE filename="PAL_6_2B.sff" checksum_method="MD5" checksum="72ac862f23cd7e2cd61a90b07ff923ce"/>
+    <FILE filename="PAL_9_2B.sff" checksum_method="MD5" checksum="54a7b8e5b28fdfa9c2976523dba4e9d0"/>
+    <FILE filename="PAL_7_2B.sff" checksum_method="MD5" checksum="6dfafd1ca8f99b5424494e8d026b4cbf"/>
+    <FILE filename="PAL_4_2B.sff" checksum_method="MD5" checksum="87e5fc5e58b9a4b24949bac436f27999"/>
+    <FILE filename="PAL_2_2B.sff" checksum_method="MD5" checksum="26fc8390a2fc272e97d075bda807b1cc"/>
+    <FILE filename="PAL_8_2B.sff" checksum_method="MD5" checksum="ab8a81ac6ebc348b4e5e8205e8552fb5"/>
+  </FILES>
+</SUBMISSION>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="fuge-isatab.xsl"?>
+<FuGE identifier="Andy Jones Prototype">
+      <!-- Note: In all files, where a reference is given to an ontology term, the referenced terms are not shown in the document since the relevant ontologies are not yet stable  -->
+    <MaterialCollection>
+        <GenericMaterial identifier="ex01:GenericMaterial1" name="Mouse 1">
+            <_characteristics OntologyTerm_ref="OI:whole_organism"/>
+            <_characteristics OntologyTerm_ref="OI:weight_measurement_17_grams"/>
+            <_characteristics OntologyTerm_ref="OI:species_Mus_musculis"/>
+        </GenericMaterial>
+        <GenericMaterial identifier="ex01:GenericMaterial2" name="Drug treated mouse 1"/>
+        <GenericMaterial identifier="ex01:GenericMaterial3" name="example material to be scanned"></GenericMaterial>
+    </MaterialCollection>    
+    <InvestigationCollection>
+        <Investigation identifier="FuGE:Investigation:00123"
+            name="Transcriptome and proteome analysis of mice with KO of Gene XYZ against WT with varying doses of drug ABC">                
+            <InvestigationComponent identifier="IC1" name="Proteomics assay">
+                <_factors Factor_ref="OI:Factor:Genotype"/>
+                <_allProtocolApplications ProtocolApplication_ref="ex01:trpsinDigestion002"/>
+                <_allProtocolApplications ProtocolApplication_ref="ex01:LCMS0012"/>              
+            </InvestigationComponent>
+            <InvestigationComponent identifier="IC2" name="Microarray assay">
+                <_factors Factor_ref="Factor:Genotype"/>
+                <_factors Factor_ref="Factor:DrugDose"/>
+                <!-- Note: these could be references to Identifiers in a MAGE2 file -->
+                <_allProtocolApplications ProtocolApplication_ref="ex01:hybridization0017"/>
+                <_allProtocolApplications ProtocolApplication_ref="ex01:dataAcquisition004"/>
+                <_allProtocolApplications ProtocolApplication_ref="ex01:dataTransformation0032"/>
+            </InvestigationComponent>
+            <ContactRole Contact_ref="Person:APizarro">
+                <_role OntologyTerm_ref="OI:Role:Supplier"/>
+            </ContactRole>    
+            <_hypothesis>
+                <Description text="[Investigation hypothesis text in here]"/>
+            </_hypothesis>
+            <_conclusion>
+                <Description text="[Conclusions text in here]"></Description>
+            </_conclusion>
+        </Investigation>
+        <Factor identifier="Factor:DrugDose" name="Drug dose">
+            <FactorValue>
+                <_dataPartitions DataPartition_ref="ex01:dataPartition01"/>
+                <AtomicValue value="3">
+                    <_unit OntologyTerm_ref="OI:mg"/>
+                </AtomicValue>
+            </FactorValue>
+            <FactorValue>
+                <_dataPartitions DataPartition_ref="ex01:dataPartition02"/>
+                <AtomicValue value="6">
+                    <_unit OntologyTerm_ref="OI:mg"/>
+                </AtomicValue>
+            </FactorValue>
+            <FactorValue>
+             <_dataPartitions DataPartition_ref="ex01:dataPartition03"/>
+                <AtomicValue value="12">
+                    <_unit OntologyTerm_ref="OI:mg"/>
+                </AtomicValue>
+            </FactorValue>            
+            <_factorType OntologyTerm_ref="OI:FactorCategory:001"/>            
+          </Factor>
+        <Factor identifier="Factor:Exposure" name="Exposure">
+            <FactorValue>
+                <_dataPartitions DataPartition_ref="ex01:dataPartition01"/>
+                <AtomicValue value="3">
+                    <_unit OntologyTerm_ref="OI:hr"/>
+                </AtomicValue>
+            </FactorValue>
+            <FactorValue>
+                <_dataPartitions DataPartition_ref="ex01:dataPartition02"/>
+                <AtomicValue value="6">
+                    <_unit OntologyTerm_ref="OI:hr"/>
+                </AtomicValue>
+            </FactorValue>
+            <FactorValue>
+             <_dataPartitions DataPartition_ref="ex01:dataPartition03"/>
+                <AtomicValue value="12">
+                    <_unit OntologyTerm_ref="OI:hr"/>
+                </AtomicValue>
+            </FactorValue>            
+            <_factorType OntologyTerm_ref="OI:FactorCategory:002"/>            
+          </Factor>
+    </InvestigationCollection>  
+    <DataCollection>
+<!--            <GenericInternalData identifier="ex01:GenericInternalData1">
+                <_matrixEncoding OntologyTerm_ref="OI:base_64_binary"/>
+                <storage>
+ZohjXVyOkEArGJXUyZ6XQMoyxLFurpdANs07TlG4l0DvycNCbW6YQA1xrItbrphAhXzQs9nSmEAE54wobe6YQHZxGw2gHplA07zjFB1Hm0CCc0aUNn+bQLx0kxhE55tAImx4eiX7nEASg8DKITOdQKUsQxwra51AV+wvuyejnUAldQKaiPueQAu1pnnHb59A8tJNYjCZoUB88rBQy7ChQGDl0CKb8qFAJ6CJsEEMokCGONbFjRSiQHDOiNJeLKJAxf6yexJOokAzMzMzM26iQA==
+</storage>    
+            </GenericInternalData>--> 
+        <ExternalData location="http://myImageStore.org/Image17.tiff" identifier="ex01:ExternalData1" name="Raw image">
+            <_fileFormat OntologyTerm_ref="OI:tiff_format"/>
+        </ExternalData>
+        <ExternalData location="http://myProcessedDataStore.org" identifier="ex01:ExternalData2" name="Processed data"></ExternalData>
+    </DataCollection>  
+    <AuditCollection>
+        <Security identifier="exp01:Security1">
+            <_owners Contact_ref="exp01:Person1"/>
+            <SecurityAccess SecurityGroup_ref="exp01:SecuritGroup1">
+                <_accessRight OntologyTerm_ref="FuGO:WriteAccess"/>
+            </SecurityAccess>
+        </Security>
+        <Person identifier="exp01:Person1" firstName="Jones" lastName="Andrew" email="ajones@cs.man.ac.uk">
+            <_affiliations Organization_ref="exp01:Organization1"/>
+            <_affiliations Organization_ref="exp01:Organization3"/>
+        </Person>
+        <Organization identifier="exp01:Organization1" name="School of Computer Science" address="Kilburn Building, Oxford Road, Manchester, UK">
+             <_parent Organization_ref="exp01:Organization2"/>
+        </Organization>
+        <Organization identifier="exp01:Organization3" name="School of Life Sciences" address="Oxford Road, Manchester, UK">
+            <_parent Organization_ref="exp01:Organization2"/>
+        </Organization>
+        <Organization identifier="exp01:Organization2" name="University of Manchester" address="Oxford Road, Manchester, UK"/>
+        <Person identifier="exp01:Person2" firstName="Pizarro" lastName="Angel" email="angel@mail.med.upenn.edu">
+            <_affiliations Organization_ref="exp01:Organization4"/>
+        </Person>
+        <Organization identifier="exp01:Organization4" name="Institute for Translational Medicine and Therapeutics, University of Pennsylvania"></Organization>
+        <SecurityGroup identifier="exp01:SecuritGroup1">
+            <_members Contact_ref="exp01:Person1"/>
+            <_members Contact_ref="exp01:Person2"/>
+        </SecurityGroup>
+    </AuditCollection>
+    <ProtocolCollection>
+        <GenericProtocol identifier="ex01:GenericProtocol1" protocolText="[Entire protocol text in here]" name="Whole protocol as text example e.g. Drug treatment on mouse">
+            <_equipment GenericEquipment_ref="ex01:GenericEquipment1"/>
+            <GenericParameter identifier="ex01:GenericParameter1" name="ex01:GenericParameter1">               
+                <!-- Should we use the MapAssocToElement stereotype so that the tag <_defaultValue> appears in instances? -->
+                <AtomicValue value="36">
+                    <_unit OntologyTerm_ref="OI:degrees_celcius"/>
+                </AtomicValue>
+                <_parameterType OntologyTerm_ref="OI:temperature"/>
+            </GenericParameter>
+        </GenericProtocol>    
+        <GenericProtocol identifier="ex01:GenericProtocol2" name="Protocol described by GenericAction example e.g. Image acquistion protocol">
+            <_equipment GenericEquipment_ref="ex01:GenericEquipment2"/>
+            <GenericAction identifier="ex01:GenericAction1" actionText="[Step 1 described in here]" actionOrdinal="1"/>
+            <GenericAction identifier="ex01:GenericAction2" actionText="[Step 2 described in here]" actionOrdinal="2"/>
+            <GenericAction identifier="ex01:GenericAction3" actionText="[Step 3 described in here]" actionOrdinal="3"/>  
+        </GenericProtocol>
+        <GenericProtocol identifier="ex01:GenericProtocol3" name="Protocol described by subprotocols example e.g. data transformation">
+            <GenericAction identifier="ex01:GenericAction4" Protocol_ref="ex01:GenericProtocol4"/>
+            <GenericAction identifier="ex01:GenericAction5" Protocol_ref="ex01:GenericProtocol5"/>
+        </GenericProtocol>
+        <GenericProtocol identifier="ex01:GenericProtocol4" name="Sub-protocol A" protocolText="[Protocol description in here of first stage of data transformation]"/>
+        <GenericProtocol identifier="ex01:GenericProtocol5" name="Sub-protocol B" protocolText="[Protocol description in here of second stage of data transformation]"/>           
+        <GenericSoftware identifier="" name="[Software name in here]" version="2.0">
+        </GenericSoftware>
+        <!-- Example of a GenericProtocolApplication that has an input of 1 Material and an output of 1 Material e.g. a drug treatment on a mouse-->
+        <GenericProtocolApplication Protocol_ref="ex01:GenericProtocol1" identifier="ex01:GenProtocolApp1" name="Application of simple drug treatment protocol example">
+            <ParameterValue Parameter_ref="ex01:GenericParameter1">
+                <AtomicValue value="28"/>
+            </ParameterValue>
+            <_outputMaterials Material_ref="ex01:GenericMaterial2"/>
+            <_inputCompleteMaterials Material_ref="ex01:GenericMaterial1"/>
+        </GenericProtocolApplication>
+        <!-- Example of a GenericProtocolApplication that has an input of Material and an output of data e.g. scanning-->
+        <GenericProtocolApplication Protocol_ref="ex01:GenericProtocol2" identifier="ex01:GenericProtocolApplication2">
+            <_outputData Data_ref="ex01:Data1"/>
+            <_inputCompleteMaterials Material_ref="ex01:GenericMaterial3"/>            
+        </GenericProtocolApplication>
+        <!-- ProtocolApplication referencing a data transformation protocol (that has sub-protocols) -->
+        <GenericProtocolApplication Protocol_ref="ex01:GenericProtocol3" identifier="ex01:GenericProtocolApplication3">
+            <ActionApplication Action_ref="ex01:GenericAction4" ProtocolApplication_ref="ex01:GenericProtocolApplication4"/>
+            <ActionApplication Action_ref="ex01:GenericAction5" ProtocolApplication_ref="ex01:GenericProtocolApplication5"/>
+            <_inputData Data_ref="ex01:ExternalData1"/>
+            <_outputData Data_ref="ex01:ExternalData2"/>            
+        </GenericProtocolApplication>
+        <!-- These are ProtocolApplication for sub-Protocols, runtime parameter values etc. could be given here -->
+        <GenericProtocolApplication Protocol_ref="ex01:GenericProtocol4" identifier="ex01:GenericProtocolApplication4"/>
+        <GenericProtocolApplication Protocol_ref="ex01:GenericProtocol5" identifier="ex01:GenericProtocolApplication5"/>
+        <GenericEquipment identifier="ex01:GenericEquipment1">
+            <GenericParameter identifier="ex01:GenericParameter2">
+                <_parameterType OntologyTerm_ref="OI:voltage"/>
+            </GenericParameter>
+        </GenericEquipment>
+        <GenericEquipment identifier="ex01:GenericEquipment2" name="[Some type of scanner]">
+            <_make OntologyTerm_ref="OI:ScannerMake1"/>
+            <_model OntologyTerm_ref="OI:Scanner-3700"/>
+            <GenericParameter identifier="">
+                <AtomicValue value="370">
+                    <_unit OntologyTerm_ref="OI:nanometres"/>
+                </AtomicValue>
+                <_parameterType OntologyTerm_ref="OI:wavelength"/> 
+            </GenericParameter>
+        </GenericEquipment>
+    </ProtocolCollection>  
+    <ConceptualMoleculeCollection>
+            <Sequence identifier="exp01:Sequence1" length="2188" SequenceAnnotationSet_ref="ex01:SeqAnnotSet01">
+                <DatabaseEntry accession="NM_028016" Database_ref="exp01:Database1"/>
+            </Sequence>
+            <Sequence identifier="exp01:Sequence2" length="1890" SequenceAnnotationSet_ref="ex01:SeqAnnotSet01">
+                <DatabaseEntry accession="NM_207688" Database_ref="exp01:Database1"/>
+            </Sequence>
+            <Sequence identifier="exp01:Sequence3" length="1890" SequenceAnnotationSet_ref="ex01:SeqAnnotSet01">
+                <DatabaseEntry accession="NM_207688" Database_ref="exp01:Database1"/>
+            </Sequence>
+            <SequenceAnnotationSet identifier="ex01:SeqAnnotSet01">
+                <_species OntologyTerm_ref="OI:Mus_musculis"/>
+                <_types OntologyTerm_ref="OI:mRNA"/>            
+                <_polymerType OntologyTerm_ref="OI:DNA"/>   
+            </SequenceAnnotationSet>
+     </ConceptualMoleculeCollection>
+    <ReferenceableCollection>
+            <Database identifier="exp01:Database1" name="Genbank" URI="http://www.ncbi.nlm.nih.gov/Genbank/index.html"/>
+    </ReferenceableCollection>
+</FuGE>

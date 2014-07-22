@@ -1,0 +1,1842 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="sra-isatab-txt.xsl"?>
+<SRA identifier="SRA-TEST-ISATAB">
+<SUBMISSION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ accession="SRA000266"
+ handle="."
+ submission_id="SRA000266"
+ submission_date="2008-02-08T09:00:00.0Z"
+ submission_comment="Ftp submission of runfiles EVHINN101.sff  EVHINN107.sff  EVHINN113.sff  EVNG8PH03.sff  EWOEPZA01.sff EVHINN102.sff  EVHINN108.sff  EVHINN114.sff  EVNG8PH04.sff  EWOEPZA02.sff EVHINN103.sff  EVHINN109.sff  EVHINN115.sff  EVUSNDQ01.sff  EX398L101.sff EVHINN104.sff  EVHINN110.sff  EVHINN116.sff  EVUSNDQ02.sff  EX398L102.sff EVHINN105.sff  EVHINN111.sff  EVNG8PH01.sff  EVUSNDQ03.sff  EXHS9OF01.sff EVHINN106.sff  EVHINN112.sff  EVNG8PH02.sff  EVUSNDQ04.sff  EXHS9OF02.sff processed manually by belaia."
+ center_name="PML"
+>
+ <CONTACTS>
+    <CONTACT name="Jack Gilbert" inform_on_status="mailto:jagi@pml.ac.uk" inform_on_error="mailto:jagi@pml.ac.uk"/>
+ </CONTACTS>
+ <ACTIONS>
+   <ACTION><ADD source="SRA000266.study.xml" schema="study" notes="study metadata"/></ACTION>
+   <ACTION><ADD source="SRA000266.sample.xml" schema="sample" notes="sample metadata"/></ACTION>
+   <ACTION><ADD source="SRA000266.experiment.xml" schema="experiment" notes="experiment metadata"/></ACTION>
+   <ACTION><ADD source="SRA000266.run.xml" schema="run" notes="run metadata"/></ACTION>
+   <ACTION><RELEASE/></ACTION>
+ </ACTIONS>
+ <FILES>
+    <FILE filename="EVHINN101.sff" checksum_method="MD5" checksum="d6ed3cecb599b4865ee445d5e60b3476"/>
+    <FILE filename="EVHINN102.sff" checksum_method="MD5" checksum="8ea81ebdeed5465741c5036990777c7b"/>
+    <FILE filename="EVHINN103.sff" checksum_method="MD5" checksum="b50907209169d6ca96140d63ef78e057"/>
+    <FILE filename="EVHINN104.sff" checksum_method="MD5" checksum="5448f0551705f5ad7fb88c289a7a020a"/>
+    <FILE filename="EVHINN105.sff" checksum_method="MD5" checksum="a5b41d15e0c03124f2c87f05a34ea7b3"/>
+    <FILE filename="EVHINN106.sff" checksum_method="MD5" checksum="bbc40619e66fb47b2367d78698cd4ff8"/>
+    <FILE filename="EVHINN107.sff" checksum_method="MD5" checksum="94aaa887272d6e8f6445cab2cbc97fab"/>
+    <FILE filename="EVHINN108.sff" checksum_method="MD5" checksum="b7ceab0e85305ebc8fff126444b7d5c7"/>
+    <FILE filename="EVHINN109.sff" checksum_method="MD5" checksum="b7ab4db8f55b1a464181b2a741ad90bd"/>
+    <FILE filename="EVHINN110.sff" checksum_method="MD5" checksum="810351fe0b52e09f0bb03c9d5efa426d"/>
+    <FILE filename="EVHINN111.sff" checksum_method="MD5" checksum="0974f4ff094bc7723e98ff6aa9d063c6"/>
+    <FILE filename="EVHINN112.sff" checksum_method="MD5" checksum="9a368578995d7caaccd34b2922d18ef5"/>
+    <FILE filename="EVHINN113.sff" checksum_method="MD5" checksum="24e652d289d250f2c8e8cdf995f6ce9d"/>
+    <FILE filename="EVHINN114.sff" checksum_method="MD5" checksum="d405fbb6cef629e820146168ab884eaa"/>
+    <FILE filename="EVHINN115.sff" checksum_method="MD5" checksum="6119c3350416e50cdb5731163fbc43b7"/>
+    <FILE filename="EVHINN116.sff" checksum_method="MD5" checksum="c762f4aa331cf0d7c4f0bb0faa695fd4"/>
+    <FILE filename="EVNG8PH01.sff" checksum_method="MD5" checksum="37195847e1f4c39efd7e3ad40cf9fa2c"/>
+    <FILE filename="EVNG8PH02.sff" checksum_method="MD5" checksum="6b31a69fe349b3a475a4c88b1172d1ef"/>
+    <FILE filename="EVNG8PH03.sff" checksum_method="MD5" checksum="dd798e55b0692a229bccb5c64be72b50"/>
+    <FILE filename="EVNG8PH04.sff" checksum_method="MD5" checksum="d54d3f16dfb09621104fd03f4f16d734"/>
+    <FILE filename="EVUSNDQ01.sff" checksum_method="MD5" checksum="e298422867db0e2b03c296ab0b229e0b"/>
+    <FILE filename="EVUSNDQ02.sff" checksum_method="MD5" checksum="d3200aac099198c13691cd9e763b1537"/>
+    <FILE filename="EVUSNDQ03.sff" checksum_method="MD5" checksum="72242fb47b15bcc66b5f0d28cae4a076"/>
+    <FILE filename="EVUSNDQ04.sff" checksum_method="MD5" checksum="59119ae434cc12689859250cd1e3e8ef"/>
+    <FILE filename="EWOEPZA01.sff" checksum_method="MD5" checksum="2824e4edbe11694f0a22c6e4c672bceb"/>
+    <FILE filename="EWOEPZA02.sff" checksum_method="MD5" checksum="b50a8774124e362601d9ea74ab223392"/>
+    <FILE filename="EX398L101.sff" checksum_method="MD5" checksum="6a33c695b5728095f18862fe3a2e7565"/>
+    <FILE filename="EX398L102.sff" checksum_method="MD5" checksum="dd055a4cb605345087374218a779e2ed"/>
+    <FILE filename="EXHS9OF01.sff" checksum_method="MD5" checksum="243db07fddfc8ae361402caaea4895bf"/>
+
+    <FILE filename="EXHS9OF02.sff" checksum_method="MD5" checksum="2a928fc4f2f19b44e6624912b9735914"/>
+ </FILES>
+</SUBMISSION>
+
+<STUDY 
+alias="Metagenomic/metatranscriptomic analysis within an ocean acidification"
+accession="SRA000266">
+    <DESCRIPTOR>
+        <STUDY_TITLE>Metagenomic/metatranscriptomic analysis of two time points within an ocean acidification mesocosm experiment</STUDY_TITLE>
+        <STUDY_TYPE existing_study_type="Metagenomics"/>
+        <STUDY_ABSTRACT>This study comprises 8 samples, 4 metagenomic and 4 metatranscriptomic, from a experiment to analyses the effect of ocean acidification of marine microbes.</STUDY_ABSTRACT>
+        <CENTER_NAME>PML</CENTER_NAME>
+        <CENTER_PROJECT_NAME>Marine Metagenomics</CENTER_PROJECT_NAME>
+        <PROJECT_ID>0</PROJECT_ID>
+        <STUDY_DESCRIPTION>Sequencing the metatranscriptome can provide information about the response of organisms to varying environmental conditions. We present a methodology for obtaining random whole-community mRNA from a complex microbial assemblage using Pyrosequencing. The metatranscriptome had, with minimum contamination by ribosomal RNA, significant coverage of abundant transcripts, and included significantly more potentially novel proteins than in the metagenome.  This experiment is part of a much larger experiment. We have produced 4 454 metatranscriptomic datasets and 4 454 metagenomic datasets. These were derived from 4 samples. The experiment was an ocean acidification mesocosm set up in a Norwegian Fjord in 2006. We suspended 6 bags containing 11,000 L of sea water in a Coastal Fjord and then we bubbled CO2 through three of these bags to simulate ocean acidification conditions in the year 2100. The other three bags were bubbled with air. We then induced a phytoplankton bloom in all six bags and took measurements and performed analyses of phytoplankton, bacterioplankton and physiochemical characteristics over a 22 day period. We took water samples from the peak of the phytoplankton bloom and following the decline of the phytoplankton bloom to analyses using 454 metagenomics and 454 metatranscriptomics. Time 1, High CO2 Bag and Day 1, Present Day Bag, refer to the metatranscriptomes from the peak of the bloom. Time 2, High CO2 Bag and Time 2, Present Day Bag, refer to the metatranscriptomes following the decline of the bloom. Obviously High CO2 refers to the ocean acidification mesocosm and Present Day refers to the control mesocosm.
+</STUDY_DESCRIPTION> 
+    </DESCRIPTOR>
+<STUDY_LINKS>
+  <STUDY_LINK>
+    <URL_LINK>
+      <LABEL>Microbial Metagenomics</LABEL>
+	<URL>
+         http://www.genomics.ceh.ac.uk/mm/
+        </URL>
+    </URL_LINK>
+  </STUDY_LINK>
+</STUDY_LINKS>
+    <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+            <TAG>Project Contact</TAG>
+            <VALUE>Jack Gilbert [jagi@pml.ac.uk]</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>GEO Series accession</TAG>
+            <VALUE>GSE10119</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Project  Contributor</TAG>
+            <VALUE>Jack Gilbert</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Project  Contributor</TAG>
+            <VALUE>Dawn Field</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Project  Contributor</TAG>
+            <VALUE>Weizhong Li</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Project  Contributor</TAG>
+            <VALUE>Ian Joint</VALUE>
+        </STUDY_ATTRIBUTE>
+    </STUDY_ATTRIBUTES>
+</STUDY>
+
+<SAMPLE_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <SAMPLE alias="Time1-Bag1-DNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Ocean acidification conditions bag from May 13th 2006. This was taken during the peak of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.4</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>9.7</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>7.53</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.23</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>450</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+ <SAMPLE alias="Time1-Bag6-DNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Control conditions bag from May 13th 2006. This was taken during the peak of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.475</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>221</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>9.65</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>3.84</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.19</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+ <SAMPLE alias="Time2-Bag1-DNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Ocean acidification conditions bag from May 19th 2006. This was taken following the decline of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>621</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.5</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>9</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>3.94</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.20</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+ <SAMPLE alias="Time2-Bag6-DNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Control conditions bag from May 19th 2006. This was taken following the decline of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.525</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>198</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>8.975</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>0.59</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.25</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+ <SAMPLE alias="Time1-Bag1-mRNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Ocean acidification conditions bag from May 13th 2006. This was taken during the peak of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.4</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>9.7</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>7.53</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.23</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>450</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+ <SAMPLE alias="Time1-Bag6-mRNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Control conditions bag from May 13th 2006. This was taken during the peak of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.475</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>221</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>9.65</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>3.84</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.19</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+   </SAMPLE>
+ <SAMPLE alias="Time2-Bag1-mRNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Ocean acidification conditions bag from May 19th 2006. This was taken following the decline of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>621</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.5</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>9</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>3.94</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.20</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+ <SAMPLE alias="Time2-Bag6-mRNA" >
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <COMMON_NAME>marine metagenome</COMMON_NAME>
+    </SAMPLE_NAME>
+    <DESCRIPTION>Control conditions bag from May 19th 2006. This was taken following the decline of the bloom.
+    </DESCRIPTION>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Collection place</TAG>
+        <VALUE>Norwegian fjord</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Longitude</TAG>
+        <VALUE>60 16' 10'' N</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Latitude</TAG>
+        <VALUE>5 13' 20'' E</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Salinity</TAG>
+        <VALUE>31.525</VALUE>
+        <UNITS>psu</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pCO2 concentrations</TAG>
+        <VALUE>198</VALUE>
+        <UNITS>microatm</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Temperature</TAG>
+        <VALUE>8.975</VALUE>
+        <UNITS>degrees Celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Nitrate</TAG>
+        <VALUE>0.59</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>Phosphate</TAG>
+        <VALUE>0.25</VALUE>
+        <UNITS>micromol N l-1</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+</SAMPLE_SET>
+
+<EXPERIMENT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EXPERIMENT
+    alias="Time1-Bag1-DNA_experiment"
+    expected_number_runs="1"
+    expected_number_spots="209073"
+    expected_number_reads="209073"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic sample Time1-Bag1-DNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time1-Bag1-DNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time1-Bag1-DNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+
+          
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+Total nucleic acid extraction was done as quickly as possible using the method of Neufeld et al. 2007.
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT
+    alias="Time1-Bag6-DNA_experiment"
+    expected_number_runs="1"
+    expected_number_spots="134915"
+    expected_number_reads="134915"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic sample Time1-Bag6-DNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time1-Bag6-DNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time1-Bag6-DNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>      
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+Total nucleic acid extraction was done as quickly as possible using the method of Neufeld et al. 2007.
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT
+    alias="Time2-Bag1-DNA_experiment"
+    expected_number_runs="2"
+    expected_number_spots="344216"
+    expected_number_reads="344216"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic sample Time2-Bag1-DNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time2-Bag1-DNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time2-Bag1-DNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+          
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+Total nucleic acid extraction was done as quickly as possible using the method of Neufeld et al. 2007.
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT
+    alias="Time2-Bag6-DNA_experiment"
+    expected_number_runs="2"
+    expected_number_spots="304020"
+    expected_number_reads="304020"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic sample Time2-Bag6-DNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time2-Bag6-DNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time2-Bag6-DNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+
+          
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+Total nucleic acid extraction was done as quickly as possible using the method of Neufeld et al. 2007.
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT
+    alias="Time1-Bag1-mRNA_experiment"
+    expected_number_runs="6"
+    expected_number_spots="135023"
+    expected_number_reads="135023"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic transcriptomic sample Time1-Bag1-mRNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time1-Bag1-mRNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time1-Bag1-mRNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>EST</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>NON GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+
+          
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+ For transcriptomics, total RNA was separated from the columns using the RNA MinEluteTM clean-up kit (Qiagen) and checked for integrity of rRNA using an Agilent bioanalyser (RNA nano6000 chip). High integrity rRNA is essential for subtractive hybridization. Samples were treated with Turbo DNA-free enzyme (Ambion) to remove contaminating DNA. The rRNA was removed from mRNA by subtractive hybridization (Microbe Express Kit, Ambion), and absence of rRNA and DNA contamination was confirmed using the Agilent bioanalyser. The mRNA was further purified with the MEGAclearTM kit (Ambion). Reverse transcription of mRNA was performed using the SuperScript III enzyme (Invitrogen) with random hexamer primers (Promega). The cDNA was treated with RiboShredderTM RNase Blend (Epicentre) to remove trace RNA contaminants. To improve the yield of cDNA, samples were subjected to random amplification using the GenomiPhi V2 method (GE Healthcare). GenomiPhi technology produces branched DNA molecules that are recalcitrant to the pyrosequencing methodology. Therefore amplified samples were treated with S1 nuclease using the method of Zhang et al.2006. 
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT
+    alias="Time1-Bag6-mRNA_experiment"
+    expected_number_runs="6"
+    expected_number_spots="162871"
+    expected_number_reads="162871"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic transcriptomic sample Time1-Bag6-mRNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time1-Bag6-mRNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time1-Bag6-mRNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>EST</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>NON GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+
+          
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+ For transcriptomics, total RNA was separated from the columns using the RNA MinEluteTM clean-up kit (Qiagen) and checked for integrity of rRNA using an Agilent bioanalyser (RNA nano6000 chip). High integrity rRNA is essential for subtractive hybridization. Samples were treated with Turbo DNA-free enzyme (Ambion) to remove contaminating DNA. The rRNA was removed from mRNA by subtractive hybridization (Microbe Express Kit, Ambion), and absence of rRNA and DNA contamination was confirmed using the Agilent bioanalyser. The mRNA was further purified with the MEGAclearTM kit (Ambion). Reverse transcription of mRNA was performed using the SuperScript III enzyme (Invitrogen) with random hexamer primers (Promega). The cDNA was treated with RiboShredderTM RNase Blend (Epicentre) to remove trace RNA contaminants. To improve the yield of cDNA, samples were subjected to random amplification using the GenomiPhi V2 method (GE Healthcare). GenomiPhi technology produces branched DNA molecules that are recalcitrant to the pyrosequencing methodology. Therefore amplified samples were treated with S1 nuclease using the method of Zhang et al.2006. 
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT
+    alias="Time2-Bag1-mRNA_experiment"
+    expected_number_runs="6"
+    expected_number_spots="38220"
+    expected_number_reads="38220"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic transcriptomic sample Time2-Bag1-mRNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time2-Bag1-mRNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time2-Bag1-mRNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>EST</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>NON GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+
+          
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+ For transcriptomics, total RNA was separated from the columns using the RNA MinEluteTM clean-up kit (Qiagen) and checked for integrity of rRNA using an Agilent bioanalyser (RNA nano6000 chip). High integrity rRNA is essential for subtractive hybridization. Samples were treated with Turbo DNA-free enzyme (Ambion) to remove contaminating DNA. The rRNA was removed from mRNA by subtractive hybridization (Microbe Express Kit, Ambion), and absence of rRNA and DNA contamination was confirmed using the Agilent bioanalyser. The mRNA was further purified with the MEGAclearTM kit (Ambion). Reverse transcription of mRNA was performed using the SuperScript III enzyme (Invitrogen) with random hexamer primers (Promega). The cDNA was treated with RiboShredderTM RNase Blend (Epicentre) to remove trace RNA contaminants. To improve the yield of cDNA, samples were subjected to random amplification using the GenomiPhi V2 method (GE Healthcare). GenomiPhi technology produces branched DNA molecules that are recalcitrant to the pyrosequencing methodology. Therefore amplified samples were treated with S1 nuclease using the method of Zhang et al.2006. 
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT
+    alias="Time2-Bag6-mRNA_experiment"
+    expected_number_runs="6"
+    expected_number_spots="116192"
+    expected_number_reads="116192"
+  >
+    <STUDY_REF refname="Metagenomic/metatranscriptomic analysis within an ocean acidification" />
+    <DESIGN>
+      <DESIGN_DESCRIPTION>
+     454 sequencing of metagenomic transcriptomic sample Time2-Bag6-mRNA 
+      </DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="Time2-Bag6-mRNA"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>Time2-Bag6-mRNA</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>EST</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>NON GENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+              
+          
+        </LIBRARY_LAYOUT>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>
+ For transcriptomics, total RNA was separated from the columns using the RNA MinEluteTM clean-up kit (Qiagen) and checked for integrity of rRNA using an Agilent bioanalyser (RNA nano6000 chip). High integrity rRNA is essential for subtractive hybridization. Samples were treated with Turbo DNA-free enzyme (Ambion) to remove contaminating DNA. The rRNA was removed from mRNA by subtractive hybridization (Microbe Express Kit, Ambion), and absence of rRNA and DNA contamination was confirmed using the Agilent bioanalyser. The mRNA was further purified with the MEGAclearTM kit (Ambion). Reverse transcription of mRNA was performed using the SuperScript III enzyme (Invitrogen) with random hexamer primers (Promega). The cDNA was treated with RiboShredderTM RNase Blend (Epicentre) to remove trace RNA contaminants. To improve the yield of cDNA, samples were subjected to random amplification using the GenomiPhi V2 method (GE Healthcare). GenomiPhi technology produces branched DNA molecules that are recalcitrant to the pyrosequencing methodology. Therefore amplified samples were treated with S1 nuclease using the method of Zhang et al.2006. 
+        </LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>2</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <BASE_COORD>5</BASE_COORD>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+      </DESIGN>
+      <PLATFORM>
+        <LS454>
+          <INSTRUMENT_MODEL>GS FLX</INSTRUMENT_MODEL>
+          <FLOW_SEQUENCE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG
+          </FLOW_SEQUENCE>
+          <FLOW_COUNT>400</FLOW_COUNT>
+        </LS454>
+      </PLATFORM>
+      <PROCESSING>
+        <BASE_CALLS>
+                    <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+                    <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+                    <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+                    <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+                    <MULTIPLIER>1.0</MULTIPLIER>
+        </QUALITY_SCORES>
+      </PROCESSING>
+  </EXPERIMENT>
+</EXPERIMENT_SET>
+
+<RUN_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <RUN
+    alias = "Time1-Bag1-DNA_run"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-10-02T15:59:49.0Z"    
+    run_file = "EWOEPZA01.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag1-DNA_experiment" />
+    <DATA_BLOCK
+      name = "EWOEPZA"
+      region = "1"
+      total_spots = "209073"
+      total_reads = "209073"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EWOEPZA01.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag6-DNA_run"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-10-02T15:59:49.0Z"    
+    run_file = "EWOEPZA02.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag6-DNA_experiment" />
+    <DATA_BLOCK
+      name = "EWOEPZA"
+      region = "2"
+      total_spots = "134915"
+      total_reads = "134915"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EWOEPZA02.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-DNA_run2"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-10-30T16:18:11.0Z"    
+    run_file = "EX398L102.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-DNA_experiment" />
+    <DATA_BLOCK
+      name = "EX398L1"
+      region = "2"
+      total_spots = "201671"
+      total_reads = "201671"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EX398L102.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-DNA_run1"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-10-18T13:04:26.0Z"    
+    run_file = "EXHS9OF01.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-DNA_experiment" />
+    <DATA_BLOCK
+      name = "EXHS9OF"
+      region = "1"
+      total_spots = "142545"
+      total_reads = "142545"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EXHS9OF01.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-DNA_run1"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-10-18T13:04:26.0Z"    
+    run_file = "EXHS9OF02.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-DNA_experiment" />
+    <DATA_BLOCK
+      name = "EXHS9OF"
+      region = "2"
+      total_spots = "75282"
+      total_reads = "75282"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EXHS9OF02.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-DNA_run2"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-10-30T16:18:11.0Z"    
+    run_file = "EX398L101.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-DNA_experiment" />
+    <DATA_BLOCK
+      name = "EX398L1"
+      region = "1"
+      total_spots = "228738"
+      total_reads = "228738"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EX398L101.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag1-mRNA_run1"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN102.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "2"
+      total_spots = "5026"
+      total_reads = "5026"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN102.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag1-mRNA_run2"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN101.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "1"
+      total_spots = "4162"
+      total_reads = "4162"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN101.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag1-mRNA_run3"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN104.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "4"
+      total_spots = "272"
+      total_reads = "272"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN104.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag1-mRNA_run4"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN103.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "3"
+      total_spots = "3944"
+      total_reads = "3944"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN103.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag1-mRNA_run5"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-14T17:23:03.0Z"    
+    run_file = "EVNG8PH01.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVNG8PH"
+      region = "1"
+      total_spots = "33866"
+      total_reads = "33866"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVNG8PH01.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag1-mRNA_run6"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-18T16:12:39.0Z"    
+    run_file = "EVUSNDQ01.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVUSNDQ"
+      region = "1"
+      total_spots = "87763"
+      total_reads = "87763"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVUSNDQ01.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag6-mRNA_run1"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-14T17:23:03.0Z"    
+    run_file = "EVNG8PH02.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVNG8PH"
+      region = "2"
+      total_spots = "54728"
+      total_reads = "54728"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVNG8PH02.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag6-mRNA_run2"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-18T16:12:39.0Z"    
+    run_file = "EVUSNDQ02.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVUSNDQ"
+      region = "2"
+      total_spots = "93346"
+      total_reads = "93346"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVUSNDQ02.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag6-mRNA_run3"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN108.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "8"
+      total_spots = "617"
+      total_reads = "617"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN108.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag6-mRNA_run4"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN107.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "7"
+      total_spots = "6075"
+      total_reads = "6075"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN107.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag6-mRNA_run5"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN106.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "6"
+      total_spots = "5351"
+      total_reads = "5351"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN106.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time1-Bag6-mRNA_run6"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN105.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time1-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "5"
+      total_spots = "2754"
+      total_reads = "2754"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN105.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-mRNA_run1"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-14T17:23:03.0Z"    
+    run_file = "EVNG8PH03.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVNG8PH"
+      region = "3"
+      total_spots = "1515"
+      total_reads = "1515"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVNG8PH03.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-mRNA_run2"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-18T16:12:39.0Z"    
+    run_file = "EVUSNDQ03.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVUSNDQ"
+      region = "3"
+      total_spots = "30661"
+      total_reads = "30661"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVUSNDQ03.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-mRNA_run3"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN110.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "10"
+      total_spots = "3802"
+      total_reads = "3802"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN110.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-mRNA_run4"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN109.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "9"
+      total_spots = "450"
+      total_reads = "450"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN109.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-mRNA_run5"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN111.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "11"
+      total_spots = "1695"
+      total_reads = "1695"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN111.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag1-mRNA_run6"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN112.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag1-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "12"
+      total_spots = "97"
+      total_reads = "97"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN112.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-mRNA_run1"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-14T17:23:03.0Z"    
+    run_file = "EVNG8PH04.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVNG8PH"
+      region = "4"
+      total_spots = "25388"
+      total_reads = "25388"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVNG8PH04.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-mRNA_run2"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-18T16:12:39.0Z"    
+    run_file = "EVUSNDQ04.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVUSNDQ"
+      region = "4"
+      total_spots = "5163"
+      total_reads = "5163"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVUSNDQ04.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-mRNA_run3"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN114.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "14"
+      total_spots = "5163"
+      total_reads = "5163"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN114.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-mRNA_run4"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN113.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "13"
+      total_spots = "3439"
+      total_reads = "3439"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN113.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-mRNA_run5"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN116.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "16"
+      total_spots = "110"
+      total_reads = "110"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN116.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+ <RUN
+    alias = "Time2-Bag6-mRNA_run6"    
+    instrument_model = "454 GS FLX"    
+    run_date = "2007-09-11T12:08:01.0Z"    
+    run_file = "EVHINN115.sff"    
+    run_center = "Liverpool Microarray facility (NERC)"    
+    total_data_blocks = "1"    
+  >
+    <EXPERIMENT_REF refname="Time2-Bag6-mRNA_experiment" />
+    <DATA_BLOCK
+      name = "EVHINN1"
+      region = "15"
+      total_spots = "4434"
+      total_reads = "4434"
+      number_channels = "1"
+      format_code = "1"
+    >
+      <FILES>
+        <FILE filename = "EVHINN115.sff" filetype = "sff" />
+      </FILES>
+    </DATA_BLOCK>
+    <RUN_ATTRIBUTES>
+      <RUN_ATTRIBUTE> <TAG>flow_count</TAG> <VALUE>400</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>submission_id</TAG> <VALUE>SRA000266</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>flow_sequence</TAG> <VALUE>TACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACG</VALUE> </RUN_ATTRIBUTE>
+      <RUN_ATTRIBUTE> <TAG>key_sequence</TAG> <VALUE>TCAG</VALUE> </RUN_ATTRIBUTE>
+    </RUN_ATTRIBUTES>
+  </RUN>
+</RUN_SET>
+
+</SRA>

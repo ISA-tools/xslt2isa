@@ -1,0 +1,1478 @@
+Study Identifier         -
+Study Title         Marine bacteria exhibit a bipolar distribution.
+
+Study Submission Date         
+Study Public Release Date         
+Study File Name
+STUDY DESIGN DESCRIPTORS
+Study Design Type         Metagenomics
+Study Design Type Term Accession Number         
+Study Design Type Term Source REF         
+STUDY PUBLICATIONS
+Study PubMed ID
+Study Publication DOI
+Study Publication Author List
+Study Publication Title
+Study Publication Status
+Study Publication Status Term Accession Number
+Study Publication Status Term Source REF 
+STUDY FACTORS
+Study Factor Name         
+Study Factor Type         
+Study Factor Type Term Accession Number         
+Study Factor Type Term Source REF         
+STUDY ASSAYS
+Study Assay Measurement Type
+Study Assay Measurement Type Term Accession Number         ENA:0000019         ENA:0000020
+Study Assay Measurement Type Term Source REF         ENA         ENA
+Study Assay Technology Type         
+Study Assay Technology Type Term Accession Number         ENA:0000044         ENA:0000054
+Study Assay Technology Type Term Source REF         ENA         ENA 
+Study Assay File Names         
+STUDY PROTOCOLS
+Study Protocol Name         
+Study Protocol Type         library construction
+Study Protocol Type Term Accession Number
+Study Protocol Type Term Source REF
+Study Protocol Description         
+STUDY CONTACTS
+Person Last Name         Linda
+Person First Name         Amaral Zettler
+Person Mid Initials
+Person Email         amaral@mbl.edu
+Person Phone         -
+Person Fax         -
+Person Address
+Person Affiliation
+Person Role
+Person Role Term Source REF
+Person Role Term Accession
+
+Source Name         Comment[Common Name]         Characteristics[Taxonomic ID]         Characteristics[Description]         Characteristics[ogl_reference_name]         Characteristics[collection_date]         Characteristics[shelf_position]         Characteristics[country]         Characteristics[bacteria_count]         Characteristics[time]         Characteristics[lat_lon]         Characteristics[longhurst_zone_code]         Characteristics[depth]         Characteristics[environment]         Characteristics[envo_biome]         Characteristics[envo_feature]         Characteristics[envo_material]         Characteristics[atm_press]         Characteristics[conductivity]         Characteristics[depth_category]         Characteristics[carbon_14]         Characteristics[chlorophyll]         Characteristics[diss_org_carb]         Characteristics[diss_oxygen]         Characteristics[nitrite]         Characteristics[nitrate]         Characteristics[part_org_carb]         Characteristics[nitrite_plus_nitrate]         Characteristics[phosphate]         Characteristics[part_org_nitro]         Characteristics[silicate]         Characteristics[salinity]         Characteristics[tot_depth_water_col]         Characteristics[temp]         Characteristics[leucine]         Characteristics[tot_nitro]         Characteristics[density]         Characteristics[cast]         Characteristics[rel_to_oxygen]         Characteristics[lter_station_name]         Characteristics[lon]         Characteristics[fluorescence]         Sample Name         
+LAM-454-MBL-PALMER-STATION:source:PAL_9_1_2008_08_15 (orig)         408172         NULL         2008-08-15T20:00:00-05         ON         USA (orig)         NULL         20 (orig)         -64.94-64.41 (orig)         Polar Antarctic Province         10 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         NULL         NULL         NULL         top 50 m (orig)         10 (orig)         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         600.04 (orig)         -64.41 (orig)         NULL         LAM-454-MBL-PALMER-STATION:source:PAL_9_1_2008_08_15 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_8_1_2008_01_27 (orig)         408172         PAL_8_1_2008_01_27 (orig)         2008-01-27T20:25:00-06         ON         USA (orig)         0.247         20.4 (orig)         -67.9-69.62 (orig)         Polar Antarctic Province         99.821 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         99.768 (orig)         2.75 (orig)         27.5 (conv)         top 100 m (orig)         99.821 (orig)         73.7 (orig)         0.076 (orig)         45.5         329 (orig)         0.2 (orig)         20.1 (orig)         NULL         20.3 (orig)         2 (orig)         NULL         71.9 (orig)         34.0317 (orig)         170 (orig)         -1.0168 (orig)         NULL         32 (orig)         27.368 (orig)         69 (orig)         Oxic         200.-020 (orig)         -69.62 (orig)         0.06 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_8_1_2008_01_27 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_3_2_2008_01_12 (orig)         408172         PAL_3_2_2008_01_12 (orig)         2008-01-12T05:20:00-06         OFF         USA (orig)         0.173         5.2 (orig)         -63.97-66.86(orig)         Polar Antarctic Province         12.765 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         12.891 (orig)         2.87 (orig)         28.7 (conv)         top 50 m (orig)         12.765 (orig)         6.08 (orig)         0.259 (orig)         46.2         353 (orig)         0.4 (orig)         21.3 (orig)         80.7 (orig)         21.7 (orig)         1.7 (orig)         16.9 (orig)         32 (orig)         33.9072 (orig)         3090 (orig)         0.5633 (orig)         7.8 (orig)         32.3 (orig)         27.194 (orig)         21 (orig)         Oxic         600.2 (orig)         -66.86 (orig)         0.4863 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_3_2_2008_01_12 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_1_1_2008_01_05 (orig)         408172         PAL_1_1_2008_01_05 (orig)         2008-01-05T20:30:00-06         ON         USA (orig)         0.204         20.5 (orig)         -64.94-64.41(orig)         Polar Antarctic Province         10.6 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         9.452 (orig)         2.89 (orig)         28.9 (conv)         top 50 m (orig)         10.6 (orig)         29.25 (orig)         4.001 (orig)         45.3 (orig)         372.2 (orig)         0.3 (orig)         17.7 (orig)         531.2 (orig)         18 (orig)         1.5 (orig)         121.5 (orig)         74.3 (orig)         33.73 (orig)         1327 (orig)         0.97 (orig)         29.74 (orig)         26.4 (orig)         27.224 (orig)         1 (orig)         Oxic         600.04 (orig)         -64.41 (orig)         5.7902 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_1_1_2008_01_05 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_3_1_2008_01_12 (orig)         408172         PAL_3_1_2008_01_12 (orig)         2008-01-05T20:30:00-06         OFF         USA (orig)         0.173         5.2 (orig)         -63.97-66.86(orig)         Polar Antarctic Province         12.765 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         12.891 (orig)         2.87 (orig)         28.7 (conv)         top 50 m (orig)         12.765 (orig)         6.08 (orig)         0.259 (orig)         46.2         353 (orig)         0.4 (orig)         21.3 (orig)         80.7 (orig)         21.7 (orig)         1.7 (orig)         16.9 (orig)         32 (orig)         33.9072 (orig)         3090 (orig)         0.5633 (orig)         7.8 (orig)         32.3 (orig)         27.194 (orig)         21 (orig)         Oxic         600.2 (orig)         -66.86 (orig)         0.4863 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_3_1_2008_01_12 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_1_2_2008_01_05 (orig)         408172         PAL_1_2_2008_01_05 (orig)         2008-01-05T20:30:00-06         ON         USA (orig)         0.204         20.5 (orig)         -64.94-64.41(orig)         Polar Antarctic Province         10.6 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         9.452 (orig)         2.89 (orig)         28.9 (conv)         top 50 m (orig)         10.6 (orig)         29.25 (orig)         4.001 (orig)         45.3 (orig)         372.2 (orig)         0.3 (orig)         17.7 (orig)         531.2 (orig)         18 (orig)         1.5 (orig)         121.5 (orig)         74.3 (orig)         33.73 (orig)         1327 (orig)         0.97 (orig)         29.74 (orig)         26.4 (orig)         27.224 (orig)         1 (orig)         Oxic         600.04 (orig)         -64.41 (orig)         5.7902 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_1_2_2008_01_05 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_7_1_2008_01_27 (orig)         408172         PAL_7_1_2008_01_27 (orig)         2008-01-27T20:25:00-06         ON         USA (orig)         0.28         20.4 (orig)         -67.9-69.62 (orig)         Polar Antarctic Province         14.932 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         14.841 (orig)         2.86 (orig)         28.6 (conv)         top 50 m (orig)         14.932 (orig)         73.7 (orig)         2.422 (orig)         47.5         359.3 (orig)         0.2 (orig)         15.3 (orig)         166.7 (orig)         15.5 (orig)         1.5 (orig)         38.3 (orig)         67.3 (orig)         33.7999 (orig)         170 (orig)         0.5784 (orig)         15.99 (orig)         23.8 (orig)         27.106 (orig)         69 (orig)         Oxic         200.-020 (orig)         -69.62 (orig)         2.417 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_7_1_2008_01_27 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_2_1_2008_01_05 (orig)         408172         PAL_2_1_2008_01_05 (orig)         2008-01-05T20:30:00-06         ON         USA (orig)         0.155         20.5 (orig)         -64.94-64.41(orig)         Polar Antarctic Province         99.9 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         101.264 (orig)         2.84 (orig)         28.4 (conv)         top 100 m (orig)         99.9 (orig)         29.25 (orig)         0.058 (orig)         40.8 (orig)         253.8 (orig)         0.2 (orig)         27.2 (orig)         NULL         27.4 (orig)         2.2 (orig)         NULL         84 (orig)         34.2672 (orig)         1327 (orig)         -0.09 (orig)         NULL         36.6 (orig)         27.52 (orig)         1 (orig)         Oxic         600.04 (orig)         -64.41 (orig)         0.0678 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_2_1_2008_01_05 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_4_1_2008_01_12 (orig)         408172         PAL_4_1_2008_01_12 (orig)         2008-01-12T05:20:00-06         OFF         USA (orig)         0.245         5.2 (orig)         -63.97-66.86(orig)         Polar Antarctic Province         98.606 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         99.598 (orig)         2.75 (orig)         27.5 (conv)         top 100 m (orig)         98.606 (orig)         6.08 (orig)         0.356 (orig)         46.7         323 (orig)         0.2 (orig)         24.6 (orig)         NULL         24.8 (orig)         2 (orig)         NULL         54 (orig)         34.0389 (orig)         3090 (orig)         -0.9987 (orig)         NULL         35.5 (orig)         27.194 (orig)         21 (orig)         Oxic         600.2 (orig)         -66.86 (orig)         0.5349 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_4_1_2008_01_12 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_5_1_2008_01_23 (orig)         408172         PAL_5_1_2008_01_23 (orig)         2008-01-23T04:15:00-06         OFF         USA (orig)         0.251         4.25 (orig)         -66.45-73.03 (orig)         Polar Antarctic Province         11.857 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         11.975 (orig)         2.89 (orig)         28.9 (conv)         top 50 m (orig)         11.857 (orig)         10.08 (orig)         0.17 (orig)         43.7         344.7 (orig)         0.6 (orig)         20.2 (orig)         62.9 (orig)         20.8 (orig)         1.6 (orig)         13.5 (orig)         39 (orig)         33.8298 (orig)         3090 (orig)         0.9155 (orig)         4.94 (orig)         30.6 (orig)         27.107 (orig)         56 (orig)         Oxic         200.2 (orig)         -73.03 (orig)         0.5256 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_5_1_2008_01_23 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_5_2_2008_01_23 (orig)         408172         PAL_5_2_2008_01_23 (orig)         2008-01-23T04:15:00-06         OFF         USA (orig)         0.251         4.25 (orig)         -66.45-73.03 (orig)         Polar Antarctic Province         11.857 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         11.975 (orig)         2.89 (orig)         28.9 (conv)         top 50 m (orig)         11.857 (orig)         10.08 (orig)         0.17 (orig)         43.7         344.7 (orig)         0.6 (orig)         20.2 (orig)         62.9 (orig)         20.8 (orig)         1.6 (orig)         13.5 (orig)         39 (orig)         33.8298 (orig)         3701 (orig)         0.9155 (orig)         4.94 (orig)         30.6 (orig)         27.107 (orig)         56 (orig)         Oxic         200.2 (orig)         -73.03 (orig)         0.5256 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_5_2_2008_01_23 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_6_1_2008_01_23 (orig)         408172         PAL_6_1_2008_01_23 (orig)         2008-01-23T04:15:00-06         OFF         USA (orig)         0.136         4.25 (orig)         -66.45-73.03 (orig)         Polar Antarctic Province         124.619 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         126.924 (orig)         2.97 (orig)         29.7 (conv)         top 200 m (orig)         124.619 (orig)         10.08 (orig)         0.096 (orig)         40.8         199.5 (orig)         0.5 (orig)         27.1 (orig)         NULL         27.6 (orig)         2.2 (orig)         NULL         64.6 (orig)         34.4377 (orig)         3701 (orig)         1.2106 (orig)         NULL         41.2 (orig)         27.487 (orig)         56 (orig)         Oxic         200.2 (orig)         -73.03 (orig)         0.094 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_6_1_2008_01_23 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_6_2_2008_01_23 (orig)         408172         PAL_6_2_2008_01_23 (orig)         2008-01-23T04:15:00-06         OFF         USA (orig)         0.136         4.25 (orig)         -66.45-73.03 (orig)         Polar Antarctic Province         124.619 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         126.924 (orig)         2.97 (orig)         29.7 (conv)         top 200 m (orig)         124.619 (orig)         10.08 (orig)         0.096 (orig)         40.8         199.5 (orig)         0.5 (orig)         27.1 (orig)         NULL         27.6 (orig)         2.2 (orig)         NULL         64.6 (orig)         34.4377 (orig)         3701 (orig)         1.2106 (orig)         NULL         41.2 (orig)         27.487 (orig)         56 (orig)         Oxic         200.2 (orig)         -73.03 (orig)         0.094 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_6_2_2008_01_23 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_9_2_2008_08_15 (orig)         408172         NULL         2008-08-15T20:00:00-05         ON         USA (orig)         NULL         20 (orig)         -64.94-64.41 (orig)         Polar Antarctic Province         10 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         NULL         NULL         NULL         top 50 m (orig)         10 (orig)         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         NULL         600.04 (orig)         -64.41 (orig)         NULL         LAM-454-MBL-PALMER-STATION:source:PAL_9_2_2008_08_15 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_7_2_2008_01_27 (orig)         408172         PAL_7_2_2008_01_27 (orig)         2008-01-27T20:25:00-06         ON         USA (orig)         0.28         20.4 (orig)         -67.9-69.62 (orig)         Polar Antarctic Province         14.932 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         14.841 (orig)         2.86 (orig)         28.6 (conv)         top 50 m (orig)         14.932 (orig)         73.7 (orig)         2.422 (orig)         47.5         359.3 (orig)         0.2 (orig)         15.3 (orig)         166.7 (orig)         15.5 (orig)         1.5 (orig)         38.3 (orig)         67.3 (orig)         33.7999 (orig)         170 (orig)         0.5784 (orig)         15.99 (orig)         23.8 (orig)         27.106 (orig)         69 (orig)         Oxic         200.-020 (orig)         -69.62 (orig)         2.417 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_7_2_2008_01_27 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_4_2_2008_01_12 (orig)         408172         PAL_4_2_2008_01_12 (orig)         2008-01-12T05:20:00-06         OFF         USA (orig)         0.245         5.2 (orig)         -63.97-66.86(orig)         Polar Antarctic Province         98.606 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         99.598 (orig)         2.75 (orig)         27.5 (conv)         top 100 m (orig)         98.606 (orig)         6.08 (orig)         0.356 (orig)         46.7         323 (orig)         0.2 (orig)         24.6 (orig)         NULL         24.8 (orig)         2 (orig)         NULL         54 (orig)         34.0389 (orig)         3090 (orig)         -0.9987 (orig)         NULL         35.5 (orig)         27.194 (orig)         21 (orig)         Oxic         600.2 (orig)         -66.86 (orig)         0.5349 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_4_2_2008_01_12 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_2_2_2008_01_05 (orig)         408172         PAL_2_2_2008_01_05 (orig)         2008-01-05T20:30:00-06         ON         USA (orig)         0.155         20.5 (orig)         -64.94-64.41(orig)         Polar Antarctic Province         99.9 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         101.264 (orig)         2.84 (orig)         28.4 (conv)         top 100 m (orig)         99.9 (orig)         29.25 (orig)         0.058 (orig)         40.8 (orig)         253.8 (orig)         0.2 (orig)         27.2 (orig)         NULL         27.4 (orig)         2.2 (orig)         NULL         84 (orig)         34.2672 (orig)         1327 (orig)         -0.09 (orig)         NULL         36.6 (orig)         27.52 (orig)         1 (orig)         Oxic         600.04 (orig)         -64.41 (orig)         0.0678 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_2_2_2008_01_05 (orig)         
+LAM-454-MBL-PALMER-STATION:source:PAL_8_2_2008_01_27 (orig)         408172         PAL_8_2_2008_01_27 (orig)         2008-01-27T20:25:00-06         ON         USA (orig)         0.247         20.4 (orig)         -67.9-69.62 (orig)         Polar Antarctic Province         99.821 (orig)         ENVO:seawater;ENVO:marine_habitat;ENVO:water         seawater         marine_habitat         water         99.768 (orig)         2.75 (orig)         27.5 (conv)         top 100 m (orig)         99.821 (orig)         73.7 (orig)         0.076 (orig)         45.5         329 (orig)         0.2 (orig)         20.1 (orig)         NULL         20.3 (orig)         2 (orig)         NULL         71.9 (orig)         34.0317 (orig)         170 (orig)         -1.0168 (orig)         NULL         32 (orig)         27.368 (orig)         69 (orig)         Oxic         200.-020 (orig)         -69.62 (orig)         0.06 (orig)         LAM-454-MBL-PALMER-STATION:source:PAL_8_2_2008_01_27 (orig)         
+
+  
+    Sequencing library derived from sample PAL_9_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_9_1B.30_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TATAC
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TATAC
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_8_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_8_1B.28_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGTAG
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TGTAG
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_3_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_3_2B.19_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: (GTATC)
+ mid: GCGTG
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              (GTATC)
+              GCGTG
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_1_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_1_1B.14_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: CACAC
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              CACAC
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_3_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_3_1B.18_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCGAT
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              GCGAT
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_1_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_1_2B.15_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GAGCG
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              GAGCG
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_7_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_7_1B.26_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGACT
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TGACT
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_2_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_2_1B.16_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCACG
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              GCACG
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_4_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_4_1B.20_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCTAC
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              GCTAC
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_5_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_5_1B.22_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCGAG
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TCGAG
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_5_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_5_2B.23_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCGCT
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TCGCT
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_6_1B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_6_1B.24_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCGTC
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TCGTC
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_6_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_6_2B.25_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCTGT
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TCTGT
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_9_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_9_2B.31_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: CGTAC
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              CGTAC
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_7_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_7_2B.27_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGATA
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TGATA
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_4_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_4_2B.21_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCACA
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TCACA
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_2_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_2_2B.17_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCAGT
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              GCAGT
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+  
+    Sequencing library derived from sample PAL_8_2B
+    
+    
+      See study and sample descriptions for details
+      
+      
+        LAM-454-MBL-PALMER-STATION:assay:PAL_8_2B.29_Bacteria
+        AMPLICON
+        METAGENOMIC
+        PCR
+        
+          
+        
+        
+          
+            
+              pcrPrimersXref
+              PubMed
+            
+          
+        
+        multiplexed libraries
+        target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGTCA
+      
+      
+        
+          3
+          
+            0
+            Technical Read
+            Adapter
+            1
+          
+          
+            1
+            Technical Read
+            BarCode
+            
+              TGTCA
+            
+          
+          
+            2
+            Application Read
+            Forward
+            
+          
+        
+      
+    
+    
+      
+        unspecified
+        TACG
+        800
+      
+    
+    
+      
+        
+          Base Space
+          454 Basecaller
+        
+        
+          454 Basecaller
+          64
+          1
+        
+      
+    
+  
+
+Sample Name         Protocol REF         Parameter Value[library strategy]         Parameter Value[library source]         Parameter Value[library selection]         Parameter Value[library layout]                  Labeled Extract Name         Protocol REF         Parameter Value[read information {index;type;class;base coord}]         Parameter Value[sequencing instrument]         Performer         Date         Assay Name         Raw Data File         Comment[File checksum method]         Comment[File checksum]         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_9_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_9_1B.30         PAL_9_1B.sff         MD5         8309a7208a792654b7a365f1f8d3a0cf         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_8_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_8_1B.28         PAL_8_1B.sff         MD5         882454575e57d3013466180f0a21d12c         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_3_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_3_2B.19         PAL_3_2B.sff         MD5         e3e597b01f3dbf84e241f2a8d15077e6         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_1_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_1_1B.14         PAL_1_1B.sff         MD5         8e03a586312499c31e7e581f9bfec958         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_3_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_3_1B.18         PAL_3_1B.sff         MD5         8fe38207c82a361a364f04019b1f3a86         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_1_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_1_2B.15         PAL_1_2B.sff         MD5         d387c542a3ca3ac08c9193e3a7bdd9d7         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_7_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_7_1B.26         PAL_7_1B.sff         MD5         a63928031ec861559f8593e1e087e58a         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_2_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_2_1B.16         PAL_2_1B.sff         MD5         47805d6daf4def8678a5b3ab8fc73891         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_4_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_4_1B.20         PAL_4_1B.sff         MD5         fe5ce14b2724f220d1fd3f3e2bcc87bd         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_5_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_5_1B.22         PAL_5_1B.sff         MD5         fd9617414c3695c76512f9041a1484ac         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_5_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_5_2B.23         PAL_5_2B.sff         MD5         d91996314b215995a4d0f95d8f1fc6b3         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_6_1B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_6_1B.24         PAL_6_1B.sff         MD5         4d5f7f12b612152dafd20d21ab632d79         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_6_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_6_2B.25         PAL_6_2B.sff         MD5         72ac862f23cd7e2cd61a90b07ff923ce         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_9_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_9_2B.31         PAL_9_2B.sff         MD5         54a7b8e5b28fdfa9c2976523dba4e9d0         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_7_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_7_2B.27         PAL_7_2B.sff         MD5         6dfafd1ca8f99b5424494e8d026b4cbf         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_4_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_4_2B.21         PAL_4_2B.sff         MD5         87e5fc5e58b9a4b24949bac436f27999         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_2_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_2_2B.17         PAL_2_2B.sff         MD5         26fc8390a2fc272e97d075bda807b1cc         
+         library construction                                             LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_8_2B                                             LAM-454-MBL-PALMER-STATION:assay:PAL_8_2B.29         PAL_8_2B.sff         MD5         ab8a81ac6ebc348b4e5e8205e8552fb5         

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RUN_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.run.xsd">
+  <RUN alias="BII-theroux:assay:SMT_BS09_Ev9.2" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="BII-theroux:generic_assay:a_gene_survey_assay.SMT_BS09_Ev9"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="SMT_BS09_Ev9.sff" checksum_method="MD5" checksum="2a1bdc163262b2a75242e8203a25ce52"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="BII-theroux:assay:BYS_2009_2009_06_17_Bv6v4.4" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="BII-theroux:generic_assay:a_gene_survey_assay.BYS_2009_2009_06_17_Bv6v4"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="BYS_2009_2009_06_17_Bv6v4.sff" checksum_method="MD5" checksum="ba2f36cee7d020517e94725e36f95986"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="BII-theroux:assay:BYS_2007_2007_06_19_Bv6v4.3" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="BII-theroux:generic_assay:a_gene_survey_assay.BYS_2007_2007_06_19_Bv6v4"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="BYS_2007_2007_06_19_Bv6v4.sff" checksum_method="MD5" checksum="a3ec1c13df74b302e0cb10aef1203dfe"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="BII-theroux:assay:GNL_E.1" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="BII-theroux:generic_assay:a_gene_survey_assay.GNL_E"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="GNL_E.sff" checksum_method="MD5" checksum="44a26dd4f60a94ffe3a6693fc84aaa41"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+</RUN_SET>

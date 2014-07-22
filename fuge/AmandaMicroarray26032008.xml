@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="fuge-isatab-mod.xsl"?>
+<FuGE name="cdc13 microarrays" endurant="urn:lsid:cisban.cisbs.org:FuGEEndurant:b5d3370d-125b-417c-9377-d4a9fc224b4f" identifier="urn:lsid:cisban.cisbs.org:FuGE:c5600070-3375-4790-85db-227f7f43b9ff"
+ xmlns:fuge="http://fuge.sourceforge.net/fuge/1.0"
+>
+    <auditTrail>
+        <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:21.447+01:00"/>
+    </auditTrail>
+    <MaterialCollection>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:b2809d24-164e-4fb4-819f-d665e9d59280" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:b19d612f-cced-4fae-9472-8d059c0c14d6">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:07.831+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:90a0ad27-f6b7-45a9-b549-c691e85db180"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:eb87e155-130c-4337-97b4-c6d8704eafc0" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:361674e1-4956-4caa-b10a-20346b72032e">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:11.723+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:7a982fa0-8cf4-48b6-8d00-7123e5b50913"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:61a8e22c-860f-46e1-87ff-23432f9403c0" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:b3f06269-b989-49dd-a231-ee971cdbe52d">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:06.353+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:d7e127b5-f0b8-47e5-bef0-a04f1746695b"/>
+        </GenericMaterial>
+        <GenericMaterial name="A" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:c9f53d5c-4710-4726-bb5e-2e13a0dd6d4c" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:8a2ecf63-0fe1-4e98-a7ba-1cb2f457fa06">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:51.920+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:6a26470d-c90d-4756-8587-b980abea20ce"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:05ada0c4-7ee8-4f02-9248-fc6693817562" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:85776bba-2581-4f88-8464-d9b4a27379da">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:51.158+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:6a26470d-c90d-4756-8587-b980abea20ce"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:aa08621a-7082-4e28-a4d8-56d6a00c054f" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:6e84f66a-cb51-47e2-bdee-9da120ebd3f9">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:50.297+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:f7d294eb-296d-4957-9058-2a4ff1d7159a"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:2c1f12b4-ffe2-4d94-9d34-a21218fdcdc6" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:0c77441a-a526-48b9-8fd8-2fb5f95a014c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:07.418+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:d7e127b5-f0b8-47e5-bef0-a04f1746695b"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:acdf0dd6-12c0-4b47-b41e-62232c173f96" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:b66de72e-ea97-4572-8d04-a0c9f683bc18">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:09.791+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:dca24f90-1369-4a6b-b0bd-1b5ef5d20a4a"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:c04dfb01-43bb-4cd6-ab0b-9a1d3b615715" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:eb908bfe-4442-4a95-ab33-12184eeec22c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:11.232+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:7a982fa0-8cf4-48b6-8d00-7123e5b50913"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:dc98dfd5-cfc5-4387-9544-61b74daf3a4c" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:58635d03-5275-428d-ae9f-732fb37ab1d5">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:06.620+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:d7e127b5-f0b8-47e5-bef0-a04f1746695b"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:bdc03f47-8080-414b-bced-92b02c82036c" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:125df107-1077-4a05-91de-c820312f8bd9">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:52.168+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:6a26470d-c90d-4756-8587-b980abea20ce"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:a68f60bf-e415-42ed-814f-5f0c42379492" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:70e5f7ce-b91d-4ea9-99b0-af413bef29c4">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:08.108+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:90a0ad27-f6b7-45a9-b549-c691e85db180"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:b24cdcd1-8306-482d-8214-37972977c56b" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:12828ed5-2e63-45ee-8305-bfadaf94b073">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:09.554+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:dca24f90-1369-4a6b-b0bd-1b5ef5d20a4a"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:de6dd24b-3acf-430f-88ac-32ad5011692e" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:1d953a95-6578-4116-a60b-fddb08ff9ca3">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:10.969+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:7a982fa0-8cf4-48b6-8d00-7123e5b50913"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:38e33e99-1d99-4bb5-9f8a-e48cbb413caa" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:973ae7b2-d70b-499e-8eb8-0b3ad88e3afe">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:50.551+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:f7d294eb-296d-4957-9058-2a4ff1d7159a"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:b6260379-1155-4994-b034-098660ee1340" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:9869981c-5729-4e13-bc74-a3a19eab2504">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:50.024+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:f7d294eb-296d-4957-9058-2a4ff1d7159a"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:dd3cbc07-7a74-4b76-9d17-86c7ca732d94" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:dde07406-327f-4a47-8148-da7c7799ee33">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:07.149+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:d7e127b5-f0b8-47e5-bef0-a04f1746695b"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:1a7b2e36-dd2b-4c79-adf5-d3a2d56f641a" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:269c82d3-a299-4bb1-a7db-829519d0b534">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:08.653+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:90a0ad27-f6b7-45a9-b549-c691e85db180"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:3a240466-df36-40fc-873e-533b3909745b" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:5204b5b6-d382-4802-bb4b-4db4fa28eb92">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:11.484+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:7a982fa0-8cf4-48b6-8d00-7123e5b50913"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:960b7f9f-763b-4aa5-b1d7-268bc7b0be54" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:79e76702-3d6a-4063-9115-97d7c9c0aaee">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:10.057+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:dca24f90-1369-4a6b-b0bd-1b5ef5d20a4a"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:9bbdedaf-b1a6-4c1f-aa67-0a210502f3e0" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:3ec795c2-cca6-407c-9dc7-9d006b9450c9">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:10.713+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:7a982fa0-8cf4-48b6-8d00-7123e5b50913"/>
+        </GenericMaterial>
+        <GenericMaterial name="Z" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:c98d6be6-c1a3-43f8-b37f-89671cf399d9" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:7d09148a-2322-4ac5-9604-4b8355c1ea01">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:51.678+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:6a26470d-c90d-4756-8587-b980abea20ce"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:0bcf56fd-3744-456d-9b37-12ea14404634" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:e201cee4-f4dd-4ea6-8d2e-b90b1c4e8031">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:51.431+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:6a26470d-c90d-4756-8587-b980abea20ce"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:5e6f4495-c133-40f2-aebe-e9b832433956" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:e0d91403-3f60-4db9-9049-64583ef4171a">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:09.300+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:dca24f90-1369-4a6b-b0bd-1b5ef5d20a4a"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:eb5d557e-fece-4fca-aab2-efd052927c12" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:c16b49ba-ebb0-4afe-becb-4743190d48ea">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:08.904+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:90a0ad27-f6b7-45a9-b549-c691e85db180"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:65cd2a52-110d-4a3f-9929-5a3a0122a081" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:cfab3ec4-6d82-474b-99b6-5f2d52f5594f">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:50.786+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:f7d294eb-296d-4957-9058-2a4ff1d7159a"/>
+        </GenericMaterial>
+        <GenericMaterial name="" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:5910916c-725e-4261-8a5f-743e712b3892" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:85fa2f5b-3251-4588-a82a-e96af250a171">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:49.776+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:f7d294eb-296d-4957-9058-2a4ff1d7159a"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:91993d97-5860-41a5-bd6a-4b7708211a15" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:1b2fa535-9c23-4cde-a526-bee51d660e88">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:08.382+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:90a0ad27-f6b7-45a9-b549-c691e85db180"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:78ed9e6a-b72f-4bac-8116-dab88acd5cc7" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:e75e6a36-378a-4b97-8854-fe30246a27ff">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:06.888+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:d7e127b5-f0b8-47e5-bef0-a04f1746695b"/>
+        </GenericMaterial>
+        <GenericMaterial name="null" endurant="urn:lsid:cisban.cisbs.org:GenericMaterialEndurant:d9c962df-f587-4669-bddd-f3354463d3dd" identifier="urn:lsid:cisban.cisbs.org:GenericMaterial:3f56436d-bc95-4ffb-b596-2f0fbb54750e">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:10.318+01:00"/>
+            </auditTrail>
+            <materialType OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:dca24f90-1369-4a6b-b0bd-1b5ef5d20a4a"/>
+        </GenericMaterial>
+    </MaterialCollection>
+    <InvestigationCollection>
+        <Investigation name="Investigation Details for cdc13 microarrays" endurant="urn:lsid:cisban.cisbs.org:InvestigationEndurant:02827cd4-274e-45e1-8cbb-5b13ba0012d0" identifier="urn:lsid:cisban.cisbs.org:Investigation:c2d17393-1dca-4400-81f8-0acf64204ede">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:49.378+01:00"/>
+            </auditTrail>
+            <descriptions>
+                <Description text="Hypothesis: telomere uncapping in cdc13-1 strains will cause changes in gene expression"/>
+                <Description text="Conclusions: A number of genes are differentially regulated when telomeres are uncapped"/>
+            </descriptions>
+        </Investigation>
+    </InvestigationCollection>
+    <DataCollection>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:db40b2fe-1bc9-4676-baed-be817c833f80" name="Gre_MCA_2172" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:07509336-330d-4ded-8efa-31d2c9a6b82d" identifier="urn:lsid:cisban.cisbs.org:ExternalData:93761aaa-3bd8-421a-988d-ecf9a0024ee2">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:22.116+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:b53ee5fa-d69e-4956-9f5b-b1a4e36b6e68" name="Gre_MCA_1726" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:dc3f94f0-49d8-4118-8ebc-b59ace6db8c1" identifier="urn:lsid:cisban.cisbs.org:ExternalData:23a611a6-767e-4e16-9013-d6c18ab8f652">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:54.995+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:1c56735a-018c-450a-99f4-c0f6443b7b2c" name="Gre_MCA_8052" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:dfaf200f-aab4-407b-a9df-af6640d5013b" identifier="urn:lsid:cisban.cisbs.org:ExternalData:ff343b29-5c81-4d0d-8146-e482d4a98d56">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:58.172+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:2bec26aa-b078-466a-ba37-102e4e528da5" name="Gre_MCA_9301" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:6091efb9-9611-4545-b204-6c2924ca3f83" identifier="urn:lsid:cisban.cisbs.org:ExternalData:99fc7d42-4819-45ff-99e9-bd3a25daf2c1">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:53.671+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:c33d1308-0d12-4473-be00-7596da807a75" name="Gre_MCA_5948" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:6aecea27-9846-4c81-9344-55ad134043a7" identifier="urn:lsid:cisban.cisbs.org:ExternalData:7b4818a8-5769-4ba5-b929-7d389f0f15a3">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:25.944+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:c5082bdc-61c3-4fe0-b1ad-2b6b77e739cc" name="Gre_MCA_7031" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:01766891-15d5-4a39-a7bc-7bc588074dc6" identifier="urn:lsid:cisban.cisbs.org:ExternalData:5bcd1987-f177-4979-8888-3d05cd4b97ae">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:20.981+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:3b164b5b-dd60-4fa6-b707-5ba4fdb01f44" name="Gre_MCA_7528" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:44e188e6-e25a-4bcb-98dc-800d31974445" identifier="urn:lsid:cisban.cisbs.org:ExternalData:1cc37d66-e052-44ee-9fae-6ce5eff063ba">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:57.501+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:34816a5c-e59a-4d6b-b7d4-0768ee178e33" name="Gre_MCA_8454" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:2d1648a5-d866-49d1-b692-047f9dba1a8a" identifier="urn:lsid:cisban.cisbs.org:ExternalData:bce12118-8cd1-48e6-ad82-b79c784d2e60">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:54.362+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:19bd85bd-f74f-44b1-ab36-16a5b365f827" name="Gre_MCA_9147" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:16c54ebd-6082-44ac-beca-bcd16f8f003c" identifier="urn:lsid:cisban.cisbs.org:ExternalData:d936f0dc-63c9-4eda-b790-ac0ecb041139">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:30.655+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:768f9283-f877-4ae5-a577-5d215ef393fb" name="Gre_MCA_3864" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:57659259-d02c-4b4a-a35f-cdccb5567cbd" identifier="urn:lsid:cisban.cisbs.org:ExternalData:69c95f3b-ab82-45d0-a046-872b0d736633">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:13.439+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:bbd392bc-ff12-4d44-ac2b-2cfa3d5b825f" name="Gre_MCA_8016" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:6df2c2e3-1209-4ea8-a618-3f7f1bbe06d1" identifier="urn:lsid:cisban.cisbs.org:ExternalData:702ae454-4b00-49f5-8110-0c8372d4b136">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:55.653+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:e092fd3e-a538-473d-9267-354b77cd7f95" name="Gre_MCA_6510" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:c06e6bc1-aadd-4af2-8bb0-0a5d34ce65ae" identifier="urn:lsid:cisban.cisbs.org:ExternalData:71ffe01d-5885-41d9-8365-1cc7fb0fe719">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:29.146+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:c9af3744-24c8-499b-9d85-a52c8672faa7" name="Gre_MCA_3824" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:4b100532-705d-44cc-a281-0fbc28bdb47a" identifier="urn:lsid:cisban.cisbs.org:ExternalData:8083705b-a861-436d-af52-f1b60a591dfb">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:58.902+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:5fc022b9-67b9-4c91-bafa-79dd29ec9865" name="Gre_MCA_6857" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:aad48754-229c-44be-821f-3eebdab5420b" identifier="urn:lsid:cisban.cisbs.org:ExternalData:632ef457-335f-41e3-8d7d-164e1ccb1e6b">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:19.241+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:d3be03df-0f8f-4020-9243-3476964c9532" name="Gre_MCA_3378" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:c5436a77-8807-458f-9a98-10456f753312" identifier="urn:lsid:cisban.cisbs.org:ExternalData:c8fe4cef-a5e0-4c3e-9858-ec2f477ce0c4">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:52.962+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:bde554cd-6fb3-4022-91df-4b77459f0e3b" name="Gre_MCA_8298" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:306de91f-d4fa-460c-b927-c2e0274512ac" identifier="urn:lsid:cisban.cisbs.org:ExternalData:6c53faf7-1658-4f6b-bb62-334d7240d5dc">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:23.104+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:c49f011a-e41e-4fa3-9030-b3e48ac44481" name="Gre_MCA_2822" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:33c1be2b-08a2-4b08-b8b6-6cc94077f09f" identifier="urn:lsid:cisban.cisbs.org:ExternalData:6c68043c-dc1d-4b7b-a85c-84ff16a98d2a">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:15.504+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:6ce27832-3250-408e-aa62-509f3695eddb" name="Gre_MCA_4493" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:40b48ae2-3643-4392-88c5-3d7cb0f1ea9f" identifier="urn:lsid:cisban.cisbs.org:ExternalData:4efef7e5-aab5-4560-86f7-6246cedeb0d3">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:30.034+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:32b59b9a-4f35-48e3-bf9a-ab5c8b5d6b81" name="Gre_MCA_9211" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:a881f5fa-91b5-4de0-9eff-83a5e8c74333" identifier="urn:lsid:cisban.cisbs.org:ExternalData:beba5492-cbdd-46cf-b07f-9ddedb67155c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:24.275+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:e29afd17-f8b1-474d-97bc-273c6ee86065" name="Gre_MCA_2282" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:ee28cec0-f72f-4e2d-a3e0-ef8098dae624" identifier="urn:lsid:cisban.cisbs.org:ExternalData:78a6bf89-8154-446b-9ed9-6a01bf1d5ad4">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:16.446+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:57f19d4d-c08f-4416-a71c-564a65367eb7" name="Gre_MCA_5014" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:1b2c6223-30ee-4676-a9a1-1a3c9e0fa5f6" identifier="urn:lsid:cisban.cisbs.org:ExternalData:22ae3af9-96d4-4a7e-b87e-ec1202a348e1">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:18.306+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:90bf0b1f-39fd-4380-a8dc-cfa403728c6d" name="Gre_MCA_6052" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:be499162-7015-4f97-bd16-69aff3b2027a" identifier="urn:lsid:cisban.cisbs.org:ExternalData:2f890900-7d68-4936-b5ce-3f13d62b223a">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:56.884+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:e068d1ed-e4b1-416a-a02a-e42cd1d5ad27" name="Gre_MCA_3174" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:99ad071d-c37f-4802-ab1a-140846aef311" identifier="urn:lsid:cisban.cisbs.org:ExternalData:4d6efb44-6d35-4ee1-aba5-864d31df8c63">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:28.104+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:dccdba77-1597-4385-87c1-7d51eb7eccca" name="Gre_MCA_7817" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:bf043fa2-8566-4a1a-b7a1-36dc77041581" identifier="urn:lsid:cisban.cisbs.org:ExternalData:163504d1-ee91-47cc-87da-825e8cf21a09">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:20.046+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:4af51344-721a-4872-96e9-13688ef4b29d" name="Gre_MCA_0356" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:dc09b4eb-ddd2-442b-be38-beb144b17aa6" identifier="urn:lsid:cisban.cisbs.org:ExternalData:954a31fb-31df-4833-9419-6f15a4474b97">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:32.057+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:f609c0a5-9323-41eb-bf7a-e33c9083b08f" name="Gre_MCA_6886" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:b5d4f57e-b39f-4140-a743-10a32404940d" identifier="urn:lsid:cisban.cisbs.org:ExternalData:624f5f0d-8a57-4285-a9c3-507b42755364">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:14.656+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:6ba71f23-3f2e-4602-ac21-11de6e430220" name="Gre_MCA_6671" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:8ccf1652-8c29-4aba-af8d-793e7dc32d74" identifier="urn:lsid:cisban.cisbs.org:ExternalData:2d88ffba-672a-4a39-9a72-b213fa5423e5">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:48:56.292+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:52ed6544-e56b-49a0-b6bb-f9cbd9c37f95" name="Gre_MCA_4108" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:e672bfa1-fe34-412f-b1d7-c56bf7636a08" identifier="urn:lsid:cisban.cisbs.org:ExternalData:51b5ee35-927f-48f4-8b97-2e889371d069">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:31.346+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:c39ee199-29c9-42d5-8eb6-909ba660c4b8" name="Gre_MCA_1103" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:3cd4b114-683a-4873-b504-3a2876652d1c" identifier="urn:lsid:cisban.cisbs.org:ExternalData:3f6a39b0-b186-48cf-9e99-1d17d3f4127a">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:27.026+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+        <ExternalData location="urn:lsid:cisban.cisbs.org:RawData:d0e7eadc-7e32-4fdd-a110-96f6da6f4090" name="Gre_MCA_9353" endurant="urn:lsid:cisban.cisbs.org:ExternalDataEndurant:cc597ee1-8891-4a7f-98a4-45de69719a51" identifier="urn:lsid:cisban.cisbs.org:ExternalData:f50d7ba0-d072-4e38-861f-8f4280d46b8e">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:17.464+01:00"/>
+            </auditTrail>
+            <fileFormat OntologyTerm_ref="xml"/>
+        </ExternalData>
+    </DataCollection>
+    <AuditCollection>
+        <Organization email="helpdesk@cisban.ac.uk" phone="+44 (0)191 256 3325" address="CISBAN, Henry Wellcome Laboratory for Biogerontology Research, Newcastle University, Newcastle General Hospital, Newcastle upon Tyne, NE4 6BE, United Kingdom" name="CISBAN" endurant="urn:lsid:cisban.cisbs.org:OrganizationEndurant:230f3f0e-6fe4-4982-bd83-e9415ec23eb4" identifier="urn:lsid:cisban.cisbs.org:Organization:10175418-3427-4f1e-baea-66d53d2044db">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:02:20.609+01:00"/>
+            </auditTrail>
+        </Organization>
+        <Person firstName="Amanda" lastName="Greenall" email="A.J.Greenall@newcastle.ac.uk" name="Amanda Greenall (Research Associate)" endurant="urn:lsid:cisban.cisbs.org:PersonEndurant:5190eb26-70f6-4e00-bcbc-450a3b8a6a29" identifier="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:02:24.023+01:00"/>
+            </auditTrail>
+            <affiliations Organization_ref="urn:lsid:cisban.cisbs.org:Organization:10175418-3427-4f1e-baea-66d53d2044db"/>
+        </Person>
+    </AuditCollection>
+    <ProtocolCollection>
+        <GenericProtocol name="CISBAN cdc13-1/WT Microarray Investigation" endurant="urn:lsid:cisban.cisbs.org:GenProtocolEndurant:45774fc1-16f4-417d-a60e-17a3eea9e0c3" identifier="urn:lsid:cisban.cisbs.org:GenericProtocol:767ff7d4-9fa5-4b46-bb38-105effb3822b">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:28.810+01:00"/>
+            </auditTrail>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:82cb4ddd-2993-4d58-b0fa-a02681521f92" actionOrdinal="1" name="Step Containing the cdc13-1/WT Microarray Sample Preparation Protocol" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:8f1159cd-4e55-40ae-8dc2-6d25e31f2b27" identifier="urn:lsid:cisban.cisbs.org:GenericAction:d9a8e091-c7eb-4fa4-bd9c-93a502054427">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:23.787+01:00"/>
+                </auditTrail>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:d9248775-b438-4f5b-ab78-2c9810a4abdc" actionOrdinal="2" name="Step Containing the cdc13-1/WT Microarray Time Series Protocol for the CDC13+ Strain" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:e0a3e317-40af-4591-9ed3-f4367d1fdb4a" identifier="urn:lsid:cisban.cisbs.org:GenericAction:b546c501-764e-4bbb-a7aa-cb85b370a0e0">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:26.040+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Strain Type" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:2f979ffc-e67e-451f-be7b-ee92d4f3c002" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:82b3c2e6-4acd-42c7-a92d-0a1168a03b89">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:25.993+01:00"/>
+                    </auditTrail>
+                    <ComplexValue>
+                        <_defaultValue OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:fa02d8b8-170f-4fd0-8a65-842c02a2ddb3"/>
+                    </ComplexValue>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:5175e266-e948-4ba3-8d18-c355d826de00"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:d9248775-b438-4f5b-ab78-2c9810a4abdc" actionOrdinal="3" name="Step Containing the cdc13-1/WT Microarray Time Series Protocol for the cdc13-1 Strain" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:e0907f7c-2c8b-4a3f-ac5a-afae06cd846b" identifier="urn:lsid:cisban.cisbs.org:GenericAction:0ea5792e-4b7e-4afc-afcc-e667ee70dd10">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:28.237+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Mutation Type" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:7bba1cc9-dded-4cf6-93e2-24b72b2e39e2" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:60a36f20-0274-42ec-8fc5-fcf286ee04b8">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:28.190+01:00"/>
+                    </auditTrail>
+                    <ComplexValue>
+                        <_defaultValue OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:d2fb3a81-498e-4032-989f-cd43bf340d3e"/>
+                    </ComplexValue>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:5175e266-e948-4ba3-8d18-c355d826de00"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericParameter name="Taxonomic Identification of Strain Used" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:070cd2e9-c449-4794-9cf0-676cf8716746" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:3b4fea92-1a21-4313-a299-49e9ba837569">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:28.761+01:00"/>
+                </auditTrail>
+                <ComplexValue>
+                    <_defaultValue OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:fcd8b670-a0e2-4963-af05-c4f8bc958397"/>
+                </ComplexValue>
+                <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:57d8fa66-a180-4a07-9743-ce8026709c28"/>
+            </GenericParameter>
+        </GenericProtocol>
+        <GenericProtocol name="cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenProtocolEndurant:71fbd89e-13c7-4ced-9d0d-199abf9956f2" identifier="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:15.569+01:00"/>
+            </auditTrail>
+            <descriptions>
+                <Description text="http://www.affymetrix.com/support/technical/manual/expression_manual.affx"/>
+            </descriptions>
+            <genPrtclToEquip GenericEquipment_ref="urn:lsid:cisban.cisbs.org:GenericEquipment:615db911-ee32-46fd-bed9-166e526a6e88"/>
+        </GenericProtocol>
+        <GenericProtocol name="cdc13-1/WT Microarray Sample Preparation (Component of CISBAN cdc13-1/WT Microarray Investigation)" endurant="urn:lsid:cisban.cisbs.org:GenProtocolEndurant:4cdd7879-4e81-401f-a14b-e69a8ce76daa" identifier="urn:lsid:cisban.cisbs.org:GenericProtocol:82cb4ddd-2993-4d58-b0fa-a02681521f92">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:15.062+01:00"/>
+            </auditTrail>
+        </GenericProtocol>
+        <GenericProtocol name="cdc13-1/WT Microarray Time Series (Component of CISBAN cdc13-1/WT Microarray Investigation)" endurant="urn:lsid:cisban.cisbs.org:GenProtocolEndurant:5ad00878-be2a-400f-8b6a-0724965ba4cb" identifier="urn:lsid:cisban.cisbs.org:GenericProtocol:d9248775-b438-4f5b-ab78-2c9810a4abdc">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:23.228+01:00"/>
+            </auditTrail>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="8" name="Time Point 240" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:24584894-01de-4809-965f-068b64012cdf" identifier="urn:lsid:cisban.cisbs.org:GenericAction:151e0b44-94ae-4627-9423-28c87bb6770e">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:22.286+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:c6d80427-0f57-42a0-a995-e074f376eab7" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:f6fb8e71-253c-4ce8-a95f-eb0977dc9425">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:22.228+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="240"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="1" name="Time Point 0" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:f4291ac4-2707-4880-b5bb-7aa225f71dcc" identifier="urn:lsid:cisban.cisbs.org:GenericAction:db561d3d-dc28-4e67-9249-a2ba7d1bd183">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:16.582+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:94ba74c6-b7cd-4bd6-a741-09e5bb8bd442" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:acc09bb3-b665-49d5-92e1-dec3ba461e32">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:16.533+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="0"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="5" name="Time Point 150" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:72bb2203-f468-41c5-bc87-4c3ae47be2f6" identifier="urn:lsid:cisban.cisbs.org:GenericAction:218a48e8-9b01-47c4-9298-b7d81c603a3a">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:19.872+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:6ee6091f-0ecc-462d-97ab-201c1a379122" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:5d08a06e-d52f-4687-8065-02408d3d2341">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:19.821+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="150"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="4" name="Time Point 120" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:3d4903e6-5c08-4a2d-a564-4eccc18029f0" identifier="urn:lsid:cisban.cisbs.org:GenericAction:7d0d8161-f384-441f-8701-8966dccd24c7">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:19.074+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:7eee6f1d-a3d2-4f34-8737-63cf8e71736b" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:e1238f9a-ef4c-4dff-b204-19621d149ad3">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:19.018+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="120"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="9" name="Time Point 270" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:6fb1ceb2-5a39-44a1-baeb-2b37e8244353" identifier="urn:lsid:cisban.cisbs.org:GenericAction:bf07f1b0-fd2e-4ee1-992c-e113cba22875">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:23.178+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:f363f9e4-c4f9-4780-a6cd-6fbc1f51c298" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:762b2929-1170-49ab-a4d0-4d93a04194e5">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:23.132+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="270"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="6" name="Time Point 180" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:c1d3bf26-6171-4d7d-a61b-38e902b78583" identifier="urn:lsid:cisban.cisbs.org:GenericAction:02e58253-1bc0-48ee-b738-daa094141b3e">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:20.678+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:4616f620-80fa-4b43-922d-504caab51604" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:bbcb8dd9-0175-4489-995a-8cacc077e38c">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:20.631+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="180"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="3" name="Time Point 90" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:537f1e3a-1ec7-4b29-bf8e-89fb18a70872" identifier="urn:lsid:cisban.cisbs.org:GenericAction:634b5aaf-5269-4378-9c39-13de40688b58">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:18.231+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:5e0364b6-b09c-4080-8088-c7c3949e0790" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:8d63caef-f6cd-421b-b142-85b20d1fc44c">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:18.183+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="90"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="7" name="Time Point 210" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:d7147ed5-7bab-424d-8ea3-4d2860bd64d8" identifier="urn:lsid:cisban.cisbs.org:GenericAction:015fa948-e073-4519-bb92-e9909c9e9754">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:21.472+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:069d4e76-d464-4b16-a539-12105e7ed529" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:ff8d770f-54fa-4eea-a97e-87d1b29b8322">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:21.422+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="210"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+            <GenericAction Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" actionOrdinal="2" name="Time Point 60" endurant="urn:lsid:cisban.cisbs.org:GenericActionEndurant:cf987646-ac3b-466f-a286-c55f50d9e499" identifier="urn:lsid:cisban.cisbs.org:GenericAction:d400eb36-6faa-4ae3-b8e0-55171bada0e9">
+                <auditTrail>
+                    <Audit action="creation" date="2007-10-11T11:03:17.472+01:00"/>
+                </auditTrail>
+                <GenericParameter name="Minutes after Inoculation" endurant="urn:lsid:cisban.cisbs.org:GenParamEndurant:a7d50919-c0c7-4117-9205-661ee88ce8c0" identifier="urn:lsid:cisban.cisbs.org:GenericParameter:9952f23c-b6d6-490d-bd96-0668690aa9b4">
+                    <auditTrail>
+                        <Audit action="creation" date="2007-10-11T11:03:17.422+01:00"/>
+                    </auditTrail>
+                    <AtomicValue defaultValue="60"/>
+                    <unit OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6"/>
+                </GenericParameter>
+            </GenericAction>
+        </GenericProtocol>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:19.290+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:af9e0496-4f01-4039-ad27-e9de05f37356" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:1b57dbe0-5427-4d8f-be25-99021cfc032c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:19.764+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:2f890900-7d68-4936-b5ce-3f13d62b223a"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:e201cee4-f4dd-4ea6-8d2e-b90b1c4e8031"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:e201cee4-f4dd-4ea6-8d2e-b90b1c4e8031"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:09.847+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:549854de-179c-4206-8e3a-e38ea939ace5" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:3408ec64-5d56-4cee-867d-f2065a60a12c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:10.335+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:4d6efb44-6d35-4ee1-aba5-864d31df8c63"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:3f56436d-bc95-4ffb-b596-2f0fbb54750e"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:3f56436d-bc95-4ffb-b596-2f0fbb54750e"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:58.617+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:9d797734-c2ec-41d6-bd50-0be6759fc7d9" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:129701da-1e2e-4552-a83a-0bbc45832fdd">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:59.140+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:93761aaa-3bd8-421a-988d-ecf9a0024ee2"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:c16b49ba-ebb0-4afe-becb-4743190d48ea"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:c16b49ba-ebb0-4afe-becb-4743190d48ea"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:52.369+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:978b1b79-8060-43ba-ac09-2de59bb9376b" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:449347e8-9e8e-40db-996b-a4cb1105c2a0">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:52.839+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:632ef457-335f-41e3-8d7d-164e1ccb1e6b"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:70e5f7ce-b91d-4ea9-99b0-af413bef29c4"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:70e5f7ce-b91d-4ea9-99b0-af413bef29c4"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:45.946+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:9f1fdf04-f52b-4f9b-a116-865384162170" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:49b98f6d-bed4-47b1-a32e-a8de0a9ad149">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:46.411+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:78a6bf89-8154-446b-9ed9-6a01bf1d5ad4"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:dde07406-327f-4a47-8148-da7c7799ee33"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:dde07406-327f-4a47-8148-da7c7799ee33"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:56.551+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:fb396a74-1469-4667-979e-b77fd58ff679" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:d5fde742-6cca-4a1b-8916-53fb22f24120">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:57.018+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:5bcd1987-f177-4979-8888-3d05cd4b97ae"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:269c82d3-a299-4bb1-a7db-829519d0b534"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:269c82d3-a299-4bb1-a7db-829519d0b534"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:07.716+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:c6462bec-fa8c-4415-bdd0-be61f8921f9a" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:3b2b14cf-f374-457f-b7a4-8688e8aed66a">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:08.201+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:3f6a39b0-b186-48cf-9e99-1d17d3f4127a"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:79e76702-3d6a-4063-9115-97d7c9c0aaee"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:79e76702-3d6a-4063-9115-97d7c9c0aaee"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:d9248775-b438-4f5b-ab78-2c9810a4abdc" activityDate="2007-10-11T14:49:06.236+01:00" name="Actual Application/Performance of cdc13-1/WT Microarray Time Series (Component of CISBAN cdc13-1/WT Microarray Investigation) for Experiment cdc13 microarrays" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:69ecbe29-8b96-40f6-8ac0-531045f951e3" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:90f1072b-dc6c-4816-9a27-33e56b29691f">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T15:18:10.431+01:00"/>
+            </auditTrail>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:29b2d70a-ff9f-42bd-b783-ad1a702581bf" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:db561d3d-dc28-4e67-9249-a2ba7d1bd183"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:7f359812-9488-4178-9da9-074b1947f939" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:d400eb36-6faa-4ae3-b8e0-55171bada0e9"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:db65c061-db0c-4535-8a25-b802f3a874f7" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:7d0d8161-f384-441f-8701-8966dccd24c7"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:e01ee706-f802-4b45-94fc-d8f25776c79f" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:02e58253-1bc0-48ee-b738-daa094141b3e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:5b5afcba-9747-4d1b-b802-752220eea187" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:151e0b44-94ae-4627-9423-28c87bb6770e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:313f1aa2-d94a-4480-9ae4-a3b5178e5573" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:db561d3d-dc28-4e67-9249-a2ba7d1bd183"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:8c8c8d8e-5722-4e3b-b05d-6e73f5466989" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:d400eb36-6faa-4ae3-b8e0-55171bada0e9"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:e8ce3164-b069-40b2-9fc6-e8c9a8cf59df" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:7d0d8161-f384-441f-8701-8966dccd24c7"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:49b98f6d-bed4-47b1-a32e-a8de0a9ad149" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:02e58253-1bc0-48ee-b738-daa094141b3e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:758c8297-dc92-472e-8a4f-aff29841ae1c" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:151e0b44-94ae-4627-9423-28c87bb6770e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:814d0093-d7c1-4418-9edc-1128582270bf" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:db561d3d-dc28-4e67-9249-a2ba7d1bd183"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:5874d683-e9af-4452-acd1-0014d1b8fda5" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:d400eb36-6faa-4ae3-b8e0-55171bada0e9"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:5261cdf4-63c5-4b77-aa98-e0d1f73a3026" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:7d0d8161-f384-441f-8701-8966dccd24c7"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:3b2b14cf-f374-457f-b7a4-8688e8aed66a" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:02e58253-1bc0-48ee-b738-daa094141b3e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:3408ec64-5d56-4cee-867d-f2065a60a12c" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:151e0b44-94ae-4627-9423-28c87bb6770e"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:54.426+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:6af4666f-670d-495a-bf31-de2bc6b77942" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:3a200bc3-8c9b-4016-acf6-7d468abe6b42">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:54.908+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:163504d1-ee91-47cc-87da-825e8cf21a09"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:1b2fa535-9c23-4cde-a526-bee51d660e88"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:1b2fa535-9c23-4cde-a526-bee51d660e88"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:41.687+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:5983dcaa-2f38-4f1e-aa68-55153cd77f60" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:8c8c8d8e-5722-4e3b-b05d-6e73f5466989">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:42.169+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:624f5f0d-8a57-4285-a9c3-507b42755364"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:58635d03-5275-428d-ae9f-732fb37ab1d5"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:58635d03-5275-428d-ae9f-732fb37ab1d5"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:d9248775-b438-4f5b-ab78-2c9810a4abdc" activityDate="2007-10-11T14:49:17.251+01:00" name="Actual Application/Performance of cdc13-1/WT Microarray Time Series (Component of CISBAN cdc13-1/WT Microarray Investigation) for Experiment cdc13 microarrays" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:b8d3f288-3c22-4a8e-8aee-d23e216b4265" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:ff8d79c8-894b-4a1e-bde9-d5781bd76ddc">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T15:18:20.972+01:00"/>
+            </auditTrail>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:6cac16ee-22be-4819-a626-c50e6107c72e" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:db561d3d-dc28-4e67-9249-a2ba7d1bd183"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:1b57dbe0-5427-4d8f-be25-99021cfc032c" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:d400eb36-6faa-4ae3-b8e0-55171bada0e9"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:777f17de-b045-4222-8259-0557567706aa" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:7d0d8161-f384-441f-8701-8966dccd24c7"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:198b4d9f-2ecf-4b75-9c0f-890874189a1c" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:02e58253-1bc0-48ee-b738-daa094141b3e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:7c56c4c6-ede4-40a1-9822-addb624f338f" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:151e0b44-94ae-4627-9423-28c87bb6770e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:a167d7bc-cf31-466e-86ef-09475a21945a" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:db561d3d-dc28-4e67-9249-a2ba7d1bd183"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:449347e8-9e8e-40db-996b-a4cb1105c2a0" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:d400eb36-6faa-4ae3-b8e0-55171bada0e9"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:3a200bc3-8c9b-4016-acf6-7d468abe6b42" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:7d0d8161-f384-441f-8701-8966dccd24c7"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:d5fde742-6cca-4a1b-8916-53fb22f24120" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:02e58253-1bc0-48ee-b738-daa094141b3e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:129701da-1e2e-4552-a83a-0bbc45832fdd" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:151e0b44-94ae-4627-9423-28c87bb6770e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:075a3ea9-c1c6-495a-9424-076ce2d79bb0" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:db561d3d-dc28-4e67-9249-a2ba7d1bd183"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:30a4389a-dd8b-4083-87c6-c881cd6fb01c" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:d400eb36-6faa-4ae3-b8e0-55171bada0e9"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:b97354e9-3511-466d-a06c-050fdfa755e4" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:7d0d8161-f384-441f-8701-8966dccd24c7"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:91c3e6c9-af92-4313-b161-5b80599b9304" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:02e58253-1bc0-48ee-b738-daa094141b3e"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:ad9bcafd-3d33-43c7-902f-7712a45ba2b6" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:151e0b44-94ae-4627-9423-28c87bb6770e"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:10.315+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:8f0a083c-d3de-4001-ae40-20077543b636" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:db65c061-db0c-4535-8a25-b802f3a874f7">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:10.778+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:bce12118-8cd1-48e6-ad82-b79c784d2e60"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:6e84f66a-cb51-47e2-bdee-9da120ebd3f9"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:6e84f66a-cb51-47e2-bdee-9da120ebd3f9"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:25.863+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:2422c2cf-5895-40ff-9953-c2c287b01ddf" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:7c56c4c6-ede4-40a1-9822-addb624f338f">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:26.371+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:8083705b-a861-436d-af52-f1b60a591dfb"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:125df107-1077-4a05-91de-c820312f8bd9"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:125df107-1077-4a05-91de-c820312f8bd9"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:48.116+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:31688dad-e4d7-4887-99d8-3df11a44f2cf" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:758c8297-dc92-472e-8a4f-aff29841ae1c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:48.622+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:f50d7ba0-d072-4e38-861f-8f4280d46b8e"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:0c77441a-a526-48b9-8fd8-2fb5f95a014c"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:0c77441a-a526-48b9-8fd8-2fb5f95a014c"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:767ff7d4-9fa5-4b46-bb38-105effb3822b" activityDate="2007-10-11T14:49:06.200+01:00" name="Actual Application/Performance of CISBAN cdc13-1/WT Microarray Investigation for Investigation cdc13 microarrays" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:83192e1a-99c4-40fc-be70-eb97118eb1ff" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:ab68ab6a-dcd4-4f3e-9d57-0d1580425789">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:21.104+01:00"/>
+            </auditTrail>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:ff8d79c8-894b-4a1e-bde9-d5781bd76ddc" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:b546c501-764e-4bbb-a7aa-cb85b370a0e0"/>
+            <ActionApplication ProtocolApplication_ref="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:90f1072b-dc6c-4816-9a27-33e56b29691f" Action_ref="urn:lsid:cisban.cisbs.org:GenericAction:0ea5792e-4b7e-4afc-afcc-e667ee70dd10"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:00.758+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:9ea0faf5-533a-445f-b8aa-6d193a7a0ad7" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:814d0093-d7c1-4418-9edc-1128582270bf">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:01.243+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:6c53faf7-1658-4f6b-bb62-334d7240d5dc"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:e0d91403-3f60-4db9-9049-64583ef4171a"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:e0d91403-3f60-4db9-9049-64583ef4171a"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:14.403+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:580ff53f-42d2-4880-bad9-3d65ec1e9243" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:5b5afcba-9747-4d1b-b802-752220eea187">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:14.867+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:702ae454-4b00-49f5-8110-0c8372d4b136"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:cfab3ec4-6d82-474b-99b6-5f2d52f5594f"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:cfab3ec4-6d82-474b-99b6-5f2d52f5594f"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:18.327+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:bad89a57-b841-4a4c-b702-3543cb239483" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:91c3e6c9-af92-4313-b161-5b80599b9304">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:18.813+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:51b5ee35-927f-48f4-8b97-2e889371d069"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:5204b5b6-d382-4802-bb4b-4db4fa28eb92"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:5204b5b6-d382-4802-bb4b-4db4fa28eb92"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:11.907+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:f5ac14bc-fb17-4184-8a0e-74d61303f19d" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:075a3ea9-c1c6-495a-9424-076ce2d79bb0">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:12.379+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:71ffe01d-5885-41d9-8365-1cc7fb0fe719"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:3ec795c2-cca6-407c-9dc7-9d006b9450c9"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:3ec795c2-cca6-407c-9dc7-9d006b9450c9"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:43.892+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:61791177-6762-46cb-bc51-adbbb463144b" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:e8ce3164-b069-40b2-9fc6-e8c9a8cf59df">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:44.374+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:6c68043c-dc1d-4b7b-a85c-84ff16a98d2a"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:e75e6a36-378a-4b97-8854-fe30246a27ff"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:e75e6a36-378a-4b97-8854-fe30246a27ff"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:02.837+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:6b61accb-2599-4b89-81f3-04d54c15fdf6" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:5874d683-e9af-4452-acd1-0014d1b8fda5">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:03.361+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:beba5492-cbdd-46cf-b07f-9ddedb67155c"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:12828ed5-2e63-45ee-8305-bfadaf94b073"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:12828ed5-2e63-45ee-8305-bfadaf94b073"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:04.947+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:ffa4362d-b051-4c7e-b626-8c509634b319" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:5261cdf4-63c5-4b77-aa98-e0d1f73a3026">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:06.097+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:7b4818a8-5769-4ba5-b929-7d389f0f15a3"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:b66de72e-ea97-4572-8d04-a0c9f683bc18"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:b66de72e-ea97-4572-8d04-a0c9f683bc18"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:23.587+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:5168f36f-3fc8-4423-8c76-240aa27fa2a5" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:198b4d9f-2ecf-4b75-9c0f-890874189a1c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:24.055+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:ff343b29-5c81-4d0d-8146-e482d4a98d56"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:8a2ecf63-0fe1-4e98-a7ba-1cb2f457fa06"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:7d09148a-2322-4ac5-9604-4b8355c1ea01"/>              
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:8a2ecf63-0fe1-4e98-a7ba-1cb2f457fa06"/>         
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:21.334+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:0566d8f0-2428-47bb-8966-4848923f74ae" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:777f17de-b045-4222-8259-0557567706aa">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:21.802+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:1cc37d66-e052-44ee-9fae-6ce5eff063ba"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:7d09148a-2322-4ac5-9604-4b8355c1ea01"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:7d09148a-2322-4ac5-9604-4b8355c1ea01"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:12.346+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:188c86b7-5921-4006-af38-9842d0d68aee" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:e01ee706-f802-4b45-94fc-d8f25776c79f">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:12.849+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:23a611a6-767e-4e16-9013-d6c18ab8f652"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:973ae7b2-d70b-499e-8eb8-0b3ad88e3afe"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:973ae7b2-d70b-499e-8eb8-0b3ad88e3afe"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:20.397+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:18db2342-d5bc-46be-9cc7-bf81680fa0c2" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:ad9bcafd-3d33-43c7-902f-7712a45ba2b6">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:20.887+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:954a31fb-31df-4833-9419-6f15a4474b97"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:361674e1-4956-4caa-b10a-20346b72032e"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:361674e1-4956-4caa-b10a-20346b72032e"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:06.270+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:1a8951e1-8185-4037-8b4b-a18107bd1b9e" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:29b2d70a-ff9f-42bd-b783-ad1a702581bf">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:06.731+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:c8fe4cef-a5e0-4c3e-9858-ec2f477ce0c4"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:85fa2f5b-3251-4588-a82a-e96af250a171"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:85fa2f5b-3251-4588-a82a-e96af250a171"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:39.473+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:6f976b31-d465-4f5e-b294-a6ea89e18d8a" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:313f1aa2-d94a-4480-9ae4-a3b5178e5573">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:39.974+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:69c95f3b-ab82-45d0-a046-872b0d736633"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:b3f06269-b989-49dd-a231-ee971cdbe52d"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:b3f06269-b989-49dd-a231-ee971cdbe52d"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:08.314+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:77a36591-ead8-4cef-9661-3c2cb50daf6b" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:7f359812-9488-4178-9da9-074b1947f939">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:08.777+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:99fc7d42-4819-45ff-99e9-bd3a25daf2c1"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:9869981c-5729-4e13-bc74-a3a19eab2504"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:9869981c-5729-4e13-bc74-a3a19eab2504"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:17:50.269+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:e00bf5d5-e09d-454c-b412-d84623a72537" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:a167d7bc-cf31-466e-86ef-09475a21945a">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:17:50.775+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:22ae3af9-96d4-4a7e-b87e-ec1202a348e1"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:b19d612f-cced-4fae-9472-8d059c0c14d6"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:b19d612f-cced-4fae-9472-8d059c0c14d6"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:14.007+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:ab4048d6-23d8-423a-b080-b18ddfc6f6d2" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:30a4389a-dd8b-4083-87c6-c881cd6fb01c">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:14.478+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:4efef7e5-aab5-4560-86f7-6246cedeb0d3"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:1d953a95-6578-4116-a60b-fddb08ff9ca3"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:1d953a95-6578-4116-a60b-fddb08ff9ca3"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T15:18:16.288+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:8875c040-fd62-41e8-a179-599bdc17513c" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:b97354e9-3511-466d-a06c-050fdfa755e4">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T15:18:16.759+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:d936f0dc-63c9-4eda-b790-ac0ecb041139"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:eb908bfe-4442-4a95-ab33-12184eeec22c"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:eb908bfe-4442-4a95-ab33-12184eeec22c"/>
+        </GenericProtocolApplication>
+        <GenericProtocolApplication Protocol_ref="urn:lsid:cisban.cisbs.org:GenericProtocol:14476baa-eb2b-41ec-a9be-1c721b99cd47" activityDate="2007-10-11T14:49:17.287+01:00" name="Actual Application/Performance of a cdc13-1/WT Microarray Assay (Component of cdc13-1/WT Microarray Time Series)" endurant="urn:lsid:cisban.cisbs.org:GenPrtclAppEndurant:d34dd77c-8ad6-4f2f-a553-0299b3a45f5a" identifier="urn:lsid:cisban.cisbs.org:GenericProtocolApplication:6cac16ee-22be-4819-a626-c50e6107c72e">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:17.753+01:00"/>
+            </auditTrail>
+            <genericOutputData Data_ref="urn:lsid:cisban.cisbs.org:ExternalData:2d88ffba-672a-4a39-9a72-b213fa5423e5"/>
+            <genericOutputMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:85776bba-2581-4f88-8464-d9b4a27379da"/>
+            <genericInputCompleteMaterials Material_ref="urn:lsid:cisban.cisbs.org:GenericMaterial:85776bba-2581-4f88-8464-d9b4a27379da"/>
+        </GenericProtocolApplication>
+        <GenericEquipment name="Microarray Chip: Affymetrix Yeast Genome 2.0" endurant="urn:lsid:cisban.cisbs.org:GenEquipEndurant:2a583ff1-d669-4ddf-bf2a-719921c6f4b6" identifier="urn:lsid:cisban.cisbs.org:GenericEquipment:615db911-ee32-46fd-bed9-166e526a6e88">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:14.725+01:00"/>
+            </auditTrail>
+        </GenericEquipment>
+    </ProtocolCollection>
+    <OntologyCollection>
+        <OntologyIndividual OntologySource_ref="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4" termAccession="accession to come" term="WT 1" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:34778c5f-87e9-4485-9355-0e1b8f87ec94" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:6a26470d-c90d-4756-8587-b980abea20ce">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:11.758+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual OntologySource_ref="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4" termAccession="accession to come" term="WT 2" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:e1fbc45b-c971-4bd2-8bf1-09a071cc6bc3" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:90a0ad27-f6b7-45a9-b549-c691e85db180">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:12.120+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual OntologySource_ref="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4" termAccession="accession to come" term="Mut 2" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:d790c384-0cb4-4465-a42e-d5d52b7e7de6" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:d7e127b5-f0b8-47e5-bef0-a04f1746695b">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:13.616+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual termAccession="accession to come" term="strain" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:af6db223-3185-4371-9f26-613ce1e53ef7" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:9a018c29-6d38-4ad0-98a1-707942abf193">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:04:07.273+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual termAccession="accession to come" term="cdc13-1" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:33f1c9fc-c251-4087-a275-60d1ef3e0b05" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:d2fb3a81-498e-4032-989f-cd43bf340d3e">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:10.690+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual termAccession="accession to come" term="S288C" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:078118d8-6724-42b6-8856-d18c509509c3" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:fcd8b670-a0e2-4963-af05-c4f8bc958397">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:11.362+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual OntologySource_ref="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4" termAccession="accession to come" term="Mut 3" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:7526bc04-5f5d-4e6c-9500-9f8cf501dc3a" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:dca24f90-1369-4a6b-b0bd-1b5ef5d20a4a">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:14.014+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual termAccession="accession to come" term="mutation" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:52b96f4c-ed2e-47e9-aeeb-269edf2e0fdf" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:5175e266-e948-4ba3-8d18-c355d826de00">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:10.916+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual termAccession="accession to come" term="Principal Investigators" name="Principal Investigator" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:fa92ddae-a581-4e4b-9bcc-b29f79428c64" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:3b9d564f-4824-4fac-a54c-a60442d5bb97">
+            <auditTrail>
+                <Audit Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:27.542+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual termAccession="accession to come" term="minute" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:be8cea26-286c-4b29-8c55-4cf558095d3a" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:62eee36e-1a45-4eaa-b16b-aac317eea5d6">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:10.217+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual termAccession="accession to come" term="CDC13+" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:8f97a98b-21f8-496c-b648-db9ced5ccf4c" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:fa02d8b8-170f-4fd0-8a65-842c02a2ddb3">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:10.450+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual OntologySource_ref="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4" termAccession="accession to come" term="Mut 1" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:ff9c092e-b46c-4fe8-b681-8df7962e7aa4" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:f7d294eb-296d-4957-9058-2a4ff1d7159a">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:13.244+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual OntologySource_ref="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4" termAccession="accession to come" term="WT 3" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:61138a40-f9d9-4117-a045-dde2a9046f5d" identifier="urn:lsid:cisban.cisbs.org:OntologyIndividual:7a982fa0-8cf4-48b6-8d00-7123e5b50913">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:12.467+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>
+        <OntologyIndividual OntologySource_ref="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4" termAccession="accession to come" term="CELv3" endurant="urn:lsid:cisban.cisbs.org:OntoIndvEndurant:61138a40-f9d9-4117-a045-dde2a9046f5d" identifier="xml">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:12.467+01:00"/>
+            </auditTrail>
+        </OntologyIndividual>        
+        <OntologySource ontologyURI="http://www.cisban.ac.uk" name="strain name CV" endurant="urn:lsid:cisban.cisbs.org:OntoSourceEndurant:fd04bbe6-9847-4c6d-957c-5e0e60fdf9ed" identifier="urn:lsid:cisban.cisbs.org:OntologySource:6103cb4a-b8be-4c3e-bde7-86f91be574f4">
+            <auditTrail>
+                <Audit action="creation" date="2007-10-11T11:03:09.981+01:00"/>
+            </auditTrail>
+            <descriptions>
+                <Description text="Instructions: Please select which strain was used in the creation of this data file."/>
+            </descriptions>
+        </OntologySource>
+    </OntologyCollection>
+    <Provider name="Main Provider of Experiment: cdc13 microarrays" endurant="urn:lsid:cisban.cisbs.org:ProviderEndurant:c9eb3c80-aade-468f-b16a-b8786bbc64c4" identifier="urn:lsid:cisban.cisbs.org:Provider:80478d9d-e932-4db4-81b3-3362cc91d2c9">
+        <auditTrail>
+            <Audit tt_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e" action="creation" date="2007-10-11T14:49:27.662+01:00"/>
+        </auditTrail>
+        <ContactRole Contact_ref="urn:lsid:cisban.cisbs.org:Person:ae6b50c6-ed0a-4582-8041-1b2bdd90ea9e">
+            <role OntologyTerm_ref="urn:lsid:cisban.cisbs.org:OntologyIndividual:3b9d564f-4824-4fac-a54c-a60442d5bb97"/>
+        </ContactRole>
+    </Provider>
+</FuGE>

@@ -1,0 +1,3660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT request="SRS173206-SRS173223&amp;display=xml"><SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:sample:MOR3_2_011208" accession="SRS173206" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173206</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:sample:MOR3_2_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR3_2_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216284</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044491</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108948</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173206</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173206</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR3_2_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>22.9411</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.02</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>197.728</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.0851</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>3.16E-08</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>40 nautical miles North of Oponohu Bay, Moorea</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-16.9517</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-150.0567</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.0084</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.74</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.12</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.9</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>22843</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2715900</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_2_011408" accession="SRS173207" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173207</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_2_011408</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR9_2_011408</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216285</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044493</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108949</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173207</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173207</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR9_2_011408</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0324</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.2063</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>70</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.079</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.63</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>Fore Reef</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>LTER 1</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.44</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.475</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>4.21</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.837</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.312</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-14T10:30+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9145</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.11</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.1526</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>0.9</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>1.02</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.264</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>25544</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3022538</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_1_011308" accession="SRS173208" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173208</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_1_011308</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR4_1_011308</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216286</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044492</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108950</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173208</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173208</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR4_1_011308</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0454</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.03</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>192.122</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.0543</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>522</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>60 miles North of Moorea, heading West</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-16.3767</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-150.145</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-166.5217</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-13T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9678</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.319</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.2355</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>19809</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2354470</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_1_011208" accession="SRS173209" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173209</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_1_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR6_1_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216287</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044494</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108951</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173209</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173209</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR6_1_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0056</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0769</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>69</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.024</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.34</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>fringing reef [ENVO:00000130]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Fringe 1</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.36</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4849</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>3.66</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8337</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.3186</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:21+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9109</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.14</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.2256</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.32</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>0.85</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.255</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>14773</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>1745136</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_1_011208" accession="SRS173210" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173210</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_1_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR5_1_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216288</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044495</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108952</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173210</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173210</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR5_1_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>22.9281</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0933</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>62</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.062</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.41</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>lagoon [ENVO:00000038]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Lagoon 1</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.48</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4779</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>5.2</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8421</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.32</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T11:15+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9045</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.14</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.4459</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.45</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>0.83</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>1.501</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>31484</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3718055</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_2_011208" accession="SRS173211" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173211</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_2_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR5_2_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216289</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044496</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108953</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173211</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173211</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR5_2_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>22.9281</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0933</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>62</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.062</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.41</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>lagoon [ENVO:00000038]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Lagoon 1</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.48</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4779</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>5.2</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8421</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.32</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T11:15+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9045</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.14</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.4459</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.45</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>0.83</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>1.501</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17569</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2074104</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_1_011208" accession="SRS173212" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173212</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_1_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR2_1_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216290</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044497</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108954</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173212</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173212</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR2_1_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>25.056</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.038</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>175.873</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.108</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>2.161651259</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>1.00E-12</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>1 mile North of Oponohu Bay, Moorea</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4333</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8633</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.2966</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9643</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.145</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>21.6641</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 200 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>6910</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>825773</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR3_1_011208" accession="SRS173213" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173213</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR3_1_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR3_1_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216291</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044498</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108955</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173213</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173213</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR3_1_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>22.9411</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.02</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>197.728</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.0851</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>3.16E-08</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>40 nautical miles North of Oponohu Bay, Moorea</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-16.9517</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-150.0567</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.0084</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.74</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.12</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.9</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>21398</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2540714</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_1_011208" accession="SRS173214" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173214</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_1_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR7_1_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216292</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044499</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108956</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173214</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173214</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR7_1_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>22.8696</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0769</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>65</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.166</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.34</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>Cooks Bay</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Cooks Bay</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4896</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>7.91</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8227</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.3123</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:55+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9124</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.13</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.64</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.32</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>0.85</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.48</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>36879</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4355647</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_1_011408" accession="SRS173215" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173215</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_1_011408</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR9_1_011408</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216293</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044500</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108957</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173215</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173215</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR9_1_011408</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0324</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.2063</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>70</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.079</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.63</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>Fore Reef</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>LTER 1</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.44</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.475</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>4.21</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.837</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.312</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-14T10:30+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9145</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.11</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.1526</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>0.9</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>1.02</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.264</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>33909</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4016697</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_2_011408" accession="SRS173216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173216</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_2_011408</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR8_2_011408</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216294</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044501</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108958</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173216</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173216</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR8_2_011408</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0631</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0552</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>76</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.01</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.34</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Offshore 1, 5K Offshore</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.435</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4271</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>2.99</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8183</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.2454</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-14T08:48+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.8926</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.12</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.009</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.54</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>1.1</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.246</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>39853</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4732494</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_1_011408" accession="SRS173217" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173217</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_1_011408</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR8_1_011408</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216295</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044502</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108959</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173217</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173217</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR8_1_011408</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0631</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0552</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>76</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.01</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.34</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Offshore 1, 5K Offshore</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.435</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4271</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>2.99</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8183</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.2454</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-14T08:48+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.8926</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.12</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.009</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.54</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>1.1</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.246</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>6721</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>241604</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_2_011208" accession="SRS173218" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173218</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_2_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR6_2_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216296</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044503</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108960</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173218</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173218</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR6_2_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0056</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0769</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>69</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.024</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.34</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>fringing reef [ENVO:00000130]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Fringe 1</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>0.36</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4849</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>3.66</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8337</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.3186</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:21+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9109</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.14</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.2256</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.32</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>0.85</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.255</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>25979</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3077916</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_2_011208" accession="SRS173219" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173219</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_2_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR1_2_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216297</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044504</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108961</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173219</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173219</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR1_2_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.05</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.048</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>155.562</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.0545</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>3.16E-08</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>1 mile North of Oponohu Bay, Moorea</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4333</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8633</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.2966</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.92</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.072</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.1</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17935</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2104196</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_2_011308" accession="SRS173220" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173220</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_2_011308</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR4_2_011308</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216298</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044505</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108962</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173220</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173220</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR4_2_011308</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.0454</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.03</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>192.122</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.0543</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>522</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>60 miles North of Moorea, heading West</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-16.3767</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-150.145</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-166.5217</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-13T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9678</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.319</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.2355</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>27005</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3200328</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_2_011208" accession="SRS173221" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173221</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_2_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR2_2_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216299</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044506</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108963</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173221</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173221</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR2_2_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>25.056</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.038</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>175.873</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.108</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>2.161651259</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>1.00E-12</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>1 mile North of Oponohu Bay, Moorea</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4333</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8633</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.2966</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9643</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.145</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>21.6641</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 200 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>200</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>7166</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>855796</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_2_011208" accession="SRS173222" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173222</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_2_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR7_2_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216300</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044507</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108964</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173222</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173222</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR7_2_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>22.8696</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.0769</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_org_carb</TAG>
+               <VALUE>65</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.166</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>nitrite_plus_nitrate</TAG>
+               <VALUE>0.34</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>Cooks Bay</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>Cooks Bay</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_nitro</TAG>
+               <VALUE>1</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4896</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>part_org_carv</TAG>
+               <VALUE>7.91</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8227</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.3123</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:55+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.9124</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.13</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.64</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>5</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>silicate</TAG>
+               <VALUE>1.32</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ammonium</TAG>
+               <VALUE>0.85</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>5.48</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17934</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2113280</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_1_011208" accession="SRS173223" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRS173223</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_1_011208</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>MOR1_1_011208</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>408172</TAXON_ID>
+          <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <SAMPLE_LINKS>
+          <SAMPLE_LINK>
+               <ENTREZ_LINK>
+                    <DB>biosample</DB>
+                    <ID>216301</ID>
+               </ENTREZ_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044508</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108965</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRS173223</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+          <SAMPLE_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRS173223</ID>
+               </XREF_LINK>
+          </SAMPLE_LINK>
+     </SAMPLE_LINKS>
+     <SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ogl_reference_name</TAG>
+               <VALUE>MOR1_1_011208</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>density</TAG>
+               <VALUE>23.05</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>Material Type</TAG>
+               <VALUE>water column</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>chlorophyll</TAG>
+               <VALUE>0.048</VALUE>
+               <UNITS>microgram per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment</TAG>
+               <VALUE>seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_biome</TAG>
+               <VALUE>marine biome [ENVO:00000447]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>diss_oxygen</TAG>
+               <VALUE>155.562</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_feature</TAG>
+               <VALUE>marine habitat [ENVO:00000569]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>fluorescence</TAG>
+               <VALUE>0.0545</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>envo_material</TAG>
+               <VALUE>sea water [ENVO:00002149]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>season</TAG>
+               <VALUE>summer;rainy season</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>country</TAG>
+               <VALUE>French Polynesia</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>general_location</TAG>
+               <VALUE>offshore area [ENVO:00000090]</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>par_irradiance</TAG>
+               <VALUE>3.16E-08</VALUE>
+               <UNITS>microeinstein</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lter_station_name</TAG>
+               <VALUE>1 mile North of Oponohu Bay, Moorea</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ocean_basin</TAG>
+               <VALUE>South Pacific</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat</TAG>
+               <VALUE>-17.4333</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lon</TAG>
+               <VALUE>-149.8633</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>lat_lon</TAG>
+               <VALUE>-167.2966</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection_date</TAG>
+               <VALUE>2008-01-12T08:50+10</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>salinity</TAG>
+               <VALUE>35.92</VALUE>
+               <UNITS>PSU</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>phosphate</TAG>
+               <VALUE>0.072</VALUE>
+               <UNITS>micromole per liter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_end</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>temp</TAG>
+               <VALUE>28.1</VALUE>
+               <UNITS>degree C</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_start</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>meter</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>depth_category</TAG>
+               <VALUE>top 50 m</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>rel_to_oxygen</TAG>
+               <VALUE>oxic</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>atm_press</TAG>
+               <VALUE>2</VALUE>
+               <UNITS>dbar</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>21974</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2607912</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+</ROOT>

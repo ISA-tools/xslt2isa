@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RUN_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.run.xsd">
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_9_1B.30" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_9_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_9_1B.sff" checksum_method="MD5" checksum="8309a7208a792654b7a365f1f8d3a0cf"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_8_1B.28" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_8_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_8_1B.sff" checksum_method="MD5" checksum="882454575e57d3013466180f0a21d12c"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_3_2B.19" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_3_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_3_2B.sff" checksum_method="MD5" checksum="e3e597b01f3dbf84e241f2a8d15077e6"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_1_1B.14" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_1_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_1_1B.sff" checksum_method="MD5" checksum="8e03a586312499c31e7e581f9bfec958"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_3_1B.18" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_3_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_3_1B.sff" checksum_method="MD5" checksum="8fe38207c82a361a364f04019b1f3a86"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_1_2B.15" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_1_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_1_2B.sff" checksum_method="MD5" checksum="d387c542a3ca3ac08c9193e3a7bdd9d7"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_7_1B.26" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_7_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_7_1B.sff" checksum_method="MD5" checksum="a63928031ec861559f8593e1e087e58a"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_2_1B.16" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_2_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_2_1B.sff" checksum_method="MD5" checksum="47805d6daf4def8678a5b3ab8fc73891"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_4_1B.20" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_4_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_4_1B.sff" checksum_method="MD5" checksum="fe5ce14b2724f220d1fd3f3e2bcc87bd"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_5_1B.22" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_5_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_5_1B.sff" checksum_method="MD5" checksum="fd9617414c3695c76512f9041a1484ac"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_5_2B.23" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_5_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_5_2B.sff" checksum_method="MD5" checksum="d91996314b215995a4d0f95d8f1fc6b3"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_6_1B.24" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_6_1B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_6_1B.sff" checksum_method="MD5" checksum="4d5f7f12b612152dafd20d21ab632d79"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_6_2B.25" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_6_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_6_2B.sff" checksum_method="MD5" checksum="72ac862f23cd7e2cd61a90b07ff923ce"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_9_2B.31" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_9_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_9_2B.sff" checksum_method="MD5" checksum="54a7b8e5b28fdfa9c2976523dba4e9d0"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_7_2B.27" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_7_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_7_2B.sff" checksum_method="MD5" checksum="6dfafd1ca8f99b5424494e8d026b4cbf"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_4_2B.21" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_4_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_4_2B.sff" checksum_method="MD5" checksum="87e5fc5e58b9a4b24949bac436f27999"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_2_2B.17" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_2_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_2_2B.sff" checksum_method="MD5" checksum="26fc8390a2fc272e97d075bda807b1cc"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="LAM-454-MBL-PALMER-STATION:assay:PAL_8_2B.29" center_name="MBL" broker_name="ISAcreator">
+    <EXPERIMENT_REF refname="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_8_2B"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filetype="sff" filename="PAL_8_2B.sff" checksum_method="MD5" checksum="ab8a81ac6ebc348b4e5e8205e8552fb5"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+</RUN_SET>

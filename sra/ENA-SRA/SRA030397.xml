@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT request="SRA030397&amp;display=xml"><SUBMISSION xsi:noNamespaceSchemaLocation="../../sra/sra/doc/SRA.submission.xsd" center_name="MBL" broker_name="ISA converter" lab_name="Bay Paul Center" alias="ISA_LAZ1" submission_date="2011-02-10T00:00:00Z" accession="SRA030397" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRA030397</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">ISA_LAZ1</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>Submitted by Marine Biological Laboratory on 10-FEB-2011</TITLE>
+     <SUBMISSION_LINKS>
+          <SUBMISSION_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </SUBMISSION_LINK>
+          <SUBMISSION_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173206-SRS173223</ID>
+               </XREF_LINK>
+          </SUBMISSION_LINK>
+          <SUBMISSION_LINK>
+               <XREF_LINK>
+                    <DB>ENA-EXPERIMENT</DB>
+                    <ID>SRX044491-SRX044508</ID>
+               </XREF_LINK>
+          </SUBMISSION_LINK>
+          <SUBMISSION_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108948-SRR108965</ID>
+               </XREF_LINK>
+          </SUBMISSION_LINK>
+          <SUBMISSION_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRA030397</ID>
+               </XREF_LINK>
+          </SUBMISSION_LINK>
+     </SUBMISSION_LINKS>
+     <SUBMISSION_ATTRIBUTES>
+          <SUBMISSION_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>395685</VALUE>
+          </SUBMISSION_ATTRIBUTE>
+          <SUBMISSION_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>46302560</VALUE>
+          </SUBMISSION_ATTRIBUTE>
+     </SUBMISSION_ATTRIBUTES>
+</SUBMISSION>
+</ROOT>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAMPLE_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.sample.xsd">
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="BII-theroux:source:SMT_BS09">
+    <TITLE>BII-theroux:source:SMT_BS09</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>449393</TAXON_ID>
+      <SCIENTIFIC_NAME>freshwater metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>26/06/2009</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>Greenland</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:00000873; ENVO:00000892; ENVO:00002026</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>freshwater biome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>cold temperature habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>brackish water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>+66.99-51.01</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pH</TAG>
+        <VALUE>9.09</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>3.2</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>4.59</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="BII-theroux:source:BYS_2009_2009_06_17">
+    <TITLE>BII-theroux:source:BYS_2009_2009_06_17</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>449393</TAXON_ID>
+      <SCIENTIFIC_NAME>freshwater metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>26/06/2009</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>Greenland</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:00000873; ENVO:00000892; ENVO:00002026</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>freshwater biome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>cold temperature habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>brackish water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>+66.99-51.01</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pH</TAG>
+        <VALUE>9.09</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>3.2</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>4.59</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="BII-theroux:source:BYS_2007_2007_06_19">
+    <TITLE>BII-theroux:source:BYS_2007_2007_06_19</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>449393</TAXON_ID>
+      <SCIENTIFIC_NAME>freshwater metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>19/06/2007</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>Greenland</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:00000873; ENVO:00000892; ENVO:00002026</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>freshwater biome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>cold temperature habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>brackish water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>+66.99-51.01</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pH</TAG>
+        <VALUE>8.69</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>7.38</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>3.74</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="BII-theroux:source:GNL">
+    <TITLE>BII-theroux:source:GNL</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>449393</TAXON_ID>
+      <SCIENTIFIC_NAME>freshwater metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>19/06/2007</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>Greenland</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:00000873; ENVO:00000892; ENVO:00002026</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>freshwater biome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>cold temperature habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>brackish water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>+66.99-51.01</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>pH</TAG>
+        <VALUE>8.69</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>7.38</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>3.74</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+</SAMPLE_SET>

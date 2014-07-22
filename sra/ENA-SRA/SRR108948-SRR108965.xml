@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT request="SRR108948-SRR108965&amp;display=xml"><RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_3_2B.67" center_name="MBL" broker_name="ISA converter" accession="SRR108948" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108948</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_3_2B.67</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_3_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044491" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044491</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173206</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108948</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_3_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>22843</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2715900</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_9_2B.79" center_name="MBL" broker_name="ISA converter" accession="SRR108949" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108949</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_9_2B.79</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_9_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044493" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044493</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173207</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108949</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_9_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>25544</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3022538</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_4_1B.68" center_name="MBL" broker_name="ISA converter" accession="SRR108950" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108950</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_4_1B.68</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_4_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044492" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044492</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173208</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108950</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_4_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>19809</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2354470</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_6_1B.72" center_name="MBL" broker_name="ISA converter" accession="SRR108951" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108951</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_6_1B.72</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_6_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044494" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044494</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173209</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108951</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_6_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>14773</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>1745136</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_5_1B.70" center_name="MBL" broker_name="ISA converter" accession="SRR108952" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108952</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_5_1B.70</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_5_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044495" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044495</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173210</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108952</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_5_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>31484</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3718055</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_5_2B.71" center_name="MBL" broker_name="ISA converter" accession="SRR108953" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108953</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_5_2B.71</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_5_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044496" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044496</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173211</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108953</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_5_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17569</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2074104</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_2_1B.64" center_name="MBL" broker_name="ISA converter" accession="SRR108954" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108954</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_2_1B.64</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_2_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044497" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044497</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173212</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108954</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_2_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>6910</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>825773</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_3_1B.66" center_name="MBL" broker_name="ISA converter" accession="SRR108955" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108955</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_3_1B.66</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_3_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044498" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044498</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173213</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108955</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_3_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>21398</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2540714</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_7_1B.74" center_name="MBL" broker_name="ISA converter" accession="SRR108956" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108956</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_7_1B.74</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_7_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044499" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044499</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173214</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108956</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_7_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>36879</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4355647</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_9_1B.78" center_name="MBL" broker_name="ISA converter" accession="SRR108957" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108957</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_9_1B.78</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_9_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044500" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044500</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173215</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108957</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_9_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>33909</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4016697</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_8_2B.77" center_name="MBL" broker_name="ISA converter" accession="SRR108958" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108958</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_8_2B.77</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_8_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044501" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044501</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173216</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108958</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_8_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>39853</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4732494</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_8_1B.76" center_name="MBL" broker_name="ISA converter" accession="SRR108959" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108959</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_8_1B.76</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_8_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044502" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044502</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173217</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108959</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_8_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>6721</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>241604</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_6_2B.73" center_name="MBL" broker_name="ISA converter" accession="SRR108960" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108960</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_6_2B.73</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_6_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044503" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044503</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173218</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108960</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_6_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>25979</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3077916</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_1_2B.63" center_name="MBL" broker_name="ISA converter" accession="SRR108961" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108961</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_1_2B.63</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_1_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044504" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044504</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173219</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108961</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_1_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17935</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2104196</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_4_2B.69" center_name="MBL" broker_name="ISA converter" accession="SRR108962" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108962</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_4_2B.69</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_4_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044505" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044505</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173220</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108962</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_4_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>27005</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3200328</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_2_2B.65" center_name="MBL" broker_name="ISA converter" accession="SRR108963" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108963</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_2_2B.65</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_2_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044506" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044506</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173221</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108963</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_2_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>7166</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>855796</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_7_2B.75" center_name="MBL" broker_name="ISA converter" accession="SRR108964" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108964</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_7_2B.75</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_7_2B</TITLE>
+     <EXPERIMENT_REF accession="SRX044507" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_2B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044507</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_2B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173222</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108964</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_7_2B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17934</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2113280</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+<RUN alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_1_1B.62" center_name="MBL" broker_name="ISA converter" accession="SRR108965" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRR108965</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:assay:MCR_1_1B.62</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_1_1B</TITLE>
+     <EXPERIMENT_REF accession="SRX044508" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_1B">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRX044508</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_1B</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </EXPERIMENT_REF>
+     <RUN_LINKS>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-STUDY</DB>
+                    <ID>SRP005890</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173223</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+          <RUN_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRR108965</ID>
+               </XREF_LINK>
+          </RUN_LINK>
+     </RUN_LINKS>
+     <RUN_ATTRIBUTES>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-RUN-TITLE</TAG>
+               <VALUE>454 GS FLX sequencing; Sequencing library derived from sample MCR_1_1B</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>21974</VALUE>
+          </RUN_ATTRIBUTE>
+          <RUN_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2607912</VALUE>
+          </RUN_ATTRIBUTE>
+     </RUN_ATTRIBUTES>
+</RUN>
+</ROOT>

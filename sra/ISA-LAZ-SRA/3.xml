@@ -1,0 +1,3477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAMPLE_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.sample.xsd">
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_9_1_2008_08_15 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_9_1_2008_08_15 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>NULL</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-08-15T20:00:00-05</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-64.94-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>NULL</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>NULL</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.04 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_8_1_2008_01_27 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_8_1_2008_01_27 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_8_1_2008_01_27 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-27T20:25:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.247</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.4 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-67.9-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.821 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>99.768 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.75 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>27.5 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 100 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.821 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>73.7 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.076 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>45.5</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>329 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>20.1 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>20.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>71.9 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.0317 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>170 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>-1.0168 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>32 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.368 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>69 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.-020 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.06 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_3_2_2008_01_12 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_3_2_2008_01_12 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_3_2_2008_01_12 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-12T05:20:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.173</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>5.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-63.97-66.86(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>12.765 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>12.891 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.87 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.7 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>12.765 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>6.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.259 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>46.2</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>353 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.4 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>21.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>80.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>21.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>16.9 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>32 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.9072 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3090 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.5633 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>7.8 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>32.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.194 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>21 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-66.86 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.4863 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_1_1_2008_01_05 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_1_1_2008_01_05 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_1_1_2008_01_05 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-05T20:30:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.204</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.5 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-64.94-64.41(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10.6 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>9.452 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.89 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.9 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10.6 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>29.25 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>4.001 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>45.3 (orig)</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>372.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>17.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>531.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>18 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>121.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>74.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.73 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>1327 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.97 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>29.74 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>26.4 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.224 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>1 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.04 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>5.7902 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_3_1_2008_01_12 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_3_1_2008_01_12 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_3_1_2008_01_12 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-05T20:30:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.173</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>5.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-63.97-66.86(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>12.765 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>12.891 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.87 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.7 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>12.765 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>6.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.259 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>46.2</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>353 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.4 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>21.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>80.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>21.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>16.9 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>32 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.9072 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3090 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.5633 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>7.8 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>32.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.194 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>21 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-66.86 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.4863 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_1_2_2008_01_05 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_1_2_2008_01_05 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_1_2_2008_01_05 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-05T20:30:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.204</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.5 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-64.94-64.41(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10.6 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>9.452 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.89 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.9 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10.6 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>29.25 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>4.001 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>45.3 (orig)</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>372.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>17.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>531.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>18 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>121.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>74.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.73 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>1327 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.97 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>29.74 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>26.4 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.224 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>1 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.04 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>5.7902 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_7_1_2008_01_27 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_7_1_2008_01_27 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_7_1_2008_01_27 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-27T20:25:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.28</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.4 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-67.9-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>14.932 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>14.841 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.86 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.6 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>14.932 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>73.7 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>2.422 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>47.5</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>359.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>15.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>166.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>15.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>38.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>67.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.7999 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>170 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.5784 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>15.99 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>23.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.106 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>69 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.-020 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>2.417 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_2_1_2008_01_05 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_2_1_2008_01_05 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_2_1_2008_01_05 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-05T20:30:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.155</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.5 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-64.94-64.41(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.9 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>101.264 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.84 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.4 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 100 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.9 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>29.25 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.058 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>40.8 (orig)</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>253.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>27.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>27.4 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>84 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.2672 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>1327 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>-0.09 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>36.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.52 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>1 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.04 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.0678 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_4_1_2008_01_12 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_4_1_2008_01_12 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_4_1_2008_01_12 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-12T05:20:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.245</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>5.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-63.97-66.86(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>98.606 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>99.598 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.75 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>27.5 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 100 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>98.606 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>6.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.356 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>46.7</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>323 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>24.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>24.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>54 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.0389 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3090 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>-0.9987 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>35.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.194 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>21 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-66.86 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.5349 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_5_1_2008_01_23 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_5_1_2008_01_23 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_5_1_2008_01_23 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-23T04:15:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.251</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>4.25 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-66.45-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>11.857 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>11.975 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.89 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.9 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>11.857 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>10.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.17 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>43.7</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>344.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>20.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>62.9 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>20.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>13.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>39 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.8298 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3090 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.9155 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>4.94 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>30.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.107 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>56 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.5256 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_5_2_2008_01_23 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_5_2_2008_01_23 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_5_2_2008_01_23 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-23T04:15:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.251</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>4.25 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-66.45-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>11.857 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>11.975 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.89 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.9 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>11.857 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>10.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.17 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>43.7</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>344.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>20.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>62.9 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>20.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>13.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>39 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.8298 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3701 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.9155 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>4.94 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>30.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.107 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>56 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.5256 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_6_1_2008_01_23 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_6_1_2008_01_23 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_6_1_2008_01_23 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-23T04:15:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.136</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>4.25 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-66.45-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>124.619 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>126.924 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.97 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>29.7 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 200 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>124.619 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>10.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.096 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>40.8</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>199.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>27.1 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>27.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>64.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.4377 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3701 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>1.2106 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>41.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.487 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>56 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.094 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_6_2_2008_01_23 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_6_2_2008_01_23 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_6_2_2008_01_23 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-23T04:15:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.136</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>4.25 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-66.45-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>124.619 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>126.924 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.97 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>29.7 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 200 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>124.619 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>10.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.096 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>40.8</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>199.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>27.1 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>27.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>64.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.4377 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3701 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>1.2106 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>41.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.487 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>56 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-73.03 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.094 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_9_2_2008_08_15 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_9_2_2008_08_15 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>NULL</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-08-15T20:00:00-05</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-64.94-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>10 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>NULL</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>NULL</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.04 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_7_2_2008_01_27 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_7_2_2008_01_27 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_7_2_2008_01_27 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-27T20:25:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.28</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.4 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-67.9-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>14.932 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>14.841 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.86 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.6 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 50 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>14.932 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>73.7 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>2.422 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>47.5</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>359.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>15.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>166.7 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>15.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>1.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>38.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>67.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>33.7999 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>170 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>0.5784 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>15.99 (orig)</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>23.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.106 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>69 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.-020 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>2.417 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_4_2_2008_01_12 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_4_2_2008_01_12 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_4_2_2008_01_12 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-12T05:20:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>OFF</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.245</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>5.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-63.97-66.86(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>98.606 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>99.598 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.75 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>27.5 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 100 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>98.606 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>6.08 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.356 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>46.7</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>323 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>24.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>24.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>54 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.0389 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>3090 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>-0.9987 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>35.5 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.194 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>21 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.2 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-66.86 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.5349 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_2_2_2008_01_05 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_2_2_2008_01_05 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_2_2_2008_01_05 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-05T20:30:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.155</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.5 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-64.94-64.41(orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.9 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>101.264 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.84 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>28.4 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 100 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.9 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>29.25 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.058 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>40.8 (orig)</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>253.8 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>27.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>27.4 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>84 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.2672 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>1327 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>-0.09 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>36.6 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.52 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>1 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>600.04 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-64.41 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.0678 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+  <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="LAM-454-MBL-PALMER-STATION:source:PAL_8_2_2008_01_27 (orig)">
+    <TITLE>LAM-454-MBL-PALMER-STATION:source:PAL_8_2_2008_01_27 (orig)</TITLE>
+    <SAMPLE_NAME>
+      <TAXON_ID>408172</TAXON_ID>
+      <SCIENTIFIC_NAME>marine metagenome</SCIENTIFIC_NAME>
+    </SAMPLE_NAME>
+    <SAMPLE_ATTRIBUTES>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>ogl_reference_name</TAG>
+        <VALUE>PAL_8_2_2008_01_27 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>collection_date</TAG>
+        <VALUE>2008-01-27T20:25:00-06</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>shelf_position</TAG>
+        <VALUE>ON</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>country</TAG>
+        <VALUE>USA (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>bacteria_count</TAG>
+        <VALUE>0.247</VALUE>
+        <UNITS>X106perML</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>time</TAG>
+        <VALUE>20.4 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lat_lon</TAG>
+        <VALUE>-67.9-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>longhurst_zone_code</TAG>
+        <VALUE>Polar Antarctic Province</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.821 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>environment</TAG>
+        <VALUE>ENVO:seawater;ENVO:marine_habitat;ENVO:water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_biome</TAG>
+        <VALUE>seawater</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_feature</TAG>
+        <VALUE>marine_habitat</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>envo_material</TAG>
+        <VALUE>water</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>atm_press</TAG>
+        <VALUE>99.768 (orig)</VALUE>
+        <UNITS>db</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>2.75 (orig)</VALUE>
+        <UNITS>SeimenPerMeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>conductivity</TAG>
+        <VALUE>27.5 (conv)</VALUE>
+        <UNITS>milliSeimenPerCentimeter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth_category</TAG>
+        <VALUE>top 100 m (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>depth</TAG>
+        <VALUE>99.821 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>carbon_14</TAG>
+        <VALUE>73.7 (orig)</VALUE>
+        <UNITS>milliMolesCarbonPerMeterSquaredPerDay</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>chlorophyll</TAG>
+        <VALUE>0.076 (orig)</VALUE>
+        <UNITS>microgramPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_org_carb</TAG>
+        <VALUE>45.5</VALUE>
+        <UNITS>microMoleCarbonPerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>diss_oxygen</TAG>
+        <VALUE>329 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite</TAG>
+        <VALUE>0.2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrate</TAG>
+        <VALUE>20.1 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_carb</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>nitrite_plus_nitrate</TAG>
+        <VALUE>20.3 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>phosphate</TAG>
+        <VALUE>2 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>part_org_nitro</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>silicate</TAG>
+        <VALUE>71.9 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>salinity</TAG>
+        <VALUE>34.0317 (orig)</VALUE>
+        <UNITS>PSU</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_depth_water_col</TAG>
+        <VALUE>170 (orig)</VALUE>
+        <UNITS>meter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>temp</TAG>
+        <VALUE>-1.0168 (orig)</VALUE>
+        <UNITS>celsius</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>leucine</TAG>
+        <VALUE>NULL</VALUE>
+        <UNITS>picoMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>tot_nitro</TAG>
+        <VALUE>32 (orig)</VALUE>
+        <UNITS>microMolePerLiter</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>density</TAG>
+        <VALUE>27.368 (orig)</VALUE>
+        <UNITS>sigmaT</UNITS>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>cast</TAG>
+        <VALUE>69 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>rel_to_oxygen</TAG>
+        <VALUE>Oxic</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lter_station_name</TAG>
+        <VALUE>200.-020 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>lon</TAG>
+        <VALUE>-69.62 (orig)</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
+        <TAG>fluorescence</TAG>
+        <VALUE>0.06 (orig)</VALUE>
+        <UNITS>milligramPerMeterCubed</UNITS>
+      </SAMPLE_ATTRIBUTE>
+    </SAMPLE_ATTRIBUTES>
+  </SAMPLE>
+</SAMPLE_SET>

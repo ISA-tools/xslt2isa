@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STUDY xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.study.xsd" alias="LAM-454-MBL-PALMER-STATION" center_name="MBL" broker_name="ISAcreator">
+  <DESCRIPTOR>
+    <CENTER_NAME>MBL</CENTER_NAME>
+    <CENTER_PROJECT_NAME>MBL</CENTER_PROJECT_NAME>
+    <STUDY_TITLE>Marine bacteria exhibit a bipolar distribution.</STUDY_TITLE>
+    <STUDY_DESCRIPTION>The cosmopolitan dispersion hypothesis to explain widespread microbial distribution patterns that cite the high-connectivity of oceanographic water masses and the wide dispersal ability due to their small size, has never been rigorously tested. Using a global marine bacterial dataset and iterative matrix randomization simulation,here we show that marine bacteria exhibit a significantly greater dispersal limitation than predicted under the "everything is everywhere" assumption. Specifically, marine bacteria displayed bipolar and paired distributions significantly less often than null simulations while hemisphere specific distributed taxa occurred more frequently. We also observed a latitudinal gradient in bacterial diversity with higher richness at lower latitudes, but decreased richness toward the poles. Narrower latitudinal ranges of bacteria in the tropics relative to larger ranges in higher latitudes conformed to the controversial macroecological Rapoport's rule. Collectively, our findings suggest that bacteria follow biogeographic patterns more typical of macroscopic organisms and that dispersal limitation, not just environmental selection, likely plays an important role. Distributions of microbes that deliver critical ecosystem services, particularly those in polar regions, may be vulnerable to the same impacts that environmental stressors, climate warming, and degradation in habitat quality are having on biodiversity in animal and plant species.</STUDY_DESCRIPTION>
+    <STUDY_TYPE existing_study_type="Metagenomics"/>
+  </DESCRIPTOR>
+  <STUDY_LINKS>
+    <STUDY_LINK>
+      <ENTREZ_LINK>
+        <DB>pubmed</DB>
+        <ID>0</ID>
+      </ENTREZ_LINK>
+    </STUDY_LINK>
+  </STUDY_LINKS>
+  <STUDY_ATTRIBUTES>
+    <STUDY_ATTRIBUTE>
+      <TAG>Submission Date</TAG>
+      <VALUE>15/05/2012</VALUE>
+    </STUDY_ATTRIBUTE>
+    <STUDY_ATTRIBUTE>
+      <TAG>Release Date</TAG>
+      <VALUE>31/05/2012</VALUE>
+    </STUDY_ATTRIBUTE>
+    <STUDY_ATTRIBUTE>
+      <TAG>BII Study Accession</TAG>
+      <VALUE>LAM-454-MBL-PALMER-STATION</VALUE>
+    </STUDY_ATTRIBUTE>
+    <STUDY_ATTRIBUTE>
+      <TAG>Study Contact</TAG>
+      <VALUE>Name: Linda Amaral Zettler
+e-mail: amaral@mbl.edu
+Affiliation: MBL
+Address: 7 MBL street, Woods Hole, MA 02543
+Role: SRA Inform On Status
+Role: SRA Inform On Error</VALUE>
+    </STUDY_ATTRIBUTE>
+    <STUDY_ATTRIBUTE>
+      <TAG>Study Contact</TAG>
+      <VALUE>Name: Philippe Rocca-Serra
+e-mail: proccaserra@gmail.com
+Affiliation: University of Oxford
+Role: SRA Inform On Status
+Role: SRA Inform On Error</VALUE>
+    </STUDY_ATTRIBUTE>
+    <STUDY_ATTRIBUTE>
+      <TAG>Study Publication</TAG>
+      <VALUE>Title: Marine bacteria exhibit a bipolar distribution.
+Authors: Woo Jun Sul, Thomas A. Oliver, Hugh W. Ducklow, Linda Amaral-Zettler, and Mitchell L. Sogin
+Status: published
+PUBMED ID: 0</VALUE>
+    </STUDY_ATTRIBUTE>
+  </STUDY_ATTRIBUTES>
+</STUDY>

@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sra-isatab-txt.xsl"?>
+<SRA identifier="SRA-TEST-ISATAB">
+<SUBMISSION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_3/SRA.submission.xsd" center_name="MBL" accession="" alias="VS-454-MBL" broker_name="ISAcreator" lab_name="MBL" submission_date="2012-05-15T00:00:00.000+01:00">
+    <CONTACTS>
+        <CONTACT name="Philippe Rocca-Serra" inform_on_status="proccaserra@gmail.com" inform_on_error="proccaserra@gmail.com"/>
+        <CONTACT name="Victor Schmidt" inform_on_status="vschmidt@evol5.mbl.edu" inform_on_error="vschmidt@evol5.mbl.edu"/>
+    </CONTACTS>
+    <ACTIONS>
+        <ACTION>
+            <ADD schema="study" source="study.xml"/>
+        </ACTION>
+        <ACTION>
+            <ADD schema="sample" source="sample_set.xml"/>
+        </ACTION>
+        <ACTION>
+            <ADD schema="experiment" source="experiment_set.xml"/>
+        </ACTION>
+        <ACTION>
+            <ADD schema="run" source="run_set.xml"/>
+        </ACTION>
+    </ACTIONS>
+    <FILES>
+        <FILE filename="A1.sff" checksum_method="MD5" checksum="150bdab3ed8b729ea655d92c4acaed14"/>
+        <FILE filename="A2.sff" checksum_method="MD5" checksum="9bd165c1e92c37bdb7fa50cf18c46ea7"/>
+        <FILE filename="E2.sff" checksum_method="MD5" checksum="2010701d6b48b752b0ce2dae495fab71"/>
+        <FILE filename="D2.sff" checksum_method="MD5" checksum="38581fffff7ece73f1816695343357fd"/>
+        <FILE filename="E1.sff" checksum_method="MD5" checksum="88070f0b09d13315117fc225689f489e"/>
+        <FILE filename="E1_v4.sff" checksum_method="MD5" checksum="f025b34d0ecc8f39f2505efd7a14e923"/>
+        <FILE filename="D1_v4.sff" checksum_method="MD5" checksum="0e5279b6c209c498b20b730fb9f034a6"/>
+        <FILE filename="A1_v4.sff" checksum_method="MD5" checksum="8492f5f19a01ff712ddef306eb11500b"/>
+        <FILE filename="A2_v4.sff" checksum_method="MD5" checksum="85203cd7cb832620fa7a42d286f037e6"/>
+        <FILE filename="D2_v4.sff" checksum_method="MD5" checksum="d9af7f028f8d840456ce623f41b78817"/>
+        <FILE filename="E2_v4.sff" checksum_method="MD5" checksum="7e03156266721510e0e63163a11557a6"/>
+        <FILE filename="B2_v4.sff" checksum_method="MD5" checksum="477a34e291b9b79f3688c5a3f440be44"/>
+        <FILE filename="D1.sff" checksum_method="MD5" checksum="216ff2aa0d5fc9be778b0d1b76aef2aa"/>
+    </FILES>
+</SUBMISSION>
+
+<STUDY xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_3/SRA.study.xsd" alias="VS-454-MBL" center_name="MBL" broker_name="ISAcreator">
+    <DESCRIPTOR>
+        <CENTER_NAME>MBL</CENTER_NAME>
+        <CENTER_PROJECT_NAME>MBL</CENTER_PROJECT_NAME>
+        <STUDY_TITLE>Microbial Diversity and Potential Pathogens in Ornamental Fish Aquarium Water</STUDY_TITLE>
+        <STUDY_DESCRIPTION>Ornamental fishes are among the most popular and fastest growing categories of pets in the United States (U.S.). The global scope and scale of the ornamental fish trade and growing popularity of pet fish in the U.S. are strong indicators of the myriad economic and social benefits the pet industry provides. Relatively little is known about the microbial communities associated with these ornamental fishes or the aquarium water in which they are transported and housed. Using conventional molecular approaches and next generation high-throughput amplicon sequencing of 16S ribosomal RNA gene hypervariable regions, we characterized the bacterial community of aquarium water containing common goldfish (Carassius auratus) and Chinese algae eaters (Gyrinocheilus aymonieri) purchased from seven pet/aquarium shops in Rhode Island and identified the presence of potential pathogens. Our survey identified a total of 30 phyla, the most common being Proteobacteria (52%), Bacteroidetes (18%) and Planctomycetes (6%), with the top four phyla representing >80% of all sequences. Sequences from our water samples were most closely related to eleven bacterial species that have the potential to cause disease in fishes, humans and other species: Coxiella burnetii, Flavobacterium columnare, Legionella birminghamensis, L. pneumophila, Vibrio cholerae, V. mimicus. V. vulnificus, Aeromonas schubertii, A. veronii, A. hydrophila and Pleisomonas shigelloides. Our results, combined with evidence from the literature, suggest aquarium tank water harboring ornamental fish are an understudied source for novel microbial communities and pathogens that pose potential risks to the pet industry, fishes in trade, humans and other species.</STUDY_DESCRIPTION>
+        <STUDY_TYPE existing_study_type="Other" new_study_type="METAGENOMICS"/>
+    </DESCRIPTOR>
+    <STUDY_LINKS>
+        <STUDY_LINK>
+            <ENTREZ_LINK>
+                <DB>pubmed</DB>
+                <ID>0</ID>
+            </ENTREZ_LINK>
+        </STUDY_LINK>
+    </STUDY_LINKS>
+    <STUDY_ATTRIBUTES>
+        <STUDY_ATTRIBUTE>
+            <TAG>Submission Date</TAG>
+            <VALUE>15/05/2012</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Release Date</TAG>
+            <VALUE>31/05/2012</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>BII Study Accession</TAG>
+            <VALUE>VS-454-MBL</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Study Contact</TAG>
+            <VALUE>Name: Philippe Rocca-Serra
+                e-mail: proccaserra@gmail.com
+                Affiliation: University of Oxford
+                Role: SRA Inform On Status
+                Role: SRA Inform On Error</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Study Contact</TAG>
+            <VALUE>Name: Victor Schmidt
+                e-mail: vschmidt@evol5.mbl.edu
+                Affiliation: MBL
+                Role: SRA Inform On Status
+                Role: SRA Inform On Error</VALUE>
+        </STUDY_ATTRIBUTE>
+        <STUDY_ATTRIBUTE>
+            <TAG>Study Publication</TAG>
+            <VALUE>Title: Microbial Diversity and Potential Pathogens in Ornamental Fish Aquarium Water
+                Authors: Smith, K., Schmidt, V., Rosen, R., Amaral-Zettler, L
+                Status: published
+                PUBMED ID: 0</VALUE>
+        </STUDY_ATTRIBUTE>
+    </STUDY_ATTRIBUTES>
+</STUDY>
+
+<SAMPLE_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_3/SRA.sample_set.xsd">
+    <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="VS-454-MBL:source:A1">
+        <TITLE>VS-454-MBL:source:A1</TITLE>
+        <SAMPLE_NAME>
+            <TAXON_ID>408169</TAXON_ID>
+            <SCIENTIFIC_NAME>metagenomes</SCIENTIFIC_NAME>
+        </SAMPLE_NAME>
+        <SAMPLE_ATTRIBUTES>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>environment</TAG>
+                <VALUE>fish tank</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>biome</TAG>
+                <VALUE>aquatic biome</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>material</TAG>
+                <VALUE>fresh water</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>feature</TAG>
+                <VALUE>anthropogenic feature</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>geo_loc_name</TAG>
+                <VALUE>USA</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>collection_date</TAG>
+                <VALUE>2009-12-09</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>lat_lon</TAG>
+                <VALUE>41.8,-71.4</VALUE>
+            </SAMPLE_ATTRIBUTE>
+        </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="VS-454-MBL:source:A2">
+        <TITLE>VS-454-MBL:source:A2</TITLE>
+        <SAMPLE_NAME>
+            <TAXON_ID>408169</TAXON_ID>
+            <SCIENTIFIC_NAME>metagenomes</SCIENTIFIC_NAME>
+        </SAMPLE_NAME>
+        <SAMPLE_ATTRIBUTES>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>environment</TAG>
+                <VALUE>fish tank</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>biome</TAG>
+                <VALUE>aquatic biome</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>material</TAG>
+                <VALUE>fresh water</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>feature</TAG>
+                <VALUE>anthropogenic feature</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>geo_loc_name</TAG>
+                <VALUE>USA</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>collection_date</TAG>
+                <VALUE>2009-12-09</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>lat_lon</TAG>
+                <VALUE>41.8,-71.4</VALUE>
+            </SAMPLE_ATTRIBUTE>
+        </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="VS-454-MBL:source:E2">
+        <TITLE>VS-454-MBL:source:E2</TITLE>
+        <SAMPLE_NAME>
+            <TAXON_ID>408169</TAXON_ID>
+            <SCIENTIFIC_NAME>metagenomes</SCIENTIFIC_NAME>
+        </SAMPLE_NAME>
+        <SAMPLE_ATTRIBUTES>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>environment</TAG>
+                <VALUE>fish tank</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>biome</TAG>
+                <VALUE>aquatic biome</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>material</TAG>
+                <VALUE>fresh water</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>feature</TAG>
+                <VALUE>anthropogenic feature</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>geo_loc_name</TAG>
+                <VALUE>USA</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>collection_date</TAG>
+                <VALUE>2009-12-12</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>lat_lon</TAG>
+                <VALUE>41.8,-71.4</VALUE>
+            </SAMPLE_ATTRIBUTE>
+        </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="VS-454-MBL:source:D2">
+        <TITLE>VS-454-MBL:source:D2</TITLE>
+        <SAMPLE_NAME>
+            <TAXON_ID>408169</TAXON_ID>
+            <SCIENTIFIC_NAME>metagenomes</SCIENTIFIC_NAME>
+        </SAMPLE_NAME>
+        <SAMPLE_ATTRIBUTES>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>environment</TAG>
+                <VALUE>fish tank</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>biome</TAG>
+                <VALUE>aquatic biome</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>material</TAG>
+                <VALUE>fresh water</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>feature</TAG>
+                <VALUE>anthropogenic feature</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>geo_loc_name</TAG>
+                <VALUE>USA</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>collection_date</TAG>
+                <VALUE>2009-12-09</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>lat_lon</TAG>
+                <VALUE>41.8,-71.4</VALUE>
+            </SAMPLE_ATTRIBUTE>
+        </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="VS-454-MBL:source:E1">
+        <TITLE>VS-454-MBL:source:E1</TITLE>
+        <SAMPLE_NAME>
+            <TAXON_ID>408169</TAXON_ID>
+            <SCIENTIFIC_NAME>metagenomes</SCIENTIFIC_NAME>
+        </SAMPLE_NAME>
+        <SAMPLE_ATTRIBUTES>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>environment</TAG>
+                <VALUE>fish tank</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>biome</TAG>
+                <VALUE>aquatic biome</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>material</TAG>
+                <VALUE>fresh water</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>feature</TAG>
+                <VALUE>anthropogenic feature</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>geo_loc_name</TAG>
+                <VALUE>USA</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>collection_date</TAG>
+                <VALUE>2009-12-12</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>lat_lon</TAG>
+                <VALUE>41.8,-71.4</VALUE>
+            </SAMPLE_ATTRIBUTE>
+        </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="VS-454-MBL:source:D1">
+        <TITLE>VS-454-MBL:source:D1</TITLE>
+        <SAMPLE_NAME>
+            <TAXON_ID>408169</TAXON_ID>
+            <SCIENTIFIC_NAME>metagenomes</SCIENTIFIC_NAME>
+        </SAMPLE_NAME>
+        <SAMPLE_ATTRIBUTES>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>environment</TAG>
+                <VALUE>fish tank</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>biome</TAG>
+                <VALUE>aquatic biome</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>material</TAG>
+                <VALUE>fresh water</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>feature</TAG>
+                <VALUE>anthropogenic feature</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>geo_loc_name</TAG>
+                <VALUE>USA</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>collection_date</TAG>
+                <VALUE>2009-12-09</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>lat_lon</TAG>
+                <VALUE>41.8,-71.4</VALUE>
+            </SAMPLE_ATTRIBUTE>
+        </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+    <SAMPLE center_name="MBL" broker_name="ISAcreator" alias="VS-454-MBL:source:B2">
+        <TITLE>VS-454-MBL:source:B2</TITLE>
+        <SAMPLE_NAME>
+            <TAXON_ID>408169</TAXON_ID>
+            <SCIENTIFIC_NAME>metagenomes</SCIENTIFIC_NAME>
+        </SAMPLE_NAME>
+        <SAMPLE_ATTRIBUTES>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>environment</TAG>
+                <VALUE>fish tank</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>biome</TAG>
+                <VALUE>aquatic biome</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>material</TAG>
+                <VALUE>fresh water</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>feature</TAG>
+                <VALUE>anthropogenic feature</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>geo_loc_name</TAG>
+                <VALUE>USA</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>collection_date</TAG>
+                <VALUE>2009-12-13</VALUE>
+            </SAMPLE_ATTRIBUTE>
+            <SAMPLE_ATTRIBUTE>
+                <TAG>lat_lon</TAG>
+                <VALUE>41.8,-71.4</VALUE>
+            </SAMPLE_ATTRIBUTE>
+        </SAMPLE_ATTRIBUTES>
+    </SAMPLE>
+</SAMPLE_SET>
+
+<EXPERIMENT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_3/SRA.experiment_set.xsd">
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A1.V3-V5" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample A1.V3-V5</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:A1"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:A1.V3-V5.1_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V3-V5 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V3-V5
+ pcr_primers: 341F2:CCTACGGGNGGCWGCAG; 341F2:TCTACGGAAGGCTGCAG; 925R1:CCGTCAATTCNTTTRAGT 926R3:CCGTCAATTTCTTTGAGT 926R4: CCGTCTATTCCTTTGANT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="CACAC">CACAC</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A2.V3-V5" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample A2.V3-V5</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:A2"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:A2.V3-V5.2_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V3-V5 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V3-V5
+ pcr_primers: 341F2:CCTACGGGNGGCWGCAG; 341F2:TCTACGGAAGGCTGCAG; 925R1:CCGTCAATTCNTTTRAGT 926R3:CCGTCAATTTCTTTGAGT 926R4: CCGTCTATTCCTTTGANT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="AGAGC">AGAGC</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E2.V3-V5" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample E2.V3-V5</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:E2"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:E2.V3-V5.6_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V3-V5 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V3-V5
+ pcr_primers: 341F2:CCTACGGGNGGCWGCAG; 341F2:TCTACGGAAGGCTGCAG; 925R1:CCGTCAATTCNTTTRAGT 926R3:CCGTCAATTTCTTTGAGT 926R4: CCGTCTATTCCTTTGANT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GAGCG">GAGCG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D2.V3-V5" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample D2.V3-V5</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:D2"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:D2.V3-V5.4_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V3-V5 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V3-V5
+ pcr_primers: 341F2:CCTACGGGNGGCWGCAG; 341F2:TCTACGGAAGGCTGCAG; 925R1:CCGTCAATTCNTTTRAGT 926R3:CCGTCAATTTCTTTGAGT 926R4: CCGTCTATTCCTTTGANT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GCGTG">GCGTG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E1.V3-V5" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample E1.V3-V5</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:E1"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:E1.V3-V5.5_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V3-V5 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V3-V5
+ pcr_primers: 341F2:CCTACGGGNGGCWGCAG; 341F2:TCTACGGAAGGCTGCAG; 925R1:CCGTCAATTCNTTTRAGT 926R3:CCGTCAATTTCTTTGAGT 926R4: CCGTCTATTCCTTTGANT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GCACG">GCACG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E1.V4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample E1.V4</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:E1"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:E1.V4.11_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V4 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V4
+ pcr_primers: 518F 5'CCAGCAGCYGCGGTAAN'3, Vib2 r-5'-GAAATTCTACCCCCCTCTACAG-3'
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TCACA">TCACA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D1.V4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample D1.V4</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:D1"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:D1.V4.9_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V4 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V4
+ pcr_primers: 518F 5'CCAGCAGCYGCGGTAAN'3, Vib2 r-5'-GAAATTCTACCCCCCTCTACAG-3'
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TGTCA">TGTCA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A1.V4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample A1.V4</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:A1"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:A1.V4.7_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V4 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V4
+ pcr_primers: 518F 5'CCAGCAGCYGCGGTAAN'3, Vib2 r-5'-GAAATTCTACCCCCCTCTACAG-3'
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TACTA">TACTA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A2.V4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample A2.V4</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:A2"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:A2.V4.8_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V4 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V4
+ pcr_primers: 518F 5'CCAGCAGCYGCGGTAAN'3, Vib2 r-5'-GAAATTCTACCCCCCTCTACAG-3'
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TCGCT">TCGCT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D2.V4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample D2.V4</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:D2"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:D2.V4.10_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V4 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V4
+ pcr_primers: 518F 5'CCAGCAGCYGCGGTAAN'3, Vib2 r-5'-GAAATTCTACCCCCCTCTACAG-3'
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TGATA">TGATA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E2.V4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample E2.V4</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:E2"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:E2.V4.12_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V4 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V4
+ pcr_primers: 518F 5'CCAGCAGCYGCGGTAAN'3, Vib2 r-5'-GAAATTCTACCCCCCTCTACAG-3'
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TAGCA">TAGCA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.B2.V4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample B2.V4</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:B2"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:B2.V4.13_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V4 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V4
+ pcr_primers: 518F 5'CCAGCAGCYGCGGTAAN'3, Vib2 r-5'-GAAATTCTACCCCCCTCTACAG-3'
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TGCGT">TGCGT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D1.V3-V5" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample D1.V3-V5</TITLE>
+    <STUDY_REF refname="VS-454-MBL"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="VS-454-MBL:source:D1"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>VS-454-MBL:assay:D1.V3-V5.3_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA" description="Bacteria V3-V5 region">
+                    <PROBE_SET>
+                        <DB>pubmed</DB>
+                        <ID>000000</ID>
+                    </PROBE_SET>
+                </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V3-V5
+ pcr_primers: 341F2:CCTACGGGNGGCWGCAG; 341F2:TCTACGGAAGGCTGCAG; 925R1:CCGTCAATTCNTTTRAGT 926R3:CCGTCAATTTCTTTGAGT 926R4: CCGTCTATTCCTTTGANT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GTGAG">GTGAG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+</EXPERIMENT_SET>
+<RUN_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_3/SRA.run.xsd">
+    <RUN alias="VS-454-MBL:assay:A1.V3-V5.1" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A1.V3-V5"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="A1.sff" checksum_method="MD5" checksum="150bdab3ed8b729ea655d92c4acaed14"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:A2.V3-V5.2" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A2.V3-V5"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="A2.sff" checksum_method="MD5" checksum="9bd165c1e92c37bdb7fa50cf18c46ea7"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:E2.V3-V5.6" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E2.V3-V5"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="E2.sff" checksum_method="MD5" checksum="2010701d6b48b752b0ce2dae495fab71"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:D2.V3-V5.4" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D2.V3-V5"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="D2.sff" checksum_method="MD5" checksum="38581fffff7ece73f1816695343357fd"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:E1.V3-V5.5" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E1.V3-V5"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="E1.sff" checksum_method="MD5" checksum="88070f0b09d13315117fc225689f489e"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:E1.V4.11" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E1.V4"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="E1_v4.sff" checksum_method="MD5" checksum="f025b34d0ecc8f39f2505efd7a14e923"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:D1.V4.9" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D1.V4"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="D1_v4.sff" checksum_method="MD5" checksum="0e5279b6c209c498b20b730fb9f034a6"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:A1.V4.7" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A1.V4"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="A1_v4.sff" checksum_method="MD5" checksum="8492f5f19a01ff712ddef306eb11500b"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:A2.V4.8" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.A2.V4"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="A2_v4.sff" checksum_method="MD5" checksum="85203cd7cb832620fa7a42d286f037e6"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:D2.V4.10" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D2.V4"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="D2_v4.sff" checksum_method="MD5" checksum="d9af7f028f8d840456ce623f41b78817"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:E2.V4.12" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.E2.V4"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="E2_v4.sff" checksum_method="MD5" checksum="7e03156266721510e0e63163a11557a6"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:B2.V4.13" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.B2.V4"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="B2_v4.sff" checksum_method="MD5" checksum="477a34e291b9b79f3688c5a3f440be44"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+    <RUN alias="VS-454-MBL:assay:D1.V3-V5.3" center_name="MBL" broker_name="ISAcreator">
+        <EXPERIMENT_REF refname="VS-454-MBL:generic_assay:a_study1_environmental gene survey_nucleotide sequencing.D1.V3-V5"/>
+        <DATA_BLOCK>
+            <FILES>
+                <FILE filetype="sff" filename="D1.sff" checksum_method="MD5" checksum="216ff2aa0d5fc9be778b0d1b76aef2aa"/>
+            </FILES>
+        </DATA_BLOCK>
+    </RUN>
+</RUN_SET>
+</SRA>

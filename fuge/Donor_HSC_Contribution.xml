@@ -1,0 +1,2794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="proto.xsl"?>
+<!-- 
+  ********************************************************************
+  * FuGEFlow Experiment Annotation Example
+  * **************************************
+  * 
+  * This document represents an example description of a flow cytometry 
+  * experiment that is compliant with the Minimum Information about a 
+  * Flow Cytometry Experiment (MIFlowCyt).
+  * 
+  * The purpose of this document is to validate FuGEFlow - a Flow Cytometry
+  * specific extension of the FuGE model. Validation is understood in terms of
+  * whether the FuGEFlow XML schema defines a language that allows to describe
+  * flow cytometry experiments.
+  *
+  * This XML document is based on 
+  * "MIFlowCyt Experiment Annotation Example" from February 20th, 2008
+  * by Maura Gasparetto, Josef Spidlen, and Ryan R. Brinkman
+  * 
+  * License
+  * The work may be used under the terms of the 
+  * Creative Commons Attribution-ShareAlike 3.0 Unported license. 
+  * You are free to share (copy, distribute and transmit), and adapt 
+  * the work under the conditions specified at 
+  * http://creativecommons.org/licenses/by-sa/3.0/legalcode
+  * 
+  * Acknowledgement
+  * This work has been supported by NIH grant EB005034 from the 
+  * National Institute of Biomedical Imaging And Bioengineering.
+  * 
+  * Disclaimer
+  * The content is solely the responsibility of the authors and 
+  * does not necessarily represent the official views of the 
+  * National Institute of Biomedical Imaging And Bioengineering 
+  * or the National Institutes of Health.
+  *
+  * Josef Spidlen, Ph.D., jspidlen@bccrc.ca, April 11, 2008
+  ********************************************************************** 
+  -->
+<fuge:FuGE
+  
+  xmlns:fuge="http://fuge.sourceforge.net/fuge/1.0"
+  xmlns:fcm="http://flowcyt.sourceforge.net/fugeflow/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  
+  identifier="Donor_HSC_contribution_MGJSRB20080211" 
+  name="Donor HSC Contribution"
+  
+  xsi:schemaLocation="
+    http://flowcyt.sourceforge.net/fugeflow/ ../../XSD/FuGEFlow.xsd
+    http://fuge.sourceforge.net/fuge/1.0 ../../XSD/FuGEv1.xsd
+    "
+  >
+  <!--
+    The xsi:schemaLocation="http://fuge.sourceforge.net/fuge/1.0 ../XSD/FuGEv1.xsd"
+    speeds up the validation agains FuGE XSD (locally). The following can be used to
+    validate against FuGE XSD online at sourceforge.net: 
+    xsi:schemaLocation="http://fuge.sourceforge.net/fuge/1.0 http://fuge.sourceforge.net/dev/V1Final/FuGEv1.xsd"
+  -->
+  
+  
+  <!-- 
+    ********************************* 
+    Materials
+    *********************************
+  -->
+  <fuge:MaterialCollection>
+
+    <!-- Fluorescent Reagents -->
+    <fcm:FluorescentReagent identifier="CD4_TxRed_FluorescentReagent" name="CD4 TxRed Reagent">
+      <fcm:_make OntologyTerm_ref="BD-CD4-TxRed_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_H129.19" />
+      <fcm:_reporter Material_ref="TxRed_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_553648" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="T_helper_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_H129.19">
+      <fuge:_characteristics OntologyTerm_ref="anti-CD4-OntologyTerm" />
+      <fcm:_analyte Material_ref="CD4" />
+      <fcm:_detectorCloneNumber DataProperty_ref="dp_H129.19_CloneNumber" />
+    </fcm:AnalyteDetector>
+    
+    <fcm:FluorescentReagent identifier="CD8_TxRed_FluorescentReagent" name="CD8 TxRed Reagent">
+      <fcm:_make OntologyTerm_ref="BD-CD8-TxRed_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_53-6.7" />
+      <fcm:_reporter Material_ref="TxRed_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_553028" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="T_suppresor_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_53-6.7">
+      <fuge:_characteristics OntologyTerm_ref="anti-CD8-OntologyTerm" />
+      <fcm:_analyte Material_ref="CD8" />
+      <fcm:_detectorCloneNumber DataProperty_ref="dp_53-6.7_CloneNumber" />
+    </fcm:AnalyteDetector>
+    
+    <fcm:FluorescentReagent identifier="CD45R_APC_FluorescentReagent" name="CD45R APC Reagent">
+      <fcm:_make OntologyTerm_ref="BD-CD45R-APC_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_RA3-6B2" />
+      <fcm:_reporter Material_ref="APC_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_553092" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="B_cells_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_RA3-6B2">
+      <fuge:_characteristics OntologyTerm_ref="anti-CD45R-OntologyTerm" />
+      <fcm:_analyte Material_ref="CD45R" />
+      <fcm:_detectorCloneNumber DataProperty_ref="dp_RA3-6B2_CloneNumber" />
+    </fcm:AnalyteDetector>
+    
+    <fcm:FluorescentReagent identifier="Gr1_PE_FluorescentReagent" name="Gr1 PE Reagent">
+      <fcm:_make OntologyTerm_ref="BD-Gr1-PE_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_1A8" />
+      <fcm:_reporter Material_ref="PE_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_551461" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="Granulocytes_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_1A8">
+      <fuge:_characteristics OntologyTerm_ref="anti-Gr1-OntologyTerm" />
+      <fcm:_analyte Material_ref="Gr1" />
+      <fcm:_detectorCloneNumber DataProperty_ref="dp_1A8_CloneNumber" />
+    </fcm:AnalyteDetector>
+    
+    <fcm:FluorescentReagent identifier="CD11b_PE_FluorescentReagent" name="CD11b PE Reagent">
+      <fcm:_make OntologyTerm_ref="BD-CD11b-PE_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_M1-70" />
+      <fcm:_reporter Material_ref="PE_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_557397" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="Monocytes_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_M1-70">
+      <fuge:_characteristics OntologyTerm_ref="anti-CD11b-OntologyTerm" />
+      <fcm:_analyte Material_ref="CD11b" />
+      <fcm:_detectorCloneNumber DataProperty_ref="dp_M1-70_CloneNumber" />
+    </fcm:AnalyteDetector>
+    
+    <fcm:FluorescentReagent identifier="CD45.1_FITC_FluorescentReagent" name="CD45.1 FITC Reagent">
+      <fcm:_make OntologyTerm_ref="BD-CD45.1-FITC_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_A20" />
+      <fcm:_reporter Material_ref="FITC_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_553775" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="Donor_leukocytes_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_A20">
+      <fuge:_characteristics OntologyTerm_ref="anti-CD45.1-OntologyTerm" />
+      <fcm:_analyte Material_ref="CD45.1" />
+      <fcm:_detectorCloneNumber DataProperty_ref="dp_A20_CloneNumber" />
+    </fcm:AnalyteDetector>
+    
+    <fcm:FluorescentReagent identifier="CD45.2_PerCP_FluorescentReagent" name="CD45.2 PerCP Reagent">
+      <fcm:_make OntologyTerm_ref="BD-CD45.2-PerCP_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_104" />
+      <fcm:_reporter Material_ref="PerCP_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_552950" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="Recipient_leukocytes_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_104">
+      <fuge:_characteristics OntologyTerm_ref="anti-CD45.2-OntologyTerm" />
+      <fcm:_analyte Material_ref="CD45.2" />
+      <fcm:_detectorCloneNumber DataProperty_ref="dp_104_CloneNumber" />
+    </fcm:AnalyteDetector>
+    
+    <fcm:FluorescentReagent identifier="DAPI_FluorescentReagent" name="DAPI Reagent">
+      <fcm:_make OntologyTerm_ref="Exalpha-DAPI_Term" />
+      <fcm:_analyteDetector AnalyteDetector_ref="ad_DAPI" />
+      <fcm:_reporter Material_ref="DAPI_Reporter_Component" />
+      <fcm:_catalogNumber DataProperty_ref="catalogNumber_7034" />
+      <fcm:_measuredCharacteristics OntologyTerm_ref="Cell_viability_OntologyTerm" />
+    </fcm:FluorescentReagent>
+    <fcm:AnalyteDetector identifier="ad_DAPI">
+      <fuge:_characteristics OntologyTerm_ref="DAPI_OntologyTerm" />
+      <fcm:_analyte Material_ref="DNA_of_Membrane-compromised_Cells" />
+    </fcm:AnalyteDetector>
+    
+    <!-- 4 Donor mice -->
+    <fcm:Organism identifier="Doner_Mouse_1">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="black_Pep3b_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="Ly-5_Congenic_C57BL-6_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Doner_Mouse_2">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="black_Pep3b_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="Ly-5_Congenic_C57BL-6_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Doner_Mouse_3">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="black_Pep3b_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="Ly-5_Congenic_C57BL-6_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Doner_Mouse_4">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="black_Pep3b_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="Ly-5_Congenic_C57BL-6_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <!-- 12 Recipient Mice -->
+    <fcm:Organism identifier="Recipient_Mouse_1">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_2">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_3">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_4">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_5">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_6">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_7">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_8">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_9">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_10">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_11">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <fcm:Organism identifier="Recipient_Mouse_12">
+      <fuge:_descriptions>
+        <fuge:Description text="Animal located at the Animal Resource Centre (ARC) 
+          of the BC Cancer Research Centre (BCCRC)" />
+      </fuge:_descriptions>
+      <fcm:_phenotype Phenotype_ref="White_W41_W41_mouse_phenotype" />
+      <fcm:_genotype Genotype_ref="C57BL/6J_W41/W41_mouse_genotype" />
+      <fcm:_gender OntologyTerm_ref="male_OntologyTerm" />
+      <fcm:_taxnomyNCBI OntologyTerm_ref="MusMusculus_C57BL-6J_Pep3b" />
+      <fcm:_age DataProperty_ref="6_months_data_property" />
+    </fcm:Organism>
+    
+    <!-- 12 Equally stained samples -->
+    <fcm:Sample name="Sample 1" identifier="Sample_1">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_1" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 2" identifier="Sample_2">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_2" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 3" identifier="Sample_3">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_3" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 4" identifier="Sample_4">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_4" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 5" identifier="Sample_5">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_5" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 6" identifier="Sample_6">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_6" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 7" identifier="Sample_7">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_7" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 8" identifier="Sample_8">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_8" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 9" identifier="Sample_9">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_9" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 10" identifier="Sample_10">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_10" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 11" identifier="Sample_11">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_11" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <fcm:Sample name="Sample 12" identifier="Sample_12">
+      <fcm:_subType OntologyTerm_ref="Biological_Sample_OntologyTerm"/>
+      <fcm:_sourceOrganism Organism_ref="Recipient_Mouse_12" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD4_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD8_TxRed_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45R_APC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="Gr1_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD11b_PE_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.1_FITC_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fcm:_stainingReagent FluorescentReagent_ref="DAPI_FluorescentReagent" />
+      <fcm:_otherInfo OntologyTerm_ref="SampleCharacteristicDescription_OntologyTerm" />
+    </fcm:Sample>
+    
+    <!-- HSC from doners (to be transplanted to a recipient) -->
+    <fuge:GenericMaterial identifier="HSC_from_donor_1">
+      <fuge:_characteristics OntologyTerm_ref="HSC_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="HSC_from_donor_2">
+      <fuge:_characteristics OntologyTerm_ref="HSC_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="HSC_from_donor_3">
+      <fuge:_characteristics OntologyTerm_ref="HSC_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="KSL_HSC_from_donor_4">
+      <fuge:_characteristics OntologyTerm_ref="KSL_HSC_OntologyTerm" />
+    </fuge:GenericMaterial>
+    
+    <!-- Staining components / Analyte reporters -->
+    <fuge:GenericMaterial name="TxRed" identifier="TxRed_Reporter_Component">
+      <fuge:_characteristics OntologyTerm_ref="TexasRed_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial name="APC" identifier="APC_Reporter_Component">
+      <fuge:_characteristics OntologyTerm_ref="APC_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial name="PE" identifier="PE_Reporter_Component">
+      <fuge:_characteristics OntologyTerm_ref="PE_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial name="FITC" identifier="FITC_Reporter_Component">
+      <fuge:_characteristics OntologyTerm_ref="FITC_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial name="PerCP" identifier="PerCP_Reporter_Component">
+      <fuge:_characteristics OntologyTerm_ref="PerCP_OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial name="DAPI" identifier="DAPI_Reporter_Component">
+      <fuge:_characteristics OntologyTerm_ref="DAPI_OntologyTerm" />
+    </fuge:GenericMaterial>
+    
+    <!-- Analytes -->
+    <fuge:GenericMaterial identifier="CD4">
+      <fuge:_characteristics OntologyTerm_ref="CD4-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="CD8">
+      <fuge:_characteristics OntologyTerm_ref="CD8-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="CD45R">
+      <fuge:_characteristics OntologyTerm_ref="CD45R-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="Gr1">
+      <fuge:_characteristics OntologyTerm_ref="Gr1-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="CD11b">
+      <fuge:_characteristics OntologyTerm_ref="CD11b-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="CD45.1">
+      <fuge:_characteristics OntologyTerm_ref="CD45.1-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="CD45.2">
+      <fuge:_characteristics OntologyTerm_ref="CD45.2-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="CD45.2">
+      <fuge:_characteristics OntologyTerm_ref="CD45.2-OntologyTerm" />
+    </fuge:GenericMaterial>
+    <fuge:GenericMaterial identifier="DNA_of_Membrane-compromised_Cells">
+      <fuge:_characteristics OntologyTerm_ref="DNA_of_Membrane-compromised_Cells-OntologyTerm" />
+    </fuge:GenericMaterial>
+    
+  </fuge:MaterialCollection>
+  
+
+  <!-- 
+    ********************************* 
+    References
+    *********************************
+  -->
+  <fuge:ReferenceableCollection>
+    <fuge:BibliographicReference identifier="bibRef_1_Szilvassy_1990" 
+      name="Szilvassy et al., 1990"
+      authors="Szilvassy, S.J.; Humphries, R.K.; Lansdorp, P.M.; Eaves, A.C.; Eaves, C.J."
+      title="Quantitative Assay for Totipotent Reconstituting Hematopoietic Stem Cells by a Competitive Repopulation Strategy"
+      publication="Proceedings of the National Academy of Sciences"
+      year="1990" volume="87" pages="8736-8740" />
+  </fuge:ReferenceableCollection>
+
+
+  <!-- 
+    ********************************* 
+    Investigations and its components
+    *********************************
+  -->
+  <fuge:InvestigationCollection>
+    
+    <!-- A single investigation having multiple components (a component # of transplanted cells) -->
+    <fuge:Investigation 
+      identifier="DonHSCC2LMC 2006-07-28 MGCS" 
+      start="2006-07-08T00:00:00" end="2006-11-30T00:00:00" 
+      name="Donor hematopoietic stem cells contribution to lymphocytes and myeloid cells">
+      
+      <fuge:_descriptions>
+        <fuge:Description 
+          text="The Competitive Repopulation Assay is used for the experiment. It is a quantitative 
+          assay for long-term repopulating stem cells with the potential for reconstituting all 
+          hematopoietic lineages. This assay has two key features. The first is the use of competitive 
+          repopulation conditions that ensure not only the detection of a very primitive class of 
+          hematopoietic stem cells but also the survival of lethally irradiated mice transplanted with 
+          very low numbers of such cells. The second is the use of a limiting-dilution experimental 
+          design to allow stem cell quantitation." />
+      </fuge:_descriptions>
+      
+      <fuge:_bibliographicReferences BibliographicReference_ref="bibRef_1_Szilvassy_1990" />
+      
+      <!-- Investigation components based on the number of transplanted HSC cells -->
+      <fuge:InvestigationComponent identifier="IC_5HSC">
+        <fuge:_factors Factor_ref="fact_5HSC" />
+        <fuge:_factors Factor_ref="fact_0KSLHSC" />
+        <fuge:_qualityControlDescription>
+          <fuge:Description text="This investigation component is a negative control." />
+        </fuge:_qualityControlDescription>
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_1" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_2" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_3" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_1" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_4" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_7" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_1" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_4" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_7" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data01.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data04.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data07.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data01.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data04.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data07.fsc" />
+      </fuge:InvestigationComponent>
+      
+      <fuge:InvestigationComponent identifier="IC_20HSC">
+        <fuge:_factors Factor_ref="fact_20HSC" />
+        <fuge:_factors Factor_ref="fact_0KSLHSC" />
+        <fuge:_qualityControlDescription>
+          <fuge:Description text="This investigation component is a negative control." />
+        </fuge:_qualityControlDescription>
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_1" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_2" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_3" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_2" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_5" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_8" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_2" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_5" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_8" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data02.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data05.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data08.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data02.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data05.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data08.fsc" />
+      </fuge:InvestigationComponent>
+      
+      <fuge:InvestigationComponent identifier="IC_100HSC">
+        <fuge:_factors Factor_ref="fact_100HSC" />
+        <fuge:_factors Factor_ref="fact_0KSLHSC" />
+        <fuge:_qualityControlDescription>
+          <fuge:Description 
+            text="PB has been collected from positive as well as negative mice in order to provide a 
+            staining control. Mice from the 500 KSL group were consider as the positive controls; mice 
+            that are not reconstituted as the negative controls." />
+        </fuge:_qualityControlDescription>
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_1" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_2" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_3" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_3" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_6" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_9" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_3" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_6" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_9" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data03.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data06.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data09.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data03.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data06.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data09.fsc" />
+      </fuge:InvestigationComponent>
+      
+      <fuge:InvestigationComponent identifier="IC_500KSLHSC">
+        <fuge:_factors Factor_ref="fact_0HSC" />
+        <fuge:_factors Factor_ref="fact_500KSLHSC" />
+        <fuge:_qualityControlDescription>
+          <fuge:Description text="This investigation component is a positive control." />
+        </fuge:_qualityControlDescription>
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Collect_cells_from_doner_4" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_10" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_11" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Inject_cells_into_recipient_12" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_10" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_11" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_Sample_12" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data10.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data11.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Create_data12.fcs" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data10.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data11.fsc" />
+        <fuge:_allProtocolApplications ProtocolApplication_ref="Compensate_and_gate_data12.fsc" />
+      </fuge:InvestigationComponent>
+      
+      <fuge:ContactRole Contact_ref="Clayton_Smith">
+        <fuge:_role OntologyTerm_ref="OBI_0000103" />
+      </fuge:ContactRole>
+      
+      <fuge:ContactRole Contact_ref="Maura_Gasparetto">
+        <fuge:_role OntologyTerm_ref="OBI_0000357" />
+      </fuge:ContactRole>
+      
+      <fuge:ContactRole Contact_ref="TFL_BCCRC">
+        <fuge:_role OntologyTerm_ref="OBI_0000184" />
+      </fuge:ContactRole>
+      
+      <fuge:_sourceMaterials Material_ref="Doner_Mouse_1" />
+      <fuge:_sourceMaterials Material_ref="Doner_Mouse_2" />
+      <fuge:_sourceMaterials Material_ref="Doner_Mouse_3" />
+      <fuge:_sourceMaterials Material_ref="Doner_Mouse_4" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_1" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_2" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_3" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_4" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_5" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_6" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_7" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_8" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_9" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_10" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_11" />
+      <fuge:_sourceMaterials Material_ref="Recipient_Mouse_12" />
+      <fuge:_sourceMaterials Material_ref="CD4_TxRed_FluorescentReagent" />
+      <fuge:_sourceMaterials Material_ref="CD8_TxRed_FluorescentReagent" />
+      <fuge:_sourceMaterials Material_ref="CD45R_APC_FluorescentReagent" />
+      <fuge:_sourceMaterials Material_ref="Gr1_PE_FluorescentReagent" />
+      <fuge:_sourceMaterials Material_ref="CD11b_PE_FluorescentReagent" />
+      <fuge:_sourceMaterials Material_ref="CD45.1_FITC_FluorescentReagent" />
+      <fuge:_sourceMaterials Material_ref="CD45.2_PerCP_FluorescentReagent" />
+      <fuge:_sourceMaterials Material_ref="DAPI_FluorescentReagent" />
+      
+      <fuge:_hypothesis>
+        <fuge:Description 
+          text="The purpose of the experiment is to quantify donor hematopoietic stem cells (HSC) contribution 
+          to lymphocytes and myeloid cells by flow cytometric analysis of peripheral blood (PB) cells stained 
+          with appropriate combinations of donor specific marker and lineage specific antibodies. The hypothesis 
+          is that donor HSC contribute significantly to recipient’s lymphocytes and myeloid cells." />
+      </fuge:_hypothesis>
+      
+      <fuge:_conclusion>
+        <fuge:Description 
+          text="Mice are considered reconstituted (positive) if their PB contains at least one percent of donor derived 
+          myeloid and lymphoid cells at 4 months or later post transplantation. In this sense, 1 mouse out of 3 in the 
+          5 cell group was considered positive, 1 mouse out of 3 in the 20 cell group was considered positive, all 3 
+          mice in the 100 cell group were considered positive and all 3 mice in the 500 cell control group were 
+          considered positive. This indicates that higher number of transplanted HSC cells invokes donor derived 
+          myeloid and lymphoid cells in the recipient." />
+      </fuge:_conclusion>
+      
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_1_blood" />
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_2_transplant" />
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_3_donor" />
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_4_recipient" />
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_5_leukocyte" />
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_6_lymphocyte" />
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_7_monocyte" />
+      <fuge:_investigationSummary OntologyTerm_ref="keyword_8_granulocyte" />
+      
+    </fuge:Investigation>
+
+    <fuge:Factor identifier="fact_0HSC">
+      <fuge:FactorValue>
+        <fuge:AtomicValue value="0" />
+      </fuge:FactorValue>
+      <fuge:_factorType OntologyTerm_ref="injected_donor_HSC_no" />
+    </fuge:Factor>
+    <fuge:Factor identifier="fact_5HSC">
+      <fuge:FactorValue>
+        <fuge:AtomicValue value="5" />
+      </fuge:FactorValue>
+      <fuge:_factorType OntologyTerm_ref="injected_donor_HSC_no" />
+    </fuge:Factor>
+    <fuge:Factor identifier="fact_20HSC">
+      <fuge:FactorValue>
+        <fuge:AtomicValue value="20" />
+      </fuge:FactorValue>
+      <fuge:_factorType OntologyTerm_ref="injected_donor_HSC_no" />
+    </fuge:Factor>
+    <fuge:Factor identifier="fact_100HSC">
+      <fuge:FactorValue>
+        <fuge:AtomicValue value="100" />
+      </fuge:FactorValue>
+      <fuge:_factorType OntologyTerm_ref="injected_donor_HSC_no" />
+    </fuge:Factor>
+    <fuge:Factor identifier="fact_0KSLHSC">
+      <fuge:FactorValue>
+        <fuge:AtomicValue value="0" />
+      </fuge:FactorValue>
+      <fuge:_factorType OntologyTerm_ref="injected_control_HSC_no" />
+    </fuge:Factor>
+    <fuge:Factor identifier="fact_500KSLHSC">
+      <fuge:FactorValue>
+        <fuge:AtomicValue value="0" />
+      </fuge:FactorValue>
+      <fuge:_factorType OntologyTerm_ref="injected_control_HSC_no" />
+    </fuge:Factor>
+  
+  </fuge:InvestigationCollection>
+  
+  <!-- 
+    ********************************* 
+    Data
+    *********************************
+  -->
+  <fuge:DataCollection>
+    
+    <!-- 12 list mode data files (FCS files), one file per recipient-->
+    <fcm:ListModeDataFile location="file://data01.fcs" identifier="data01.fcs" name="data01.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data02.fcs" identifier="data02.fcs" name="data02.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data03.fcs" identifier="data03.fcs" name="data03.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data04.fcs" identifier="data04.fcs" name="data04.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data05.fcs" identifier="data05.fcs" name="data05.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data06.fcs" identifier="data06.fcs" name="data06.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data07.fcs" identifier="data07.fcs" name="data07.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data07.fcs" identifier="data07.fcs" name="data07.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data09.fcs" identifier="data09.fcs" name="data09.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data10.fcs" identifier="data10.fcs" name="data10.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data11.fcs" identifier="data11.fcs" name="data11.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <fcm:ListModeDataFile location="file://data12.fcs" identifier="data12.fcs" name="data12.fcs">
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://www.isac-net.org/index.php?option=com_content&amp;task=view&amp;id=101&amp;Itemid=46" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="OBI_0000021" />
+    </fcm:ListModeDataFile>
+    
+    <!-- Fluorescence compensation matrix (wihtin the Gating-ML file) -->
+    <fuge:ExternalData location="file://Gating.xml#spillover_01" identifier="spillover_01" name="spillover_01" >
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://flowcyt.sourceforge.net/gating/latest.pdf" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="SpilloverMatrixInGating-ML_OntologyTerm" />
+    </fuge:ExternalData>
+    
+    <!-- Gating description in a Gating-ML file -->
+    <fuge:ExternalData location="file://Gating.xml" identifier="gating_file" name="Gating description file" >
+      <fuge:_externalFormatDocumentation>
+        <fuge:URI location="http://flowcyt.sourceforge.net/gating/latest.pdf" />
+      </fuge:_externalFormatDocumentation>
+      <fuge:_fileFormat OntologyTerm_ref="Gating-ML_File_Format_OntologyTerm" />
+    </fuge:ExternalData>
+    
+    <!-- Results summary -->
+   <fuge:GenericInternalData identifier="Results_for_Sample_1">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="1" />
+        <fuge:NameValueType name="Cells" value="5" />
+        <fuge:NameValueType name="Doner" value="1" />
+        <fuge:NameValueType name="Result" value="Negative" />
+        
+        <fuge:NameValueType name="Leukocytes" value="58.8" />
+        <fuge:NameValueType name="Viable Leukocytes" value="92.1" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="0.2" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       58.8% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                92.1% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):   0.2% of Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_2">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="2" />
+        <fuge:NameValueType name="Cells" value="20" />
+        <fuge:NameValueType name="Doner" value="1" />
+        <fuge:NameValueType name="Result" value="Negative" />
+        
+        <fuge:NameValueType name="Leukocytes" value="57.1" />
+        <fuge:NameValueType name="Viable Leukocytes" value="94.5" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="0.8" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       57.1% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                94.5% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):   0.8% of Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_3">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="3" />
+        <fuge:NameValueType name="Cells" value="100" />
+        <fuge:NameValueType name="Doner" value="1" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="55.6" />
+        <fuge:NameValueType name="Viable Leukocytes" value="93.1" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="43.1" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="30.9" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="30.4" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="38.8" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       55.6% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                93.1% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):  43.1% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            30.9% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            30.4% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      38.8% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_4">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="4" />
+        <fuge:NameValueType name="Cells" value="5" />
+        <fuge:NameValueType name="Doner" value="2" />
+        <fuge:NameValueType name="Result" value="Negative" />
+        
+        <fuge:NameValueType name="Leukocytes" value="54.8" />
+        <fuge:NameValueType name="Viable Leukocytes" value="97.2" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="0.1%" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       54.8% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                97.2% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):   0.1% of Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_5">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="5" />
+        <fuge:NameValueType name="Cells" value="20" />
+        <fuge:NameValueType name="Doner" value="2" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="53.6" />
+        <fuge:NameValueType name="Viable Leukocytes" value="92.5" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="10.8" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="29.0" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="31.5" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="39.5" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       53.6% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                92.5% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):  10.8% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            29.0% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            31.5% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      39.5% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_6">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="6" />
+        <fuge:NameValueType name="Cells" value="100" />
+        <fuge:NameValueType name="Doner" value="2" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="56.6" />
+        <fuge:NameValueType name="Viable Leukocytes" value="92.5" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="45.8" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="29.5" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="31.0" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="39.5" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       56.6% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                92.5% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):  45.8% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            29.5% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            31.0% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      39.5% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_7">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="7" />
+        <fuge:NameValueType name="Cells" value="5" />
+        <fuge:NameValueType name="Doner" value="3" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="48.8" />
+        <fuge:NameValueType name="Viable Leukocytes" value="95.4" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="3.8" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="33.6" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="35.0" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="31.4" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       48.8% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                95.4% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):   3.8% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            33.6% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            35.0% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      31.4% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_8">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="8" />
+        <fuge:NameValueType name="Cells" value="20" />
+        <fuge:NameValueType name="Doner" value="3" />
+        <fuge:NameValueType name="Result" value="Negative" />
+        
+        <fuge:NameValueType name="Leukocytes" value="55.8" />
+        <fuge:NameValueType name="Viable Leukocytes" value="97.0" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="0.8%" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       55.8% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                97.0% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):   0.8% of Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_9">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="9" />
+        <fuge:NameValueType name="Cells" value="100" />
+        <fuge:NameValueType name="Doner" value="3" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="48.7" />
+        <fuge:NameValueType name="Viable Leukocytes" value="92.4" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="35.8" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="29.6" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="28.0" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="42.4" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       48.7% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                92.4% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):  35.8% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            29.6% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            28.0% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      42.4% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_10">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="10" />
+        <fuge:NameValueType name="Cells" value="500" />
+        <fuge:NameValueType name="Doner" value="4" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="55.8" />
+        <fuge:NameValueType name="Viable Leukocytes" value="93.5" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="55.4" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="31.1" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="32.1" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="66.8" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       55.8% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                93.5% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):  55.4% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            31.1% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            32.1% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      66.8% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_11">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="11" />
+        <fuge:NameValueType name="Cells" value="500" />
+        <fuge:NameValueType name="Doner" value="4" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="56.8" />
+        <fuge:NameValueType name="Viable Leukocytes" value="93.7" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="52.6" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="32.5" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="32.0" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="65.5" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       56.8% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                93.7% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):  52.6% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            32.5% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            32.0% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      66.5% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+    <fuge:GenericInternalData identifier="Results_for_Sample_12">
+      <fuge:_propertySets>
+        <fuge:NameValueType name="Sample" value="12" />
+        <fuge:NameValueType name="Cells" value="500" />
+        <fuge:NameValueType name="Doner" value="4" />
+        <fuge:NameValueType name="Result" value="Positive" />
+        
+        <fuge:NameValueType name="Leukocytes" value="52.9" />
+        <fuge:NameValueType name="Viable Leukocytes" value="91.7" />
+        <fuge:NameValueType name="Donor-derived Viable Leukocytes" value="49.8" />
+        <fuge:NameValueType name="Doner-derived B-cells" value="30.1" />
+        <fuge:NameValueType name="Doner-derived T-cells" value="31.3" />
+        <fuge:NameValueType name="Doner-derived Myeloid cells" value="68.6" />
+      </fuge:_propertySets>
+      <fuge:storage>
+        Leukocytes (FSC-SSC):                       52.9% of the total number of cells
+        Viable Leukocytes (FSC-FL8):                91.7% of Leukocytes
+        Donor-derived Viable Leukocytes (FL1-FL4):  49.8% of Viable Leukocytes
+        Doner-derived B cells (FL2-FL6):            30.1% of Donor-derived Viable Leukocytes
+        Doner-derived T cells (FL3-FL6):            31.3% of Donor-derived Viable Leukocytes
+        Doner-derived Myeloid cells (FL2-FL6):      68.6% of Donor-derived Viable Leukocytes
+      </fuge:storage>
+    </fuge:GenericInternalData>
+    
+  </fuge:DataCollection>
+  
+  <!-- 
+    ********************************* 
+    Contact Details
+    *********************************
+  -->
+  <fuge:AuditCollection>
+    <fuge:Person identifier="Clayton_Smith"
+      name="Clayton Smith" address="BC Cancer Research Centre, 675 West 10th Avenue, Vancouver, BC, V5Z 1L3, Canada"
+      email="clsmith@bccancer.bc.ca" phone="+1-813-903-6870" fax="+1-604-877-0712" 
+      lastName="Smith" firstName="Clayton" midInitials="A" />
+    <fuge:Person identifier="Maura_Gasparetto"
+      name="Maura Gasparetto" address="Terry Fox Laboratory, BC Cancer Research Centre, 675 West 10th Avenue, Vancouver, BC, V5Z 1L3, Canada"
+      email="mgaspare@bccrc.ca" lastName="Gasparetto" firstName="Maura" />
+    <fuge:Organization identifier="TFL_BCCRC"
+      name="Terry Fox Laboratory, BC Cancer Research Centre" address="675 West 10th Avenue, Vancouver, BC, V5Z 1L3, Canada" />
+  </fuge:AuditCollection>
+  
+  <!-- 
+    ********************************* 
+    Protocols
+    *********************************
+  -->
+  <fuge:ProtocolCollection>
+    
+    <!-- Protocols for collection and injection of donor HSC -->
+    <fuge:GenericProtocol identifier="Donor_Cells_Collection_Protocol" protocolText="Collect donor hematopoietic stem cells" />
+    <fuge:GenericProtocol identifier="Inject_Cells_Protocol" protocolText="Inject cells into recipient mouse" >
+      <fuge:GenericAction identifier="Irradiation" actionOrdinal="1" actionText="Irradiation">
+        <fuge:GenericParameter identifier="dose" isInputParam="true" />
+      </fuge:GenericAction>
+      <fuge:GenericAction identifier="Injection" actionOrdinal="2" actionText="Inject cells into recipient mouse" />
+    </fuge:GenericProtocol>
+    
+    <!-- Staining and treatment protocol -->
+    <fuge:GenericProtocol identifier="Staining_Protocol" protocolText="Collect peripheral blood and stain with fluorescent reagents" >
+      <fuge:GenericAction identifier="Adjust_Concentration_Action" actionOrdinal="1"
+        actionText="Single cell suspensions are prepared and the cell concentrations are adjusted to 107/ml.">
+        <fuge:GenericParameter identifier="cell concentration" isInputParam="true">
+          <fuge:AtomicValue value="107"><fuge:_unit OntologyTerm_ref="CellsPerML_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:GenericParameter>
+      </fuge:GenericAction>
+      <fuge:GenericAction identifier="Block_Immunoglobulin_Fc_Receptors_Action" actionOrdinal="2"
+        actionText="Block Immunoglobulin Fc Receptors: In the mouse system, purified antibodies directed against mouse 
+        FcGamaI/III (Mouse BD FcBlock™, CD16/CD32, catalogue no. 553141 and 553142) have been used to block nonspecific 
+        staining due to FcR. To block FcR with BD FcBlock reagents, the cells are preincubated with 10 µg/ml of BD FcBlock 
+        antibody per 2x107 cells for 15–20 min at 4°C. The cells are not washed before the first staining step." />
+      <fuge:GenericAction identifier="Staining_Action" actionOrdinal="3"
+        actionText="Cells have been incubated for 40 minutes at 4°C in a staining buffer (approx. 106 cells in 100µl of 
+        staining buffer). The staining buffer contained a pre-titrated, optimal concentration (≤ 1µg) of a fluorescent 
+        monoclonal antibody specific for a receptor or with an immunoglobulin (Ig) isotype-matched control respectively." />
+      <fuge:GenericAction identifier="Washing_Action" actionOrdinal="4"
+        actionText="After the incubation, cells have been washed 1x with 2ml of staining buffer and pelleted by 
+        centrifugation (250 X g for 5 min); supernatant has been removed." />
+      <fuge:GenericAction identifier="Resuspend_in_PBSFCS_Action" actionOrdinal="5"
+        actionText="Finally, cells have been resuspended in PBS/2%FCS (Phosphate Buffered Solution, Fetal Calf Serum) 
+        for flow cytometric analysis." />
+    </fuge:GenericProtocol>
+    
+    <!-- Data acquisition protocol -->
+    <fuge:GenericProtocol identifier="Data_Acquisition_Protocol" protocolText="Run samples through the cytometer and collect FCS data files.">
+      <fuge:GenericAction identifier="Setup_Instrument" actionOrdinal="1"
+         actionText="Calibrate the instrument and set detector voltages">
+        <fuge:GenericParameter identifier="FSC_Voltage" isInputParam="true" />
+        <fuge:GenericParameter identifier="SSC_Voltage" isInputParam="true" />
+        <fuge:GenericParameter identifier="FL1_Voltage" isInputParam="true" />
+        <fuge:GenericParameter identifier="FL2_Voltage" isInputParam="true" />
+        <fuge:GenericParameter identifier="FL3_Voltage" isInputParam="true" />
+        <fuge:GenericParameter identifier="FL4_Voltage" isInputParam="true" />
+        <fuge:GenericParameter identifier="FL6_Voltage" isInputParam="true" />
+        <fuge:GenericParameter identifier="FL8_Voltage" isInputParam="true" />
+      </fuge:GenericAction>
+      <fuge:GenericAction identifier="Run_Instrument" actionOrdinal="2"
+      actionText="Run the sample through the cytometer and get list mode data file" />
+    </fuge:GenericProtocol>
+
+    <!-- Data analysis protocol - created as a combination of compensation and gating -->
+    <fuge:GenericProtocol identifier="CompensateAndGateProtocol">
+      <fuge:GenericAction identifier="compensationAction" Protocol_ref="CompPr" actionOrdinal="1" actionText="Compensate the data file" />
+      <fuge:GenericAction identifier="gatingAction" Protocol_ref="GatingPr" actionOrdinal="2" actionText="Gate the data file" />
+    </fuge:GenericProtocol>
+
+    <!-- Compensation Protocol - appears as the first action in the CompensateAndGateProtocol -->
+    <fcm:CompensationProtocol identifier="CompPr" name="Compensation Protocol">
+      <fcm:_compensationType OntologyTerm_ref="SW_compensation" />
+      <fcm:_spilloverMatrix ExternalData_ref="spillover_01" />
+    </fcm:CompensationProtocol>
+    
+    <!-- Gating Protocol - appears as the second action in the CompensateAndGateProtocol -->
+    <fcm:DataFilteringProtocol identifier="GatingPr" name="Gating Protocol" >
+      <fcm:_gate ExternalData_ref="gating_file" />
+    </fcm:DataFilteringProtocol>
+    
+    <!-- Software used for compensation and gating -->
+    <fcm:Software identifier="FlowJo_6_4_7_on_MacOSX_10_2_3" name="FlowJo" version="6.4.7">
+      <fuge:_uri>
+        <fuge:URI location="http://www.flowjo.com/" />
+      </fuge:_uri>
+      <fuge:_types OntologyTerm_ref="FCM_Analysis_SW_OntologyTerm" />
+      <fcm:_operatingSystem OntologyTerm_ref="Mackintosh_OSX_10_2_3_OntologyTerm" />
+    </fcm:Software>
+    
+    <!-- Software used to create this XML file -->
+    <fuge:GenericSoftware identifier="oXygen" version="8.1" name="oXygen XML Editor">
+      <fuge:_uri>
+        <fuge:URI location="http://www.oxygenxml.com/" />
+      </fuge:_uri>
+      <fuge:_types OntologyTerm_ref="XML_Editor" />
+    </fuge:GenericSoftware>
+    
+    <!-- ProtocolApplication - get HSC from doners -->
+    <fuge:GenericProtocolApplication Protocol_ref="Donor_Cells_Collection_Protocol" identifier="Collect_cells_from_doner_1" 
+      activityDate="2006-07-28T12:00:00-08:00">
+      <fuge:_outputMaterials Material_ref="HSC_from_donor_1" />
+      <fuge:_inputCompleteMaterials Material_ref="Doner_Mouse_1" />
+    </fuge:GenericProtocolApplication>
+    <fuge:GenericProtocolApplication Protocol_ref="Donor_Cells_Collection_Protocol" identifier="Collect_cells_from_doner_2"
+      activityDate="2006-07-28T12:00:00-08:00">
+      <fuge:_outputMaterials Material_ref="HSC_from_donor_2" />
+      <fuge:_inputCompleteMaterials Material_ref="Doner_Mouse_2" />
+    </fuge:GenericProtocolApplication>
+    <fuge:GenericProtocolApplication Protocol_ref="Donor_Cells_Collection_Protocol" identifier="Collect_cells_from_doner_3"
+      activityDate="2006-07-28T12:00:00-08:00">
+      <fuge:_outputMaterials Material_ref="HSC_from_donor_3" />
+      <fuge:_inputCompleteMaterials Material_ref="Doner_Mouse_3" />
+    </fuge:GenericProtocolApplication>
+    <fuge:GenericProtocolApplication Protocol_ref="Donor_Cells_Collection_Protocol" identifier="Collect_cells_from_doner_4"
+      activityDate="2006-07-28T12:00:00-08:00">
+      <fuge:_outputMaterials Material_ref="KSL_HSC_from_donor_4" />
+      <fuge:_inputCompleteMaterials Material_ref="Doner_Mouse_4" />
+    </fuge:GenericProtocolApplication>
+
+    <!-- ProtocolApplication - inject HSC into recipients -->
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_1"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_1">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_1" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_1">
+        <fuge:AtomicValue value="5"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_1" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_2"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_2">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_2" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_1">
+        <fuge:AtomicValue value="20"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_2" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_3"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_3">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_3" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_1">
+        <fuge:AtomicValue value="100"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_3" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_4"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_4">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_4" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_2">
+        <fuge:AtomicValue value="5"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_4" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_5"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_5">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_2">
+        <fuge:AtomicValue value="20"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_5" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_6"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_6">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_6" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_2">
+        <fuge:AtomicValue value="100"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_6" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_7"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_7">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_7" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_3">
+        <fuge:AtomicValue value="5"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_7" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_8"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_8">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_8" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_3">
+        <fuge:AtomicValue value="20"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_8" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_9"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_9">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_9" />
+      <fuge:GenericMaterialMeasurement Material_ref="HSC_from_donor_3">
+        <fuge:AtomicValue value="100"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_9" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_10"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_10">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_10" />
+      <fuge:GenericMaterialMeasurement Material_ref="KSL_HSC_from_donor_4">
+        <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_10" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_11"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_11">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_11" />
+      <fuge:GenericMaterialMeasurement Material_ref="KSL_HSC_from_donor_4">
+        <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_11" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Inject_Cells_Protocol" identifier="Inject_cells_into_recipient_12"
+      activityDate="2006-07-28T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Irradiation" identifier="Irradiation_of_recipient_12">
+        <fuge:ParameterValue Parameter_ref="dose">
+          <fuge:AtomicValue value="360"><fuge:_unit OntologyTerm_ref="rad_irradiation_unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Injection" identifier="Injection_into_recipient_12" />
+      <fuge:GenericMaterialMeasurement Material_ref="KSL_HSC_from_donor_4">
+        <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="Cell_Unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Recipient_Mouse_12" />
+    </fuge:GenericProtocolApplication>
+    
+    <!-- ProtocolApplication - Threatment and staining (creating samples) -->
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_1"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS1_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS1_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS1_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS1_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS1_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_1">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_1" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_2"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS2_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS2_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS2_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS2_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS2_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_2">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_2" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_3"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS3_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS3_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS3_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS3_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS3_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_3">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_3" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_4"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS4_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS4_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS4_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS4_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS4_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_4">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_4" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_5"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS5_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS5_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS5_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS5_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS5_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_5">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_5" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_6"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS6_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS6_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS6_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS6_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS6_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_6">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_6" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_7"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS7_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS7_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS7_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS7_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS7_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_7">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_7" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_8"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS8_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS8_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS8_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS8_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS8_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_8">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_8" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_9"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS9_1" >
+        <fuge:ParameterValue Parameter_ref="cell concentration">
+          <fuge:AtomicValue value="106"><fuge:_unit OntologyTerm_ref="CellsPerML_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS9_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS9_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS9_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS9_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_9">
+        <fuge:AtomicValue value="65"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_9" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_10"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS10_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS10_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS10_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS10_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS10_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_10">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_10" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_11"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS11_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS11_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS11_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS11_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS11_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_11">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_11" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Staining_Protocol" identifier="Create_Sample_12"
+      activityDate="2006-11-20T14:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Adjust_Concentration_Action" identifier="CS12_1" />
+      <fuge:ActionApplication Action_ref="Block_Immunoglobulin_Fc_Receptors_Action" identifier="CS12_2" />
+      <fuge:ActionApplication Action_ref="Staining_Action" identifier="CS12_3" />
+      <fuge:ActionApplication Action_ref="Washing_Action" identifier="CS12_4" />
+      <fuge:ActionApplication Action_ref="Resuspend_in_PBSFCS_Action" identifier="CS12_5" />
+      <fuge:GenericMaterialMeasurement Material_ref="Recipient_Mouse_12">
+        <fuge:AtomicValue value="60"><fuge:_unit OntologyTerm_ref="micro_liter_unit_OntologyTerm" /></fuge:AtomicValue>
+      </fuge:GenericMaterialMeasurement>
+      <fuge:_outputMaterials Material_ref="Sample_12" />
+    </fuge:GenericProtocolApplication>
+    
+    <!-- Data acquisition protocol applications -->
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data01.fcs"
+      activityDate="2006-11-21T15:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data01.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data01.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data01.fcs" />
+      <fuge:_outputData Data_ref="data01.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_1" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data02.fcs"
+      activityDate="2006-11-21T15:10:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data02.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data02.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data02.fcs" />
+      <fuge:_outputData Data_ref="data02.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_2" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data03.fcs"
+      activityDate="2006-11-21T15:20:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data03.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data03.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data03.fcs" />
+      <fuge:_outputData Data_ref="data03.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_3" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data04.fcs"
+      activityDate="2006-11-21T15:30:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data04.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data04.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data04.fcs" />
+      <fuge:_outputData Data_ref="data04.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_4" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data05.fcs"
+      activityDate="2006-11-21T15:40:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data05.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data05.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data05.fcs" />
+      <fuge:_outputData Data_ref="data05.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_5" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data06.fcs"
+      activityDate="2006-11-21T15:50:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data06.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data06.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data06.fcs" />
+      <fuge:_outputData Data_ref="data06.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_6" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data07.fcs"
+      activityDate="2006-11-21T16:00:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data07.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data07.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data07.fcs" />
+      <fuge:_outputData Data_ref="data07.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_7" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data08.fcs"
+      activityDate="2006-11-21T16:10:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data08.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data08.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data08.fcs" />
+      <fuge:_outputData Data_ref="data08.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_8" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data09.fcs"
+      activityDate="2006-11-21T16:20:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data09.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data09.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data09.fcs" />
+      <fuge:_outputData Data_ref="data09.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_9" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data10.fcs"
+      activityDate="2006-11-21T16:30:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data10.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data10.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data10.fcs" />
+      <fuge:_outputData Data_ref="data10.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_10" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data11.fcs"
+      activityDate="2006-11-21T16:40:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data11.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data11.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data11.fcs" />
+      <fuge:_outputData Data_ref="data11.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_11" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="Data_Acquisition_Protocol" identifier="Create_data12.fcs"
+      activityDate="2006-11-21T16:50:00-08:00">
+      <fuge:ActionApplication Action_ref="Setup_Instrument" identifier="Setup_Instrument_for_data12.fcs">
+        <fuge:ParameterValue Parameter_ref="FSC_Voltage">
+          <fuge:AtomicValue value="220"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="SSC_Voltage">
+          <fuge:AtomicValue value="330"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL1_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL2_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL3_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL4_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL6_Voltage">
+          <fuge:AtomicValue value="500"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+        <fuge:ParameterValue Parameter_ref="FL8_Voltage">
+          <fuge:AtomicValue value="550"><fuge:_unit OntologyTerm_ref="V_Unit_OntologyTerm" /></fuge:AtomicValue>
+        </fuge:ParameterValue>
+      </fuge:ActionApplication>
+      <fuge:ActionApplication Action_ref="Run_Instrument" identifier="Run_Instrument_for_data12.fcs" />
+      <fuge:EquipmentApplication Equipment_ref="BD_FACSAria_Flow_Cytometer_SN_P0143" identifier="EqPrApp_for_data12.fcs" />
+      <fuge:_outputData Data_ref="data12.fcs" />
+      <fuge:_inputCompleteMaterials Material_ref="Sample_12" />
+    </fuge:GenericProtocolApplication>
+    
+    <!-- Compensation and Gating Protocol Application -->
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data01.fsc" 
+      activityDate="2006-11-22T13:00:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data01.fsc" name="Compensate data01.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data01.fsc" name="Gate data01.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample01" />
+      <fuge:_inputData Data_ref="data01.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_1" />
+    </fuge:GenericProtocolApplication>
+
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data02.fsc" 
+      activityDate="2006-11-22T13:10:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data02.fsc" name="Compensate data02.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data02.fsc" name="Gate data02.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample02" />
+      <fuge:_inputData Data_ref="data02.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_2" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data03.fsc" 
+      activityDate="2006-11-22T13:20:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data03.fsc" name="Compensate data03.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data03.fsc" name="Gate data03.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample03" />
+      <fuge:_inputData Data_ref="data03.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_3" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data04.fsc" 
+      activityDate="2006-11-22T13:30:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data04.fsc" name="Compensate data04.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data04.fsc" name="Gate data04.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample04" />
+      <fuge:_inputData Data_ref="data04.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_4" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data05.fsc" 
+      activityDate="2006-11-22T13:40:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data05.fsc" name="Compensate data05.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data05.fsc" name="Gate data05.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample05" />
+      <fuge:_inputData Data_ref="data05.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_5" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data06.fsc" 
+      activityDate="2006-11-22T13:50:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data06.fsc" name="Compensate data06.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data06.fsc" name="Gate data06.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample06" />
+      <fuge:_inputData Data_ref="data06.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_6" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data07.fsc" 
+      activityDate="2006-11-22T14:00:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data07.fsc" name="Compensate data07.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data07.fsc" name="Gate data07.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample07" />
+      <fuge:_inputData Data_ref="data07.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_7" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data08.fsc" 
+      activityDate="2006-11-22T14:10:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data08.fsc" name="Compensate data08.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data02.fsc" name="Gate data08.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample08" />
+      <fuge:_inputData Data_ref="data08.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_8" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data09.fsc" 
+      activityDate="2006-11-22T14:20:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data09.fsc" name="Compensate data09.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data09.fsc" name="Gate data09.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample09" />
+      <fuge:_inputData Data_ref="data09.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_9" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data10.fsc" 
+      activityDate="2006-11-22T14:30:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data10.fsc" name="Compensate data10.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data10.fsc" name="Gate data10.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample10" />
+      <fuge:_inputData Data_ref="data10.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_10" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data11.fsc" 
+      activityDate="2006-11-22T14:40:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data11.fsc" name="Compensate data11.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data11.fsc" name="Gate data11.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample11" />
+      <fuge:_inputData Data_ref="data11.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_11" />
+    </fuge:GenericProtocolApplication>
+    
+    <fuge:GenericProtocolApplication Protocol_ref="CompensateAndGateProtocol" identifier="Compensate_and_gate_data12.fsc" 
+      activityDate="2006-11-22T14:50:00-08:00" >
+      <fuge:ActionApplication Action_ref="compensationAction" identifier="Compensate_data12.fsc" name="Compensate data12.fsc" />
+      <fuge:ActionApplication Action_ref="gatingAction" identifier="Gate_data12.fsc" name="Gate data12.fsc" />
+      <fuge:SoftwareApplication Software_ref="FlowJo_6_4_7_on_MacOSX_10_2_3" identifier="FlowJoSample12" />
+      <fuge:_inputData Data_ref="data12.fcs" />
+      <fuge:_outputData Data_ref="Results_for_Sample_12" />
+    </fuge:GenericProtocolApplication>
+    
+    <!-- Instrumentation description -->
+    <fcm:Cytometer identifier="BD_FACSAria_Flow_Cytometer_SN_P0143">
+      <!--
+        *************************************************************************************************** 
+        Please note that MIFlowCyt only requires the make, model# and user-altered and configured parts.
+        Here, we are trying to describe the whole instrument just to test that the model and the XSD allows
+        for such a description!
+        ***************************************************************************************************
+      -->
+      <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+      <fuge:_model OntologyTerm_ref="OBI_0400040" />
+      <fcm:FlowCell identifier="Cuvette_flow_cell">
+        <fcm:_flowCellType OntologyTerm_ref="Cuvette_OntologyTerm" />
+        <fcm:_flowCellOtherInfo>
+          <fuge:Description text="Quartz Cuvette Flow Cell, 160-um x 250-um, 15-mm long" />
+        </fcm:_flowCellOtherInfo>
+      </fcm:FlowCell>
+      <fcm:OpticalFilter identifier="LP735o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_LP735_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_735nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400067"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-A; Octagon (488nm laser), intended dye: PECy-7" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP780_60o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP780_60_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_750nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_810nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-A; Octagon (488nm laser), intended dye: PECy-7" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="LP655o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_LP655_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_655nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400067"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-B (FL4); Octagon (488nm laser), intended dye: PerCP" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP675_20o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP675_20_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_665nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_685nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-B (FL4); Octagon (488nm laser), intended dye: PerCP" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="LP595o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_LP595_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_595nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400067"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-C (FL3); Octagon (488nm laser), intended dye: PE-TxRed" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP610_20o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP610_20_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_600nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_620nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-C (FL3); Octagon (488nm laser), intended dye: PE-TxRed" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="LP556o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_LP556_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_556nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400067"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-D (FL2); Octagon (488nm laser), intended dye: PE or PI" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP575_26o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP575_26_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_562nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_588nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-D (FL2); Octagon (488nm laser), intended dye: PE or PI" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="LP502o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_LP502_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_502nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400067"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-E (FL1); Octagon (488nm laser), intended dye: FITC" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP530_30o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP530_30_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_515nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_545nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-E (FL1); Octagon (488nm laser), intended dye: FITC" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP488_10o" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP488_10_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_483nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_493nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-F; Octagon (488nm laser), SSC" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="LP735t1" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_LP735_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_735nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400067"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-A; Trigon 1 (633nm laser), intended dye: APC-Cy7" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP780_60t1" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP780_60_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_750nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_810nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-A; Trigon 1 (633nm laser), intended dye: APC-Cy7" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP660_20t1" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP660_20_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_650nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_670nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-B (FL6); Trigon 1 (633nm laser), intended dye: APC" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="LP502t2" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_LP502_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_502nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400067"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-A (FL8); Trigon 2 (407nm laser), intended dye: DAPI" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP530_30t2" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP530_30_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_515nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_545nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-A (FL8); Trigon 2 (407nm laser), intended dye: DAPI" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalFilter identifier="BP450_40t2" instalationDate="2006-02-15T00:00:00">
+        <fuge:_make OntologyTerm_ref="BD_OntologyTerm" />
+        <fuge:_model OntologyTerm_ref="BD_BP450_40_OntologyTerm" />
+        <fcm:_minTransmittedWavelength DataProperty_ref="dp_430nm" />
+        <fcm:_maxTransmittedWavelength DataProperty_ref="dp_470nm" />
+        <fcm:_opticalFilterType OntologyTerm_ref="OBI_0400013"/>
+        <fcm:_opticalFilterOtherInfo>
+          <fuge:Description text="Before PMT-B; Trigon 2 (407nm laser), intended dye: Pacific Blue, Cascade Blue, Alexa Fluor 405" />
+        </fcm:_opticalFilterOtherInfo>
+      </fcm:OpticalFilter>
+      <fcm:OpticalDetector identifier="FSC" name="Forward Scatter">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400083" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="linear" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_220V" />
+      </fcm:OpticalDetector>
+      <fcm:OpticalDetector identifier="SSC" name="Side Scatter">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400084" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="linear" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_330V" />
+        <fcm:_opticalDetectorOtherInfo>
+          <fuge:Description text="PMT-F; Octagon (488nm laser)" />
+        </fcm:_opticalDetectorOtherInfo>
+      </fcm:OpticalDetector>
+      <fcm:OpticalDetector identifier="FL1" name="FL1">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400084" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="log" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_500V" />
+        <fcm:_opticalDetectorOtherInfo>
+          <fuge:Description text="PMT-E; Octagon (488nm laser)" />
+        </fcm:_opticalDetectorOtherInfo>
+      </fcm:OpticalDetector>
+      <fcm:OpticalDetector identifier="FL2" name="FL2">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400084" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="log" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_500V" />
+        <fcm:_opticalDetectorOtherInfo>
+          <fuge:Description text="PMT-D; Octagon (488nm laser)" />
+        </fcm:_opticalDetectorOtherInfo>
+      </fcm:OpticalDetector>
+      <fcm:OpticalDetector identifier="FL3" name="FL3">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400084" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="log" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_500V" />
+        <fcm:_opticalDetectorOtherInfo>
+          <fuge:Description text="PMT-C; Octagon (488nm laser)" />
+        </fcm:_opticalDetectorOtherInfo>
+      </fcm:OpticalDetector>
+      <fcm:OpticalDetector identifier="FL4" name="FL4">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400084" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="log" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_500V" />
+        <fcm:_opticalDetectorOtherInfo>
+          <fuge:Description text="PMT-B; Octagon (488nm laser)" />
+        </fcm:_opticalDetectorOtherInfo>
+      </fcm:OpticalDetector>
+      <fcm:OpticalDetector identifier="FL6" name="FL6">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400084" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="log" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_500V" />
+        <fcm:_opticalDetectorOtherInfo>
+          <fuge:Description text="PMT-B; Trigon 1 (633nm laser)" />
+        </fcm:_opticalDetectorOtherInfo>
+      </fcm:OpticalDetector>
+      <fcm:OpticalDetector identifier="FL8" name="FL8">
+        <fcm:_opticalDetectorType OntologyTerm_ref="OBI_0400084" />
+        <fcm:_opticalDetectorAmplificationType><fuge:Description text="log" /></fcm:_opticalDetectorAmplificationType>
+        <fcm:_opticalDetectorVoltage DataProperty_ref="dp_550V" />
+        <fcm:_opticalDetectorOtherInfo>
+          <fuge:Description text="PMT-A; Trigon 2 (407nm laser)" />
+        </fcm:_opticalDetectorOtherInfo>
+      </fcm:OpticalDetector>
+      <fcm:LightSource identifier="Laser_488nm" name="Laser 488nm">
+        <fcm:_lightSourceType OntologyTerm_ref="OBI_0400096" />
+        <fcm:_lightSourceExcitatoryWavelength DataProperty_ref="dp_488nm" />
+        <fcm:_lightSourcePower DataProperty_ref="dp_15mW" />
+        <fcm:_lightSourcePolarization>
+          <fuge:Description text="N/A" />
+        </fcm:_lightSourcePolarization>
+        <fcm:_lightSourceBeam>
+          <fuge:Description text="Elliptical Shape, Beam height is 9 +/- 3um and beam width is 65 +/- 7um" />
+        </fcm:_lightSourceBeam>
+        <fcm:_lightSourceOtherInfo>
+          <fuge:Description text="Coherent Sapphire, Class IIIb." />
+        </fcm:_lightSourceOtherInfo>
+      </fcm:LightSource>
+      <fcm:LightSource identifier="Laser_633nm" name="Laser 633nm">
+        <fcm:_lightSourceType OntologyTerm_ref="OBI_0400053" />
+        <fcm:_lightSourceExcitatoryWavelength DataProperty_ref="dp_633nm" />
+        <fcm:_lightSourcePower DataProperty_ref="dp_15mW" />
+        <fcm:_lightSourceBeam>
+          <fuge:Description text="Elliptical Shape, Beam height is 9 +/- 3um and beam width is 65 +/- 7um" />
+        </fcm:_lightSourceBeam>
+        <fcm:_lightSourceOtherInfo>
+          <fuge:Description text="JDS UniphaseTM HeNe air-cooled, Class IIIb." />
+        </fcm:_lightSourceOtherInfo>
+      </fcm:LightSource>
+      <fcm:LightSource identifier="Laser_407nm" name="Laser 407nm">
+        <fcm:_lightSourceType OntologyTerm_ref="OBI_0400096" />
+        <fcm:_lightSourceExcitatoryWavelength DataProperty_ref="dp_407nm" />
+        <fcm:_lightSourcePower DataProperty_ref="dp_15mW" />
+        <fcm:_lightSourceBeam>
+          <fuge:Description text="Elliptical Shape, Beam height is 9 +/- 3um and beam width is 65 +/- 7um" />
+        </fcm:_lightSourceBeam>
+        <fcm:_lightSourceOtherInfo>
+          <fuge:Description text="Point Source Violet solid state, Class IIIb." />
+        </fcm:_lightSourceOtherInfo>
+      </fcm:LightSource>
+      <fcm:OpticalPathDesctiption identifier="FSC-OpticalPath" name="FSC Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_488nm" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="FSC" />
+      </fcm:OpticalPathDesctiption>
+      <fcm:OpticalPathDesctiption identifier="SSC-OpticalPath" name="SSC Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_488nm" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="BP488_10o" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="SSC" />
+      </fcm:OpticalPathDesctiption>
+      <fcm:OpticalPathDesctiption identifier="FL1-OpticalPath" name="FL1 Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_488nm" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="LP502o" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="BP530_30o" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="FL1" />
+      </fcm:OpticalPathDesctiption>
+      <fcm:OpticalPathDesctiption identifier="FL2-OpticalPath" name="FL2 Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_488nm" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="LP556o" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="BP575_26o" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="FL2" />
+      </fcm:OpticalPathDesctiption>
+      <fcm:OpticalPathDesctiption identifier="FL3-OpticalPath" name="FL3 Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_488nm" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="LP595o" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="BP610_20o" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="FL3" />
+      </fcm:OpticalPathDesctiption>
+      <fcm:OpticalPathDesctiption identifier="FL4-OpticalPath" name="FL4 Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_488nm" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="LP655o" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="BP675_20o" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="FL4" />
+      </fcm:OpticalPathDesctiption>
+      <fcm:OpticalPathDesctiption identifier="FL6-OpticalPath" name="FL6 Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_633nm" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="BP660_20t1" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="FL6" />
+      </fcm:OpticalPathDesctiption>
+      <fcm:OpticalPathDesctiption identifier="FL8-OpticalPath" name="FL8 Optical Path">
+        <fcm:OpticalPathComponent LightSource_ref="Laser_407nm" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="LP502t2" />
+        <fcm:OpticalPathComponent OpticalFilter_ref="BP530_30t2" />
+        <fcm:OpticalPathComponent OpticalDetector_ref="FL8" />
+      </fcm:OpticalPathDesctiption>
+    </fcm:Cytometer>
+
+  </fuge:ProtocolCollection>
+  
+  <!-- 
+    ********************************* 
+    Ontological Terms
+    *********************************
+  -->
+  <fuge:OntologyCollection>
+    
+    <!-- Keywords, trying MeSH -->
+    <fuge:OntologyIndividual 
+      term="Blood" OntologySource_ref="http://www.nlm.nih.gov/mesh/meshhome.html"  
+      termAccession="MeSH:Q000097" identifier="keyword_1_blood" />
+    <fuge:OntologyIndividual 
+      term="Transplants" OntologySource_ref="http://www.nlm.nih.gov/mesh/meshhome.html" 
+      termAccession="MeSH:D019737" identifier="keyword_2_transplant" />
+    <fuge:OntologyIndividual 
+      term="Donor" termAccession="N/A" identifier="keyword_3_donor" />
+    <fuge:OntologyIndividual 
+      term="Recipient" termAccession="N/A" identifier="keyword_4_recipient" />
+    <fuge:OntologyIndividual 
+      term="Leukocytes" OntologySource_ref="http://www.nlm.nih.gov/mesh/meshhome.html" 
+      termAccession="MeSH:D007962" identifier="keyword_5_leukocyte" />
+    <fuge:OntologyIndividual 
+      term="Lymphocytes" OntologySource_ref="http://www.nlm.nih.gov/mesh/meshhome.html" 
+      termAccession="MeSH:D008214" identifier="keyword_6_lymphocyte" />
+    <fuge:OntologyIndividual 
+      term="Monocytes" OntologySource_ref="http://www.nlm.nih.gov/mesh/meshhome.html" 
+      termAccession="MeSH:D009000" identifier="keyword_7_monocyte" />
+    <fuge:OntologyIndividual 
+      term="Granulocytes" OntologySource_ref="http://www.nlm.nih.gov/mesh/meshhome.html" 
+      termAccession="MeSH:D006098" identifier="keyword_8_granulocyte" />
+    
+    <!-- Number of inhected cells, data properties? -->
+    <fuge:DataProperty 
+      term="Number of donor HSC cells injected into a recipient mice" 
+      termAccession="N/A" identifier="injected_donor_HSC_no" />
+    <fuge:DataProperty 
+      term="Number of Kit+/sca-1+/Lineage- (KSL) HSC cells injected into a recipient mice" 
+      termAccession="N/A" identifier="injected_control_HSC_no" />
+    
+    <!-- Roles from OBI -->
+    <fuge:OntologyIndividual
+      term="principal investigator role" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" 
+      termAccession="OBI:OBI_0000103" identifier="OBI_0000103" />
+    <fuge:OntologyIndividual 
+      term="laboratory role" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl"
+      termAccession="OBI:OBI_0000184" identifier="OBI_0000184" />
+    <fuge:OntologyIndividual 
+      term="author role" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl"
+      termAccession="OBI:OBI_0000357" identifier="OBI_0000357" />
+
+    <!-- IT stuff -->
+    <fuge:OntologyIndividual 
+      term="Extensible Markup Language (XML) Editor"
+      termAccession="N/A" identifier="XML_Editor" />
+    <fuge:OntologyIndividual 
+      term="Flow Cytometry Analysis Software" termAccession="N/A" identifier="FCM_Analysis_SW_OntologyTerm" />
+    <fuge:OntologyIndividual 
+      term="Mackintosh OSX 10_2_3" termAccession="N/A" identifier="Mackintosh_OSX_10_2_3_OntologyTerm" />
+
+    <!-- Dyes -->
+    <fuge:OntologyIndividual 
+      term="Texas Red" name="Texas Red" OntologySource_ref="http://www.drmr.com/abcon/trfspec.html"
+      termAccession="N/A" identifier="TexasRed_OntologyTerm" />
+    <fuge:OntologyIndividual 
+      term="Allophycocyanin (APC)" name="Allophycocyanin (APC)" OntologySource_ref="http://www.drmr.com/abcon/APCfspec.html"
+      termAccession="N/A" identifier="APC_OntologyTerm" />
+    <fuge:OntologyIndividual 
+      term="Phycoerythrin (PE)" name="Phycoerythrin (PE)" OntologySource_ref="http://www.drmr.com/abcon/PEfspec.html"
+      termAccession="N/A" identifier="PE_OntologyTerm" />
+    <fuge:OntologyIndividual 
+      term="Fluorescein (FITC)" name="Fluorescein (FITC)" OntologySource_ref="http://www.drmr.com/abcon/Ffspec.html"
+      termAccession="N/A" identifier="FITC_OntologyTerm" />
+    <fuge:OntologyIndividual 
+      term="Peridinin-chlorophyll-protein (PerCP)" name="Peridinin-chlorophyll-protein (PerCP)"
+      termAccession="N/A" identifier="PerCP_OntologyTerm" />
+    <fuge:OntologyIndividual 
+      term="4,6-diamidino-2-phenylindole (DAPI)" name="4,6-diamidino-2-phenylindole (DAPI)"
+      termAccession="N/A" identifier="DAPI_OntologyTerm" />
+
+    <!-- Antibodies -->
+    <fuge:OntologyIndividual identifier="anti-CD4-OntologyTerm" term="anti-CD4" name="anti-CD4" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="anti-CD8-OntologyTerm" term="anti-CD8" name="anti-CD8" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="anti-CD45R-OntologyTerm" term="anti-CD45R" name="anti-CD45R" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="anti-Gr1-OntologyTerm" term="anti-Gr1" name="anti-Gr1" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="anti-CD11b-OntologyTerm" term="anti-CD11b" name="anti-CD11b" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="anti-CD45.1-OntologyTerm" term="anti-CD45.1" name="anti-CD45.1" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="anti-CD45.2-OntologyTerm" term="anti-CD45.2" name="anti-CD45.2" termAccession="N/A" />
+    
+    <!-- Analytes -->
+    <fuge:OntologyIndividual identifier="CD4-OntologyTerm"
+      term="CD4" name="CD4" termAccession="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD4" 
+      OntologySource_ref="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD4" />
+    <fuge:OntologyIndividual identifier="CD8-OntologyTerm" 
+      term="CD8" name="CD8" termAccession="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD8" 
+      OntologySource_ref="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD8" />
+    <fuge:OntologyIndividual identifier="CD45-OntologyTerm"
+      term="CD45" name="CD45" termAccession="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD45" 
+      OntologySource_ref="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD45" />
+    <fuge:OntologyIndividual identifier="Gr1-OntologyTerm" term="Gr1" name="Gr1" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="CD11b-OntologyTerm" termAccession="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD11b" 
+      term="CD11b" name="CD11b" OntologySource_ref="http://www.genecards.org/cgi-bin/carddisp.pl?gene=CD11b" />
+    <fuge:OntologyIndividual identifier="CD45.1-OntologyTerm" term="CD45.1" name="CD45.1" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="CD45.2-OntologyTerm" term="CD45.2" name="CD45.2" termAccession="N/A" />
+    <fuge:OntologyIndividual identifier="DNA_of_Membrane-compromised_Cells-OntologyTerm" term="DNA of Membrane-compromised Cells" 
+      name="DNA of Membrane-compromised Cells" termAccession="N/A" />
+    
+    <!-- Organism details -->
+    <fuge:OntologyIndividual term="male" name="male" identifier="male_OntologyTerm" 
+      termAccession="PATO:0000384" 
+      OntologySource_ref="http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=PATO" />
+    
+    <fuge:OntologyIndividual term="Mus Musculus, C57BL/6J:Pep3b" name="Mus Musculus, C57BL/6J:Pep3b" identifier="MusMusculus_C57BL-6J_Pep3b" 
+      termAccession="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=10090&amp;lvl=3&amp;keep=1&amp;srchmode=1&amp;unlock&amp;mod=1#modif" 
+      OntologySource_ref="http://www.ncbi.nlm.nih.gov/Taxonomy/" />
+    
+    <fuge:OntologyIndividual term="computationally post acquisition" termAccession="N/A" identifier="SW_compensation" />
+    <fuge:OntologyIndividual term="Biological sample" termAccession="N/A" identifier="Biological_Sample_OntologyTerm" />
+    <fuge:OntologyIndividual term="Expected/analyzed types of cells: red blood cells, lymphoid and myeloid properties, Ly-5.1 vs. Ly-5.2."
+      termAccession="N/A" identifier="SampleCharacteristicDescription_OntologyTerm" >
+      <fuge:_descriptions>
+        <fuge:Description text="Expected/analyzed types of cells: red blood cells, lymphoid and myeloid properties, 
+          Ly-5.1 vs. Ly-5.2. After lysing red blood cells, samples are stained for lymphoid and myeloid properties 
+          in addition to the specific form (Ly-5.1 or Ly-5.2) of the alloantigen ptprc (protein tyrosine phosphatase 
+          receptor type c polypeptide) to detect donor and recipient respectively." />
+      </fuge:_descriptions>
+    </fuge:OntologyIndividual>
+   
+    <fuge:DataProperty identifier="6_months_data_property"
+      term="6 months" name="6 months" termAccession="N/A" value="6" dataType="integer" />
+    
+    <!-- Catalog numbers as data properties -->
+    <fuge:DataProperty term="Catalog Number 553648" termAccession="N/A" identifier="catalogNumber_553648" value="553648" />
+    <fuge:DataProperty term="Catalog Number 553028" termAccession="N/A" identifier="catalogNumber_553028" value="553028" />
+    <fuge:DataProperty term="Catalog Number 553092" termAccession="N/A" identifier="catalogNumber_553092" value="553092" />
+    <fuge:DataProperty term="Catalog Number 551461" termAccession="N/A" identifier="catalogNumber_551461" value="551461" />
+    <fuge:DataProperty term="Catalog Number 557397" termAccession="N/A" identifier="catalogNumber_557397" value="557397" />
+    <fuge:DataProperty term="Catalog Number 553775" termAccession="N/A" identifier="catalogNumber_553775" value="553775" />
+    <fuge:DataProperty term="Catalog Number 552950" termAccession="N/A" identifier="catalogNumber_552950" value="552950" />
+    <fuge:DataProperty term="Catalog Number 7034" termAccession="N/A" identifier="catalogNumber_7034" value="7034" />
+    
+    <!-- Clone numbers as data properties -->
+    <fuge:DataProperty term="Clone Number H129.19" termAccession="N/A" identifier="dp_H129.19_CloneNumber" value="H129.19" />
+    <fuge:DataProperty term="Clone Number 53-6.7" termAccession="N/A" identifier="dp_53-6.7_CloneNumber" value="53-6.7" />
+    <fuge:DataProperty term="Clone Number RA3-6B2" termAccession="N/A" identifier="dp_RA3-6B2_CloneNumber" value="RA3-6B2" />
+    <fuge:DataProperty term="Clone Number 1A8" termAccession="N/A" identifier="dp_1A8_CloneNumber" value="1A8" />
+    <fuge:DataProperty term="Clone Number M1/70" termAccession="N/A" identifier="dp_M1-70_CloneNumber" value="M1/70" />
+    <fuge:DataProperty term="Clone Number A20" termAccession="N/A" identifier="dp_A20_CloneNumber" value="A20" />
+    <fuge:DataProperty term="Clone Number 104" termAccession="N/A" identifier="dp_104_CloneNumber" value="104" />
+    
+    <!-- Wavelengths as data properties -->
+    <fuge:DataProperty term="407 nm" termAccession="N/A" identifier="dp_407nm" value="407" />
+    <fuge:DataProperty term="430 nm" termAccession="N/A" identifier="dp_430nm" value="430" />
+    <fuge:DataProperty term="470 nm" termAccession="N/A" identifier="dp_470nm" value="470" />
+    <fuge:DataProperty term="483 nm" termAccession="N/A" identifier="dp_483nm" value="483" />
+    <fuge:DataProperty term="488 nm" termAccession="N/A" identifier="dp_488nm" value="488" />
+    <fuge:DataProperty term="493 nm" termAccession="N/A" identifier="dp_493nm" value="493" />
+    <fuge:DataProperty term="502 nm" termAccession="N/A" identifier="dp_502nm" value="502" />
+    <fuge:DataProperty term="515 nm" termAccession="N/A" identifier="dp_515nm" value="515" />
+    <fuge:DataProperty term="545 nm" termAccession="N/A" identifier="dp_545nm" value="545" />
+    <fuge:DataProperty term="556 nm" termAccession="N/A" identifier="dp_556nm" value="556" />
+    <fuge:DataProperty term="562 nm" termAccession="N/A" identifier="dp_562nm" value="562" />
+    <fuge:DataProperty term="588 nm" termAccession="N/A" identifier="dp_588nm" value="588" />
+    <fuge:DataProperty term="595 nm" termAccession="N/A" identifier="dp_595nm" value="595" />
+    <fuge:DataProperty term="600 nm" termAccession="N/A" identifier="dp_600nm" value="655" />
+    <fuge:DataProperty term="620 nm" termAccession="N/A" identifier="dp_620nm" value="620" />
+    <fuge:DataProperty term="633 nm" termAccession="N/A" identifier="dp_633nm" value="633" />
+    <fuge:DataProperty term="650 nm" termAccession="N/A" identifier="dp_650nm" value="650" />
+    <fuge:DataProperty term="655 nm" termAccession="N/A" identifier="dp_655nm" value="655" />
+    <fuge:DataProperty term="665 nm" termAccession="N/A" identifier="dp_665nm" value="665" />
+    <fuge:DataProperty term="670 nm" termAccession="N/A" identifier="dp_670nm" value="670" />
+    <fuge:DataProperty term="685 nm" termAccession="N/A" identifier="dp_685nm" value="685" />
+    <fuge:DataProperty term="735 nm" termAccession="N/A" identifier="dp_735nm" value="735" />
+    <fuge:DataProperty term="750 nm" termAccession="N/A" identifier="dp_750nm" value="750" />
+    <fuge:DataProperty term="810 nm" termAccession="N/A" identifier="dp_810nm" value="810" />
+
+    <!-- Voltages as data properties -->
+    <fuge:DataProperty term="220 V" termAccession="N/A" identifier="dp_220V" value="220" />
+    <fuge:DataProperty term="330 V" termAccession="N/A" identifier="dp_330V" value="330" />
+    <fuge:DataProperty term="500 V" termAccession="N/A" identifier="dp_500V" value="500" />
+    <fuge:DataProperty term="550 V" termAccession="N/A" identifier="dp_550V" value="550" />
+
+    <!-- Powers as data properties -->
+    <fuge:DataProperty term="15 mW" termAccession="N/A" identifier="dp_15mW" value="15" />
+    
+    <!-- Reagent model/make -->
+    <fuge:OntologyIndividual term="BD-CD4-TxRed" termAccession="N/A" identifier="BD-CD4-TxRed_Term" />
+    <fuge:OntologyIndividual term="BD-CD8-TxRed" termAccession="N/A" identifier="BD-CD8-TxRed_Term" />
+    <fuge:OntologyIndividual term="BD-CD45R-APC" termAccession="N/A" identifier="BD-CD45R-APC_Term" />
+    <fuge:OntologyIndividual term="BD-Gr1-PE" termAccession="N/A" identifier="BD-Gr1-PE_Term" />
+    <fuge:OntologyIndividual term="BD-CD11b-PE" termAccession="N/A" identifier="BD-CD11b-PE_Term" />
+    <fuge:OntologyIndividual term="BD-CD45.1-FITC" termAccession="N/A" identifier="BD-CD45.1-FITC_Term" />
+    <fuge:OntologyIndividual term="BD-CD45.2-PerCP" termAccession="N/A" identifier="BD-CD45.2-PerCP_Term" />
+    <fuge:OntologyIndividual term="Exalpha-DAPI" termAccession="N/A" identifier="Exalpha-DAPI_Term" />
+    
+    <!-- Instrumentation terms, some from OBI -->
+    <fuge:OntologyIndividual term="Becton Dickinson" termAccession="N/A" identifier="BD_OntologyTerm" />
+    <fuge:OntologyIndividual term="FACSAria" termAccession="OBI:OBI_0400040" identifier="OBI_0400040" 
+      OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="Cuvette" termAccession="N/A" identifier="Cuvette_OntologyTerm" />
+    <fuge:OntologyIndividual term="Band pass filter" termAccession="OBI:OBI_0400013" identifier="OBI_0400013" 
+      name="Band pass filter" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="Long pass filter" termAccession="OBI:OBI_0400067" identifier="OBI_0400067" 
+      name="Long pass filter" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="Photodiode" termAccession="OBI:OBI_0400083" identifier="OBI_0400083" 
+      name="Photodiode" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="Photomultiplier tube" termAccession="OBI:OBI_0400084" identifier="OBI_0400084" 
+      name="Photomultiplier tube" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="Solid state laser" termAccession="OBI:OBI_0400096" identifier="OBI_0400096" 
+      name="Solid state laser" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="HeNe laser" termAccession="OBI:OBI_0400053" identifier="OBI_0400053" 
+      name="HeNe laser" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="List-mode data file" termAccession="OBI:OBI_0000021" identifier="OBI_0000021" 
+      name="List-mode data file" OntologySource_ref="http://purl.obofoundry.org/obo/obi.owl" />
+    <fuge:OntologyIndividual term="Spillover Matrix in Gating-ML" termAccession="N/A" identifier="SpilloverMatrixInGating-ML_OntologyTerm" 
+      name="Spillover Matrix in Gating-ML" />
+    <fuge:OntologyIndividual term="Gating-ML File Format" termAccession="N/A" identifier="Gating-ML_File_Format_OntologyTerm" 
+      name="Gating-ML File Format" />
+    
+    <!-- Instrumentation individuals - make/models -->
+    <fuge:OntologyIndividual term="BD LP 502 filter" termAccession="N/A" identifier="BD_LP502_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD LP 556 filter" termAccession="N/A" identifier="BD_LP556_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD LP 595 filter" termAccession="N/A" identifier="BD_LP595_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD LP 655 filter" termAccession="N/A" identifier="BD_LP655_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD LP 735 filter" termAccession="N/A" identifier="BD_LP735_OntologyTerm" />
+    
+    <fuge:OntologyIndividual term="BD BP 450/40 filter" termAccession="N/A" identifier="BD_BP450_40_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD BP 488/10 filter" termAccession="N/A" identifier="BD_BP488_10_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD BP 530/30 filter" termAccession="N/A" identifier="BD_BP530_30_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD BP 575/26 filter" termAccession="N/A" identifier="BD_BP575_26_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD BP 610/20 filter" termAccession="N/A" identifier="BD_BP610_20_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD BP 660/20 filter" termAccession="N/A" identifier="BD_BP660_20_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD BP 675/20 filter" termAccession="N/A" identifier="BD_BP675_20_OntologyTerm" />
+    <fuge:OntologyIndividual term="BD BP 780/60 filter" termAccession="N/A" identifier="BD_BP780_60_OntologyTerm" />
+    
+    <!--Characteristic being measured, maybe the cell ontology could be used here?  -->
+    <fuge:OntologyIndividual term="T helper" termAccession="N/A" identifier="T_helper_OntologyTerm" />
+    <fuge:OntologyIndividual term="T suppresor" termAccession="N/A" identifier="T_suppresor_OntologyTerm" />
+    <fuge:OntologyIndividual term="B cell" termAccession="N/A" identifier="B_cells_OntologyTerm" />
+    <fuge:OntologyIndividual term="Granulocyte" termAccession="N/A" identifier="Granulocytes_OntologyTerm" />
+    <fuge:OntologyIndividual term="Monocyte" termAccession="N/A" identifier="Monocytes_OntologyTerm" />
+    <fuge:OntologyIndividual term="Donor leukocytes" termAccession="N/A" identifier="Donor_leukocytes_OntologyTerm" />
+    <fuge:OntologyIndividual term="Recipient leukocytes" termAccession="N/A" identifier="Recipient_leukocytes_OntologyTerm" />
+    <fuge:OntologyIndividual term="Cell viability" termAccession="N/A" identifier="Cell_viability_OntologyTerm" />
+    <fuge:OntologyIndividual term="Hematopoietic Stem Cell" termAccession="N/A" identifier="HSC_OntologyTerm" />
+    <fuge:OntologyIndividual term="Kit+/sca-1+/Lineage- Hematopoietic Stem Cell" termAccession="N/A" identifier="KSL_HSC_OntologyTerm" />
+
+    <!-- Units, is there an ontology useful for these? -->
+    <fuge:OntologyIndividual term="µl" name="µl" termAccession="N/A" identifier="micro_liter_unit_OntologyTerm" />
+    <fuge:OntologyIndividual term="number of cells" termAccession="N/A" identifier="Cell_Unit_OntologyTerm" />
+    <fuge:OntologyIndividual term="rad (irradiation unit)" termAccession="N/A" identifier="rad_irradiation_unit_OntologyTerm" />
+    <fuge:OntologyIndividual term="cells per ml" termAccession="N/A" identifier="CellsPerML_Unit_OntologyTerm" />
+    <fuge:OntologyIndividual term="V (Volts)" termAccession="N/A" identifier="V_Unit_OntologyTerm" />
+        
+    <!-- Phenotypes and genotypes of the mice -->
+    <fcm:Phenotype term="Black Pep3b Mouse" termAccession="N/A" identifier="black_Pep3b_mouse_phenotype" />
+    <fcm:Phenotype term="White W41/W41 Mouse" termAccession="N/A" identifier="White_W41_W41_mouse_phenotype" />
+    <fcm:Genotype term="Ly-5 Congenic C57BL-6 Mouse" termAccession="N/A" identifier="Ly-5_Congenic_C57BL-6_mouse_genotype" />
+    <fcm:Genotype term="C57BL/6J W41/W41 Mouse" termAccession="N/A" identifier="C57BL/6J_W41/W41_mouse_genotype" />
+ 
+    <fuge:OntologySource ontologyURI="http://purl.obofoundry.org/obo/obi.owl" name="OBI" identifier="http://purl.obofoundry.org/obo/obi.owl">
+    </fuge:OntologySource> 
+    <fuge:OntologySource ontologyURI="http://www.nlm.nih.gov/mesh/meshhome.html" name="MESH" identifier="http://www.nlm.nih.gov/mesh/meshhome.html">
+    </fuge:OntologySource> 
+    <fuge:OntologySource ontologyURI="http://www.drmr.com/abcon/trfspec.html" name="DRMR" identifier="http://www.drmr.com/abcon/trfspec.html">
+    </fuge:OntologySource> 
+    <fuge:OntologySource ontologyURI="http://www.genecards.org/cgi-bin/carddisp.pl?gene=" name="GeneCard" identifier="http://www.genecards.org/cgi-bin/carddisp.pl?gene=">
+    </fuge:OntologySource>     
+ 
+  </fuge:OntologyCollection>
+  
+  <fuge:Provider identifier="JSpidlen" name="Josef Spidlen (XML created in oXygen)" Software_ref="oXygen" />
+  
+</fuge:FuGE>

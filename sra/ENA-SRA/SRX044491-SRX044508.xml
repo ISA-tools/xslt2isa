@@ -1,0 +1,2230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT request="SRX044491-SRX044508&amp;display=xml"><EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044491">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044491</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_3_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173206" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:sample:MOR3_2_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173206</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:sample:MOR3_2_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_3_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: ATGTC
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="ATGTC">ATGTC</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173206</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108948</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044491</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044491</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>22843</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2715900</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044492">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044492</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_4_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173208" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_1_011308">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173208</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_1_011308</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_4_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: AGAGC
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="AGAGC">AGAGC</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173208</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108950</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044492</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044492</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>19809</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2354470</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044493">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044493</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_9_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173207" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_2_011408">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173207</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_2_011408</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_9_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: GCGAT
+ mid: TGTGC
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="GCGAT">GCGAT</BASECALL>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TGTGC">TGTGC</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173207</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108949</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044493</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044493</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>25544</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3022538</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044494">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044494</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_6_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173209" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_1_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173209</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_1_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_6_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: GTGAG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="GTGAG">GTGAG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173209</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108951</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044494</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044494</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>14773</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>1745136</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044495">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044495</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_5_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173210" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_1_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173210</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_1_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_5_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: TGCTG
+ mid: ATACG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TGCTG">TGCTG</BASECALL>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="ATACG">ATACG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173210</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108952</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044495</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044495</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>31484</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3718055</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044496">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044496</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_5_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_5_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173211" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_2_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173211</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR5_2_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_5_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: TCATG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TCATG">TCATG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173211</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108953</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044496</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044496</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17569</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2074104</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044497">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044497</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_2_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173212" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_1_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173212</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_1_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_2_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: ATACG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="ATACG">ATACG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173212</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108954</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044497</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044497</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>6910</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>825773</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044498">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044498</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_3_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173213" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR3_1_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173213</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR3_1_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_3_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: CACAC
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="CACAC">CACAC</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173213</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108955</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044498</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044498</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>21398</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2540714</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044499">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044499</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_7_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173214" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_1_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173214</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_1_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_7_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: GCGTG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="GCGTG">GCGTG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173214</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108956</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044499</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044499</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>36879</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4355647</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044500">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044500</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_9_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_9_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173215" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_1_011408">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173215</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR9_1_011408</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_9_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: ACAGA
+ mid: ATCAG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="ACAGA">ACAGA</BASECALL>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="ATCAG">ATCAG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173215</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108957</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044500</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044500</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>33909</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4016697</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044501">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044501</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_8_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173216" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_2_011408">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173216</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_2_011408</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_8_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: CTGTG
+ mid: TGTCA
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="CTGTG">CTGTG</BASECALL>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TGTCA">TGTCA</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173216</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108958</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044501</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044501</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>39853</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>4732494</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044502">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044502</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_8_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_8_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173217" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_1_011408">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173217</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR8_1_011408</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_8_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: GAGCG
+ mid: TGCGT
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="GAGCG">GAGCG</BASECALL>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TGCGT">TGCGT</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173217</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108959</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044502</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044502</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>6721</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>241604</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044503">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044503</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_6_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_6_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173218" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_2_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173218</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR6_2_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_6_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: GTCTG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="GTCTG">GTCTG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173218</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108960</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044503</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044503</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>25979</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3077916</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044504">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044504</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_1_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173219" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_2_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173219</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_2_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_1_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: TAGTG
+ mid: TCGCT
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TAGTG">TAGTG</BASECALL>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TCGCT">TCGCT</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173219</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108961</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044504</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044504</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17935</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2104196</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044505">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044505</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_4_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_4_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173220" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_2_011308">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173220</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR4_2_011308</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_4_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: ACATC
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="ACATC">ACATC</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173220</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108962</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044505</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044505</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>27005</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>3200328</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044506">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044506</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_2_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_2_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173221" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_2_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173221</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR2_2_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_2_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: ACTCG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="ACTCG">ACTCG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173221</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108963</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044506</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044506</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>7166</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>855796</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044507">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044507</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_7_2B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_7_2B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173222" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_2_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173222</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR7_2_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_7_2B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: TCTGT
+ mid: GCACG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TCTGT">TCTGT</BASECALL>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="GCACG">GCACG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173222</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108964</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044507</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044507</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>17934</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2113280</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+<EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_1B" center_name="MBL" broker_name="ISA converter" accession="SRX044508">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SRX044508</PRIMARY_ID>
+          <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_1_1B</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>454 GS FLX sequencing; Sequencing library derived from sample MCR_1_1B</TITLE>
+     <STUDY_REF accession="SRP005890" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey">
+          <IDENTIFIERS>
+               <PRIMARY_ID>SRP005890</PRIMARY_ID>
+               <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey</SUBMITTER_ID>
+          </IDENTIFIERS>
+     </STUDY_REF>
+     <DESIGN>
+          <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+          <SAMPLE_DESCRIPTOR accession="SRS173223" refcenter="MBL" refname="LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_1_011208">
+               <IDENTIFIERS>
+                    <PRIMARY_ID>SRS173223</PRIMARY_ID>
+                    <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16SRNA_gene_survey:sample:MOR1_1_011208</SUBMITTER_ID>
+               </IDENTIFIERS>
+          </SAMPLE_DESCRIPTOR>
+          <LIBRARY_DESCRIPTOR>
+               <LIBRARY_NAME>a_LTR_MCR_2008.MCR_1_1B</LIBRARY_NAME>
+               <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+               <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+               <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+               <LIBRARY_LAYOUT>
+                    <SINGLE/>
+               </LIBRARY_LAYOUT>
+               <TARGETED_LOCI>
+                    <LOCUS locus_name="16S rRNA">
+                         <PROBE_SET>
+                              <DB>pubmed</DB>
+                              <ID>17916733</ID>
+                         </PROBE_SET>
+                    </LOCUS>
+               </TARGETED_LOCI>
+               <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+               <LIBRARY_CONSTRUCTION_PROTOCOL>protocol_description: a long description of the library construction
+ nucl_acid_amp: 10.1126/science.1146689
+ url: http://amarallab.mbl.edu/mirada/mirada.html; http://vamps.mbl.edu
+ target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ mid: TCGAG
+ pcr_primers: 967F-PP:CNACGCGAAGAACCTTANC;967F-U1:CAACGCGAAAAACCTTACC;967F-U2:CAACGCGCAGAACCTTACC;967F-U3:ATACGCGARGAACCTTACC;967F-AQ:CTAACCGANGAACCTYACC;1046R:CGACAGCCATGCANCACCT;1046R-PP:CGACAACCATGCANCACCT;1046R-AQ1:CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles</LIBRARY_CONSTRUCTION_PROTOCOL>
+          </LIBRARY_DESCRIPTOR>
+          <SPOT_DESCRIPTOR>
+               <SPOT_DECODE_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>0</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>Adapter</READ_TYPE>
+                         <BASE_COORD>1</BASE_COORD>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>1</READ_INDEX>
+                         <READ_CLASS>Technical Read</READ_CLASS>
+                         <READ_TYPE>BarCode</READ_TYPE>
+                         <EXPECTED_BASECALL_TABLE>
+                              <BASECALL max_mismatch="0" match_edge="full" read_group_tag="TCGAG">TCGAG</BASECALL>
+                         </EXPECTED_BASECALL_TABLE>
+                    </READ_SPEC>
+                    <READ_SPEC>
+                         <READ_INDEX>2</READ_INDEX>
+                         <READ_CLASS>Application Read</READ_CLASS>
+                         <READ_TYPE>Forward</READ_TYPE>
+                         <RELATIVE_ORDER follows_read_index="1"/>
+                    </READ_SPEC>
+               </SPOT_DECODE_SPEC>
+          </SPOT_DESCRIPTOR>
+     </DESIGN>
+     <PLATFORM>
+          <LS454>
+               <INSTRUMENT_MODEL>454 GS FLX</INSTRUMENT_MODEL>
+               <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+               <FLOW_COUNT>400</FLOW_COUNT>
+          </LS454>
+     </PLATFORM>
+     <PROCESSING/>
+     <EXPERIMENT_LINKS>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SAMPLE</DB>
+                    <ID>SRS173223</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-RUN</DB>
+                    <ID>SRR108965</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>SRA030397</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/submitted_files/SRX044508</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+          <EXPERIMENT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID>http://www.ebi.ac.uk/ena/data/view/reports/sra/fastq_files/SRX044508</ID>
+               </XREF_LINK>
+          </EXPERIMENT_LINK>
+     </EXPERIMENT_LINKS>
+     <EXPERIMENT_ATTRIBUTES>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-SPOT-COUNT</TAG>
+               <VALUE>21974</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+          <EXPERIMENT_ATTRIBUTE>
+               <TAG>ENA-BASE-COUNT</TAG>
+               <VALUE>2607912</VALUE>
+          </EXPERIMENT_ATTRIBUTE>
+     </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+</ROOT>

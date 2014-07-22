@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXPERIMENT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.experiment.xsd">
+  <EXPERIMENT alias="BII-theroux:generic_assay:a_gene_survey_assay.SMT_BS09_Ev9" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample SMT_BS09_Ev9</TITLE>
+    <STUDY_REF refname="BII-theroux"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="BII-theroux:source:SMT_BS09"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>BII-theroux:assay:SMT_BS09_Ev9.2_Eukaryota</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="18S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Eukaryota
+ target_gene: 18S rRNA
+ target_subfragment: V9
+ pcr_primers: 1380FWD:CCCTGCCHTTTGTACACAC; 1389FWD:TTGTACACACCGCCC; 1510REV:CCTTCYGCAGGTTCACCTAC
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GACAG</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GACAG">GACAG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="BII-theroux:generic_assay:a_gene_survey_assay.BYS_2009_2009_06_17_Bv6v4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample BYS_2009_2009_06_17_Bv6v4</TITLE>
+    <STUDY_REF refname="BII-theroux"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="BII-theroux:source:BYS_2009_2009_06_17"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>BII-theroux:assay:BYS_2009_2009_06_17_Bv6v4.4_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6V4
+ pcr_primers: 518FWD:CCAGCAGCYGCGGTAAN; 1064REV:CGACRRCCATGCANCACCT; 1064R1REV:CGACAGCCATGCANCACCT;1064R2REV:CGACAACCATGCANCACCT; 1064R3REV:CGACGGCCATGCANCACCT; 1064R-4REV:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles
+ mid: CAGTA</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="CAGTA">CAGTA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="BII-theroux:generic_assay:a_gene_survey_assay.BYS_2007_2007_06_19_Bv6v4" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample BYS_2007_2007_06_19_Bv6v4</TITLE>
+    <STUDY_REF refname="BII-theroux"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="BII-theroux:source:BYS_2007_2007_06_19"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>BII-theroux:assay:BYS_2007_2007_06_19_Bv6v4.3_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6V4
+ pcr_primers: 518FWD:CCAGCAGCYGCGGTAAN; 1064REV:CGACRRCCATGCANCACCT; 1064R1REV:CGACAGCCATGCANCACCT;1064R2REV:CGACAACCATGCANCACCT; 1064R3REV:CGACGGCCATGCANCACCT; 1064R-4REV:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;30 cycles
+ mid: ACTAT</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="ACTAT">ACTAT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="BII-theroux:generic_assay:a_gene_survey_assay.GNL_E" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample GNL_E</TITLE>
+    <STUDY_REF refname="BII-theroux"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="BII-theroux:source:GNL"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>BII-theroux:assay:GNL_E.1_Eukaryota</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="18S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Eukaryota
+ target_gene: 18S rRNA
+ target_subfragment: V9
+ pcr_primers: 1380FWD:CCCTGCCHTTTGTACACAC; 1389FWD:TTGTACACACCGCCC; 1510REV:CCTTCYGCAGGTTCACCTAC
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GTGAG</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GTGAG">GTGAG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+</EXPERIMENT_SET>

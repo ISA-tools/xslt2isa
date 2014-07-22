@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXPERIMENT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.experiment.xsd">
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_9_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_9_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_9_1_2008_08_15 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_9_1B.30_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TATAC</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TATAC">TATAC</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_8_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_8_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_8_1_2008_01_27 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_8_1B.28_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGTAG</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TGTAG">TGTAG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_3_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_3_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_3_2_2008_01_12 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_3_2B.19_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: (GTATC)
+ mid: GCGTG</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="(GTATC)">(GTATC)</BASECALL>
+              <BASECALL read_group_tag="GCGTG">GCGTG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_1_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_1_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_1_1_2008_01_05 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_1_1B.14_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: CACAC</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="CACAC">CACAC</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_3_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_3_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_3_1_2008_01_12 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_3_1B.18_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCGAT</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GCGAT">GCGAT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_1_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_1_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_1_2_2008_01_05 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_1_2B.15_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GAGCG</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GAGCG">GAGCG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_7_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_7_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_7_1_2008_01_27 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_7_1B.26_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGACT</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TGACT">TGACT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_2_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_2_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_2_1_2008_01_05 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_2_1B.16_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCACG</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GCACG">GCACG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_4_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_4_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_4_1_2008_01_12 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_4_1B.20_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCTAC</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GCTAC">GCTAC</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_5_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_5_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_5_1_2008_01_23 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_5_1B.22_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCGAG</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TCGAG">TCGAG</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_5_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_5_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_5_2_2008_01_23 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_5_2B.23_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCGCT</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TCGCT">TCGCT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_6_1B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_6_1B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_6_1_2008_01_23 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_6_1B.24_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCGTC</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TCGTC">TCGTC</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_6_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_6_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_6_2_2008_01_23 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_6_2B.25_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCTGT</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TCTGT">TCTGT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_9_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_9_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_9_2_2008_08_15 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_9_2B.31_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: CGTAC</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="CGTAC">CGTAC</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_7_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_7_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_7_2_2008_01_27 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_7_2B.27_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGATA</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TGATA">TGATA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_4_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_4_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_4_2_2008_01_12 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_4_2B.21_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TCACA</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TCACA">TCACA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_2_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_2_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_2_2_2008_01_05 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_2_2B.17_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: GCAGT</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="GCAGT">GCAGT</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+  <EXPERIMENT alias="LAM-454-MBL-PALMER-STATION:generic_assay:a_gene_survey_pal.PAL_8_2B" center_name="MBL" broker_name="ISAcreator">
+    <TITLE>Sequencing library derived from sample PAL_8_2B</TITLE>
+    <STUDY_REF refname="LAM-454-MBL-PALMER-STATION"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION>See study and sample descriptions for details</DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="LAM-454-MBL-PALMER-STATION:source:PAL_8_2_2008_01_27 (orig)"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME>LAM-454-MBL-PALMER-STATION:assay:PAL_8_2B.29_Bacteria</LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>METAGENOMIC</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+        <TARGETED_LOCI>
+          <LOCUS locus_name="16S rRNA">
+            <PROBE_SET>
+              <ID>pcrPrimersXref</ID>
+              <DB>PubMed</DB>
+            </PROBE_SET>
+          </LOCUS>
+        </TARGETED_LOCI>
+        <POOLING_STRATEGY>multiplexed libraries</POOLING_STRATEGY>
+        <LIBRARY_CONSTRUCTION_PROTOCOL>target_taxon: Bacteria
+ target_gene: 16S rRNA
+ target_subfragment: V6
+ pcr_primers: 967FWD-PP:CNACGCGAAGAACCTTANC;967FWD-UC1:CAACGCGAAAAACCTTACC;967FWD-UC2:CAACGCGCAGAACCTTACC;967FWD-UC3 :ATACGCGARGAACCTTACC;967FWD-AQ :CTAACCGANGAACCTYACC;1046REV:CGACAGCCATGCANCACCT;1046REV-PP:CGACAACCATGCANCACCT;1046R-AQ1 :CGACGGCCATGCANCACCT;1046R-AQ2:CGACGACCATGCANCACCT
+ pcr_cond: initial denaturation:94degC_4min;denaturation:94degC_45sec;annealing:55degC_45sec;elongation:72degC_1min;final elongation:72degC_10 min;28 cycles
+ mid: TGTCA</LIBRARY_CONSTRUCTION_PROTOCOL>
+      </LIBRARY_DESCRIPTOR>
+      <SPOT_DESCRIPTOR>
+        <SPOT_DECODE_SPEC>
+          <NUMBER_OF_READS_PER_SPOT>3</NUMBER_OF_READS_PER_SPOT>
+          <READ_SPEC>
+            <READ_INDEX>0</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>Adapter</READ_TYPE>
+            <BASE_COORD>1</BASE_COORD>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>1</READ_INDEX>
+            <READ_CLASS>Technical Read</READ_CLASS>
+            <READ_TYPE>BarCode</READ_TYPE>
+            <EXPECTED_BASECALL_TABLE>
+              <BASECALL read_group_tag="TGTCA">TGTCA</BASECALL>
+            </EXPECTED_BASECALL_TABLE>
+          </READ_SPEC>
+          <READ_SPEC>
+            <READ_INDEX>2</READ_INDEX>
+            <READ_CLASS>Application Read</READ_CLASS>
+            <READ_TYPE>Forward</READ_TYPE>
+            <RELATIVE_ORDER follows_read_index="1"/>
+          </READ_SPEC>
+        </SPOT_DECODE_SPEC>
+      </SPOT_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <LS454>
+        <INSTRUMENT_MODEL>unspecified</INSTRUMENT_MODEL>
+        <FLOW_SEQUENCE>TACG</FLOW_SEQUENCE>
+        <FLOW_COUNT>800</FLOW_COUNT>
+      </LS454>
+    </PLATFORM>
+    <PROCESSING>
+      
+        <BASE_CALLS>
+          <SEQUENCE_SPACE>Base Space</SEQUENCE_SPACE>
+          <BASE_CALLER>454 Basecaller</BASE_CALLER>
+        </BASE_CALLS>
+        <QUALITY_SCORES qtype="phred">
+          <QUALITY_SCORER>454 Basecaller</QUALITY_SCORER>
+          <NUMBER_OF_LEVELS>64</NUMBER_OF_LEVELS>
+          <MULTIPLIER>1</MULTIPLIER>
+        </QUALITY_SCORES>
+      
+    </PROCESSING>
+  </EXPERIMENT>
+</EXPERIMENT_SET>

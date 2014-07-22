@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_4/SRA.submission.xsd" center_name="MBL" accession="" alias="BII-theroux" broker_name="ISAcreator" lab_name="MBL">
+  <CONTACTS>
+    <CONTACT name="Philippe Rocca-Serra" inform_on_status="proccaserra@gmail.com" inform_on_error="proccaserra@gmail.com"/>
+    <CONTACT name="Linda Amaral-Zettler" inform_on_status="amaral@evol5.mbl.edu" inform_on_error="amaral@evol5.mbl.edu"/>
+  </CONTACTS>
+  <ACTIONS>
+    <ACTION>
+      <ADD schema="study" source="study.xml"/>
+    </ACTION>
+    <ACTION>
+      <ADD schema="sample" source="sample_set.xml"/>
+    </ACTION>
+    <ACTION>
+      <ADD schema="experiment" source="experiment_set.xml"/>
+    </ACTION>
+    <ACTION>
+      <ADD schema="run" source="run_set.xml"/>
+    </ACTION>
+  </ACTIONS>
+  <FILES>
+    <FILE filename="SMT_BS09_Ev9.sff" checksum_method="MD5" checksum="2a1bdc163262b2a75242e8203a25ce52"/>
+    <FILE filename="BYS_2009_2009_06_17_Bv6v4.sff" checksum_method="MD5" checksum="ba2f36cee7d020517e94725e36f95986"/>
+    <FILE filename="BYS_2007_2007_06_19_Bv6v4.sff" checksum_method="MD5" checksum="a3ec1c13df74b302e0cb10aef1203dfe"/>
+    <FILE filename="GNL_E.sff" checksum_method="MD5" checksum="44a26dd4f60a94ffe3a6693fc84aaa41"/>
+  </FILES>
+</SUBMISSION>
