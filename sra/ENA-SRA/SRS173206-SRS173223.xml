@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ROOT request="SRS173206-SRS173223&amp;display=xml"><SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:sample:MOR3_2_011208" accession="SRS173206" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ROOT request="SRS173206-SRS173223&amp;display=xml">
+     <SAMPLE center_name="MBL" broker_name="ISA converter" alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:sample:MOR3_2_011208" accession="SRS173206" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
      <IDENTIFIERS>
           <PRIMARY_ID>SRS173206</PRIMARY_ID>
           <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:sample:MOR3_2_011208</SUBMITTER_ID>

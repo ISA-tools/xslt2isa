@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="sra-isatab-txt.xsl"?>
 <SRA identifier="SRA-TEST-ISATAB">
-<SUBMISSION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_3/SRA.submission.xsd" center_name="MBL" accession="" alias="VS-454-MBL" broker_name="ISAcreator" lab_name="MBL" submission_date="2012-05-15T00:00:00.000+01:00">
+<SUBMISSION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.submission.xsd" center_name="MBL" accession="" alias="VS-454-MBL" broker_name="ISAcreator" lab_name="MBL" submission_date="2012-05-15T00:00:00.000+01:00">
     <CONTACTS>
         <CONTACT name="Philippe Rocca-Serra" inform_on_status="proccaserra@gmail.com" inform_on_error="proccaserra@gmail.com"/>
         <CONTACT name="Victor Schmidt" inform_on_status="vschmidt@evol5.mbl.edu" inform_on_error="vschmidt@evol5.mbl.edu"/>

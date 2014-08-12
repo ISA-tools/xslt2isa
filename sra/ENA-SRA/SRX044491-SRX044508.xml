@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ROOT request="SRX044491-SRX044508&amp;display=xml"><EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044491">
+<ROOT request="SRX044491-SRX044508&amp;display=xml">
+ <EXPERIMENT alias="LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_2B" center_name="MBL" broker_name="ISA converter" accession="SRX044491">
      <IDENTIFIERS>
           <PRIMARY_ID>SRX044491</PRIMARY_ID>
           <SUBMITTER_ID namespace="MBL">LTR_MRC_2008_Bacteria_16S_rRNA_gene_survey:generic_assay:a_LTR_MCR_2008.MCR_3_2B</SUBMITTER_ID>

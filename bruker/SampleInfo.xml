@@ -1,6 +1,22 @@
 <?xml version="1.0"?>
 <SampleTable>
-  <SampleTableHeader Version="2" CreationDate="01/07/13" CreationTime="12:03:04" Creator="esidemoadmin" CreationComputer="" UpdateDate="01/09/13" UpdateTime="15:27:29" UpdateUser="esidemoadmin" UpdateComputer="" Author="esidemoadmin" Company="Bruker Customer" Laboratory="unknown" Phone="" Fax="" EMail="" Description="" NumOfSamples="1" HyStarVersion="3.2.44.0" SampleTablePath="D:\Data\VT\Kaffee Application Note\Data Test\Sample table pos.xml" />
-  <AnalysisHeader CreationDateTime="2013-01-09T03:27:29+01:00" FileName="D:\Data\vt\kaffee application note\data pos\10_1_GC1_01_326.d" SampleID="10_1" Method="" />
-  <Sample Line="20" CheckToRun="0" Status="2" Injections="1" Volume="5" Amount="0" Dilution="1" Weight="0" Position="GC1" InternalStandard="0" PreRunTime="0" SampleID="10_1" DataPath="vt\kaffee application note\data pos" Operator="esidemoadmin" SampleType="0" ReferenceSampleNum="0" NumOnGel="0" ResultDatafile="D:\Data\vt\kaffee application note\data pos\10_1_GC1_01_326.d" NumberInSequence="20" CalibAction="-" CalibLevel="" AcquisitionID="0" SaltConc="0" LastLineInGroup="0" InstrumentCalibration="0" RunDAScript="0" Method="D:\Data\VT\Kaffee Application Note\Methods\LC\Kaffee LC method 5min gradient.m" MS_Method="D:\Data\VT\Kaffee Application Note\Methods\MS\MSmethod_pos_cal_3Hz.m" AutosamplerMethod="Standard" />
+  <SampleTableHeader Version="2" CreationDate="01/07/13" CreationTime="12:03:04"
+    Creator="esidemoadmin" CreationComputer="" UpdateDate="01/09/13" UpdateTime="15:27:29"
+    UpdateUser="esidemoadmin" UpdateComputer="" Author="esidemoadmin" Company="Bruker Customer"
+    Laboratory="unknown" Phone="" Fax="" EMail="" Description="" NumOfSamples="1"
+    HyStarVersion="3.2.44.0"
+    SampleTablePath="D:\Data\VT\Kaffee Application Note\Data Test\Sample table pos.xml"/>
+  <AnalysisHeader CreationDateTime="2013-01-09T03:27:29+01:00"
+    FileName="D:\Data\vt\kaffee application note\data pos\10_1_GC1_01_326.d" SampleID="10_1"
+    Method=""/>
+  <Sample Line="20" CheckToRun="0" Status="2" Injections="1" Volume="5" Amount="0" Dilution="1"
+    Weight="0" Position="GC1" InternalStandard="0" PreRunTime="0" SampleID="10_1"
+    DataPath="vt\kaffee application note\data pos" Operator="esidemoadmin" SampleType="0"
+    ReferenceSampleNum="0" NumOnGel="0"
+    ResultDatafile="D:\Data\vt\kaffee application note\data pos\10_1_GC1_01_326.d"
+    NumberInSequence="20" CalibAction="-" CalibLevel="" AcquisitionID="0" SaltConc="0"
+    LastLineInGroup="0" InstrumentCalibration="0" RunDAScript="0"
+    Method="D:\Data\VT\Kaffee Application Note\Methods\LC\Kaffee LC method 5min gradient.m"
+    MS_Method="D:\Data\VT\Kaffee Application Note\Methods\MS\MSmethod_pos_cal_3Hz.m"
+    AutosamplerMethod="Standard"/>
 </SampleTable>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ROOT request="SRA030397&amp;display=xml"><SUBMISSION xsi:noNamespaceSchemaLocation="../../sra/sra/doc/SRA.submission.xsd" center_name="MBL" broker_name="ISA converter" lab_name="Bay Paul Center" alias="ISA_LAZ1" submission_date="2011-02-10T00:00:00Z" accession="SRA030397" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml-stylesheet type="text/xsl" href="sra-isatab-txt.xsl"?>
+<ROOT request="SRA030397&amp;display=xml">
+<SUBMISSION xsi:noNamespaceSchemaLocation="../../sra/sra/doc/SRA.submission.xsd" center_name="submission-MBL" broker_name="ISA converter" lab_name="Bay Paul Center" alias="ISA_LAZ1" submission_date="2011-02-10T00:00:00Z" accession="SRA030397" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
      <IDENTIFIERS>
           <PRIMARY_ID>SRA030397</PRIMARY_ID>
           <SUBMITTER_ID namespace="MBL">ISA_LAZ1</SUBMITTER_ID>
