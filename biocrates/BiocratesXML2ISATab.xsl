@@ -28,7 +28,7 @@ TODO: retrofit xsl template to set instrument details
     <!-- declaring all keys for lookups -->
     <xsl:key name="metabolitelookupid"  match="metabolite"  use="@identifier"/>
     <xsl:key name="samplelookupid"  match="sample"  use="@SampleIdentifier"/>
-    <xsl:key name="samplefeaturelookupid"  match="data/plate/well/sample/sampleInfoExport"  use="@feature"/>
+    <xsl:key name="samplefeaturelookupid"  match="sampleInfoExport"  use="@feature"/>
     <xsl:key name="samplevaluelookupid"  match="//data/plate/well/sample/sampleInfoExport"  use="@value"/>
     <xsl:key name="measure_by_metabolite" match="measure" use="@metabolite"/>   
     <xsl:key name="plateInfo" match="plate" use="@plateBarcode"/>   
@@ -300,7 +300,6 @@ Study Protocol Type<xsl:text>&#9;</xsl:text>
     <xsl:text>material separation&#9;</xsl:text>
         <xsl:for-each select="plate"> 
             <xsl:text>sample preparation&#9;</xsl:text>
-            <xsl:text>&#9;</xsl:text>
         </xsl:for-each>
     
     <xsl:if test="count($positiveModeCount) > 0">       
@@ -785,9 +784,9 @@ Study Person Roles Term Source REF
     <xsl:text>Characteristics[chemical compound]</xsl:text><xsl:text>&#9;</xsl:text>
      <xsl:text>Characteristics[organism]</xsl:text><xsl:text>&#9;</xsl:text>
      <xsl:text>Characteristics[organism part]</xsl:text><xsl:text>&#9;</xsl:text>
-        <xsl:for-each select="//sampleInfoExport[generate-id(.)=generate-id(key('features-by-sample',@feature)[1])]">
+        <xsl:for-each select="//sampleInfoExport[generate-id(.)=generate-id(key('samplefeaturelookupid',@feature)[1])]">
          <xsl:text>Characteristics[</xsl:text>
-         <xsl:value-of select="@feature"/>
+            <xsl:value-of select="@feature"/>
          <xsl:text>]</xsl:text>
          <xsl:text>&#9;</xsl:text>
     </xsl:for-each>
@@ -935,7 +934,7 @@ Study Person Roles Term Source REF
         <xsl:when test="./sample/sampleInfoExport">
             
             <xsl:for-each select="./sample">
-                <xsl:variable name="tags" select="key('features-by-sample', .)" />
+                <xsl:variable name="tags" select="key('features-by-sample',.)" />
                 <xsl:for-each select="features-by-sample">
                             <xsl:value-of select="$tags[/sampleInfoExport = current()]" />                       
                     </xsl:for-each>               
@@ -1125,42 +1124,45 @@ Study Person Roles Term Source REF
                 </xsl:choose>    
                 <xsl:value-of select="ancestor::plate/@usedOP"/>
             <xsl:text>&#9;</xsl:text>        
-                <xsl:if test="starts-with(ancestor::plate/@usedOP,'KIT1-')">
+            <xsl:choose>
+                <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT1-')">
                <!-- <xsl:value-of select="substring-after(/data/plateInfo/@usedOP,'KIT1-')">
                 </xsl:value-of> -->
                 <xsl:text>Biocrates p150 Kit</xsl:text>
                 <xsl:text>&#9;</xsl:text>
-            </xsl:if>
-                <xsl:if test="starts-with(ancestor::plate/@usedOPP,'KIT2-')">
+            </xsl:when>
+                <xsl:when test="starts-with(ancestor::plate/@usedOPP,'KIT2-')">
                 <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT2-')">
                 </xsl:value-of> -->
                 <xsl:text>Biocrates p180 LCMS Part</xsl:text>
                 <xsl:text>&#9;</xsl:text>
-            </xsl:if>
-                <xsl:if test="starts-with(ancestor::plate/@usedOP,'KIT3-')">
+            </xsl:when>
+                <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT3-')">
                 <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT3-')">
                 </xsl:value-of> -->
                 <xsl:text>Biocrates p180 FIA Part</xsl:text>
                 <xsl:text>&#9;</xsl:text>
-            </xsl:if>
-                <xsl:if test="starts-with(ancestor::plate/@usedOP,'ST17-')">
+            </xsl:when>
+                <xsl:when test="starts-with(ancestor::plate/@usedOP,'ST17-')">
                 <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'ST17-')">
                 </xsl:value-of> -->
                 <xsl:text>Biocrates Stero17 Kit</xsl:text>
                 <xsl:text>&#9;</xsl:text>
-            </xsl:if>
-                <xsl:if test="starts-with(ancestor::plate/@usedOP,'MD01-')">
+            </xsl:when>
+                <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD01-')">
                 <!--  <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD01-')">
                 </xsl:value-of> -->
                 <xsl:text>Biocrates MetaDis Kit LCMS Part</xsl:text>
                 <xsl:text>&#9;</xsl:text>
-            </xsl:if> 
-                <xsl:if test="starts-with(ancestor::plate/@usedOP,'MD02-')">
+            </xsl:when> 
+                <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD02-')">
                 <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD02-')">
                 </xsl:value-of> -->
                 <xsl:text>Biocrates MetaDis Kit FIA Part</xsl:text>
                 <xsl:text>&#9;</xsl:text>
-            </xsl:if>           
+                </xsl:when> 
+                <xsl:otherwise><xsl:text>none reported&#9;</xsl:text></xsl:otherwise>
+            </xsl:choose>    
             <xsl:value-of select="ancestor::plate/@plateBarcode"/>
             <xsl:text>&#9;</xsl:text>
                 <xsl:value-of select="$wellposition"/>
@@ -1364,43 +1366,48 @@ Study Person Roles Term Source REF
                         </xsl:otherwise>
                     </xsl:choose>
                     <xsl:value-of select="ancestor::plate/@usedOP"/>
-                    <xsl:text>&#9;</xsl:text>      
-                    <xsl:if test="starts-with(ancestor::plate/@usedOP,'KIT1-')">
+                    <xsl:text>&#9;</xsl:text> 
+                   <xsl:choose> 
+                    <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT1-')">
                         <!-- <xsl:value-of select="substring-after(/data/plateInfo/@usedOP,'KIT1-')">
                             </xsl:value-of> -->
                         <xsl:text>Biocrates p150 Kit</xsl:text>
                         <xsl:text>&#9;</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="starts-with(ancestor::plate/@usedOP,'KIT2-')">
+                    </xsl:when>
+                       <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT2-')">
                         <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT2-')">
                             </xsl:value-of> -->
                         <xsl:text>Biocrates p180 LCMS Part</xsl:text>
                         <xsl:text>&#9;</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="starts-with(ancestor::plate/@usedOP,'KIT3-')">
+                       </xsl:when>
+                       <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT3-')">
                         <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT3-')">
                             </xsl:value-of> -->
                         <xsl:text>Biocrates p180 FIA Part</xsl:text>
                         <xsl:text>&#9;</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="starts-with(ancestor::plate/@usedOP,'ST17-')">
+                       </xsl:when>
+                       <xsl:when test="starts-with(ancestor::plate/@usedOP,'ST17-')">
                         <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'ST17-')">
                             </xsl:value-of> -->
                         <xsl:text>Biocrates Stero17 Kit</xsl:text>
                         <xsl:text>&#9;</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="starts-with(ancestor::plate/@usedOP,'MD01-')">
+                       </xsl:when>
+                       <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD01-')">
                         <!--  <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD01-')">
                             </xsl:value-of> -->
                         <xsl:text>Biocrates MetaDis Kit LCMS Part</xsl:text>
                         <xsl:text>&#9;</xsl:text>
-                    </xsl:if> 
-                    <xsl:if test="starts-with(ancestor::plate/@usedOP,'MD02-')">
+                       </xsl:when> 
+                       <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD02-')">
                         <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD02-')">
                             </xsl:value-of> -->
                         <xsl:text>Biocrates MetaDis Kit FIA Part</xsl:text>
                         <xsl:text>&#9;</xsl:text>
-                    </xsl:if>           
+                       </xsl:when> 
+                       <xsl:otherwise>
+                           <xsl:text>none reported&#9;</xsl:text>
+                       </xsl:otherwise>
+                   </xsl:choose>   
                     <xsl:value-of select="ancestor::plate/@plateBarcode"/>
                     <xsl:text>&#9;</xsl:text>
                     <xsl:value-of select="$wellposition"/>
@@ -1429,7 +1436,7 @@ Study Person Roles Term Source REF
                         </xsl:otherwise>                   
                     </xsl:choose>
                     <xsl:value-of select="lower-case(@polarity)"/>
-                    <xsl:text> scan&#9;</xsl:text>
+                    <xsl:text>scan&#9;</xsl:text>
                     <xsl:text>http://purl.obolibrary.org/obo/MS_1000130&#9;</xsl:text>
                     <xsl:text>PSI-MS&#9;</xsl:text>
                     <xsl:value-of select="@runNumber"/>
@@ -1706,9 +1713,11 @@ Study Person Roles Term Source REF
                     <xsl:text>flow infusion acquisition</xsl:text> <!-- instrument type -->
                 </xsl:if>
             </xsl:when>
+            
             <xsl:otherwise>
                 <xsl:text>none reported&#9;</xsl:text>
                 <xsl:text>&#9;</xsl:text>
+               
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>   
