@@ -13,9 +13,7 @@ Note:
 This is an XSL 2.0 transformation and requires Saxon-PE-9.5.1.5 to run.
 
 Biocrates test files:
-demo_data.xml
-2014-07-15_Conc.xml
-
+IMGUS_mouse_sample_data_4MetaboLights V6 only Last Run no BCAA-PRSmod.xml
    
     
 Author: Philippe Rocca-Serra
