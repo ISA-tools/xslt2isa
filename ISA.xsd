@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1" targetNamespace="isa-ml.xsd" xmlns="isa-ml.xsd">
+<!-- README -->
+<!-- 
+Authors: ISATeam, University of Oxford e-Research Centre
+License: CC-BY-SA 4.0
+status: alpha version
+  
+    
+    --> 
+<!-- -->    
+<xs:complexType name="ResourceReference">
+    <xs:sequence>
+        <xs:element name="ResourceName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="ResourceURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="ResourceVersion" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="ResourceDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+    <xs:complexType name="OntologyTerm">
+        <xs:attribute name="Name">
+            <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="Source_REF" type="xs:string"/>
+        <xs:attribute name="AccessionNumber" type="xs:anyURI"/>
+    </xs:complexType>
+
+   <xs:complexType name="Comment">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="Type" type="OntologyTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Parameter">
+        <xs:sequence>
+            <xs:element name="ParamaterName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ParamaterType" type="OntologyTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Component">
+        <xs:sequence>
+            <xs:element name="ComponentName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ComponentType" type="OntologyTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Role">
+        <xs:sequence>
+            <xs:element name="RoleName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="RoleType" type="OntologyTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="Protocol">
+        <xs:sequence>
+            <xs:element name="ProtocolName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ProtocolType" type="OntologyTerm" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ProtocolDescription" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ProtocolURI" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="ProtocolVersion" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="ProtocolParam" type="Parameter" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ProtocolComponent" type="Component" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Person">
+        <xs:sequence>
+            <xs:element name="PersonORCID" type="xs:ID" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="PersonFirstName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="PersonLastName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="PersonMidInitial" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="PersonEmail" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="PersonTelephone" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="PersonFax" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="PersonAffiliation" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="PersonRole" type="Role" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Factor">
+        <xs:sequence>
+            <xs:element name="FactorName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="FactorType" type="OntologyTerm" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Design">
+        <xs:sequence>
+            <xs:element name="DesignType" type="OntologyTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Publication">
+        <xs:sequence>
+            <xs:element name="PubMedID" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="DOI" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Journal" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="AuthorList" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="status" type="OntologyTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Assay">
+        <xs:sequence>
+            <xs:element name="Measurement" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="MeasurementType" type="OntologyTerm"/>
+            <xs:element name="Technology" type="xs:string"/>
+            <xs:element name="TechnologyType" type="OntologyTerm" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Platform" type="xs:string"/>
+            <xs:element name="AssayFile" type="xs:anyURI"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+<xs:complexType name="Investigation">
+    <xs:sequence>       
+        <xs:element name="Study" type="Study" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="InvestigationPublication" type="Publication" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="InvestigationContact" type="Person" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+    <xs:complexType name="Study">
+        <xs:sequence>
+            <xs:element name="Study_ID" type="xs:ID" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="StudyTitle" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="StudyDescription" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="StudySubmissionDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="StudyReleaseDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="StudyFile" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="StudyDesign" type="Design" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="StudyFactor" type="Factor" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="StudyAssay" type="Assay" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="StudyPublication" type="Publication" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="StudyProtocol" type="Protocol" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="StudyContact" type="Person" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="Material" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SourceName"/>
+            <xs:enumeration value="SampleName"/>
+            <xs:enumeration value="ExtractName"/>
+            <xs:enumeration value="LabeledExtractName"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="BioMaterial">
+        <xs:sequence>
+            <xs:element name="BioMaterialName" type="xs:string"/>
+            <xs:element name="MaterialType" type="Material"/>
+            <xs:element name="Characteristics" type="OntologyTerm" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="FileType" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Array Design File"/>
+            <xs:enumeration value="Raw Data File"/>
+            <xs:enumeration value="Raw Spectral Data File"/>
+            <xs:enumeration value="Image File"/>
+            <xs:enumeration value="Derived Data File"/>
+            <xs:enumeration value="Derived Spectral Data File"/>
+            <xs:enumeration value="Protein Annotation File"/>
+            <xs:enumeration value="Metabolite Annotation File"/>
+            <xs:enumeration value="Metabolite Flux File"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="File">
+        <xs:sequence>
+            <xs:element name="FileName" type="xs:anyURI"/>
+            <xs:element name="FileType" type="FileType"/>
+            <xs:element name="Checksum" type="xs:unsignedByte"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MaterialProtocolApplication">
+        <xs:sequence>
+            <xs:element name="Protocol_REF" type="xs:IDREF"/>
+            <xs:element name="Date" type="xs:date"/>
+            <xs:element name="Performer" type="xs:string"/>
+            <xs:element name="Input" type="BioMaterial"/>
+            <xs:element name="Output" type="BioMaterial"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AssayProtocolApplication">
+        <xs:sequence>
+            <xs:element name="Protocol_REF" type="xs:IDREF"/>
+            <xs:element name="Date" type="xs:date"/>
+            <xs:element name="Performer" type="xs:string"/>
+            <xs:element name="Input" type="BioMaterial"/>
+            <xs:element name="Output" type="File"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataTransformationProtocolApplication">
+        <xs:sequence>
+            <xs:element name="Protocol_REF" type="xs:IDREF"/>
+            <xs:element name="Date" type="xs:date"/>
+            <xs:element name="Performer" type="xs:string"/>
+            <xs:element name="Input" type="File"/>
+            <xs:element name="Output" type="File"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
