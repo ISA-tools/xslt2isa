@@ -35,7 +35,7 @@ DOI:
 -->
 
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xpath-default-namespace="http://www.biocrates.com/metstat/result/xml_1.0"> 
  <xsl:output method="text"/>
     
     <!-- declaring all keys for lookups -->
@@ -1079,18 +1079,30 @@ Study Person Roles Term Source REF
     <xsl:text>Characteristics[barcode identifier]</xsl:text><xsl:text>&#9;</xsl:text>
     <xsl:text>Characteristics[material role]</xsl:text><xsl:text>&#9;</xsl:text>
     <xsl:text>Characteristics[chemical compound]</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Characteristics[organism]</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Characteristics[organism part]</xsl:text><xsl:text>&#9;</xsl:text>
-
-     <xsl:for-each select="/data/sample/sampleInfoExport[generate-id(.)=generate-id(key('sampleinfo-features', @feature)[1])]/@feature">    
+    <xsl:text>Characteristics[Organism]</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>Term Source REF</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>Term Accession Number</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>Characteristics[Organism part]</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>Term Source REF</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>Term Accession Number</xsl:text><xsl:text>&#9;</xsl:text>     <xsl:for-each select="/data/sample/sampleInfoExport[generate-id(.)=generate-id(key('sampleinfo-features', @feature)[1])]/@feature">    
             <!-- <xsl:sort/> -->     
-            <xsl:text>Characteristics[</xsl:text><xsl:value-of select="."/><xsl:text>]&#9;</xsl:text>        
+            <xsl:text>Characteristics[</xsl:text>
+            <xsl:choose>
+                <xsl:when test="contains(.,'(') or contains(.,')')">
+                    <xsl:variable name="this" select="translate(.,'(','-')"/>
+                    <xsl:value-of select="translate($this,')','')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                <xsl:value-of select="."/>
+                    </xsl:otherwise>   
+            </xsl:choose>
+            <xsl:text>]&#9;</xsl:text>  
      </xsl:for-each>        
         
     <xsl:text>Protocol REF</xsl:text><xsl:text>&#9;</xsl:text>
     <xsl:text>Date</xsl:text><xsl:text>&#9;</xsl:text> 
-    <xsl:text>Parameter Value[plate info]</xsl:text><xsl:text>&#9;</xsl:text> 
-    <xsl:text>Parameter Value[well position]</xsl:text><xsl:text>&#9;</xsl:text> 
+ <!--   <xsl:text>Parameter Value[plate info]</xsl:text><xsl:text>&#9;</xsl:text> 
+    <xsl:text>Parameter Value[well position]</xsl:text><xsl:text>&#9;</xsl:text>  -->
     <xsl:text>Sample Name</xsl:text><xsl:text>&#9;</xsl:text>
     <xsl:text>Material Type</xsl:text><xsl:text>&#9;</xsl:text>
 
@@ -1142,6 +1154,8 @@ Study Person Roles Term Source REF
                      </xsl:when>
                      <xsl:when test="contains(./@sampleType,'ZERO_')">
                          <xsl:text>negative control</xsl:text>
+                         <xsl:text>&#9;</xsl:text>
+                         <xsl:text>&#9;</xsl:text>
                      </xsl:when>
                      <xsl:when test="contains(./@sampleType,'STANDARD_')">
                          <xsl:text>positive control</xsl:text>
@@ -1150,14 +1164,18 @@ Study Person Roles Term Source REF
                          <xsl:text></xsl:text>
                      </xsl:otherwise>
                  </xsl:choose>
-                 
+
                 <!-- <xsl:value-of select="./sample/@sampleType"/> -->
                  <xsl:text>&#9;</xsl:text>
                  <xsl:value-of select="./@Material"/>
                  <xsl:text>&#9;</xsl:text>
                  <xsl:text>not applicable</xsl:text>
                  <xsl:text>&#9;</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
                  <xsl:text>not applicable</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
                  <xsl:text>&#9;</xsl:text>
              </xsl:when>
              <xsl:otherwise>
@@ -1203,11 +1221,32 @@ Study Person Roles Term Source REF
                  <xsl:text>specimen</xsl:text>
                  <xsl:text>&#9;</xsl:text>
                  <xsl:text>not applicable</xsl:text>
-                 <xsl:text>&#9;</xsl:text> 
+                 <xsl:text>&#9;</xsl:text>
                  
                  <xsl:choose>
                      <xsl:when test="./@Species !=''">
-                         <xsl:value-of select="./@Species"/>
+                         <xsl:choose>
+                             <xsl:when test="lower-case(./@Species)='mouse'">
+                                 <xsl:text>Mus musculus</xsl:text>
+                                 <xsl:text>&#9;NCBITax&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_10090</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="lower-case(./@Species)='rat'">
+                                 <xsl:text>Rattus norvegicus</xsl:text>
+                                 <xsl:text>&#9;NCBITax&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_9606</xsl:text>
+                             </xsl:when>                             
+                             <xsl:when test="./@Species='Human'">
+                                 <xsl:text>Homo sapiens</xsl:text>
+                                 <xsl:text>&#9;NCBITax&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_9606</xsl:text>
+                             </xsl:when>
+                             <xsl:otherwise>
+                                 <xsl:value-of select="./@Species"/>
+                                 <xsl:text>&#9;</xsl:text>
+                                 <xsl:text>&#9;</xsl:text>
+                             </xsl:otherwise>
+                         </xsl:choose>
                      </xsl:when>
                      <xsl:otherwise>
                          <xsl:text>none reported</xsl:text> 
@@ -1218,7 +1257,89 @@ Study Person Roles Term Source REF
  
                  <xsl:choose>
                      <xsl:when test="./@Material">
-                         <xsl:value-of select="./@Material"/>
+                         <xsl:choose>
+                             <xsl:when test="./@Material = 'brain tissue'">
+                                 <xsl:text>brain</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0000955</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="./@Material = 'breast tissue'">
+                                 <xsl:text>mammary gland</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001911</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="./@Material = 'fat'">
+                                 <xsl:text>adipose tissue</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001013</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="./@Material = 'heart tissue'">
+                                 <xsl:text>heart</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0000948</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="./@Material = 'kidney tissue'">
+                                 <xsl:text>kidney</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002113</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="./@Material = 'liver tissue'">
+                                 <xsl:text>liver</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002107</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="./@Material = 'lung tissue'">
+                                 <xsl:text>lung</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002048</xsl:text>
+                             </xsl:when>
+                             <xsl:when test="./@Material = 'muscle tissue'">
+                                 <xsl:value-of select="./@Material"/>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002385</xsl:text>
+                             </xsl:when>
+                             
+                             <xsl:when test="./@Material = 'plasma'">
+                                 <xsl:text>blood plasma</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001969</xsl:text>
+                             </xsl:when> 
+                             <xsl:when test="./@Material = 'prostate tissue'">
+                                 <xsl:text>prostate gland</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002367</xsl:text>
+                             </xsl:when>
+
+                             <xsl:when test="./@Material = 'spleen tissue'">
+                                 <xsl:text>spleen</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002106</xsl:text>
+                             </xsl:when> 
+ 
+                             <xsl:when test="./@Material = 'serum'">
+                                 <xsl:value-of select="./@Material"/>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001977</xsl:text>
+                             </xsl:when> 
+                             <xsl:when test="./@Material = 'sweat'">
+                                 <xsl:text>sweat</xsl:text>
+                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001089</xsl:text>
+                             </xsl:when> 
+                             <xsl:when test="./@Material = 'urine'">
+                                 <xsl:text>urine</xsl:text>
+                                 <xsl:text>UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001088</xsl:text>
+                             </xsl:when>                             
+                             <xsl:when test="./@Material = 'bile'">
+                                 <xsl:text>bile</xsl:text>
+                                 <xsl:text>UBERON&#9;</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001970</xsl:text>
+                             </xsl:when> 
+                             
+  
+                         </xsl:choose>
+                       
                      </xsl:when>
                      <xsl:otherwise>
                          <xsl:value-of select="./@sampleType"/>
@@ -1300,10 +1421,10 @@ Study Person Roles Term Source REF
 
          <xsl:text>&#9;</xsl:text>
 
-         <xsl:value-of select="/data/plate/@plateInfo"/>
+     <!--    <xsl:value-of select="/data/plate/@plateInfo"/>
          <xsl:text>&#9;</xsl:text>
          <xsl:value-of select="@wellPosition"/>
-         <xsl:text>&#9;</xsl:text>
+         <xsl:text>&#9;</xsl:text> -->
 
          <xsl:choose>
              <xsl:when test="./@SampleIdentifier !=''">
@@ -1333,7 +1454,7 @@ Study Person Roles Term Source REF
          </xsl:choose>
         <xsl:text>&#9;</xsl:text>
     
-         <xsl:value-of select="./@sampleType"/>
+         <xsl:value-of select="lower-case(./@sampleType)"/>
          <xsl:text>&#9;</xsl:text>   
      </xsl:for-each>
 
@@ -1515,21 +1636,24 @@ Study Person Roles Term Source REF
                 <xsl:when test="contains(@acquisitionMethod, 'FIA')">
                     <xsl:text>flow injection analysis</xsl:text>
                     <xsl:text>&#9;</xsl:text>
-                    <xsl:text>MS_1000058&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
-                    <xsl:text>PSI-MS&#9;</xsl:text>                   
+                    <xsl:text>PSI-MS&#9;</xsl:text>
+                    <xsl:text>http://purl.obolibrary.org/obo/MS_1000058&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
+                                       
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:text>liquid chromatography separation</xsl:text>
                     <xsl:text>&#9;</xsl:text>
-                    <xsl:text>MS_1002271&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
                     <xsl:text>PSI-MS&#9;</xsl:text>
+                    <xsl:text>http://purl.obolibrary.org/obo/MS_1002271&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
+                    
                 </xsl:otherwise>                   
             </xsl:choose>   
 
             <xsl:value-of select="lower-case(@polarity)"/>
             <xsl:text> scan&#9;</xsl:text>
-                <xsl:text>MS_1000129&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
-            <xsl:text>PSI-MS&#9;</xsl:text>
+                <xsl:text>PSI-MS&#9;</xsl:text>
+                <xsl:text>http://purl.obolibrary.org/obo/MS_1000129&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
+
                 <xsl:value-of select="ancestor::plate/@runNumber"/>
             <xsl:text>&#9;</xsl:text>
             <xsl:value-of select="@injectionNumber"/>
@@ -1788,20 +1912,20 @@ Study Person Roles Term Source REF
                         <xsl:when test="contains(@acquisitionMethod, 'FIA')">
                             <xsl:text>flow injection analysis</xsl:text>
                             <xsl:text>&#9;</xsl:text>
-                            <xsl:text>MS_1000058&#9;</xsl:text> <!--http://purl.obolibrary.org/obo/ -->
-                            <xsl:text>PSI-MS&#9;</xsl:text>                   
+                            <xsl:text>PSI-MS&#9;</xsl:text>
+                            <xsl:text>http://purl.obolibrary.org/obo/MS_1000058&#9;</xsl:text> <!--http://purl.obolibrary.org/obo/ -->                   
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:text>liquid chromatography separation</xsl:text>
                             <xsl:text>&#9;</xsl:text>
-                            <xsl:text>MS_1002271&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
                             <xsl:text>PSI-MS&#9;</xsl:text>
+                            <xsl:text>http://purl.obolibrary.org/obo/MS_1002271&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
                         </xsl:otherwise>                   
                     </xsl:choose>
                     <xsl:value-of select="lower-case(@polarity)"/>
                     <xsl:text> scan&#9;</xsl:text>
-                    <xsl:text>MS_1000130&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
                     <xsl:text>PSI-MS&#9;</xsl:text>
+                    <xsl:text>http://purl.obolibrary.org/obo/   MS_1000130&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
                     <xsl:value-of select="ancestor::plate/@runNumber"/>
                     <xsl:text>&#9;</xsl:text>
                     <xsl:value-of select="@injectionNumber"/>
