@@ -60,7 +60,7 @@ Author: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk) -->
  <xsl:key name="filelookupid" match="FILE" use="@filename"/>
 
  <xsl:template match="/">
-  <xsl:apply-templates select="document('http://www.ebi.ac.uk/ena/data/view/SRA060827&amp;display=xml')" mode="go"/>
+  <xsl:apply-templates select="document($url)" mode="go"/>
  </xsl:template>
 
  <xsl:template match="ROOT" mode="go">
@@ -121,8 +121,7 @@ Investigation Person Roles Term Accession Number
 Investigation Person Roles Term Source REF
 STUDY
 </xsl:text>
-   <xsl:text>Comment[SRA broker]</xsl:text>
-   <xsl:text>&#9;</xsl:text>
+   <xsl:text>Comment[SRA broker]&#9;</xsl:text>  
    <xsl:value-of select="$broker-name"/>
    <xsl:text>
 </xsl:text>
@@ -238,9 +237,7 @@ STUDY
  </xsl:template>
  
  <xsl:template match="STUDY">
-  <xsl:for-each select="//STUDY">
-   <xsl:text>Study Identifier</xsl:text>
-   <xsl:text>&#9;</xsl:text>
+   <xsl:text>Study Identifier&#9;</xsl:text>
    <xsl:choose>
     <xsl:when test="@accession">
      <xsl:value-of select="@accession"/>
@@ -249,60 +246,36 @@ STUDY
      <xsl:text>-</xsl:text>
     </xsl:otherwise>
    </xsl:choose>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
 
-   <xsl:if test="child::DESCRIPTOR/STUDY_TITLE">
-    <xsl:text>Study Title</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="child::DESCRIPTOR/STUDY_TITLE"/>
-    <xsl:text>
-</xsl:text>
-   </xsl:if>
+   <xsl:text>Study Title&#9;</xsl:text>
+   <xsl:value-of select="DESCRIPTOR/STUDY_TITLE"/>
+   <xsl:text>&#10;</xsl:text>
+ 
+   <xsl:text>Study Description&#9;</xsl:text>
+   <xsl:value-of select="DESCRIPTOR/STUDY_ABSTRACT"/>
+   <xsl:value-of select="substring-before(DESCRIPTOR/STUDY_DESCRIPTION,'\r')"/>    
+   <xsl:text>&#10;</xsl:text>
 
-   <xsl:if test="child::DESCRIPTOR/STUDY_ABSTRACT">
-    <xsl:text>Study Description</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="child::DESCRIPTOR/STUDY_ABSTRACT"/>
-    <xsl:if test="child::DESCRIPTOR/STUDY_DESCRIPTION">
-     <xsl:value-of select="substring-before(child::DESCRIPTOR/STUDY_DESCRIPTION,'\r')"/>
-    </xsl:if>
-   </xsl:if>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>Study Submission Date&#9;</xsl:text>
+   <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>   
+   <xsl:text>&#10;</xsl:text>
 
-   <xsl:text>Study Submission Date</xsl:text>
-   <xsl:text>&#9;</xsl:text>
+   <xsl:text>Study Public Release Date&#9;</xsl:text>
    <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
-   <!-- <xsl:apply-template select="//SUBMISSION" mode="submissiondate"/>    -->
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Public Release Date</xsl:text>
-   <xsl:text>&#9;</xsl:text>
-   <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
-   <xsl:text>
-</xsl:text>
-   <xsl:text>Study File Name</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>STUDY DESIGN DESCRIPTORS</xsl:text>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
+   <xsl:text>Study File Name&#10;</xsl:text>
+  
+   <xsl:text>STUDY DESIGN DESCRIPTORS&#10;</xsl:text>
 
    <xsl:if test="child::DESCRIPTOR/STUDY_TYPE">
-    <xsl:text>Study Design Type</xsl:text>
-    <xsl:text>&#9;</xsl:text>
+    <xsl:text>Study Design Type&#9;</xsl:text>
     <xsl:value-of select="child::DESCRIPTOR/STUDY_TYPE/@existing_study_type"/>
    </xsl:if>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
    <xsl:text>Study Design Type Term Accession Number</xsl:text>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
    <xsl:text>Study Design Type Term Source REF</xsl:text>
-
    <xsl:text>
 STUDY PUBLICATIONS
 Study PubMed ID&#9;</xsl:text>
@@ -320,120 +293,58 @@ Study Publication Status
 Study Publication Status Term Accession Number
 Study Publication Status Term Source REF 
 </xsl:text>
-
-
-   <xsl:text>STUDY FACTORS</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Factor Name</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Factor Type</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Factor Type Term Accession Number</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Factor Type Term Source REF</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>STUDY ASSAYS</xsl:text>
-   <xsl:text>
-</xsl:text>
-
+   <xsl:text>STUDY FACTORS&#10;</xsl:text>
+   <xsl:text>Study Factor Name&#10;</xsl:text>
+   <xsl:text>Study Factor Type&#10;</xsl:text>
+   <xsl:text>Study Factor Type Term Accession Number&#10;</xsl:text>
+   <xsl:text>Study Factor Type Term Source REF&#10;</xsl:text>
+   <xsl:text>STUDY ASSAYS&#10;</xsl:text>
    <xsl:text>Study Assay Measurement Type</xsl:text>
    <xsl:for-each select="//LIBRARY_SOURCE[generate-id(.)=generate-id(key('libsrclookupid',.)[1])]">
     <xsl:value-of select="."/>
    </xsl:for-each>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
 
-   <xsl:text>Study Assay Measurement Type Term Accession Number</xsl:text>
-   <xsl:text>&#9;</xsl:text>
-   <xsl:text>ENA:0000019</xsl:text>
-   <xsl:text>&#9;</xsl:text>
+   <xsl:text>Study Assay Measurement Type Term Accession Number&#9;</xsl:text>
+   <xsl:text>ENA:0000019&#9;</xsl:text>
    <xsl:text>ENA:0000020</xsl:text>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
 
-   <xsl:text>Study Assay Measurement Type Term Source REF</xsl:text>
-   <xsl:text>&#9;</xsl:text>
+   <xsl:text>Study Assay Measurement Type Term Source REF&#9;</xsl:text>
+   <xsl:text>ENA&#9;</xsl:text>
    <xsl:text>ENA</xsl:text>
-   <xsl:text>&#9;</xsl:text>
-   <xsl:text>ENA</xsl:text>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
 
    <xsl:text>Study Assay Technology Type</xsl:text>
-   <xsl:for-each
-    select="//LIBRARY_STRATEGY[generate-id(.)=generate-id(key('libstratlookupid',.)[1])]">
-
+   <xsl:for-each select="//LIBRARY_STRATEGY[generate-id(.)=generate-id(key('libstratlookupid',.)[1])]">
     <xsl:value-of select="."/>
    </xsl:for-each>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
 
-   <xsl:text>Study Assay Technology Type Term Accession Number</xsl:text>
-   <xsl:text>&#9;</xsl:text>
-   <xsl:text>ENA:0000044</xsl:text>
-   <xsl:text>&#9;</xsl:text>
+   <xsl:text>Study Assay Technology Type Term Accession Number&#9;</xsl:text>
+   <xsl:text>ENA:0000044&#9;</xsl:text>
    <xsl:text>ENA:0000054</xsl:text>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>&#10;</xsl:text>
 
    <xsl:text>Study Assay Technology Type Term Source REF</xsl:text>
    <xsl:text>&#9;</xsl:text>
    <xsl:text>ENA</xsl:text>
    <xsl:text>&#9;</xsl:text>
-   <xsl:text>ENA </xsl:text>
-   <xsl:text>
-</xsl:text>
+   <xsl:text>ENA&#10;</xsl:text>
 
-   <xsl:text>Study Assay File Names</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>STUDY PROTOCOLS</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Protocol Name</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Protocol Type</xsl:text>
-   <xsl:text>&#9;</xsl:text>
-   <xsl:text>library construction</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>Study Protocol Type Term Accession Number</xsl:text>
-   <xsl:text>
-</xsl:text>
-
-
-   <xsl:text>Study Protocol Type Term Source REF</xsl:text>
-   <xsl:text>
-</xsl:text>
-
+   <xsl:text>Study Assay File Names&#10;</xsl:text>
+   <xsl:text>STUDY PROTOCOLS&#10;</xsl:text>
+   <xsl:text>Study Protocol Name&#10;</xsl:text>
+   <xsl:text>Study Protocol Type&#9;</xsl:text>
+   <xsl:text>library construction&#10;</xsl:text>
+   <xsl:text>Study Protocol Type Term Accession Number&#10;</xsl:text>
+   <xsl:text>Study Protocol Type Term Source REF&#10;</xsl:text>
    <xsl:text>Study Protocol Description</xsl:text>
-   <xsl:for-each
-    select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id(.)=generate-id(key('expprotlookupid',.)[1])]">
-
+   <xsl:for-each select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id(.)=generate-id(key('expprotlookupid',.)[1])]">
     <xsl:value-of select="substring-before(substring-after(.,'&#xa;'),'&#xa;')"/>
    </xsl:for-each>
-   <xsl:text>
-</xsl:text>
-
-   <xsl:text>STUDY CONTACTS</xsl:text>
-   <xsl:text>
-</xsl:text>
-  </xsl:for-each>
+   <xsl:text>&#10;</xsl:text>
+   <xsl:text>STUDY CONTACTS&#10;</xsl:text>
  </xsl:template>
 
  <xsl:template match="EXPERIMENT" mode="gamma">
