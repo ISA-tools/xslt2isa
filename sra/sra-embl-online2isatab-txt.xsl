@@ -43,7 +43,9 @@ Author: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk) -->
 -->
 
  <!--<xsl:value-of select="document('http://www.ebi.ac.uk/ena/data/view/ERA000092&amp;display=xml')"/> -->
- <xsl:variable name="submission" select="document('http://www.ebi.ac.uk/ena/data/view/SRA060827&amp;display=xml')"/>
+ <xsl:variable name="acc-number" select="'SRA060827'"/>
+ <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"></xsl:variable>
+ <xsl:variable name="submission" select="document($url)"/>
 
  <xsl:variable name="protocols" select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id() = generate-id(key('protocols',.)[1])]"/>
 
@@ -58,24 +60,39 @@ Author: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk) -->
  <xsl:key name="filelookupid" match="FILE" use="@filename"/>
 
  <xsl:template match="/">
-  <xsl:result-document href="i_investigation.txt" method="text">
-   <xsl:apply-templates select="document('http://www.ebi.ac.uk/ena/data/view/SRA060827&amp;display=xml')" mode="foo"/>
-  </xsl:result-document>
+  <xsl:apply-templates select="document('http://www.ebi.ac.uk/ena/data/view/SRA060827&amp;display=xml')" mode="go"/>
  </xsl:template>
 
- <xsl:template match="ROOT" mode="foo">
-  <xsl:text>#SRA Document:&#10;</xsl:text>
-  <xsl:value-of select="@identifier"/>
-  <xsl:text>ONTOLOGY SOURCE REFERENCE&#10;</xsl:text>
-  <xsl:text>Term Source Name&#9;</xsl:text>
-  <xsl:text>ENA-CV&#10;</xsl:text>
-  <xsl:text>Term Source File&#9;</xsl:text>
-  <xsl:text>ENA-CV.obo&#10;</xsl:text>
-  <xsl:text>Term Source Version&#9;</xsl:text>
-  <xsl:text>1&#10;</xsl:text>
-  <xsl:text>Term Source Description&#9;</xsl:text>
-  <xsl:text>Controlled Terminology for SRA/ENA schema</xsl:text>
-  <xsl:text>
+ <xsl:template match="ROOT" mode="go">
+  <xsl:apply-templates select="SUBMISSION"/>
+  <!-- <xsl:apply-templates select="SUBMISSION_LINK"/> -->
+  <!--<xsl:apply-templates select="SAMPLE"/>
+  <xsl:apply-templates select="RUN"/>-->
+ </xsl:template>
+ 
+ <xsl:template match="SUBMISSION">
+  <xsl:variable name="broker-name" select="@broker_name"/>
+  <xsl:apply-templates>
+   <xsl:with-param name="broker-name" select="$broker-name" tunnel="yes"/>
+  </xsl:apply-templates>
+ </xsl:template>
+ 
+ <xsl:template match="XREF_LINK/DB[contains(.,'NA-STUDY')]">
+  <xsl:param name="broker-name" required="yes" tunnel="yes"/>
+  <xsl:variable name="study" select="following-sibling::ID"/>
+  <xsl:result-document href="{concat('i_', $acc-number, '.txt')}" method="text">
+   <xsl:text>#SRA Document:&#10;</xsl:text>
+   <xsl:value-of select="@identifier"/>
+   <xsl:text>ONTOLOGY SOURCE REFERENCE&#10;</xsl:text>
+   <xsl:text>Term Source Name&#9;</xsl:text>
+   <xsl:text>ENA-CV&#10;</xsl:text>
+   <xsl:text>Term Source File&#9;</xsl:text>
+   <xsl:text>ENA-CV.obo&#10;</xsl:text>
+   <xsl:text>Term Source Version&#9;</xsl:text>
+   <xsl:text>1&#10;</xsl:text>
+   <xsl:text>Term Source Description&#9;</xsl:text>
+   <xsl:text>Controlled Terminology for SRA/ENA schema</xsl:text>
+   <xsl:text>
 INVESTIGATION
 Investigation Identitifier
 Investigation Title
@@ -104,268 +121,122 @@ Investigation Person Roles Term Accession Number
 Investigation Person Roles Term Source REF
 STUDY
 </xsl:text>
-  <xsl:apply-templates select="SUBMISSION"/>
-  <!-- <xsl:apply-templates select="SUBMISSION_LINK"/> -->
-  <!--<xsl:apply-templates select="SAMPLE"/>
-  <xsl:apply-templates select="RUN"/>-->
- </xsl:template>
-
- <xsl:template match="SUBMISSION">
-  <xsl:for-each select="//SUBMISSION">
-   <xsl:if test="child::SUBMISSION_LINKS">
-    <xsl:for-each select="child::SUBMISSION_LINKS/SUBMISSION_LINK/XREF_LINK">
-     <xsl:choose>
-      <xsl:when test="contains(./DB/.,'NA-STUDY')">
-       <!--<xsl:text>Study Identifier</xsl:text><xsl:text>&#9;|</xsl:text>-->
-       <xsl:variable name="study" select="./ID/."/>
-       <!--      <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@center_name"/><xsl:text>&#9;</xsl:text>
-
-      <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/IDENTIFIERS/PRIMARY_ID/."/><xsl:text>&#9;</xsl:text>
-      <xsl:text>&#9;</xsl:text>
-<xsl:text>
+   <xsl:text>Comment[SRA broker]</xsl:text>
+   <xsl:text>&#9;</xsl:text>
+   <xsl:value-of select="$broker-name"/>
+   <xsl:text>
 </xsl:text>
-      <xsl:text>Study Description</xsl:text><xsl:text>&#9;|</xsl:text>
-      <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/DESCRIPTOR/STUDY_ABSTRACT/."/><xsl:text>&#9;</xsl:text>
-      <xsl:text>
+   <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
+   <xsl:text>
 </xsl:text>
-      <xsl:text>Study Title</xsl:text><xsl:text>&#9;|</xsl:text>
-      <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@alias"/><xsl:text>&#9;</xsl:text>
-<xsl:text>
-</xsl:text>-->
-
-       <xsl:text>Comment[SRA broker]</xsl:text>
-       <xsl:text>&#9;</xsl:text>
-       <xsl:value-of
-        select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@broker_name"/>
-       <xsl:text>
+   
+   <xsl:if test="child::CONTACTS/CONTACT">
+    <xsl:text>Person Last Name</xsl:text>
+    <xsl:value-of select="substring-before(child::CONTACTS/CONTACT/@name,' ')"/>
+    <xsl:text>
 </xsl:text>
-       <xsl:apply-templates
-        select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
-       <xsl:text>
-</xsl:text>
-
-       <xsl:if test="child::CONTACTS/CONTACT">
-        <xsl:text>Person Last Name</xsl:text>
-        <xsl:value-of select="substring-before(child::CONTACTS/CONTACT/@name,' ')"/>
-        <xsl:text>
-</xsl:text>
-       </xsl:if>
-       <xsl:if test="child::CONTACTS/CONTACT">
-        <xsl:text>Person First Name</xsl:text>
-        <xsl:value-of select="substring-after(child::CONTACTS/CONTACT/@name,' ')"/>
-        <xsl:text>
-</xsl:text>
-       </xsl:if>
-       <xsl:text>Person Mid Initials</xsl:text>
-       <xsl:text>
-</xsl:text>
-       <xsl:if test="child::CONTACTS/CONTACT">
-        <xsl:text>Person Email</xsl:text>
-        <xsl:value-of select="child::CONTACTS/CONTACT/@inform_on_status"/>
-       </xsl:if>
-       <xsl:text>
-</xsl:text>
-       <xsl:if test="child::CONTACTS/CONTACT">
-        <xsl:text>Person Phone</xsl:text>
-        <xsl:text>-</xsl:text>
-       </xsl:if>
-       <xsl:text>
-</xsl:text>
-       <xsl:if test="child::CONTACTS/CONTACT">
-        <xsl:text>Person Fax</xsl:text>
-        <xsl:text>-</xsl:text>
-       </xsl:if>
-       <xsl:text>
-</xsl:text>
-       <xsl:text>Person Address</xsl:text>
-       <xsl:text>
-</xsl:text>
-       <xsl:text>Person Affiliation</xsl:text>
-       <xsl:text>
-</xsl:text>
-       <xsl:text>Person Role</xsl:text>
-       <xsl:text>
-</xsl:text>
-       <xsl:text>Person Role Term Source REF</xsl:text>
-       <xsl:text>
-</xsl:text>
-       <xsl:text>Person Role Term Accession</xsl:text>
-       <xsl:text>
-</xsl:text>
-       <xsl:text>
-</xsl:text>
-      </xsl:when>
-
-      <!-- Begin: Study file -->
-      <xsl:when test="contains(./DB/., 'NA-SAMPLE')">
-       <xsl:result-document href="s_study.txt" method="text">
-        <xsl:variable name="samples" select="./ID/."/>
-        <xsl:text>Source Name</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Characteristics[primary accession number]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Comment[Scientific Name]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Characteristics[Taxonomic ID]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Characteristics[Description]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:for-each
-         select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$samples,'&amp;display=xml'))/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[generate-id(.)=generate-id(key('sampletaglookupid',.)[1])]">
-         <xsl:text>Characteristics[</xsl:text>
-         <xsl:value-of select="."/>
-         <xsl:text>]</xsl:text>
-         <xsl:text>&#9;</xsl:text>
-        </xsl:for-each>
-        <xsl:text>Sample Name</xsl:text>
-        <xsl:text>
- </xsl:text>
-        <xsl:apply-templates
-         select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$samples,'&amp;display=xml'))/ROOT/SAMPLE"/>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>   
- </xsl:text>
-       </xsl:result-document>
-      </xsl:when>
-      <!-- End: Study file -->
-
-      <!-- Begin: Assay file -->
-      <xsl:when test="contains(./DB/.,'NA-EXPERIMENT')">
-       <xsl:result-document href="a_assay.txt" method="text">
-        <xsl:variable name="experiments" select="./ID/."/>
-        <xsl:text>Sample Name</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Protocol REF</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Parameter Value[library strategy]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Parameter Value[library source]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Parameter Value[library selection]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Parameter Value[library layout]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
- 
-        <!--      <xsl:for-each select="//TAG[generate-id(.)=generate-id(key('expprotlookupid',.)[1])]">      
-        <xsl:text>Parameter Value[</xsl:text>
-        <xsl:value-of select="."/>
-        <xsl:text>]</xsl:text><xsl:text>&#9;</xsl:text>       
-       </xsl:for-each>-->
- 
-        <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_taxon: ')">
-         <xsl:text>Parameter Value[target_taxon]</xsl:text>
-         <xsl:text>&#9;</xsl:text>
-        </xsl:if>
-        <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_gene: ')">
-         <xsl:text>Parameter Value[target_gene]</xsl:text>
-         <xsl:text>&#9;</xsl:text>
-        </xsl:if>
-        <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_subfragment: ')">
-         <xsl:text>Parameter Value[target_subfragment]</xsl:text>
-         <xsl:text>&#9;</xsl:text>
-        </xsl:if>
-        <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_primers: ')">
-         <xsl:text>Parameter Value[pcr_primers]</xsl:text>
-         <xsl:text>&#9;</xsl:text>
-        </xsl:if>
-        <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_cond: ')">
-         <xsl:text>Parameter Value[pcr_conditions]</xsl:text>
-         <xsl:text>&#9;</xsl:text>
-        </xsl:if>
-        <!-- <xsl:value-of select="child::EXPERIMENT_REF/@refname"/>   -->
- 
-        <xsl:text>Labeled Extract Name</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Protocol REF</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Parameter Value[read information {index;type;class;base coord}]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Parameter Value[sequencing instrument]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Performer</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Date</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Assay Name</xsl:text>
-        <xsl:text>&#9;</xsl:text>
- 
-        <!--
-     <xsl:for-each select="//TAG[generate-id(.)=generate-id(key('runtaglookupid',.)[1])]">
-     <th><font color="#CCCCCC" face="Arial" size="2pt">
-     <xsl:text>Parameter[</xsl:text>
-     <xsl:value-of select="."/>
-     <xsl:text>]</xsl:text>
-     </font></th>
-     </xsl:for-each>
-    -->
-        <xsl:text>Raw Data File</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Comment[File checksum method]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>Comment[File checksum]</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>
- </xsl:text>
- 
-        <xsl:apply-templates
-         select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$experiments,'&amp;display=xml'))/ROOT/EXPERIMENT"/>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:text>
- </xsl:text>
- 
-        <!--  <xsl:when test="contains(./DB/. ,'NA-RUN')">
-       <xsl:variable name="runs" select="./ID/."/>
-       <xsl:value-of select="$runs"/>-->
-        <!--     <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$runs,'&amp;display=xml'))/ROOT/RUN"/><xsl:text>&#9;</xsl:text>-->
- 
-       </xsl:result-document>
-      </xsl:when>
-      <!-- Begin: Assay file -->
-
-     </xsl:choose>
-    </xsl:for-each>
    </xsl:if>
-  </xsl:for-each>
+   <xsl:if test="child::CONTACTS/CONTACT">
+    <xsl:text>Person First Name</xsl:text>
+    <xsl:value-of select="substring-after(child::CONTACTS/CONTACT/@name,' ')"/>
+    <xsl:text>
+</xsl:text>
+   </xsl:if>
+   <xsl:text>Person Mid Initials</xsl:text>
+   <xsl:text>
+</xsl:text>
+   <xsl:if test="child::CONTACTS/CONTACT">
+    <xsl:text>Person Email</xsl:text>
+    <xsl:value-of select="child::CONTACTS/CONTACT/@inform_on_status"/>
+   </xsl:if>
+   <xsl:text>
+</xsl:text>
+   <xsl:if test="child::CONTACTS/CONTACT">
+    <xsl:text>Person Phone</xsl:text>
+    <xsl:text>-</xsl:text>
+   </xsl:if>
+   <xsl:text>
+</xsl:text>
+   <xsl:if test="child::CONTACTS/CONTACT">
+    <xsl:text>Person Fax</xsl:text>
+    <xsl:text>-</xsl:text>
+   </xsl:if>
+   <xsl:text>
+</xsl:text>
+   <xsl:text>Person Address</xsl:text>
+   <xsl:text>
+</xsl:text>
+   <xsl:text>Person Affiliation</xsl:text>
+   <xsl:text>
+</xsl:text>
+   <xsl:text>Person Role</xsl:text>
+   <xsl:text>
+</xsl:text>
+   <xsl:text>Person Role Term Source REF</xsl:text>
+   <xsl:text>
+</xsl:text>
+   <xsl:text>Person Role Term Accession</xsl:text>
+  </xsl:result-document>
  </xsl:template>
-
- <!--
-<xsl:template match="SUBMISSION_LINK">
- <xsl:for-each select="SUBMISSION_LINK">
- <xsl:choose>
-  <xsl:when test="contains(./XREF_LINK/DB,'NA-STUDY')">
-   <xsl:value-of select="./XREF_LINK/ID/."/>
-   <xsl:variable name="study" select="./XREF_LINK/ID/."/>
-   <xsl:value-of select="document('http://www.ebi.ac.uk/ena/data/view/$study&amp;display=xml')"/>
-  </xsl:when>
-  <xsl:when test="./XREF_LINK/DB = 'ENA-SAMPLE'">
-   <xsl:value-of select="./XREF_LINK/ID"/>
-   <xsl:variable name="samples" select="./XREF_LINK/ID"/>
-   <xsl:value-of select="document('http://www.ebi.ac.uk/ena/data/view/$sample&amp;display=xml')"/>
-  </xsl:when>
-  <xsl:when test="./XREF_LINK/DB = 'ENA-EXPERIMENT'">
-   <xsl:value-of select="./XREF_LINK/ID"/>
-   <xsl:variable name="experiments" select="./XREF_LINK/ID"/>
-   <xsl:value-of select="document('http://www.ebi.ac.uk/ena/data/view/$experiments&amp;display=xml')"/>
-  </xsl:when>
-  <xsl:when test="./XREF_LINK/DB = 'ENA-RUN'">
-   <xsl:value-of select="./XREF_LINK/ID"/>
-   <xsl:variable name="runs" select="./XREF_LINK/ID"/>
-   <xsl:value-of select="document('http://www.ebi.ac.uk/ena/data/view/$runs&amp;display=xml')"/>
-  </xsl:when>
-  <xsl:when test="./XREF_LINK/DB = 'ENA-FASTQ-FILES'">
-   <xsl:value-of select="./XREF_LINK/ID"/>
-   <xsl:variable name="fastqs" select="./XREF_LINK/ID"/>
-   <xsl:value-of select="document('fastqs')"/>
-  </xsl:when>   
- </xsl:choose>
- </xsl:for-each>
+ 
+ <xsl:template match="XREF_LINK/DB[contains(.,'NA-SAMPLE')]">  
+  <xsl:result-document href="{concat('s_', $acc-number, '.txt')}" method="text">
+   <xsl:variable name="samples" select="following-sibling::ID"/>
+   <xsl:text>Source Name&#9;</xsl:text>
+   <xsl:text>Characteristics[Primary Accession Number]&#9;</xsl:text>
+   <xsl:text>Comment[Scientific Name]&#9;</xsl:text>
+   <xsl:text>Characteristics[Taxonomic ID]&#9;</xsl:text>
+   <xsl:text>Characteristics[Description]&#9;</xsl:text>
+   <xsl:for-each select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $samples, '&amp;display=xml'))/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[generate-id(.)=generate-id(key('sampletaglookupid',.)[1])]">
+    <xsl:text>Characteristics[</xsl:text>
+    <xsl:value-of select="."/>
+    <xsl:text>]&#9;</xsl:text>
+   </xsl:for-each>
+   <xsl:text>Sample Name&#10;</xsl:text>
+   <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $samples, '&amp;display=xml'))/ROOT/SAMPLE"/>
+   <xsl:text>&#9;</xsl:text>
+  </xsl:result-document>
  </xsl:template>
- -->
-
-
-
-
-
+ 
+ <xsl:template match="XREF_LINK/DB[contains(.,'NA-EXPERIMENT')]">
+  <xsl:result-document href="{concat('a_', $acc-number, '.txt')}" method="text">
+   <xsl:variable name="experiments" select="following-sibling::ID"/>
+   <xsl:text>Sample Name&#9;</xsl:text>
+   <xsl:text>Protocol REF&#9;</xsl:text>
+   <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
+   <xsl:text>Parameter Value[library source]&#9;</xsl:text>
+   <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
+   <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
+   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_taxon: ')">
+    <xsl:text>Parameter Value[target_taxon]&#9;</xsl:text>
+   </xsl:if>
+   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_gene: ')">
+    <xsl:text>Parameter Value[target_gene]&#9;</xsl:text>
+   </xsl:if>
+   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_subfragment: ')">
+    <xsl:text>Parameter Value[target_subfragment]&#9;</xsl:text>
+   </xsl:if>
+   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_primers: ')">
+    <xsl:text>Parameter Value[pcr_primers]&#9;</xsl:text>
+   </xsl:if>
+   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_cond: ')">
+    <xsl:text>Parameter Value[pcr_conditions]&#9;</xsl:text>
+   </xsl:if>
+   <xsl:text>Labeled Extract Name&#9;</xsl:text>
+   <xsl:text>Protocol REF&#9;</xsl:text>
+   <xsl:text>Parameter Value[read information {index;type;class;base coord}]&#9;</xsl:text>
+   <xsl:text>Parameter Value[sequencing instrument]&#9;</xsl:text>
+   <xsl:text>Performer&#9;</xsl:text>
+   <xsl:text>Date&#9;</xsl:text>
+   <xsl:text>Assay Name&#9;</xsl:text>
+   <xsl:text>Raw Data File&#9;</xsl:text>
+   <xsl:text>Comment[File checksum method]&#9;</xsl:text>
+   <xsl:text>Comment[File checksum]&#10;</xsl:text>
+   <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $experiments, '&amp;display=xml'))/ROOT/EXPERIMENT"/>
+   <xsl:text>&#9;</xsl:text>   
+  </xsl:result-document>
+ </xsl:template>
+ 
  <xsl:template match="STUDY">
   <xsl:for-each select="//STUDY">
    <xsl:text>Study Identifier</xsl:text>
@@ -562,50 +433,8 @@ Study Publication Status Term Source REF
    <xsl:text>STUDY CONTACTS</xsl:text>
    <xsl:text>
 </xsl:text>
-
-
-   <!--      <xsl:choose>
-     <xsl:when test="./STUDY_ATTRIBUTES">
-     
-     <xsl:for-each select="STUDY_ATTRIBUTE">
-     <xsl:variable name="tags" select="key('TAGS-by-STUDY', .)" />
-     <tr>
-     <xsl:for-each select="TAGS-by-STUDY"> -->
-   <!-- introduce a test to check on the value of the STUDY_TAGs-> ask Rasko regarding the possible values defined by curation team-->
-   <!-- <td><font face="Arial" size="2pt">
-     <xsl:value-of select="$tags[/TAG = current()]" />
-     </td>
-     </xsl:for-each>
-     </tr>
-     </xsl:for-each>
-     <xsl:for-each select="./STUDY_ATTRIBUTES/STUDY_ATTRIBUTE/VALUE">
-     <td bgcolor="#CCCCCC">
-     <font face="Arial" size="2pt">
-     <xsl:value-of select="."/>
-     </font>
-     </td>
-     </xsl:for-each>  -->
-
-   <!--<xsl:for-each select="./SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/UNITS">
-     <td>
-     <font face="Arial" size="2pt">
-     <xsl:value-of select="."/>
-     </font>
-     </td>
-     </xsl:for-each>-->
-
-   <!--   </xsl:when>
-     <xsl:otherwise>
-     <td><font face="Arial" size="2pt">-</td>
-     </xsl:otherwise>
-     </xsl:choose>-->
-
   </xsl:for-each>
-
  </xsl:template>
-
-
-
 
  <xsl:template match="EXPERIMENT" mode="gamma">
   <xsl:apply-templates select="EXPERIMENT"/>
@@ -613,16 +442,13 @@ Study Publication Status Term Source REF
 </xsl:text>
  </xsl:template>
 
-
  <xsl:template match="SAMPLE" mode="beta">
   <xsl:text>
 </xsl:text>
   <xsl:apply-templates select="SAMPLE"/>
  </xsl:template>
 
-
  <xsl:template match="SAMPLE">
-
   <xsl:choose>
    <xsl:when test="@alias">
     <xsl:value-of select="@alias"/>
@@ -918,173 +744,4 @@ Study Publication Status Term Source REF
 </xsl:text>
 
  </xsl:template>
-
- <!--
- <xsl:template match="EXPERIMENT" mode="alpha">
-  <xsl:apply-templates select="EXPERIMENT"/> 
-  <xsl:choose>
-   <!-\- <xsl:when test="contains(./DB/.,'NA-EXPERIMENT')">
-   <xsl:variable name="experiments" select="./ID/."/>
-   <xsl:value-of select="$experiments"/>
-   <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$experiments,'&amp;display=xml'))/ROOT/EXPERIMENT"/> 
-  </xsl:when>-\->
-   <xsl:when test="child::EXPERIMENT_REF/@refname">
-    <xsl:value-of select="child::EXPERIMENT_REF/@refname"/>
-    <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/@accession"/>
-    <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/SAMPLE_DESCRIPTOR/@refname"/><xsl:text>&#9;</xsl:text>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text><xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>
-  
-  
-  
-  <!-\-    <xsl:choose>
-    <xsl:when test="child::EXPERIMENT_REF/@refname">
-    <td><font face="Arial" size="2pt"><xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE"/></font>
-    </td>
-    </xsl:when>
-    <xsl:otherwise>
-    <td><font face="Arial" size="2pt">-</td>	
-    </xsl:otherwise>
-    </xsl:choose> -\->
-  
-  
-  
-  <xsl:choose>
-   <xsl:when test="child::EXPERIMENT_REF/@refname">
-    <!-\-  <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL"/> -\->
-    <xsl:text>library construction</xsl:text> <xsl:text>&#9;</xsl:text>  
-    <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY/."/><xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE/."/><xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SELECTION/."/><xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/SINGLE"/><xsl:text>&#9;</xsl:text>
-    <xsl:if test="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS"><xsl:text>&#9;</xsl:text>
-     <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/@locus_name"/><xsl:text>&#9;</xsl:text>
-     <xsl:text>(</xsl:text>
-     <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/DB"/><xsl:text>&#9;</xsl:text>
-     <xsl:text>:</xsl:text>
-     <xsl:value-of select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/ID"/><xsl:text>&#9;</xsl:text>
-     <xsl:text>)</xsl:text> 
-    </xsl:if>
-    <xsl:if test="contains(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'target_taxon: ')">
-     <xsl:value-of select="substring-before(substring-after(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'target_taxon: '),'&#xa;')"/><xsl:text>&#9;</xsl:text>
-    </xsl:if>
-    <xsl:if test="contains(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'target_gene: ')">
-     <xsl:value-of select="substring-before(substring-after(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'target_subfragment: '),'&#xa;')"/><xsl:text>&#9;</xsl:text>
-    </xsl:if>
-    <xsl:if test="contains(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'target_subfragment: ')">
-     <xsl:value-of select="substring-before(substring-after(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'pcr_primers: '),'&#xa;')"/><xsl:text>&#9;</xsl:text>
-    </xsl:if>
-    <xsl:if test="contains(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'pcr_primers: ')">
-     <xsl:value-of select="substring-before(substring-after(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'pcr_conditions: '),'&#xa;')"/><xsl:text>&#9;</xsl:text>
-    </xsl:if>
-    <xsl:if test="contains(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'pcr_cond: ')">
-     <xsl:value-of select="substring-after(key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL/.,'pcr_cond: ')"/><xsl:text>&#9;</xsl:text>
-    </xsl:if>       
-    <xsl:value-of select="child::EXPERIMENT_REF/@refname"/><xsl:text>&#9;</xsl:text> 
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text><xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>
-  
-  <!-\-   <xsl:choose>
-    <xsl:when test="./RUN_ATTRIBUTES">
-    
-    <xsl:for-each select="RUN">
-    <xsl:variable name="tags" select="key('TAGS-by-RUN', .)" />
-    <tr>
-    <xsl:for-each select="TAGS-by-RUN">
-    <td>
-    <xsl:value-of select="$tags[/TAG = current()]" />
-    </td>
-    </xsl:for-each>
-    </tr>
-    </xsl:for-each>
-    <xsl:for-each select="./RUN_ATTRIBUTES/RUN_ATTRIBUTE/VALUE">
-    <td>
-    <font face="Arial" size="2pt">
-    <xsl:value-of select="."/>
-    </font>
-    </td>
-    </xsl:for-each>
-   -\->
-  <!-\-
-    <xsl:for-each select="./SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/UNITS">
-    <td>
-    <font face="Arial" size="2pt">
-    <xsl:value-of select="."/>
-    </font>
-    </td>
-    </xsl:for-each>-\->
-  <!-\-
-    </xsl:when>
-    <xsl:otherwise>
-    <td><font face="Arial" size="2pt">-</td>
-    </xsl:otherwise>
-    </xsl:choose>
-   -\->
-  <xsl:choose>
-   <xsl:when test="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/SPOT_DESCRIPTOR">
-    <xsl:text>Sequencing Protocol</xsl:text> <xsl:text>&#9;</xsl:text>    
-    <xsl:for-each select="key('exptlookupid',child::EXPERIMENT_REF/@refname)/DESIGN/SPOT_DESCRIPTOR/SPOT_DECODE_SPEC/READ_SPEC">
-     <xsl:value-of select="child::READ_INDEX/."/>;<xsl:value-of select="child::READ_CLASS/."/>;<xsl:value-of select="child::READ_TYPE/."/>;<xsl:value-of select="child::BASE_COORD/."/>|</xsl:for-each> 
-    <xsl:text>&#9;</xsl:text>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text><xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>
-  
-  <xsl:choose>
-   <xsl:when test="@instrument_model">
-    <xsl:value-of select="@instrument_model"/>   <xsl:text>&#9;</xsl:text>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text><xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>  
-  <xsl:choose>
-   <xsl:when test="@run_center">
-    <xsl:value-of select="@run_center"/>  <xsl:text>&#9;</xsl:text>  
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text><xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose> 
-  <xsl:choose>
-   <xsl:when test="@run_date">
-    <xsl:value-of select="@run_date"/>   <xsl:text>&#9;</xsl:text> 
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text><xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>  
-  <xsl:choose>
-   <xsl:when test="@alias">
-    <xsl:value-of select="@alias"/> <xsl:text>&#9;</xsl:text> 
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text><xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>         
-  <xsl:choose>
-   <xsl:when test="child::DATA_BLOCK/FILES/FILE/@filename">
-    <xsl:value-of select="child::DATA_BLOCK/FILES/FILE/@filename"/>   <xsl:text>&#9;</xsl:text>  
-    <xsl:value-of select="key('filelookupid',child::DATA_BLOCK/FILES/FILE/@filename)/@checksum_method"/>    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="key('filelookupid',child::DATA_BLOCK/FILES/FILE/@filename)/@checksum"/> <xsl:text>&#9;</xsl:text>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text></xsl:text>	<xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>
-  <xsl:text>
-</xsl:text>
- </xsl:template>-->
-
-
-
-
 </xsl:stylesheet>
