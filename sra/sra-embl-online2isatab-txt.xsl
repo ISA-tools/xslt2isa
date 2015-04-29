@@ -48,7 +48,7 @@ Author: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk) -->
  
  
  <!--<xsl:value-of select="document('http://www.ebi.ac.uk/ena/data/view/ERA000092&amp;display=xml')"/> -->
- <xsl:variable name="submission" select="document('http://www.ebi.ac.uk/ena/data/view/ERA148766&amp;display=xml')"/>
+ <xsl:variable name="submission" select="document('http://www.ebi.ac.uk/ena/data/view/SRA060827&amp;display=xml')"/>
  
  
  
@@ -76,27 +76,27 @@ Author: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk) -->
  
  <xsl:text>#SRA Document:</xsl:text>  <xsl:value-of select="@identifier"/>
  <xsl:text>
- </xsl:text>
-<xsl:text>Ontology Source Reference</xsl:text>
+</xsl:text>
+<xsl:text>ONTOLOGY SOURCE REFERENCE</xsl:text>
 <xsl:text>
 </xsl:text>
  
 <xsl:text>Term Source Name</xsl:text> 
-<xsl:text>ENA-CV</xsl:text>
+<xsl:text>&#9;</xsl:text><xsl:text>ENA-CV</xsl:text>
 <xsl:text>
 </xsl:text>
  
 <xsl:text>Term Source File</xsl:text>
-<xsl:text>ENA-CV.obo</xsl:text>
+<xsl:text>&#9;</xsl:text><xsl:text>ENA-CV.obo</xsl:text>
 <xsl:text>
 </xsl:text>
  
 <xsl:text>Term Source Version</xsl:text>
-<xsl:text>1</xsl:text>
+<xsl:text>&#9;</xsl:text><xsl:text>1</xsl:text>
 <xsl:text>
 </xsl:text>
 <xsl:text>Term Source Description</xsl:text>
-<xsl:text>Controlled Terminology for SRA/ENA schema</xsl:text>
+<xsl:text>&#9;</xsl:text><xsl:text>Controlled Terminology for SRA/ENA schema</xsl:text>
  
 <xsl:text>
 INVESTIGATION
@@ -158,9 +158,9 @@ STUDY
  <xsl:for-each select="child::SUBMISSION_LINKS/SUBMISSION_LINK/XREF_LINK">
     <xsl:choose>
      <xsl:when test="contains(./DB/.,'NA-STUDY')">
-      <xsl:text>Study Identifier</xsl:text><xsl:text>&#9;|</xsl:text>
+      <!--<xsl:text>Study Identifier</xsl:text><xsl:text>&#9;|</xsl:text>-->
       <xsl:variable name="study" select="./ID/."/>
-      <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@center_name"/><xsl:text>&#9;</xsl:text>
+<!--      <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@center_name"/><xsl:text>&#9;</xsl:text>
 
       <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/IDENTIFIERS/PRIMARY_ID/."/><xsl:text>&#9;</xsl:text>
       <xsl:text>&#9;</xsl:text>
@@ -173,17 +173,15 @@ STUDY
       <xsl:text>Study Title</xsl:text><xsl:text>&#9;|</xsl:text>
       <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@alias"/><xsl:text>&#9;</xsl:text>
 <xsl:text>
-</xsl:text>
+</xsl:text>-->
       
-      <xsl:text>Comment[SRA broker]</xsl:text><xsl:text>&#9;|</xsl:text> 
-      <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@broker_name"/><xsl:text>&#9;</xsl:text><xsl:text>&#9;</xsl:text>
-      <xsl:text>
-      </xsl:text>
-     
-     <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
-      <xsl:text>&#9;</xsl:text>
-      <xsl:text>
-      </xsl:text>
+      <xsl:text>Comment[SRA broker]</xsl:text><xsl:text>&#9;</xsl:text> 
+<xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY/@broker_name"/>
+<xsl:text>
+</xsl:text>  
+<xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
+<xsl:text>
+</xsl:text>
        
       <xsl:if test="child::CONTACTS/CONTACT">
        <xsl:text>Person Last Name</xsl:text>
@@ -370,10 +368,8 @@ STUDY
 
 
  <xsl:template match="STUDY">
-
 <xsl:for-each select="//STUDY">
-   
- <xsl:text>Study Identifier</xsl:text><xsl:text>&#9;</xsl:text>
+<xsl:text>Study Identifier</xsl:text><xsl:text>&#9;</xsl:text>
 <xsl:choose>
 <xsl:when test="@accession">
 <xsl:value-of select="@accession"/>
@@ -402,13 +398,13 @@ STUDY
 <xsl:text>
 </xsl:text>     
     
-<xsl:text>Study Submission Date</xsl:text>
+<xsl:text>Study Submission Date</xsl:text><xsl:text>&#9;</xsl:text>
 <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
  <!-- <xsl:apply-template select="//SUBMISSION" mode="submissiondate"/>    -->
 <xsl:text>
 </xsl:text>
     
-<xsl:text>Study Public Release Date</xsl:text>
+<xsl:text>Study Public Release Date</xsl:text><xsl:text>&#9;</xsl:text>
 <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
 <xsl:text>
 </xsl:text>
@@ -420,9 +416,9 @@ STUDY
  <xsl:text>
 </xsl:text>     
 
- <xsl:if test="child::DESCRIPTOR/STUDY_TYPE"><xsl:text>&#9;</xsl:text>
+ <xsl:if test="child::DESCRIPTOR/STUDY_TYPE">
 <xsl:text>Study Design Type</xsl:text>
-<xsl:value-of select="child::DESCRIPTOR/STUDY_TYPE/@existing_study_type"/>
+<xsl:text>&#9;</xsl:text><xsl:value-of select="child::DESCRIPTOR/STUDY_TYPE/@existing_study_type"/>
 </xsl:if>  
 <xsl:text>
 </xsl:text>     
@@ -433,7 +429,13 @@ STUDY
  
 <xsl:text>
 STUDY PUBLICATIONS
-Study PubMed ID
+Study PubMed ID&#9;</xsl:text>
+<xsl:for-each select="child::STUDY_LINKS/STUDY_LINK/XREF_LINK/DB">
+ <xsl:if test="contains(., 'pubmed')">
+ <xsl:value-of select="following-sibling::ID/."/><xsl:text>&#9;</xsl:text>
+ </xsl:if>
+</xsl:for-each>
+<xsl:text>
 Study Publication DOI
 Study Publication Author List
 Study Publication Title
@@ -447,7 +449,7 @@ Study Publication Status Term Source REF
 <xsl:text>
 </xsl:text>
  
- <xsl:text>Study Factor Name</xsl:text>
+<xsl:text>Study Factor Name</xsl:text>
 <xsl:text>
 </xsl:text>
 
@@ -469,21 +471,20 @@ Study Publication Status Term Source REF
     
 <xsl:text>Study Assay Measurement Type</xsl:text>
      <xsl:for-each select="//LIBRARY_SOURCE[generate-id(.)=generate-id(key('libsrclookupid',.)[1])]">
-      
-       <xsl:value-of select="."/>
+           <xsl:value-of select="."/>
      </xsl:for-each>
 <xsl:text>
 </xsl:text>
 
 <xsl:text>Study Assay Measurement Type Term Accession Number</xsl:text>
-    <xsl:text>ENA:0000019</xsl:text>
-    <xsl:text>ENA:0000020</xsl:text>
+ <xsl:text>&#9;</xsl:text><xsl:text>ENA:0000019</xsl:text>
+ <xsl:text>&#9;</xsl:text><xsl:text>ENA:0000020</xsl:text>
 <xsl:text>
 </xsl:text>
 
  <xsl:text>Study Assay Measurement Type Term Source REF</xsl:text>
- <xsl:text>ENA</xsl:text>
- <xsl:text>ENA</xsl:text>
+<xsl:text>&#9;</xsl:text><xsl:text>ENA</xsl:text>
+<xsl:text>&#9;</xsl:text><xsl:text>ENA</xsl:text>
  <xsl:text>
 </xsl:text>
 
@@ -496,14 +497,14 @@ Study Publication Status Term Source REF
 </xsl:text>
      
 <xsl:text>Study Assay Technology Type Term Accession Number</xsl:text>
-     <xsl:text>ENA:0000044</xsl:text>
-     <xsl:text>ENA:0000054</xsl:text>
+ <xsl:text>&#9;</xsl:text>     <xsl:text>ENA:0000044</xsl:text>
+ <xsl:text>&#9;</xsl:text>    <xsl:text>ENA:0000054</xsl:text>
 <xsl:text>
 </xsl:text>  
 
  <xsl:text>Study Assay Technology Type Term Source REF</xsl:text>
- <xsl:text>ENA</xsl:text>
- <xsl:text>ENA </xsl:text>
+ <xsl:text>&#9;</xsl:text> <xsl:text>ENA</xsl:text>
+ <xsl:text>&#9;</xsl:text><xsl:text>ENA </xsl:text>
  <xsl:text>
 </xsl:text> 
 
@@ -520,7 +521,7 @@ Study Publication Status Term Source REF
 </xsl:text>
       
 <xsl:text>Study Protocol Type</xsl:text>
-     <xsl:text>library construction</xsl:text>
+<xsl:text>&#9;</xsl:text><xsl:text>library construction</xsl:text>
 <xsl:text>
 </xsl:text>  
 
