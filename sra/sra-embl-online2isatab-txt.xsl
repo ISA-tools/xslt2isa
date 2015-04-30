@@ -718,10 +718,16 @@ Study Publication Status Term Source REF
    <xsl:when test="child::EXPERIMENT_LINKS/EXPERIMENT_LINK/XREF_LINK">
     <xsl:for-each select="child::EXPERIMENT_LINKS/EXPERIMENT_LINK/XREF_LINK/DB/.">
      <xsl:if test="contains(., 'ENA-FASTQ-FILES')">
-      <xsl:value-of select="following-sibling::ID/."/>
-       <xsl:if test="contains(.,'fastq_ftp')">
-        <xsl:value-of select="substring-after(., 'fastq_ftp')"></xsl:value-of>
-      <xsl:text>&#9;</xsl:text>
+      <xsl:variable name="file" select="following-sibling::ID/."/>
+<!--       <xsl:value-of select="following-sibling::ID/."/>-->
+      <xsl:if test="contains($file,'&amp;result=read_run&amp;fields=run_accession,fastq_ftp')"> <!--result=read_run&amp;fields=run_accession-->
+       <xsl:variable name="base" select="substring-before($file,'&amp;result=read_run&amp;fields=run_accession,fastq_ftp')"></xsl:variable>
+       <xsl:variable name="link" select="concat($base,'&amp;result=read_run&amp;fields=fastq_ftp')"></xsl:variable>
+     
+       <xsl:value-of select="tokenize(unparsed-text(document($link)),'\n')[0]"></xsl:value-of>
+       <!--<xsl:value-of select="$link"></xsl:value-of>-->
+       
+       <xsl:text>&#9;</xsl:text>
       </xsl:if>
      </xsl:if>
     </xsl:for-each>
@@ -736,4 +742,6 @@ Study Publication Status Term Source REF
 </xsl:text>
 
  </xsl:template>
+ 
+ <xsl:template name="embl_file_processing"></xsl:template>
 </xsl:stylesheet>
