@@ -1,0 +1,82 @@
+#SRA Document:
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	ENA-CV
+Term Source File	ENA-CV.obo
+Term Source Version	1
+Term Source Description	Controlled Terminology for SRA/ENA schema
+INVESTIGATION
+Investigation Identitifier
+Investigation Title
+Investigation Description
+Investigation Submission Date
+Investigation Public Release Date
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Comment[SRA broker]	ISA converter
+Study Identifier	SRP005890
+Study Title	Moorea Reef 16S rRNA gene survey
+Study Description	The Moorea Coral Reef (MCR) LTER (17.50 S, 149.83 W) is comprised of the coastal fringe of coral reefs and lagoons that surround the volcanic island of Moorea in the Society Islands of French Polynesia. The MCR LTER project is co-managed by the University of California Santa Barbara and California State University, Northridge, and field operations are conducted from the University of California Berkeley's Gump Research Station situated on Cooks Bay. Primary research interests include studies of population dynamics of local corals, nutrient dynamics and diversity studies. For the MCR portion of the MIRADA project we have incorporated investigators from the Marine Biological Laboratory, UCSB faculty, faculty at Moorea's Gump research station, the Sea Education Association's semester@sea cruise, and have incorporated an NSF REU undergraduate in 2009 for water sampling and sample analyses. The fringing reefs off the MCR LTER lie at the interface between populated terrestrial coastlines and unproductive, oligotrophic oceanic waters. Our goal within the MIRADA project is to study the changes in microbial population patterns along a transect from the island, through Cooks Bay, into the lagoon and across the fringing reef into the open ocean. In 2008 and 2009 the Marine Biological Laboratory MIRADA-LTERS project partnered with the Sea Education Association to undertake offshore water sampling and geochemical analyses, incorporating an REU student in the 2009 cruise and subsequent laboratory sample analyses. We are primarily interested in the effects of the island and the fringing reef on the microbial population in terms of diversity, species richness, and correlations of specific microbial groups with local geochemical conditions. We are also interested in seasonal comparisons from samples taken in January, 2008 (summer, rainy season) and samples from the same stations collected in June, 2009 (winter, dry season) to assess the impacts of anthropogenic inputs on near- and off-shore communities. We will look for the presence of landscape-scale patterns of diversity and richness from near shore, lagoon and offshore microbial communities within all three domains, signature communities representative of specific geographic and geochemical milieu, and the co-occurrence of specific groups within the ecosystem.
+Study Submission Date	
+Study Public Release Date	
+Study File Name
+STUDY DESIGN DESCRIPTORS
+Study Design Type	Metagenomics
+Study Design Type Term Accession Number
+Study Design Type Term Source REF
+STUDY PUBLICATIONS
+Study PubMed ID	
+Study Publication DOI
+Study Publication Author List
+Study Publication Title
+Study Publication Status
+Study Publication Status Term Accession Number
+Study Publication Status Term Source REF 
+STUDY FACTORS
+Study Factor Name
+Study Factor Type
+Study Factor Type Term Accession Number
+Study Factor Type Term Source REF
+STUDY ASSAYS
+Study Assay Measurement Type
+Study Assay Measurement Type Term Accession Number	ENA:0000019	ENA:0000020
+Study Assay Measurement Type Term Source REF	ENA	ENA
+Study Assay Technology Type
+Study Assay Technology Type Term Accession Number	ENA:0000044	ENA:0000054
+Study Assay Technology Type Term Source REF	ENA	ENA
+Study Assay File Names
+STUDY PROTOCOLS
+Study Protocol Name
+Study Protocol Type	library construction
+Study Protocol Type Term Accession Number
+Study Protocol Type Term Source REF
+Study Protocol Description
+STUDY CONTACTS
+
+Person Mid Initials
+
+
+
+Person Address
+Person Affiliation
+Person Role
+Person Role Term Source REF
+Person Role Term Accession

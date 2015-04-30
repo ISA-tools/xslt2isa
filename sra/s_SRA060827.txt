@@ -1,0 +1,16 @@
+Source Name	Characteristics[Primary Accession Number]	Comment[Scientific Name]	Characteristics[Taxonomic ID]	Characteristics[Description]	Characteristics[source_name]	Characteristics[passage number]	Characteristics[antibody]	Characteristics[cell line]	Characteristics[treatment]	Characteristics[BioSampleModel]	Characteristics[ENA-SPOT-COUNT]	Characteristics[ENA-BASE-COUNT]	Sample Name
+GSM1027476	SRS373466	Mus musculus	10090		MC3T3-E1 cells	5 - 12	C/EBPβ (Santa Cruz, C-19, sc-150, lot# F3011)	MC3T3-E1	ethanol vehicle	Generic	174305951	8659973331	GSM1027476	
+GSM1027478	SRS373468	Mus musculus	10090		MC3T3-E1 cells	5 - 12	RUNX2 (Santa Cruz, M-70, sc10758, lot# D1411)	MC3T3-E1	ethanol vehicle	Generic	77960986	7874059586	GSM1027478	
+GSM1027480	SRS373470	Mus musculus	10090		MC3T3-E1 cells	5 - 12	H4K5Ac (Millipore, 07-327, lot# DAM1794310)	MC3T3-E1	ethanol vehicle	Generic	222290309	11336805759	GSM1027480	
+GSM1027482	SRS373472	Mus musculus	10090		MC3T3-E1 cells	5 - 12	H3K9Ac (Millipore, 06-942, lot#31636)	MC3T3-E1	ethanol vehicle	Generic	33976692	1732811292	GSM1027482	
+GSM1027484	SRS373474	Mus musculus	10090		MC3T3-E1 cells	5 - 12	H3K4me1 (Abcam, ab8895, lot# GR43807-1)	MC3T3-E1	ethanol vehicle	Generic	158828237	7476994317	GSM1027484	
+GSM1027486	SRS373476	Mus musculus	10090		MC3T3-E1 cells	5 - 12	H3K4me3 (Abcam, ab1012, lot# GR10853-1)	MC3T3-E1	ethanol vehicle	Generic	139384060	6504741315	GSM1027486	
+GSM1027488	SRS373478	Mus musculus	10090		MC3T3-E1 cells	5 - 12	H3K36me3 (Abcam, ab9050, lot# GR52625-1)	MC3T3-E1	ethanol vehicle	Generic	176742596	9013872396	GSM1027488	
+GSM1027494	SRS373484	Mus musculus	10090		MC3T3-E1 cells differentiated for 15 days	5 - 12	C/EBPβ (Santa Cruz, C-19, sc-150, lot# F3011)	MC3T3-E1 differentiated for 15 days	ethanol vehicle	Generic	193886452	9821333752	GSM1027494	
+GSM1027496	SRS373486	Mus musculus	10090		MC3T3-E1 cells differentiated for 15 days	5 - 12	RUNX2 (Santa Cruz, M-70, sc10758, lot# D1411)	MC3T3-E1 differentiated for 15 days	ethanol vehicle	Generic	200129132	10122956663	GSM1027496	
+GSM1027498	SRS373488	Mus musculus	10090		MC3T3-E1 cells differentiated for 15 days	5 - 12	H4K5Ac (Millipore, 07-327, lot# DAM1794310)	MC3T3-E1 differentiated for 15 days	ethanol vehicle	Generic	74751878	3812345778	GSM1027498	
+GSM1027500	SRS373490	Mus musculus	10090		MC3T3-E1 cells differentiated for 15 days	5 - 12	H3K9Ac (Millipore, 06-942, lot#31636)	MC3T3-E1 differentiated for 15 days	ethanol vehicle	Generic	42093358	2146761258	GSM1027500	
+GSM1027502	SRS373492	Mus musculus	10090		MC3T3-E1 cells differentiated for 15 days	5 - 12	H3K4me1 (Abcam, ab8895, lot# GR43807-1)	MC3T3-E1 differentiated for 15 days	ethanol vehicle	Generic	89834340	4581551340	GSM1027502	
+GSM1027504	SRS373494	Mus musculus	10090		MC3T3-E1 cells differentiated for 15 days	5 - 12	H3K4me3 (Abcam, ab1012, lot# GR10853-1)	MC3T3-E1 differentiated for 15 days	ethanol vehicle	Generic	24257871	1237151421	GSM1027504	
+GSM1027506	SRS373496	Mus musculus	10090		MC3T3-E1 cells differentiated for 15 days	5 - 12	H3K36me3 (Abcam, ab9050, lot# GR52625-1)	MC3T3-E1	ethanol vehi differentiated for 15 dayscle	Generic	98417159	5019275109	GSM1027506	
+	

@@ -1,0 +1,82 @@
+#SRA Document:
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	ENA-CV
+Term Source File	ENA-CV.obo
+Term Source Version	1
+Term Source Description	Controlled Terminology for SRA/ENA schema
+INVESTIGATION
+Investigation Identitifier
+Investigation Title
+Investigation Description
+Investigation Submission Date
+Investigation Public Release Date
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Comment[SRA broker]	
+Study Identifier	ERP001652
+Study Title	Updated raw reads from the YH (Homo sapiens) genome (version SOAPdenovo2). The genomic DNA used in this study came from an anonymous male Han Chinese individual who has no known genetic diseases.
+Study Description	The SOAPdenovo2 version YH genome was assembled based on 2.1 billion reads using the Illumina HiSeq2000.  We achieved 202G nucleotides data and the genome was sequenced to 67.5-fold average coverage.  By aligning the short reads with SOAP, 177G nucleotides were mapped onto the NCBI reference genome and 99.99% of the genome was covered.
+Study Submission Date	
+Study Public Release Date	
+Study File Name
+STUDY DESIGN DESCRIPTORS
+Study Design Type	Whole Genome Sequencing
+Study Design Type Term Accession Number
+Study Design Type Term Source REF
+STUDY PUBLICATIONS
+Study PubMed ID	
+Study Publication DOI
+Study Publication Author List
+Study Publication Title
+Study Publication Status
+Study Publication Status Term Accession Number
+Study Publication Status Term Source REF 
+STUDY FACTORS
+Study Factor Name
+Study Factor Type
+Study Factor Type Term Accession Number
+Study Factor Type Term Source REF
+STUDY ASSAYS
+Study Assay Measurement Type
+Study Assay Measurement Type Term Accession Number	ENA:0000019	ENA:0000020
+Study Assay Measurement Type Term Source REF	ENA	ENA
+Study Assay Technology Type
+Study Assay Technology Type Term Accession Number	ENA:0000044	ENA:0000054
+Study Assay Technology Type Term Source REF	ENA	ENA
+Study Assay File Names
+STUDY PROTOCOLS
+Study Protocol Name
+Study Protocol Type	library construction
+Study Protocol Type Term Accession Number
+Study Protocol Type Term Source REF
+Study Protocol Description
+STUDY CONTACTS
+
+Person Mid Initials
+
+
+
+Person Address
+Person Affiliation
+Person Role
+Person Role Term Source REF
+Person Role Term Accession

@@ -4,8 +4,28 @@
   <!ENTITY copy "&#169;">
 ]>
 
-<!--xsl stylesheet prototype for SRA XML documents representing submission 000266 
-Authors: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk); Alfie Abdul-Rahman, Oxford e-Research Centre (alfie.abdulrahman@oerc.ox.ac.uk) -->
+<!--xsl stylesheet prototype for rendering SRA XML documents to ISA-Tab representation:
+
+Authors: 
+Philippe Rocca-Serra, University of Oxford e-Research Centre (philippe.rocca-serra@oerc.ox.ac.uk);
+Alfie Abdul-Rahman, University of Oxford e-Research Centre (alfie.abdulrahman@oerc.ox.ac.uk) 
+
+test datasets:
+SRA030397 -> targeted metagenomics application
+SRA000266 -> targeted metagenomics application
+ERA148766 -> 
+
+representing submission 
+
+SRA schema version considered:
+
+ <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.submission.xsd"/>
+ <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd"/>
+ <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd"/>
+ <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd"/>
+ <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd"/>
+
+-->
 
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
@@ -19,14 +39,7 @@ Authors: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk); Alfie Abdul-Rahman, O
  <xsl:key name="sampletaglookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG" use="."/>
  <xsl:key name="samplevallookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/VALUE" use="."/>
  <xsl:key name="sampleunitlookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/UNITS" use="."/>
-
- <!--	<xsl:param name="experimentDoc" select="document('http://www.ebi.ac.uk/ena/data/view/SRA030397&amp;display=xml')"/>-->
- <!-- <xsl:param name="experimentDoc" select="document('http://www.ebi.ac.uk/ena/data/view/ERA148766&amp;display=xml')"/>-->
-
  <xsl:key name="exptlookupid" match="EXPERIMENT" use="@alias"/>
-
- <!-- <xsl:key name="exptlookupid"  match="EXPERIMENT"  use="@alias"/> -->
-
  <xsl:key name="samplereflookupid" match="SAMPLE_DESCRIPTOR" use="@refname"/>
  <xsl:key name="libnamelookupid" match="LIBRARY_NAME" use="."/>
  <xsl:key name="libstratlookupid" match="LIBRARY_STRATEGY" use="."/>
@@ -35,28 +48,18 @@ Authors: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk); Alfie Abdul-Rahman, O
  <xsl:key name="protocols" match="LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
  <xsl:key name="expprotlookupid" match="/ROOT/EXPERIMENT/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
  <xsl:key name="instrumentlookupid" match="INSTRUMENT_MODEL" use="."/>
- <!--<xsl:key name="SamplebySampleAttributesbyTag" match="SAMPLE" use="concat(SAMPLE_ATTRIBUTES,'::',SAMPLE_ATTRIBUTE,'::',TAG)"/>-->
-
- <!--
- <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.submission.xsd"/>
- <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd"/>
- <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd"/>
- <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd"/>
- <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd"/>
--->
- <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"/>
-
- <xsl:variable name="protocols" select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id() = generate-id(key('protocols',.)[1])]"/>
-
  <xsl:key name="TAGS-by-SAMPLE" match="TAG" use="preceding-sibling::SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[1]"/>
-
  <xsl:key name="TAGS-by-RUN" match="TAG" use="preceding-sibling::RUN_ATTRIBUTES/RUN_ATTRIBUTE/TAG[1]"/>
-
  <xsl:key name="runtaglookupid" match="/ROOT/RUN/RUN_ATTRIBUTES/RUN_ATTRIBUTE/TAG" use="."/>
  <xsl:key name="runvallookupid" match="/ROOT/RUN/RUN_ATTRIBUTES/RUN_ATTRIBUTE/VALUE" use="."/>
  <xsl:key name="rununitlookupid" match="/ROOT/RUN/RUN_ATTRIBUTES/RUN_ATTRIBUTE/UNITS" use="."/>
-
  <xsl:key name="filelookupid" match="FILE" use="@filename"/>
+ <!--<xsl:key name="SamplebySampleAttributesbyTag" match="SAMPLE" use="concat(SAMPLE_ATTRIBUTES,'::',SAMPLE_ATTRIBUTE,'::',TAG)"/>-->
+ 
+
+ <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"/>
+
+ <xsl:variable name="protocols" select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id() = generate-id(key('protocols',.)[1])]"/>
 
  <xsl:template match="/">
   <xsl:apply-templates select="document($url)" mode="go"/>
@@ -199,25 +202,32 @@ STUDY
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-EXPERIMENT')]">
   <xsl:result-document href="{concat('a_', $acc-number, '.txt')}" method="text">
    <xsl:variable name="experiments" select="following-sibling::ID"/>
+   <xsl:variable name="exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $experiments, '&amp;display=xml'))"/>
+   <!--<xsl:value-of select="$exp"></xsl:value-of>-->
    <xsl:text>Sample Name&#9;</xsl:text>
    <xsl:text>Protocol REF&#9;</xsl:text>
    <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
    <xsl:text>Parameter Value[library source]&#9;</xsl:text>
    <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
    <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
-   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_taxon: ')">
+   <xsl:if test="contains($exp,'target_taxon: ')">
     <xsl:text>Parameter Value[target_taxon]&#9;</xsl:text>
    </xsl:if>
-   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_gene: ')">
+   <xsl:if test="contains($exp,'target_gene: ')">
     <xsl:text>Parameter Value[target_gene]&#9;</xsl:text>
    </xsl:if>
-   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_subfragment: ')">
+   <xsl:if test="contains($exp,'target_subfragment: ')">
     <xsl:text>Parameter Value[target_subfragment]&#9;</xsl:text>
    </xsl:if>
-   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_primers: ')">
+  
+   <xsl:if test="contains($exp,'mid: ')">
+    <xsl:text>Parameter Value[multiplex identifier]&#9;</xsl:text>
+   </xsl:if>
+   
+   <xsl:if test="contains($exp,'pcr_primers: ')">
     <xsl:text>Parameter Value[pcr_primers]&#9;</xsl:text>
    </xsl:if>
-   <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_cond: ')">
+   <xsl:if test="contains($exp,'pcr_cond: ')">
     <xsl:text>Parameter Value[pcr_conditions]&#9;</xsl:text>
    </xsl:if>
    <xsl:text>Labeled Extract Name&#9;</xsl:text>
@@ -346,7 +356,7 @@ Study Publication Status Term Source REF
    <xsl:text>STUDY CONTACTS&#10;</xsl:text>
  </xsl:template>
 
- <xsl:template match="EXPERIMENT" mode="gamma">
+<!-- <xsl:template match="EXPERIMENT" mode="gamma">
   <xsl:apply-templates select="EXPERIMENT"/>
   <xsl:text>
 </xsl:text>
@@ -356,7 +366,7 @@ Study Publication Status Term Source REF
   <xsl:text>
 </xsl:text>
   <xsl:apply-templates select="SAMPLE"/>
- </xsl:template>
+ </xsl:template>-->
 
  <xsl:template match="SAMPLE">
   <xsl:choose>
@@ -466,7 +476,8 @@ Study Publication Status Term Source REF
 
 
  <xsl:template match="EXPERIMENT">
-  <!-- <xsl:choose>
+  
+<!--   <xsl:choose>
   <xsl:when test="@alias">
    <xsl:value-of select="@alias"/><xsl:text>&#9;</xsl:text>
   </xsl:when>
@@ -476,8 +487,8 @@ Study Publication Status Term Source REF
  </xsl:choose>-->
 
   <xsl:choose>
-   <xsl:when test="@accession">
-    <xsl:value-of select="@accession"/>
+   <xsl:when test="child::DESIGN/SAMPLE_DESCRIPTOR">
+    <xsl:value-of select="child::DESIGN/SAMPLE_DESCRIPTOR/@refname"/>
     <xsl:text>&#9;</xsl:text>
    </xsl:when>
    <xsl:otherwise>
@@ -485,6 +496,7 @@ Study Publication Status Term Source REF
     <xsl:text>&#9;</xsl:text>
    </xsl:otherwise>
   </xsl:choose>
+
 
   <xsl:text>library preparation</xsl:text>
   <xsl:text>&#9;</xsl:text>
@@ -549,32 +561,11 @@ Study Publication Status Term Source REF
     <xsl:text>&#9;</xsl:text>
    </xsl:otherwise>
   </xsl:choose>
-  <xsl:choose>
-   <xsl:when test="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI">
-    <xsl:if test="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
-     <xsl:text>&#9;</xsl:text>
-     <xsl:value-of select="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/@locus_name"/>
-     <xsl:text>&#9;</xsl:text>
-     <xsl:text>(</xsl:text>
-     <xsl:value-of select="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/DB"/>
-     <xsl:text>&#9;</xsl:text>
-     <xsl:text>:</xsl:text>
-     <xsl:value-of select="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/ID"/>
-     <xsl:text>)</xsl:text>
-     <xsl:text>&#9;</xsl:text>
-    </xsl:if>
-   </xsl:when>
-
-   <xsl:otherwise>
-    <xsl:text>NULL</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>
 
   <xsl:choose>
    <xsl:when test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_taxon: ')">
     <xsl:value-of
-     select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'target_taxon: '),'target_gene:;')"/>
+     select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'target_taxon: '),'target_gene:')"/>
     <xsl:text>&#9;</xsl:text>
    </xsl:when>
    <xsl:otherwise>
@@ -583,30 +574,106 @@ Study Publication Status Term Source REF
    </xsl:otherwise>
   </xsl:choose>
 
-  <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_gene: ')">
-   <xsl:value-of
-    select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'target_gene: '),'target_subfragment:')"/>
-   <xsl:text>&#9;</xsl:text>
-  </xsl:if>
-  <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_subfragment: ')">
+  <xsl:choose>
+   <xsl:when test="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI">
+    <xsl:if test="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
+     <xsl:value-of select="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/@locus_name"/>
+     <xsl:text>&#9;</xsl:text>
+    </xsl:if>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:choose>
+     <xsl:when  test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_gene: ')">
+      <xsl:value-of
+       select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'target_gene: '),'target_subfragment:')"/>
+      <xsl:text>&#9;</xsl:text>
+     </xsl:when>
+     <xsl:otherwise>
+      <xsl:text/>
+      <xsl:text>NULL</xsl:text>
+      <xsl:text>&#9;</xsl:text>
+     </xsl:otherwise>
+    </xsl:choose>
+   </xsl:otherwise>
+  </xsl:choose>
+
+
+
+  
+  <xsl:choose>
+   <xsl:when  test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'target_subfragment: ')">
    <xsl:value-of
     select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'target_subfragment: '),'mid:')"/>
    <xsl:text>&#9;</xsl:text>
-  </xsl:if>
-  <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'mid: ')">
-   <xsl:value-of
-    select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'mid: '),'pcr_primers:')"/>
-   <xsl:text>&#9;</xsl:text>
-  </xsl:if>
-  <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_primers: ')">
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text/>
+    <xsl:text>&#9;</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
+  
+  <xsl:choose>
+   <xsl:when  test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'mid: ')">
+    <xsl:value-of
+     select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'mid: '),'pcr_primers:')"/>
+    <xsl:text>&#9;</xsl:text>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text/>
+    <xsl:text>&#9;</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
+  
+  
+  <xsl:choose>
+   <xsl:when test="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI">
+    <xsl:if test="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
+     <xsl:text>(</xsl:text>
+     <xsl:value-of select="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/DB"/>
+     <xsl:text>:</xsl:text>
+     <xsl:value-of select="child::DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/ID"/>
+     <xsl:text>) </xsl:text>
+    </xsl:if>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text>NULL</xsl:text>
+    <xsl:text></xsl:text>
+   </xsl:otherwise>
+  </xsl:choose> 
+    
+
+      <xsl:choose>
+       <xsl:when  test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_primers: ')">
    <xsl:value-of
     select="substring-before(substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_primers: '),'pcr_cond:')"/>
    <xsl:text>&#9;</xsl:text>
-  </xsl:if>
-  <xsl:if test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_cond: ')">
+       </xsl:when>
+       <xsl:otherwise>
+        <xsl:text/>
+        <xsl:text>&#9;</xsl:text>
+       </xsl:otherwise>
+      </xsl:choose>
+        <xsl:choose>
+         <xsl:when  test="contains(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_cond: ')">
    <xsl:value-of select="substring-after(child::DESIGN/DESIGN_DESCRIPTION/.,'pcr_cond: ')"/>
    <xsl:text>&#9;</xsl:text>
-  </xsl:if>
+         </xsl:when>
+         <xsl:otherwise>
+          <xsl:text/>
+          <xsl:text>&#9;</xsl:text>
+         </xsl:otherwise>
+        </xsl:choose>
+
+  <xsl:choose>
+   <xsl:when test="child::DESIGN/SAMPLE_DESCRIPTOR">
+    <xsl:value-of select="@accession"/>
+    <xsl:text>&#9;</xsl:text>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text/>
+    <xsl:text>&#9;</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
 
   <xsl:choose>
    <xsl:when test="child::DESIGN/SPOT_DESCRIPTOR">
@@ -631,14 +698,31 @@ Study Publication Status Term Source REF
    </xsl:when>
   </xsl:choose>
 
+<!-- a TAB as placeholder for Performer-->
+  <xsl:text>&#9;</xsl:text>
+<!-- another TAB as placeholder for Date--> 
+  <xsl:text>&#9;</xsl:text>
+
   <xsl:choose>
+   <xsl:when test="@accession">
+    <xsl:value-of select="@accession"/>
+    <xsl:text>&#9;</xsl:text>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text/>
+    <xsl:text>&#9;</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
 
+  <xsl:choose>
    <xsl:when test="child::EXPERIMENT_LINKS/EXPERIMENT_LINK/XREF_LINK">
-
     <xsl:for-each select="child::EXPERIMENT_LINKS/EXPERIMENT_LINK/XREF_LINK/DB/.">
      <xsl:if test="contains(., 'ENA-FASTQ-FILES')">
       <xsl:value-of select="following-sibling::ID/."/>
+       <xsl:if test="contains(.,'fastq_ftp')">
+        <xsl:value-of select="substring-after(., 'fastq_ftp')"></xsl:value-of>
       <xsl:text>&#9;</xsl:text>
+      </xsl:if>
      </xsl:if>
     </xsl:for-each>
    </xsl:when>
@@ -647,8 +731,6 @@ Study Publication Status Term Source REF
     <xsl:text>&#9;</xsl:text>
    </xsl:otherwise>
   </xsl:choose>
-
-
 
   <xsl:text>
 </xsl:text>
