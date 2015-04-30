@@ -5,12 +5,15 @@
 ]>
 
 <!--xsl stylesheet prototype for SRA XML documents representing submission 000266 
-Author: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk) -->
+Authors: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk); Alfie Abdul-Rahman, Oxford e-Research Centre (alfie.abdulrahman@oerc.ox.ac.uk) -->
 
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
  <xsl:output method="text" encoding="UTF-8"/>
  <xsl:strip-space elements="*"/>
+
+ <!-- The input parameter from the command line -->
+ <xsl:param name="acc-number" required="yes"/>
 
  <xsl:key name="samplelookupid" match="SAMPLE" use="@alias"/>
  <xsl:key name="sampletaglookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG" use="."/>
@@ -41,11 +44,7 @@ Author: Philippe Rocca-Serra, EMBL-EBI (rocca@ebi.ac.uk) -->
  <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd"/>
  <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd"/>
 -->
-
- <!--<xsl:value-of select="document('http://www.ebi.ac.uk/ena/data/view/ERA000092&amp;display=xml')"/> -->
- <xsl:variable name="acc-number" select="'SRA060827'"/>
- <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"></xsl:variable>
- <xsl:variable name="submission" select="document($url)"/>
+ <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"/>
 
  <xsl:variable name="protocols" select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id() = generate-id(key('protocols',.)[1])]"/>
 

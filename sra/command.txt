@@ -1,0 +1,1 @@
+java -jar [dir]/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
