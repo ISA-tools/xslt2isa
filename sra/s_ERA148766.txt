@@ -1,3 +1,0 @@
-Source Name	Characteristics[Primary Accession Number]	Comment[Scientific Name]	Characteristics[Taxonomic ID]	Characteristics[Description]	Characteristics[ENA-SUBMISSION-TOOL]	Characteristics[ENA-SPOT-COUNT]	Characteristics[ENA-BASE-COUNT]	Sample Name
-YH1	ERS159095	human	9606		SRA-Webin	896473815	174307949180	YH1	
-	
