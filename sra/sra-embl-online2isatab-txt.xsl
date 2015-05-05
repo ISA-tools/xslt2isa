@@ -238,10 +238,11 @@ STUDY
    <xsl:text>Date&#9;</xsl:text>
    <xsl:text>Assay Name&#9;</xsl:text>
    <xsl:text>Raw Data File&#9;</xsl:text>
-   <xsl:text>Comment[File checksum method]&#9;</xsl:text>
-   <xsl:text>Comment[File checksum]&#10;</xsl:text>
+   <xsl:text>Comment[File checksum]&#9;</xsl:text>
+   <xsl:text>Comment[File checksum method]&#10;</xsl:text>
    <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $experiments, '&amp;display=xml'))/ROOT/EXPERIMENT"/>
    <xsl:text>&#9;</xsl:text>   
+
   </xsl:result-document>
  </xsl:template>
  
@@ -722,10 +723,20 @@ Study Publication Status Term Source REF
 <!--       <xsl:value-of select="following-sibling::ID/."/>-->
       <xsl:if test="contains($file,'&amp;result=read_run&amp;fields=run_accession,fastq_ftp')"> <!--result=read_run&amp;fields=run_accession-->
        <xsl:variable name="base" select="substring-before($file,'&amp;result=read_run&amp;fields=run_accession,fastq_ftp')"></xsl:variable>
-       <xsl:variable name="link" select="concat($base,'&amp;result=read_run&amp;fields=fastq_ftp')"></xsl:variable>
-     
-       <xsl:value-of select="tokenize(unparsed-text(document($link)),'\n')[0]"></xsl:value-of>
-       <!--<xsl:value-of select="$link"></xsl:value-of>-->
+       <xsl:variable name="link" select="concat($base,'&amp;result=read_run&amp;fields=fastq_ftp,fastq_md5')"></xsl:variable>
+       <xsl:variable name="parsedlink" select="unparsed-text($link)"/>
+<!--       <xsl:value-of select="unparsed-text($link)"></xsl:value-of>-->
+       <xsl:for-each select="tokenize($parsedlink, '\n')">
+        
+        <xsl:if test="not(contains(.,'fastq_ftp'))">
+         <xsl:for-each select="tokenize(., '\t')">
+
+          <xsl:value-of select="."/>   <xsl:text>&#9;</xsl:text> 
+          
+         </xsl:for-each>
+        </xsl:if>
+       </xsl:for-each>   
+<!--       <xsl:value-of select="$link"></xsl:value-of>-->
        
        <xsl:text>&#9;</xsl:text>
       </xsl:if>
@@ -737,7 +748,7 @@ Study Publication Status Term Source REF
     <xsl:text>&#9;</xsl:text>
    </xsl:otherwise>
   </xsl:choose>
-
+  <xsl:text>md5</xsl:text>
   <xsl:text>
 </xsl:text>
 
