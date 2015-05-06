@@ -14,6 +14,7 @@ test datasets:
 SRA030397 -> targeted metagenomics application
 SRA000266 -> targeted metagenomics application
 ERA148766 -> 
+SRA095866 ->
 
 representing submission 
 
@@ -412,7 +413,7 @@ Study Publication Status Term Source REF
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/SINGLE"/>
   <xsl:text>&#9;</xsl:text>
   
-  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]"/>
+  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]" mode="target-taxon"/>
   <xsl:text>&#9;</xsl:text>
   
   <xsl:choose>
@@ -437,10 +438,10 @@ Study Publication Status Term Source REF
    </xsl:otherwise>
   </xsl:choose>
 
-  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]"/>
+  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]" mode="target-subfragment"/>
   <xsl:text>&#9;</xsl:text>
   
-  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]"/>
+  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]" mode="mid"/>
   <xsl:text>&#9;</xsl:text>
 
   <xsl:choose>
@@ -459,10 +460,10 @@ Study Publication Status Term Source REF
    </xsl:otherwise>
   </xsl:choose>
 
-  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]"/>
+  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]" mode="pcr-primers"/>
   <xsl:text>&#9;</xsl:text>
   
-  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]"/>
+  <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]" mode="pcr-cond"/>
   <xsl:text>&#9;</xsl:text>
 
   <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@accession"/>
@@ -525,28 +526,24 @@ Study Publication Status Term Source REF
   <xsl:value-of select="'single'"/>
  </xsl:template>
  
- <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]">
+ <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]" mode="target-taxon">
   <xsl:value-of select="substring-before(substring-after(.,'target_taxon: '),'target_gene:')"/>
  </xsl:template>
  
- <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]">
+ <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]" mode="target-subfragment">
   <xsl:value-of select="substring-before(substring-after(.,'target_subfragment: '),'mid:')"/>
  </xsl:template>
  
- <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]">
+ <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]" mode="mid">
   <xsl:value-of select="substring-before(substring-after(.,'mid: '),'pcr_primers:')"/>
  </xsl:template>
  
- <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]">
+ <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]" mode="pcr-primers">
   <xsl:value-of select="substring-before(substring-after(.,'pcr_primers: '),'pcr_cond:')"/>
  </xsl:template>
  
- <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]">
+ <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]" mode="pcr-cond">
   <xsl:value-of select="substring-after(.,'pcr_cond: ')"/>
- </xsl:template>
- 
- <xsl:template match="@accession">
-  <xsl:value-of select="."/>
  </xsl:template>
  
  <xsl:template match="PLATFORM//INSTRUMENT_MODEL">
