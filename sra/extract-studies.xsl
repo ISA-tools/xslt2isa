@@ -39,7 +39,7 @@
     
     <xsl:template match="EXPERIMENT" mode="get-studies">
         <xsl:param name="id" required="yes"/>
-        <study acc-number="{ $id }" library-strategy="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY }" library-source="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE }"/>
+        <study acc-number="{ $id }" accession="{ @accession }" library-strategy="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY }" library-source="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE }"/>
     </xsl:template>
     
 </xsl:stylesheet>

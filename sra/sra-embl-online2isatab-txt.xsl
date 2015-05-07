@@ -47,8 +47,7 @@ SRA schema version considered:
  <xsl:key name="libsrclookupid" match="LIBRARY_SOURCE" use="."/>
  <xsl:key name="libseleclookupid" match="LIBRARY_SELECTION" use="."/>
  <xsl:key name="protocols" match="LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
- <xsl:key name="expprotlookupid"
-  match="/ROOT/EXPERIMENT/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
+ <xsl:key name="expprotlookupid" match="/ROOT/EXPERIMENT/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
  <xsl:key name="instrumentlookupid" match="INSTRUMENT_MODEL" use="."/>
  <xsl:key name="TAGS-by-SAMPLE" match="TAG" use="preceding-sibling::SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[1]"/>
  <xsl:key name="TAGS-by-RUN" match="TAG" use="preceding-sibling::RUN_ATTRIBUTES/RUN_ATTRIBUTE/TAG[1]"/>
@@ -74,7 +73,6 @@ SRA schema version considered:
 
  <xsl:template match="ROOT" mode="go">
   <xsl:apply-templates select="SUBMISSION" mode="go"/>
-  
  </xsl:template>
 
  <xsl:template match="SUBMISSION" mode="go">
@@ -82,12 +80,13 @@ SRA schema version considered:
   <xsl:apply-templates>
    <xsl:with-param name="broker-name" select="$broker-name" tunnel="yes"/>
   </xsl:apply-templates>
+  <xsl:call-template name="generate-assay-files"/>
  </xsl:template>
  
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-STUDY')]">
   <xsl:param name="broker-name" required="yes" tunnel="yes"/>
   <xsl:variable name="study" select="following-sibling::ID"/>
-  <xsl:result-document href="{concat('i_', $acc-number, '.txt')}" method="text">
+  <xsl:result-document href="{concat($acc-number, '/', 'i_', $acc-number, '.txt')}" method="text">
    <xsl:text>#SRA Document:&#10;</xsl:text>
    <xsl:value-of select="@identifier"/>
    <xsl:text>ONTOLOGY SOURCE REFERENCE&#10;</xsl:text>
@@ -174,7 +173,7 @@ STUDY
  </xsl:template>
 
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-SAMPLE')]">
-  <xsl:result-document href="{concat('s_', $acc-number, '.txt')}" method="text">
+  <xsl:result-document href="{concat($acc-number, '/', 's_', $acc-number, '.txt')}" method="text">
    <xsl:variable name="samples" select="following-sibling::ID"/>
    <xsl:text>Source Name&#9;</xsl:text>
    <xsl:text>Characteristics[Primary Accession Number]&#9;</xsl:text>
@@ -191,60 +190,63 @@ STUDY
    <xsl:text>&#9;</xsl:text>
   </xsl:result-document>
  </xsl:template>
-
- <xsl:template match="XREF_LINK/DB[contains(.,'NA-EXPERIMENT')]">
-  <xsl:result-document href="{concat('a_', $acc-number, '.txt')}" method="text">
-   <xsl:variable name="experiments" select="following-sibling::ID"/>
-   <xsl:variable name="exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $experiments, '&amp;display=xml'))"/>
-   <xsl:text>Sample Name&#9;</xsl:text>
-   <xsl:text>Protocol REF&#9;</xsl:text>
-   <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
-   <xsl:text>Parameter Value[library source]&#9;</xsl:text>
-   <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
-   <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
-   <xsl:if test="contains($exp,'target_taxon: ')">
-    <xsl:text>Parameter Value[target_taxon]&#9;</xsl:text>
-   </xsl:if>
-   <xsl:if test="contains($exp,'target_gene: ')">
-    <xsl:text>Parameter Value[target_gene]&#9;</xsl:text>
-   </xsl:if>
-   <xsl:if test="contains($exp,'target_subfragment: ')">
-    <xsl:text>Parameter Value[target_subfragment]&#9;</xsl:text>
-   </xsl:if>
-   <xsl:if test="contains($exp,'mid: ')">
-    <xsl:text>Parameter Value[multiplex identifier]&#9;</xsl:text>
-   </xsl:if>
-   <xsl:if test="contains($exp,'pcr_primers: ')">
-    <xsl:text>Parameter Value[pcr_primers]&#9;</xsl:text>
-   </xsl:if>
-   <xsl:if test="contains($exp,'pcr_cond: ')">
-    <xsl:text>Parameter Value[pcr_conditions]&#9;</xsl:text>
-   </xsl:if>
-   <xsl:text>Labeled Extract Name&#9;</xsl:text>
-   <xsl:text>Protocol REF&#9;</xsl:text>
-   <xsl:text>Parameter Value[read information {index;type;class;base coord}]&#9;</xsl:text>
-   <xsl:text>Parameter Value[sequencing instrument]&#9;</xsl:text>
-   <xsl:text>Performer&#9;</xsl:text>
-   <xsl:text>Date&#9;</xsl:text>
-   <xsl:text>Assay Name&#9;</xsl:text>
-   <xsl:text>Raw Data File&#9;</xsl:text>
-   <xsl:text>Comment[File checksum]&#9;</xsl:text>
-   <xsl:text>Comment[File checksum method]&#10;</xsl:text>
-   <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $experiments, '&amp;display=xml'))/ROOT/EXPERIMENT"/>
-   <xsl:text>&#9;</xsl:text>
-  </xsl:result-document>
+ 
+ <xsl:template name="generate-assay-files">
+  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
+   <xsl:sort select="current-grouping-key()"/>
+   <xsl:variable name="lib-strategy" select="current-grouping-key()"/>
+   <xsl:for-each-group select="current-group()" group-by="@library-source">
+    <xsl:sort select="current-grouping-key()"/>
+    <xsl:result-document href="{concat($acc-number, '/', 'a_', lower-case($lib-strategy), '-', lower-case(current-grouping-key()), '.txt')}" method="text">
+     <!-- Using the first object in the group as a guide in what to put in the header -->
+     <xsl:variable name="header-file" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', current-group()[1]/@acc-number, '&amp;display=xml'))"/>
+     <xsl:variable name="design-desc" select="$header-file/ROOT/EXPERIMENT[@accession = current-group()[1]/@accession]/DESIGN/DESIGN_DESCRIPTION"/>
+     <!-- Create the header -->
+     <xsl:text>Protocol REF&#9;</xsl:text>
+     <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
+     <xsl:text>Parameter Value[library source]&#9;</xsl:text>
+     <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
+     <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
+     <xsl:if test="contains($design-desc,'target_taxon: ')">
+      <xsl:text>Parameter Value[target_taxon]&#9;</xsl:text>
+     </xsl:if>
+     <xsl:if test="contains($design-desc,'target_gene: ')">
+      <xsl:text>Parameter Value[target_gene]&#9;</xsl:text>
+     </xsl:if>
+     <xsl:if test="contains($design-desc,'target_subfragment: ')">
+      <xsl:text>Parameter Value[target_subfragment]&#9;</xsl:text>
+     </xsl:if>
+     <xsl:if test="contains($design-desc,'mid: ')">
+      <xsl:text>Parameter Value[multiplex identifier]&#9;</xsl:text>
+     </xsl:if>
+     <xsl:if test="contains($design-desc,'pcr_primers: ')">
+      <xsl:text>Parameter Value[pcr_primers]&#9;</xsl:text>
+     </xsl:if>
+     <xsl:if test="contains($design-desc,'pcr_cond: ')">
+      <xsl:text>Parameter Value[pcr_conditions]&#9;</xsl:text>
+     </xsl:if>
+     <xsl:text>Labeled Extract Name&#9;</xsl:text>
+     <xsl:text>Protocol REF&#9;</xsl:text>
+     <xsl:text>Parameter Value[read information {index;type;class;base coord}]&#9;</xsl:text>
+     <xsl:text>Parameter Value[sequencing instrument]&#9;</xsl:text>
+     <xsl:text>Performer&#9;</xsl:text>
+     <xsl:text>Date&#9;</xsl:text>
+     <xsl:text>Assay Name&#9;</xsl:text>
+     <xsl:text>Raw Data File&#9;</xsl:text>
+     <xsl:text>Comment[File checksum]&#9;</xsl:text>
+     <xsl:text>Comment[File checksum method]&#10;</xsl:text>        
+     <xsl:variable name="exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
+     <xsl:for-each select="current-group()">
+      <xsl:apply-templates select="$exp/ROOT/EXPERIMENT[@accession = current()/@accession]"/> 
+     </xsl:for-each>          
+    </xsl:result-document>
+   </xsl:for-each-group>
+  </xsl:for-each-group>
  </xsl:template>
-
+ 
  <xsl:template match="STUDY">
   <xsl:text>Study Identifier&#9;</xsl:text>
-  <xsl:choose>
-   <xsl:when test="@accession">
-    <xsl:value-of select="@accession"/>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text>-</xsl:text>
-   </xsl:otherwise>
-  </xsl:choose>
+  <xsl:value-of select="if (@accession) then @accession else '-'"/>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Title&#9;</xsl:text>
@@ -265,7 +267,6 @@ STUDY
   <xsl:text>&#10;</xsl:text>
   
   <xsl:text>Study File Name&#10;</xsl:text>
-
   <xsl:text>STUDY DESIGN DESCRIPTORS&#10;</xsl:text>
 
   <xsl:apply-templates select="DESCRIPTOR/STUDY_TYPE"/>
@@ -328,7 +329,17 @@ Study Publication Status Term Source REF
   
   <xsl:text>Study Assay Technology Platform&#10;</xsl:text>
 
-  <xsl:text>Study Assay File Names&#10;</xsl:text>
+  <xsl:text>Study Assay File Names</xsl:text>
+  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
+   <xsl:sort select="current-grouping-key()"/>
+   <xsl:variable name="lib-strategy" select="current-grouping-key()"/>
+   <xsl:for-each-group select="current-group()" group-by="@library-source">
+    <xsl:sort select="current-grouping-key()"/>
+    <xsl:value-of select="concat('&#9;a_', lower-case($lib-strategy), '-', lower-case(current-grouping-key()), '.txt')"/>
+   </xsl:for-each-group>
+  </xsl:for-each-group>
+  <xsl:text>&#10;</xsl:text>
+  
   <xsl:text>STUDY PROTOCOLS&#10;</xsl:text>
   <xsl:text>Study Protocol Name&#10;</xsl:text>
   <xsl:text>Study Protocol Type&#9;</xsl:text>
