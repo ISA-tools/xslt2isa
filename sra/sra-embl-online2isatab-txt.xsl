@@ -70,7 +70,7 @@ SRA schema version considered:
  <xsl:template match="/">
   <xsl:apply-templates select="document($url)" mode="go"/>
  </xsl:template>
-
+ 
  <xsl:template match="ROOT" mode="go">
   <xsl:apply-templates select="SUBMISSION" mode="go"/>
  </xsl:template>
@@ -136,13 +136,13 @@ STUDY
    <xsl:text>Study Person Last Name</xsl:text>
    <xsl:if test="CONTACTS/CONTACT">
     <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="substring-before(child::CONTACTS/CONTACT/@name,' ')"/>
+    <xsl:value-of select="substring-before(CONTACTS/CONTACT/@name,' ')"/>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
    <xsl:text>Study Person First Name</xsl:text>
    <xsl:if test="CONTACTS/CONTACT">
     <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="substring-after(child::CONTACTS/CONTACT/@name,' ')"/>    
+    <xsl:value-of select="substring-after(CONTACTS/CONTACT/@name,' ')"/>    
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
    <xsl:text>Study Person Mid Initials&#10;</xsl:text>
@@ -610,4 +610,6 @@ Study Publication Status Term Source REF
    <xsl:text>&#9;</xsl:text>
   </xsl:if>
  </xsl:template>
+ 
+ <xsl:template match="text() | @*"/>  
 </xsl:stylesheet>
