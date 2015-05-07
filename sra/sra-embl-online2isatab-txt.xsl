@@ -391,11 +391,7 @@ Study Publication Status Term Source REF
   <xsl:text>&#10;</xsl:text>
  </xsl:template>
  
- <xsl:template match="@alias">
-  <xsl:value-of select="."/>
- </xsl:template>
- 
- <xsl:template match="@accession">
+ <xsl:template match="@alias | @accession | @refname">
   <xsl:value-of select="."/>
  </xsl:template>
  
@@ -405,17 +401,7 @@ Study Publication Status Term Source REF
   <xsl:apply-templates select="TAXON_ID"/>
  </xsl:template>
  
- <xsl:template match="COMMON_NAME">
-  <xsl:value-of select="."/>
-  <xsl:text>&#9;</xsl:text>
- </xsl:template>
- 
- <xsl:template match="SCIENTIFIC_NAME">
-  <xsl:value-of select="."/>
-  <xsl:text>&#9;</xsl:text>
- </xsl:template>
- 
- <xsl:template match="TAXON_ID">
+ <xsl:template match="COMMON_NAME | SCIENTIFIC_NAME | TAXON_ID">
   <xsl:value-of select="."/>
   <xsl:text>&#9;</xsl:text>
  </xsl:template>
@@ -548,19 +534,7 @@ Study Publication Status Term Source REF
   <xsl:text>md5&#10;</xsl:text>
  </xsl:template>
  
- <xsl:template match="@refname">
-  <xsl:value-of select="."/>
- </xsl:template>
- 
- <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY">
-  <xsl:value-of select="."/>
- </xsl:template>
- 
- <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE">
-  <xsl:value-of select="."/>
- </xsl:template>
- 
- <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SELECTION">
+ <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY | DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE | DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SELECTION">
   <xsl:value-of select="."/>
  </xsl:template>
  
