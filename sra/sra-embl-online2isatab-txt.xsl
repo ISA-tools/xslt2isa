@@ -29,6 +29,7 @@ SRA schema version considered:
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+ <xsl:import href="extract-studies.xsl"/>
  <xsl:output method="text" encoding="UTF-8"/>
  <xsl:strip-space elements="*"/>
 
@@ -60,22 +61,29 @@ SRA schema version considered:
  <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"/>
 
  <xsl:variable name="protocols" select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id() = generate-id(key('protocols',.)[1])]"/>
+ 
+ <xsl:variable name="experiments-sources-strategies">
+  <xsl:call-template name="process-lib-strategies-sources">
+   <xsl:with-param name="acc-number" select="$acc-number"/>
+  </xsl:call-template>
+ </xsl:variable>
 
  <xsl:template match="/">
   <xsl:apply-templates select="document($url)" mode="go"/>
  </xsl:template>
 
  <xsl:template match="ROOT" mode="go">
-  <xsl:apply-templates select="SUBMISSION"/>
+  <xsl:apply-templates select="SUBMISSION" mode="go"/>
+  
  </xsl:template>
 
- <xsl:template match="SUBMISSION">
-  <xsl:variable name="broker-name" select="@broker_name"/>
+ <xsl:template match="SUBMISSION" mode="go">
+  <xsl:variable name="broker-name" select="@broker_name"/> 
   <xsl:apply-templates>
    <xsl:with-param name="broker-name" select="$broker-name" tunnel="yes"/>
   </xsl:apply-templates>
  </xsl:template>
-
+ 
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-STUDY')]">
   <xsl:param name="broker-name" required="yes" tunnel="yes"/>
   <xsl:variable name="study" select="following-sibling::ID"/>
@@ -123,41 +131,45 @@ STUDY
    <xsl:text>Comment[SRA broker]&#9;</xsl:text>
    <xsl:value-of select="$broker-name"/>
    <xsl:text>&#10;</xsl:text>
-   <xsl:apply-templates
-    select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
-   <xsl:text>&#10;</xsl:text>
-
-   <xsl:if test="child::CONTACTS/CONTACT">
-    <xsl:text>Person Last Name</xsl:text>
+   <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
+   
+   <xsl:text>STUDY CONTACTS&#10;</xsl:text>
+   <xsl:text>Study Person Last Name</xsl:text>
+   <xsl:if test="CONTACTS/CONTACT">
+    <xsl:text>&#9;</xsl:text>
     <xsl:value-of select="substring-before(child::CONTACTS/CONTACT/@name,' ')"/>
-    <xsl:text>&#10;</xsl:text>
-   </xsl:if>
-   <xsl:if test="child::CONTACTS/CONTACT">
-    <xsl:text>Person First Name</xsl:text>
-    <xsl:value-of select="substring-after(child::CONTACTS/CONTACT/@name,' ')"/>
-    <xsl:text>&#10;</xsl:text>
-   </xsl:if>
-   <xsl:text>Person Mid Initials&#10;</xsl:text>
-   <xsl:if test="child::CONTACTS/CONTACT">
-    <xsl:text>Person Email</xsl:text>
-    <xsl:value-of select="child::CONTACTS/CONTACT/@inform_on_status"/>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:if test="child::CONTACTS/CONTACT">
-    <xsl:text>Person Phone</xsl:text>
+   <xsl:text>Study Person First Name</xsl:text>
+   <xsl:if test="CONTACTS/CONTACT">
+    <xsl:text>&#9;</xsl:text>
+    <xsl:value-of select="substring-after(child::CONTACTS/CONTACT/@name,' ')"/>    
+   </xsl:if>
+   <xsl:text>&#10;</xsl:text>
+   <xsl:text>Study Person Mid Initials&#10;</xsl:text>
+   <xsl:text>Study Person Email</xsl:text>
+   <xsl:if test="CONTACTS/CONTACT">
+    <xsl:text>&#9;</xsl:text>
+    <xsl:value-of select="CONTACTS/CONTACT/@inform_on_status"/>
+   </xsl:if>
+   <xsl:text>&#10;</xsl:text>
+   <xsl:text>Study Person Phone</xsl:text>
+   <xsl:if test="CONTACTS/CONTACT"> 
+    <xsl:text>&#9;</xsl:text>
     <xsl:text>-</xsl:text>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:if test="child::CONTACTS/CONTACT">
-    <xsl:text>Person Fax</xsl:text>
+   <xsl:text>Study Person Fax</xsl:text>
+   <xsl:if test="CONTACTS/CONTACT">
+    <xsl:text>&#9;</xsl:text>
     <xsl:text>-</xsl:text>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:text>Person Address&#10;</xsl:text>
-   <xsl:text>Person Affiliation&#10;</xsl:text>
-   <xsl:text>Person Role&#10;</xsl:text>
-   <xsl:text>Person Role Term Source REF&#10;</xsl:text>
-   <xsl:text>Person Role Term Accession</xsl:text>
+   <xsl:text>Study Person Address&#10;</xsl:text>
+   <xsl:text>Study Person Affiliation&#10;</xsl:text>
+   <xsl:text>Study Person Roles&#10;</xsl:text>
+   <xsl:text>Study Person Roles Term Accession Number&#10;</xsl:text>
+   <xsl:text>Study Person Roles Term Source REF&#10;</xsl:text>
   </xsl:result-document>
  </xsl:template>
 
@@ -238,12 +250,7 @@ STUDY
   <xsl:text>Study Title&#9;</xsl:text>
   <xsl:value-of select="DESCRIPTOR/STUDY_TITLE"/>
   <xsl:text>&#10;</xsl:text>
-
-  <xsl:text>Study Description&#9;</xsl:text>
-  <xsl:value-of select="DESCRIPTOR/STUDY_ABSTRACT"/>
-  <xsl:value-of select="substring-before(DESCRIPTOR/STUDY_DESCRIPTION,'\r')"/>
-  <xsl:text>&#10;</xsl:text>
-
+  
   <xsl:text>Study Submission Date&#9;</xsl:text>
   <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
   <xsl:text>&#10;</xsl:text>
@@ -251,6 +258,12 @@ STUDY
   <xsl:text>Study Public Release Date&#9;</xsl:text>
   <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
   <xsl:text>&#10;</xsl:text>
+  
+  <xsl:text>Study Description&#9;</xsl:text>
+  <xsl:value-of select="DESCRIPTOR/STUDY_ABSTRACT"/>
+  <xsl:value-of select="substring-before(DESCRIPTOR/STUDY_DESCRIPTION,'\r')"/>
+  <xsl:text>&#10;</xsl:text>
+  
   <xsl:text>Study File Name&#10;</xsl:text>
 
   <xsl:text>STUDY DESIGN DESCRIPTORS&#10;</xsl:text>
@@ -277,11 +290,14 @@ Study Publication Status Term Source REF
   <xsl:text>Study Factor Type&#10;</xsl:text>
   <xsl:text>Study Factor Type Term Accession Number&#10;</xsl:text>
   <xsl:text>Study Factor Type Term Source REF&#10;</xsl:text>
+  
   <xsl:text>STUDY ASSAYS&#10;</xsl:text>
+  
   <xsl:text>Study Assay Measurement Type</xsl:text>
-  <xsl:for-each select="//LIBRARY_SOURCE[generate-id(.)=generate-id(key('libsrclookupid',.)[1])]">
-   <xsl:value-of select="."/>
-  </xsl:for-each>
+  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
+   <xsl:sort select="current-grouping-key()"/>
+   <xsl:value-of select="concat('&#9;', current-grouping-key())"/>
+  </xsl:for-each-group>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Measurement Type Term Accession Number&#9;</xsl:text>
@@ -293,9 +309,13 @@ Study Publication Status Term Source REF
   <xsl:text>ENA&#10;</xsl:text>
 
   <xsl:text>Study Assay Technology Type</xsl:text>
-  <xsl:for-each select="//LIBRARY_STRATEGY[generate-id(.)=generate-id(key('libstratlookupid',.)[1])]">
-   <xsl:value-of select="."/>
-  </xsl:for-each>
+  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
+   <xsl:sort select="current-grouping-key()"/>
+   <xsl:for-each-group select="current-group()" group-by="@library-source">
+    <xsl:sort select="current-grouping-key()"/>
+    <xsl:value-of select="concat('&#9;', current-grouping-key())"/>
+   </xsl:for-each-group>
+  </xsl:for-each-group>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Technology Type Term Accession Number&#9;</xsl:text>
@@ -305,6 +325,8 @@ Study Publication Status Term Source REF
   <xsl:text>Study Assay Technology Type Term Source REF&#9;</xsl:text>
   <xsl:text>ENA&#9;</xsl:text>
   <xsl:text>ENA&#10;</xsl:text>
+  
+  <xsl:text>Study Assay Technology Platform&#10;</xsl:text>
 
   <xsl:text>Study Assay File Names&#10;</xsl:text>
   <xsl:text>STUDY PROTOCOLS&#10;</xsl:text>
@@ -315,10 +337,19 @@ Study Publication Status Term Source REF
   <xsl:text>Study Protocol Type Term Source REF&#10;</xsl:text>
   <xsl:text>Study Protocol Description</xsl:text>
   <xsl:for-each select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id(.)=generate-id(key('expprotlookupid',.)[1])]">
+   <xsl:text>&#9;</xsl:text>
    <xsl:value-of select="substring-before(substring-after(.,'&#xa;'),'&#xa;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
-  <xsl:text>STUDY CONTACTS&#10;</xsl:text>
+  <xsl:text>Study Protocol URI&#10;</xsl:text>
+  <xsl:text>Study Protocol Version&#10;</xsl:text>
+  <xsl:text>Study Protocol Parameters Name&#10;</xsl:text>
+  <xsl:text>Study Protocol Parameters Term Accession Number&#10;</xsl:text>
+  <xsl:text>Study Protocol Parameters Term Source REF&#10;</xsl:text>
+  <xsl:text>Study Protocol Components Name&#10;</xsl:text>
+  <xsl:text>Study Protocol Components Type&#10;</xsl:text>
+  <xsl:text>Study Protocol Components Type Term Accession Number&#10;</xsl:text>
+  <xsl:text>Study Protocol Components Type Term Source REF&#10;</xsl:text>
  </xsl:template>
 
  <xsl:template match="DESCRIPTOR/STUDY_TYPE">
