@@ -36,26 +36,9 @@ SRA schema version considered:
  <!-- The input parameter from the command line -->
  <xsl:param name="acc-number" required="yes"/>
 
- <xsl:key name="samplelookupid" match="SAMPLE" use="@alias"/>
- <xsl:key name="sampletaglookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG" use="."/>
- <xsl:key name="samplevallookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/VALUE" use="."/>
- <xsl:key name="sampleunitlookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/UNITS" use="."/>
- <xsl:key name="exptlookupid" match="EXPERIMENT" use="@alias"/>
- <xsl:key name="samplereflookupid" match="SAMPLE_DESCRIPTOR" use="@refname"/>
- <xsl:key name="libnamelookupid" match="LIBRARY_NAME" use="."/>
- <xsl:key name="libstratlookupid" match="LIBRARY_STRATEGY" use="."/>
- <xsl:key name="libsrclookupid" match="LIBRARY_SOURCE" use="."/>
- <xsl:key name="libseleclookupid" match="LIBRARY_SELECTION" use="."/>
  <xsl:key name="protocols" match="LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
+ <xsl:key name="sampletaglookupid" match="/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG" use="."/>
  <xsl:key name="expprotlookupid" match="/ROOT/EXPERIMENT/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
- <xsl:key name="instrumentlookupid" match="INSTRUMENT_MODEL" use="."/>
- <xsl:key name="TAGS-by-SAMPLE" match="TAG" use="preceding-sibling::SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[1]"/>
- <xsl:key name="TAGS-by-RUN" match="TAG" use="preceding-sibling::RUN_ATTRIBUTES/RUN_ATTRIBUTE/TAG[1]"/>
- <xsl:key name="runtaglookupid" match="/ROOT/RUN/RUN_ATTRIBUTES/RUN_ATTRIBUTE/TAG" use="."/>
- <xsl:key name="runvallookupid" match="/ROOT/RUN/RUN_ATTRIBUTES/RUN_ATTRIBUTE/VALUE" use="."/>
- <xsl:key name="rununitlookupid" match="/ROOT/RUN/RUN_ATTRIBUTES/RUN_ATTRIBUTE/UNITS" use="."/>
- <xsl:key name="filelookupid" match="FILE" use="@filename"/>
- <!--<xsl:key name="SamplebySampleAttributesbyTag" match="SAMPLE" use="concat(SAMPLE_ATTRIBUTES,'::',SAMPLE_ATTRIBUTE,'::',TAG)"/>-->
 
  <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"/>
 
@@ -66,6 +49,7 @@ SRA schema version considered:
    <xsl:with-param name="acc-number" select="$acc-number"/>
   </xsl:call-template>
  </xsl:variable>
+  
 
  <xsl:template match="/">
   <xsl:apply-templates select="document($url)" mode="go"/>
@@ -174,20 +158,22 @@ STUDY
 
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-SAMPLE')]">
   <xsl:result-document href="{concat($acc-number, '/', 's_', $acc-number, '.txt')}" method="text">
-   <xsl:variable name="samples" select="following-sibling::ID"/>
+   <xsl:variable name="samples-ids" select="following-sibling::ID"/>
+     
    <xsl:text>Source Name&#9;</xsl:text>
    <xsl:text>Characteristics[Primary Accession Number]&#9;</xsl:text>
    <xsl:text>Comment[Scientific Name]&#9;</xsl:text>
    <xsl:text>Characteristics[Taxonomic ID]&#9;</xsl:text>
    <xsl:text>Characteristics[Description]&#9;</xsl:text>
-   <xsl:for-each select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $samples, '&amp;display=xml'))/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[generate-id(.)=generate-id(key('sampletaglookupid',.)[1])]">
+   <xsl:for-each select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $samples-ids, '&amp;display=xml'))/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[generate-id(.)=generate-id(key('sampletaglookupid',.)[1])]">
     <xsl:text>Characteristics[</xsl:text>
     <xsl:value-of select="."/>
     <xsl:text>]&#9;</xsl:text>
    </xsl:for-each>
    <xsl:text>Sample Name&#10;</xsl:text>
-   <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $samples, '&amp;display=xml'))/ROOT/SAMPLE"/>
-   <xsl:text>&#9;</xsl:text>
+   <xsl:for-each select="tokenize($samples-ids, ',')">
+    <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', . , '&amp;display=xml'))/ROOT/SAMPLE"/>
+   </xsl:for-each>
   </xsl:result-document>
  </xsl:template>
  
@@ -202,6 +188,7 @@ STUDY
      <xsl:variable name="header-file" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', current-group()[1]/@acc-number, '&amp;display=xml'))"/>
      <xsl:variable name="design-desc" select="$header-file/ROOT/EXPERIMENT[@accession = current-group()[1]/@accession]/DESIGN/DESIGN_DESCRIPTION"/>
      <!-- Create the header -->
+     <xsl:text>Sample Name&#9;</xsl:text>
      <xsl:text>Protocol REF&#9;</xsl:text>
      <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
      <xsl:text>Parameter Value[library source]&#9;</xsl:text>
