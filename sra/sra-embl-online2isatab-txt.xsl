@@ -198,9 +198,7 @@ STUDY
    <xsl:for-each-group select="current-group()" group-by="@library-source">
     <xsl:sort select="current-grouping-key()"/>
     <xsl:result-document href="{concat($acc-number, '/', 'a_', lower-case($lib-strategy), '-', lower-case(current-grouping-key()), '.txt')}" method="text">
-     <!-- Using the first object in the group as a guide in what to put in the header -->
-     <xsl:variable name="header-file" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', current-group()[1]/@acc-number, '&amp;display=xml'))"/>
-     <xsl:variable name="design-desc" select="$header-file/ROOT/EXPERIMENT[@accession = current-group()[1]/@accession]/DESIGN/DESIGN_DESCRIPTION"/>
+     <xsl:variable name="header-file" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
      <!-- Create the header -->
      <xsl:text>Sample Name&#9;</xsl:text>
      <xsl:text>Protocol REF&#9;</xsl:text>
@@ -208,24 +206,20 @@ STUDY
      <xsl:text>Parameter Value[library source]&#9;</xsl:text>
      <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
      <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
-     <xsl:if test="contains($design-desc,'target_taxon: ')">
-      <xsl:text>Parameter Value[target_taxon]&#9;</xsl:text>
-     </xsl:if>
-     <xsl:if test="contains($design-desc,'target_gene: ')">
-      <xsl:text>Parameter Value[target_gene]&#9;</xsl:text>
-     </xsl:if>
-     <xsl:if test="contains($design-desc,'target_subfragment: ')">
-      <xsl:text>Parameter Value[target_subfragment]&#9;</xsl:text>
-     </xsl:if>
-     <xsl:if test="contains($design-desc,'mid: ')">
-      <xsl:text>Parameter Value[multiplex identifier]&#9;</xsl:text>
-     </xsl:if>
-     <xsl:if test="contains($design-desc,'pcr_primers: ')">
-      <xsl:text>Parameter Value[pcr_primers]&#9;</xsl:text>
-     </xsl:if>
-     <xsl:if test="contains($design-desc,'pcr_cond: ')">
-      <xsl:text>Parameter Value[pcr_conditions]&#9;</xsl:text>
-     </xsl:if>
+     
+     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]) > 0) 
+      then 'Parameter Value[target_taxon]&#9;' else ''"/>
+     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_gene: ')]) > 0) 
+      then 'Parameter Value[target_gene]&#9;' else ''"></xsl:value-of>
+     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_subfragment: ')]) > 0) 
+      then 'Parameter Value[target_subfragment]&#9;' else ''"></xsl:value-of> 
+     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'mid: ')]) > 0) 
+      then 'Parameter Value[multiplex identifier]&#9;' else ''"></xsl:value-of>   
+     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_primers: ')]) > 0) 
+      then 'Parameter Value[pcr_primers]&#9;' else ''"></xsl:value-of>   
+     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_cond: ')]) > 0) 
+      then 'Parameter Value[pcr_conditions]&#9;' else ''"></xsl:value-of>
+     
      <xsl:text>Labeled Extract Name&#9;</xsl:text>
      <xsl:text>Protocol REF&#9;</xsl:text>
      <xsl:text>Parameter Value[read information {index;type;class;base coord}]&#9;</xsl:text>
