@@ -198,7 +198,7 @@ STUDY
    <xsl:for-each-group select="current-group()" group-by="@library-source">
     <xsl:sort select="current-grouping-key()"/>
     <xsl:result-document href="{concat($acc-number, '/', 'a_', lower-case($lib-strategy), '-', lower-case(current-grouping-key()), '.txt')}" method="text">
-     <xsl:variable name="header-file" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
+     <xsl:variable name="exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
      <!-- Create the header -->
      <xsl:text>Sample Name&#9;</xsl:text>
      <xsl:text>Protocol REF&#9;</xsl:text>
@@ -207,17 +207,17 @@ STUDY
      <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
      <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
      
-     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]) > 0) 
+     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]) > 0) 
       then 'Parameter Value[target_taxon]&#9;' else ''"/>
-     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_gene: ')]) > 0) 
+     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_gene: ')]) > 0) 
       then 'Parameter Value[target_gene]&#9;' else ''"/>
-     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_subfragment: ')]) > 0) 
+     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_subfragment: ')]) > 0) 
       then 'Parameter Value[target_subfragment]&#9;' else ''"/> 
-     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'mid: ')]) > 0) 
+     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'mid: ')]) > 0) 
       then 'Parameter Value[multiplex identifier]&#9;' else ''"/>   
-     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_primers: ')]) > 0) 
+     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_primers: ')]) > 0) 
       then 'Parameter Value[pcr_primers]&#9;' else ''"/>   
-     <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_cond: ')]) > 0) 
+     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_cond: ')]) > 0) 
       then 'Parameter Value[pcr_conditions]&#9;' else ''"/>
      
      <xsl:text>Labeled Extract Name&#9;</xsl:text>
@@ -229,8 +229,7 @@ STUDY
      <xsl:text>Assay Name&#9;</xsl:text>
      <xsl:text>Raw Data File&#9;</xsl:text>
      <xsl:text>Comment[File checksum]&#9;</xsl:text>
-     <xsl:text>Comment[File checksum method]&#10;</xsl:text>        
-     <xsl:variable name="exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
+     <xsl:text>Comment[File checksum method]&#10;</xsl:text>
      <xsl:for-each select="current-group()">
       <xsl:apply-templates select="$exp/ROOT/EXPERIMENT[@accession = current()/@accession]"/> 
      </xsl:for-each>          
