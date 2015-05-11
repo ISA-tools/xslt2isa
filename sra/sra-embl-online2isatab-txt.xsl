@@ -210,15 +210,15 @@ STUDY
      <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]) > 0) 
       then 'Parameter Value[target_taxon]&#9;' else ''"/>
      <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_gene: ')]) > 0) 
-      then 'Parameter Value[target_gene]&#9;' else ''"></xsl:value-of>
+      then 'Parameter Value[target_gene]&#9;' else ''"/>
      <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_subfragment: ')]) > 0) 
-      then 'Parameter Value[target_subfragment]&#9;' else ''"></xsl:value-of> 
+      then 'Parameter Value[target_subfragment]&#9;' else ''"/> 
      <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'mid: ')]) > 0) 
-      then 'Parameter Value[multiplex identifier]&#9;' else ''"></xsl:value-of>   
+      then 'Parameter Value[multiplex identifier]&#9;' else ''"/>   
      <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_primers: ')]) > 0) 
-      then 'Parameter Value[pcr_primers]&#9;' else ''"></xsl:value-of>   
+      then 'Parameter Value[pcr_primers]&#9;' else ''"/>   
      <xsl:value-of select="if (count($header-file/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_cond: ')]) > 0) 
-      then 'Parameter Value[pcr_conditions]&#9;' else ''"></xsl:value-of>
+      then 'Parameter Value[pcr_conditions]&#9;' else ''"/>
      
      <xsl:text>Labeled Extract Name&#9;</xsl:text>
      <xsl:text>Protocol REF&#9;</xsl:text>
@@ -243,18 +243,10 @@ STUDY
   <xsl:text>Study Identifier&#9;</xsl:text>
   <xsl:value-of select="if (@accession) then @accession else '-'"/>
   <xsl:text>&#10;</xsl:text>
-
-  <xsl:text>Study Title&#9;</xsl:text>
-  <xsl:value-of select="DESCRIPTOR/STUDY_TITLE"/>
-  <xsl:text>&#10;</xsl:text>
   
-  <xsl:text>Study Submission Date&#9;</xsl:text>
-  <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
-  <xsl:text>&#10;</xsl:text>
-
-  <xsl:text>Study Public Release Date&#9;</xsl:text>
-  <xsl:value-of select="SRA/SUBMISSION/@submission_date"/>
-  <xsl:text>&#10;</xsl:text>
+  <xsl:value-of select="concat('Study Title&#9;', DESCRIPTOR/STUDY_TITLE, '&#10;')"/>
+  <xsl:value-of select="concat('Study Submission Date&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>   
+  <xsl:value-of select="concat('Study Public Release Date&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>
   
   <xsl:text>Study Description&#9;</xsl:text>
   <xsl:value-of select="DESCRIPTOR/STUDY_ABSTRACT"/>
