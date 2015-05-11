@@ -49,7 +49,18 @@ SRA schema version considered:
    <xsl:with-param name="acc-number" select="$acc-number"/>
   </xsl:call-template>
  </xsl:variable>
-  
+ 
+ <xsl:variable name="samples-characteristics">
+  <xsl:call-template name="process-samples-attributes">
+   <xsl:with-param name="acc-number" select="$acc-number"/>
+  </xsl:call-template>
+ </xsl:variable>
+ 
+ <xsl:variable name="distinct-characteristic-terms">
+  <xsl:call-template name="generate-distinct-characteristic-terms">
+   <xsl:with-param name="characteristics" select="$samples-characteristics"/>
+  </xsl:call-template>
+ </xsl:variable>
 
  <xsl:template match="/">
   <xsl:apply-templates select="document($url)" mode="go"/>
@@ -159,22 +170,25 @@ STUDY
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-SAMPLE')]">
   <xsl:result-document href="{concat($acc-number, '/', 's_', $acc-number, '.txt')}" method="text">
    <xsl:variable name="samples-ids" select="following-sibling::ID"/>
-     
-   <xsl:text>Source Name&#9;</xsl:text>
-   <xsl:text>Characteristics[Primary Accession Number]&#9;</xsl:text>
-   <xsl:text>Comment[Scientific Name]&#9;</xsl:text>
-   <xsl:text>Characteristics[Taxonomic ID]&#9;</xsl:text>
-   <xsl:text>Characteristics[Description]&#9;</xsl:text>
-   <xsl:for-each select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $samples-ids, '&amp;display=xml'))/ROOT/SAMPLE/SAMPLE_ATTRIBUTES/SAMPLE_ATTRIBUTE/TAG[generate-id(.)=generate-id(key('sampletaglookupid',.)[1])]">
-    <xsl:text>Characteristics[</xsl:text>
-    <xsl:value-of select="."/>
-    <xsl:text>]&#9;</xsl:text>
-   </xsl:for-each>
-   <xsl:text>Sample Name&#10;</xsl:text>
+   <xsl:call-template name="generate-study-header"/>
+   <xsl:text>&#9;Sample Name&#10;</xsl:text>
    <xsl:for-each select="tokenize($samples-ids, ',')">
     <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', . , '&amp;display=xml'))/ROOT/SAMPLE"/>
    </xsl:for-each>
   </xsl:result-document>
+ </xsl:template>
+ 
+ <xsl:template name="generate-study-header">
+  <xsl:text>Source Name&#9;</xsl:text>
+  <xsl:text>Characteristics[Primary Accession Number]&#9;</xsl:text>
+  <xsl:text>Comment[Scientific Name]&#9;</xsl:text>
+  <xsl:text>Characteristics[Taxonomic ID]&#9;</xsl:text>
+  <xsl:text>Characteristics[Description]</xsl:text>
+  <xsl:for-each select="$distinct-characteristic-terms/terms/term">
+   <xsl:text>&#9;Characteristics[</xsl:text>
+   <xsl:value-of select="."/>
+   <xsl:text>]</xsl:text>
+  </xsl:for-each>
  </xsl:template>
  
  <xsl:template name="generate-assay-files">
@@ -371,8 +385,13 @@ Study Publication Status Term Source REF
   <xsl:apply-templates select="./DESCRIPTION"/>
   <xsl:text>&#9;</xsl:text>
   
-  <xsl:apply-templates select="./SAMPLE_ATTRIBUTES"/>
-  
+  <xsl:variable name="my-sample" select="./SAMPLE_ATTRIBUTES"/>
+  <xsl:for-each select="$distinct-characteristic-terms/terms/term">
+   <xsl:variable name="my-term" select="current()"/>
+   <xsl:value-of select="if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else ''"/>
+   <xsl:text>&#9;</xsl:text>
+  </xsl:for-each>
+ 
   <xsl:apply-templates select="@alias"/>
   <xsl:text>&#9;</xsl:text>
   <xsl:text>&#10;</xsl:text>
@@ -395,19 +414,6 @@ Study Publication Status Term Source REF
  
  <xsl:template match="DESCRIPTION">
   <xsl:value-of select="substring-before(.,'&#xa;')"/>
- </xsl:template>
- 
- <xsl:template match="SAMPLE_ATTRIBUTES">
-  <xsl:apply-templates select="SAMPLE_ATTRIBUTE"/>
- </xsl:template>
- 
- <xsl:template match="SAMPLE_ATTRIBUTE">
-  <xsl:apply-templates select="VALUE"/>
-  <xsl:text>&#9;</xsl:text>
- </xsl:template>
- 
- <xsl:template match="VALUE">
-  <xsl:value-of select="."/>
  </xsl:template>
  
  <xsl:template match="EXPERIMENT">

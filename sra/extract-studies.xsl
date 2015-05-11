@@ -41,6 +41,47 @@
         <xsl:param name="id" required="yes"/>
         <study acc-number="{ $id }" accession="{ @accession }" library-strategy="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY }" library-source="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE }"/>
     </xsl:template>
- 
     
+    <xsl:template name="process-samples-attributes">
+        <xsl:param name="acc-number" required="yes"/>
+        <xsl:variable name="sample-ids" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml'))/ROOT/SUBMISSION/SUBMISSION_LINKS/SUBMISSION_LINK/XREF_LINK/DB[contains(.,'NA-SAMPLE')]/following-sibling::ID"/>
+        <samples>
+            <xsl:for-each select="tokenize($sample-ids, ',')">
+                <xsl:variable name="sample-doc" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', ., '&amp;display=xml'))/ROOT"/>
+                <xsl:apply-templates select="$sample-doc/SAMPLE" mode="get-sample">
+                    <xsl:with-param name="id" select="."/>
+                </xsl:apply-templates>                
+            </xsl:for-each>
+        </samples>
+    </xsl:template>
+    
+    <xsl:template match="SAMPLE" mode="get-sample">
+        <xsl:param name="id" required="yes"/>
+        <sample acc-number="{ $id }" accession="{ @accession }">
+            <xsl:apply-templates select="SAMPLE_ATTRIBUTES" mode="get-sample"/>
+        </sample>
+    </xsl:template>
+    
+    <xsl:template match="SAMPLE_ATTRIBUTES" mode="get-sample">
+        <xsl:apply-templates select="SAMPLE_ATTRIBUTE" mode="get-sample"/>
+    </xsl:template>
+    
+    <xsl:template match="SAMPLE_ATTRIBUTE" mode="get-sample">
+        <xsl:apply-templates select="TAG" mode="get-sample"/>
+    </xsl:template>
+    
+    <xsl:template match="TAG" mode="get-sample">
+        <characteristic term="{ . }"/>
+    </xsl:template>
+    
+    <xsl:template name="generate-distinct-characteristic-terms">
+        <xsl:param name="characteristics" required="yes"/>
+        <terms>
+            <xsl:for-each-group select="$characteristics/samples/sample/characteristic" group-by="@term">
+                <term>
+                    <xsl:value-of select="current-grouping-key()"/>
+                </term>
+            </xsl:for-each-group>
+        </terms>
+    </xsl:template>
 </xsl:stylesheet>
