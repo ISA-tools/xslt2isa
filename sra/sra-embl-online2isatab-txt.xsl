@@ -185,9 +185,7 @@ STUDY
   <xsl:text>Characteristics[Taxonomic ID]&#9;</xsl:text>
   <xsl:text>Characteristics[Description]</xsl:text>
   <xsl:for-each select="$distinct-characteristic-terms/terms/term">
-   <xsl:text>&#9;Characteristics[</xsl:text>
-   <xsl:value-of select="."/>
-   <xsl:text>]</xsl:text>
+   <xsl:value-of select="concat('&#9;Characteristics[', ., ']')"/>
   </xsl:for-each>
  </xsl:template>
  
