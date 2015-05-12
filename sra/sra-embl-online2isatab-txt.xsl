@@ -237,6 +237,7 @@ STUDY
  </xsl:template>
  
  <xsl:template match="STUDY">
+  <xsl:variable name="sra-isa-mapping" select="document('sra-isa-measurement_type_mapping.xml')"/>
   <xsl:text>Study Identifier&#9;</xsl:text>
   <xsl:value-of select="if (@accession) then @accession else '-'"/>
   <xsl:text>&#10;</xsl:text>
@@ -286,20 +287,22 @@ Study Publication Status Term Source REF
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Measurement Type Term Accession Number&#9;</xsl:text>
-  <xsl:text>ENA:0000019&#9;</xsl:text>
-  <xsl:text>ENA:0000020&#10;</xsl:text>
+  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
+   <xsl:sort select="current-grouping-key()"/>
+   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current-grouping-key())]/@accnum)"/>
+  </xsl:for-each-group>
+  <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Measurement Type Term Source REF&#9;</xsl:text>
-  <xsl:text>ENA&#9;</xsl:text>
-  <xsl:text>ENA&#10;</xsl:text>
+  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
+   <xsl:sort select="current-grouping-key()"/>
+   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current-grouping-key())]/@resource)"/>
+  </xsl:for-each-group>
+  <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Technology Type</xsl:text>
   <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
-   <xsl:sort select="current-grouping-key()"/>
-   <xsl:for-each-group select="current-group()" group-by="@library-source">
-    <xsl:sort select="current-grouping-key()"/>
-    <xsl:value-of select="concat('&#9;', current-grouping-key())"/>
-   </xsl:for-each-group>
+   <xsl:value-of select="concat('&#9;', 'Nucleic acid sequencing')"/>
   </xsl:for-each-group>
   <xsl:text>&#10;</xsl:text>
 

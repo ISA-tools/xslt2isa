@@ -20,6 +20,6 @@
        <measurement SRA_strategy="FAIRE-seq" isa="transcription regulation" resource="OBI" accnum="http://purl.org/obo/OBI_00001234"/> 
        
        <measurement SRA_strategy="AMPLICON" SRA_source="METAGENOMIC" isa="environmental gene survey" resource="OBI" accnum="http://purl.obolibrary.org/obo/OBI_0001960"/>
-       <measurement SRA_strategy="AMPLICON" SRA_source="METATRANSCRIPTOMIC" isa="environmental gene survey" resource="OBI" accnum="http://purl.obolibrary.org/obo/OBI_0001960"/>   
+       <!--<measurement SRA_strategy="AMPLICON" SRA_source="METATRANSCRIPTOMIC" isa="environmental gene survey" resource="OBI" accnum="http://purl.obolibrary.org/obo/OBI_0001960"/>-->   
    </pairs> 
 </mapping>
