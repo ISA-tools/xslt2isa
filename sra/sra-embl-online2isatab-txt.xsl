@@ -322,14 +322,9 @@ Study Publication Status Term Source REF
   <xsl:text>Study Assay Technology Platform&#10;</xsl:text>
 
   <xsl:text>Study Assay File Names</xsl:text>
-  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
-   <xsl:sort select="current-grouping-key()"/>
-   <xsl:variable name="lib-strategy" select="current-grouping-key()"/>
-   <xsl:for-each-group select="current-group()" group-by="@library-source">
-    <xsl:sort select="current-grouping-key()"/>
-    <xsl:value-of select="concat('&#9;a_', lower-case($lib-strategy), '-', lower-case(current-grouping-key()), '.txt')"/>
-   </xsl:for-each-group>
-  </xsl:for-each-group>
+  <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
+   <xsl:value-of select="concat('&#9;a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')"/>
+  </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
   
   <xsl:text>STUDY PROTOCOLS&#10;</xsl:text>
