@@ -42,6 +42,29 @@
         <study acc-number="{ $id }" accession="{ @accession }" library-strategy="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY }" library-source="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE }"/>
     </xsl:template>
     
+    <xsl:template name="generate-distinct-exp-sources-strategies">
+        <xsl:param name="exp-sources-strategies" required="yes"/>
+        <experiments>
+            <xsl:for-each-group select="$exp-sources-strategies/studies/study" group-by="@library-strategy">
+                <xsl:sort select="current-grouping-key()"/>
+                <xsl:variable name="lib-strategy" select="current-grouping-key()"/>
+                <xsl:for-each-group select="current-group()" group-by="@library-source">
+                    <xsl:sort select="current-grouping-key()"/>
+                    <experiment library-strategy="{ $lib-strategy }" library-source="{ current-grouping-key() }" acc-number="{ @acc-number }">
+                        <xsl:variable name="exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
+                        <xsl:for-each select="current-group()">
+                            <exp>
+                                <xsl:attribute name="accession">
+                                    <xsl:value-of select="$exp/ROOT/EXPERIMENT[@accession = current()/@accession]/@accession"/>
+                                </xsl:attribute>
+                            </exp>
+                        </xsl:for-each>
+                    </experiment>                        
+                </xsl:for-each-group>
+            </xsl:for-each-group>
+        </experiments>
+    </xsl:template>
+    
     <xsl:template name="process-samples-attributes">
         <xsl:param name="acc-number" required="yes"/>
         <xsl:variable name="sample-ids" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml'))/ROOT/SUBMISSION/SUBMISSION_LINKS/SUBMISSION_LINK/XREF_LINK/DB[contains(.,'NA-SAMPLE')]/following-sibling::ID"/>

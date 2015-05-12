@@ -50,6 +50,12 @@ SRA schema version considered:
   </xsl:call-template>
  </xsl:variable>
  
+ <xsl:variable name="distinct-exp-sources-strategies">
+  <xsl:call-template name="generate-distinct-exp-sources-strategies">
+   <xsl:with-param name="exp-sources-strategies" select="$experiments-sources-strategies"/>
+  </xsl:call-template>
+ </xsl:variable>
+ 
  <xsl:variable name="samples-characteristics">
   <xsl:call-template name="process-samples-attributes">
    <xsl:with-param name="acc-number" select="$acc-number"/>
@@ -190,50 +196,52 @@ STUDY
  </xsl:template>
  
  <xsl:template name="generate-assay-files">
-  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
-   <xsl:sort select="current-grouping-key()"/>
-   <xsl:variable name="lib-strategy" select="current-grouping-key()"/>
-   <xsl:for-each-group select="current-group()" group-by="@library-source">
-    <xsl:sort select="current-grouping-key()"/>
-    <xsl:result-document href="{concat($acc-number, '/', 'a_', lower-case($lib-strategy), '-', lower-case(current-grouping-key()), '.txt')}" method="text">
-     <xsl:variable name="exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
-     <!-- Create the header -->
-     <xsl:text>Sample Name&#9;</xsl:text>
-     <xsl:text>Protocol REF&#9;</xsl:text>
-     <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
-     <xsl:text>Parameter Value[library source]&#9;</xsl:text>
-     <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
-     <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
-     
-     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]) > 0) 
-      then 'Parameter Value[target_taxon]&#9;' else ''"/>
-     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_gene: ')]) > 0) 
-      then 'Parameter Value[target_gene]&#9;' else ''"/>
-     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_subfragment: ')]) > 0) 
-      then 'Parameter Value[target_subfragment]&#9;' else ''"/> 
-     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'mid: ')]) > 0) 
-      then 'Parameter Value[multiplex identifier]&#9;' else ''"/>   
-     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_primers: ')]) > 0) 
-      then 'Parameter Value[pcr_primers]&#9;' else ''"/>   
-     <xsl:value-of select="if (count($exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_cond: ')]) > 0) 
-      then 'Parameter Value[pcr_conditions]&#9;' else ''"/>
-     
-     <xsl:text>Labeled Extract Name&#9;</xsl:text>
-     <xsl:text>Protocol REF&#9;</xsl:text>
-     <xsl:text>Parameter Value[read information {index;type;class;base coord}]&#9;</xsl:text>
-     <xsl:text>Parameter Value[sequencing instrument]&#9;</xsl:text>
-     <xsl:text>Performer&#9;</xsl:text>
-     <xsl:text>Date&#9;</xsl:text>
-     <xsl:text>Assay Name&#9;</xsl:text>
-     <xsl:text>Raw Data File&#9;</xsl:text>
-     <xsl:text>Comment[File checksum]&#9;</xsl:text>
-     <xsl:text>Comment[File checksum method]&#10;</xsl:text>
-     <xsl:for-each select="current-group()">
-      <xsl:apply-templates select="$exp/ROOT/EXPERIMENT[@accession = current()/@accession]"/> 
-     </xsl:for-each>          
-    </xsl:result-document>
-   </xsl:for-each-group>
-  </xsl:for-each-group>
+  <xsl:apply-templates select="$distinct-exp-sources-strategies/experiments" mode="distinct-exp"/>
+ </xsl:template>
+ 
+ <xsl:template match="experiments/experiment" mode="distinct-exp">
+  <xsl:result-document href="{concat(@acc-number, '/', 'a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
+   <xsl:variable name="my-exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
+   <!-- Create the header -->
+   <xsl:text>Sample Name&#9;</xsl:text>
+   <xsl:text>Protocol REF&#9;</xsl:text>
+   <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
+   <xsl:text>Parameter Value[library source]&#9;</xsl:text>
+   <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
+   <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
+   
+   <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]) > 0) 
+    then 'Parameter Value[target_taxon]&#9;' else ''"/>
+   <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_gene: ')]) > 0) 
+    then 'Parameter Value[target_gene]&#9;' else ''"/>
+   <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_subfragment: ')]) > 0) 
+    then 'Parameter Value[target_subfragment]&#9;' else ''"/> 
+   <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'mid: ')]) > 0) 
+    then 'Parameter Value[multiplex identifier]&#9;' else ''"/>   
+   <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_primers: ')]) > 0) 
+    then 'Parameter Value[pcr_primers]&#9;' else ''"/>   
+   <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_cond: ')]) > 0) 
+    then 'Parameter Value[pcr_conditions]&#9;' else ''"/>
+   
+   <xsl:text>Labeled Extract Name&#9;</xsl:text>
+   <xsl:text>Protocol REF&#9;</xsl:text>
+   <xsl:text>Parameter Value[read information {index;type;class;base coord}]&#9;</xsl:text>
+   <xsl:text>Parameter Value[sequencing instrument]&#9;</xsl:text>
+   <xsl:text>Performer&#9;</xsl:text>
+   <xsl:text>Date&#9;</xsl:text>
+   <xsl:text>Assay Name&#9;</xsl:text>
+   <xsl:text>Raw Data File&#9;</xsl:text>
+   <xsl:text>Comment[File checksum]&#9;</xsl:text>
+   <xsl:text>Comment[File checksum method]&#10;</xsl:text>
+   <xsl:apply-templates select="exp">
+    <xsl:with-param name="my-exp" select="$my-exp"/>
+   </xsl:apply-templates>
+  </xsl:result-document>
+ </xsl:template>
+ 
+ <xsl:template match="exp">
+  <xsl:param name="my-exp" required="yes"/>
+  <xsl:apply-templates select="$my-exp/ROOT/EXPERIMENT[@accession = current()/@accession]"/>
  </xsl:template>
  
  <xsl:template match="STUDY">
@@ -280,30 +288,27 @@ Study Publication Status Term Source REF
   <xsl:text>STUDY ASSAYS&#10;</xsl:text>
   
   <xsl:text>Study Assay Measurement Type</xsl:text>
-  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
-   <xsl:sort select="current-grouping-key()"/>
-   <xsl:value-of select="concat('&#9;', current-grouping-key())"/>
-  </xsl:for-each-group>
+  <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
+   <xsl:value-of select="concat('&#9;', @library-strategy)"/>
+  </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Measurement Type Term Accession Number&#9;</xsl:text>
-  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
-   <xsl:sort select="current-grouping-key()"/>
-   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current-grouping-key())]/@accnum)"/>
-  </xsl:for-each-group>
+  <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
+   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@accnum)"/>
+  </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Measurement Type Term Source REF&#9;</xsl:text>
-  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
-   <xsl:sort select="current-grouping-key()"/>
-   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current-grouping-key())]/@resource)"/>
-  </xsl:for-each-group>
+  <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
+   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@resource)"/>
+  </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Technology Type</xsl:text>
-  <xsl:for-each-group select="$experiments-sources-strategies/studies/study" group-by="@library-strategy">
+  <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="concat('&#9;', 'Nucleic acid sequencing')"/>
-  </xsl:for-each-group>
+  </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Technology Type Term Accession Number&#9;</xsl:text>
