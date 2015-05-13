@@ -200,7 +200,7 @@ STUDY
  </xsl:template>
  
  <xsl:template match="experiments/experiment" mode="distinct-exp">
-  <xsl:result-document href="{concat(@acc-number, '/', 'a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
+  <xsl:result-document href="{concat($acc-number, '/', 'a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
    <xsl:variable name="my-exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
    <!-- Create the header -->
    <xsl:text>Sample Name&#9;</xsl:text>

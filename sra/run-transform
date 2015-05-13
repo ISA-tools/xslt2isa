@@ -1,0 +1,17 @@
+#!/bin/bash
+# Running the transformation for the SRA files
+
+# Some instructions:
+# You would need saxon9ee.jar and change the path to point to the Saxon compiler.
+# First you would need to change the permission of the script. At a terminal, type in:
+# [terminal] chmod 755 run-transform
+# To run the script, type in:
+# [terminal] ./run-transform
+
+java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
+java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA030397"
+java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA000266"
+java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="ERA148766"
+java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
+java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA095866"
+echo "Finish transformation"
