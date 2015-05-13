@@ -28,8 +28,10 @@ SRA schema version considered:
 
 -->
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:isa="http://www.isa-tools.org/"
+ exclude-result-prefixes="isa" version="2.0">
  <xsl:import href="extract-studies.xsl"/>
+ <xsl:import href="isa-functions.xsl"/>
  <xsl:output method="text" encoding="UTF-8"/>
  <xsl:strip-space elements="*"/>
 
@@ -92,8 +94,8 @@ SRA schema version considered:
    <xsl:value-of select="@identifier"/>
    <xsl:text>ONTOLOGY SOURCE REFERENCE&#10;</xsl:text>
    <xsl:text>Term Source Name&#9;</xsl:text>
-   <xsl:text>ENA-CV&#10;</xsl:text>
-   <xsl:text>Term Source File&#9;</xsl:text>
+   <xsl:value-of select="isa:quotes('ENA-CV')"/>
+   <xsl:text>&#10;Term Source File&#9;</xsl:text>
    <xsl:text>ENA-CV.obo&#10;</xsl:text>
    <xsl:text>Term Source Version&#9;</xsl:text>
    <xsl:text>1&#10;</xsl:text>
