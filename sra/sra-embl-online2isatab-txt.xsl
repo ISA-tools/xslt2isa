@@ -247,7 +247,7 @@ STUDY
  <xsl:template match="STUDY">
   <xsl:variable name="sra-isa-mapping" select="document('sra-isa-measurement_type_mapping.xml')"/>
   <xsl:text>Study Identifier&#9;</xsl:text>
-  <xsl:value-of select="if (@accession) then @accession else '-'"/>
+  <xsl:value-of select="if (@accession) then concat('&quot;',@accession,'&quot;') else '&quot;-&quot;'"/>
   <xsl:text>&#10;</xsl:text>
   
   <xsl:value-of select="concat('Study Title&#9;', DESCRIPTOR/STUDY_TITLE, '&#10;')"/>
@@ -289,7 +289,8 @@ Study Publication Status Term Source REF
   
   <xsl:text>Study Assay Measurement Type</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-   <xsl:value-of select="concat('&#9;&quot;', lower-case(@library-strategy), '&quot;')"/>
+<!--   <xsl:value-of select="concat('&#9;&quot;', lower-case(@library-strategy), '&quot;')"/>-->
+   <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@isa, '&quot;') else concat('&#9;&quot;','other','&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
@@ -301,7 +302,7 @@ Study Publication Status Term Source REF
 
   <xsl:text>Study Assay Measurement Type Term Source REF</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-   <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', lower-case($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@resource), '&quot;') else concat('&#9;&quot;', lower-case(current()/@library-source), '&quot;')"/>
+   <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@resource, '&quot;') else '&#9;&quot;&quot;'"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
