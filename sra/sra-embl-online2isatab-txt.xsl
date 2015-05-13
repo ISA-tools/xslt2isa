@@ -289,41 +289,45 @@ Study Publication Status Term Source REF
   
   <xsl:text>Study Assay Measurement Type</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-   <xsl:value-of select="concat('&#9;', @library-strategy)"/>
+   <xsl:value-of select="concat('&#9;&quot;', lower-case(@library-strategy), '&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Measurement Type Term Accession Number&#9;</xsl:text>
+  <xsl:text>Study Assay Measurement Type Term Accession Number</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@accnum)"/>
+   <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@accnum, '&quot;') else '&#9;&quot;&quot;'"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Measurement Type Term Source REF&#9;</xsl:text>
+  <xsl:text>Study Assay Measurement Type Term Source REF</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-   <xsl:value-of select="concat('&#9;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@resource)"/>
+   <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', lower-case($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@resource), '&quot;') else concat('&#9;&quot;', lower-case(current()/@library-source), '&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
   <xsl:text>Study Assay Technology Type</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-   <xsl:value-of select="concat('&#9;', 'Nucleic acid sequencing')"/>
+   <xsl:value-of select="concat('&#9;', '&quot;nucleic acid sequencing&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Technology Type Term Accession Number&#9;</xsl:text>
-  <xsl:text>ENA:0000044&#9;</xsl:text>
-  <xsl:text>ENA:0000054&#10;</xsl:text>
+  <xsl:text>Study Assay Technology Type Term Accession Number</xsl:text>
+  <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
+   <xsl:value-of select="concat('&#9;', '&quot;&quot;')"/>
+  </xsl:for-each>
+  <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Technology Type Term Source REF&#9;</xsl:text>
-  <xsl:text>ENA&#9;</xsl:text>
-  <xsl:text>ENA&#10;</xsl:text>
+  <xsl:text>Study Assay Technology Type Term Source REF</xsl:text>
+  <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
+   <xsl:value-of select="concat('&#9;', '&quot;&quot;')"/>
+  </xsl:for-each>
+  <xsl:text>&#10;</xsl:text>
   
   <xsl:text>Study Assay Technology Platform&#10;</xsl:text>
 
   <xsl:text>Study Assay File Names</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-   <xsl:value-of select="concat('&#9;a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')"/>
+   <xsl:value-of select="concat('&#9;&quot;a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
   
