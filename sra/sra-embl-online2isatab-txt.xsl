@@ -90,88 +90,87 @@ SRA schema version considered:
   <xsl:param name="broker-name" required="yes" tunnel="yes"/>
   <xsl:variable name="study" select="following-sibling::ID"/>
   <xsl:result-document href="{concat($acc-number, '/', 'i_', $acc-number, '.txt')}" method="text">
-   <xsl:text>#SRA Document:&#10;</xsl:text>
-   <xsl:value-of select="@identifier"/>
-   <xsl:text>ONTOLOGY SOURCE REFERENCE&#10;</xsl:text>
-   <xsl:text>Term Source Name&#9;</xsl:text>
+   <xsl:text>#SRA Document:</xsl:text>    <xsl:value-of select="isa:quotes($acc-number)"/><xsl:text>&#10;</xsl:text>
+   <xsl:text>"ONTOLOGY SOURCE REFERENCE"&#10;</xsl:text>
+   <xsl:text>"Term Source Name"&#9;</xsl:text>
    <xsl:value-of select="isa:quotes('ENA-CV')"/>
-   <xsl:text>&#10;Term Source File&#9;</xsl:text>
-   <xsl:text>ENA-CV.obo&#10;</xsl:text>
-   <xsl:text>Term Source Version&#9;</xsl:text>
-   <xsl:text>1&#10;</xsl:text>
-   <xsl:text>Term Source Description&#9;</xsl:text>
-   <xsl:text>Controlled Terminology for SRA/ENA schema</xsl:text>
+   <xsl:text>&#10;"Term Source File"&#9;</xsl:text>
+   <xsl:value-of select="isa:quotes('ENA-CV.obo')"/><xsl:text>&#10;</xsl:text>
+   <xsl:text>"Term Source Version"&#9;</xsl:text>
+    <xsl:value-of select="isa:quotes('1')"/><xsl:text>&#10;</xsl:text>
+   <xsl:text>"Term Source Description"&#9;</xsl:text>
+    <xsl:value-of select="isa:quotes('Controlled Terminology for SRA/ENA schema')"/>
    <xsl:text>
-INVESTIGATION
-Investigation Identitifier
-Investigation Title
-Investigation Description
-Investigation Submission Date
-Investigation Public Release Date
-INVESTIGATION PUBLICATIONS
-Investigation PubMed ID
-Investigation Publication DOI
-Investigation Publication Author List
-Investigation Publication Title
-Investigation Publication Status
-Investigation Publication Status Term Accession Number
-Investigation Publication Status Term Source REF
-INVESTIGATION CONTACTS
-Investigation Person Last Name
-Investigation Person First Name
-Investigation Person Mid Initials
-Investigation Person Email
-Investigation Person Phone
-Investigation Person Fax
-Investigation Person Address
-Investigation Person Affiliation
-Investigation Person Roles
-Investigation Person Roles Term Accession Number
-Investigation Person Roles Term Source REF
-STUDY
+"INVESTIGATION"
+"Investigation Identitifier"
+"Investigation Title"
+"Investigation Description"
+"Investigation Submission Date"
+"Investigation Public Release Date"
+"INVESTIGATION PUBLICATIONS"
+"Investigation PubMed ID"
+"Investigation Publication DOI"
+"Investigation Publication Author List"
+"Investigation Publication Title"
+"Investigation Publication Status"
+"Investigation Publication Status Term Accession Number"
+"Investigation Publication Status Term Source REF"
+"INVESTIGATION CONTACTS"
+"Investigation Person Last Name"
+"Investigation Person First Name"
+"Investigation Person Mid Initials"
+"Investigation Person Email"
+"Investigation Person Phone"
+"Investigation Person Fax"
+"Investigation Person Address"
+"Investigation Person Affiliation"
+"Investigation Person Roles"
+"Investigation Person Roles Term Accession Number"
+"Investigation Person Roles Term Source REF"
+"STUDY"
 </xsl:text>
-   <xsl:text>Comment[SRA broker]&#9;</xsl:text>
-   <xsl:value-of select="$broker-name"/>
+   <xsl:text>"Comment[SRA broker]"&#9;</xsl:text>
+   <xsl:value-of select="isa:quotes($broker-name)"/>
    <xsl:text>&#10;</xsl:text>
    <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
    
-   <xsl:text>STUDY CONTACTS&#10;</xsl:text>
-   <xsl:text>Study Person Last Name</xsl:text>
+   <xsl:text>"STUDY CONTACTS"&#10;</xsl:text>
+   <xsl:text>"Study Person Last Name"</xsl:text>
    <xsl:if test="CONTACTS/CONTACT">
     <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="substring-before(CONTACTS/CONTACT/@name,' ')"/>
+    <xsl:value-of select="isa:quotes(substring-before(CONTACTS/CONTACT/@name,' '))"/>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:text>Study Person First Name</xsl:text>
+   <xsl:text>"Study Person First Name"</xsl:text>
    <xsl:if test="CONTACTS/CONTACT">
     <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="substring-after(CONTACTS/CONTACT/@name,' ')"/>    
+    <xsl:value-of select="isa:quotes(substring-after(CONTACTS/CONTACT/@name,' '))"/>    
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:text>Study Person Mid Initials&#10;</xsl:text>
-   <xsl:text>Study Person Email</xsl:text>
+   <xsl:text>"Study Person Mid Initials"&#10;</xsl:text>
+   <xsl:text>"Study Person Email"</xsl:text>
    <xsl:if test="CONTACTS/CONTACT">
     <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="CONTACTS/CONTACT/@inform_on_status"/>
+    <xsl:value-of select="isa:quotes(CONTACTS/CONTACT/@inform_on_status)"/>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:text>Study Person Phone</xsl:text>
+   <xsl:text>"Study Person Phone"</xsl:text>
    <xsl:if test="CONTACTS/CONTACT"> 
     <xsl:text>&#9;</xsl:text>
-    <xsl:text>-</xsl:text>
+    <xsl:text>"-"</xsl:text>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:text>Study Person Fax</xsl:text>
+   <xsl:text>"Study Person Fax"</xsl:text>
    <xsl:if test="CONTACTS/CONTACT">
     <xsl:text>&#9;</xsl:text>
-    <xsl:text>-</xsl:text>
+    <xsl:text>"-"</xsl:text>
    </xsl:if>
    <xsl:text>&#10;</xsl:text>
-   <xsl:text>Study Person Address&#10;</xsl:text>
-   <xsl:text>Study Person Affiliation&#10;</xsl:text>
-   <xsl:text>Study Person Roles&#10;</xsl:text>
-   <xsl:text>Study Person Roles Term Accession Number&#10;</xsl:text>
-   <xsl:text>Study Person Roles Term Source REF&#10;</xsl:text>
+   <xsl:text>"Study Person Address"&#10;</xsl:text>
+   <xsl:text>"Study Person Affiliation"&#10;</xsl:text>
+   <xsl:text>"Study Person Roles"&#10;</xsl:text>
+   <xsl:text>"Study Person Roles Term Accession Number"&#10;</xsl:text>
+   <xsl:text>"Study Person Roles Term Source REF"&#10;</xsl:text>
   </xsl:result-document>
  </xsl:template>
 
@@ -179,7 +178,7 @@ STUDY
   <xsl:result-document href="{concat($acc-number, '/', 's_', $acc-number, '.txt')}" method="text">
    <xsl:variable name="samples-ids" select="following-sibling::ID"/>
    <xsl:call-template name="generate-study-header"/>
-   <xsl:text>&#9;Sample Name&#10;</xsl:text>
+   <xsl:text>&#9;"Sample Name"&#10;</xsl:text>
    <xsl:for-each select="tokenize($samples-ids, ',')">
     <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', . , '&amp;display=xml'))/ROOT/SAMPLE"/>
    </xsl:for-each>
@@ -187,13 +186,13 @@ STUDY
  </xsl:template>
  
  <xsl:template name="generate-study-header">
-  <xsl:text>Source Name&#9;</xsl:text>
-  <xsl:text>Characteristics[Primary Accession Number]&#9;</xsl:text>
-  <xsl:text>Comment[Scientific Name]&#9;</xsl:text>
-  <xsl:text>Characteristics[Taxonomic ID]&#9;</xsl:text>
-  <xsl:text>Characteristics[Description]</xsl:text>
+  <xsl:text>"Source Name"&#9;</xsl:text>
+  <xsl:text>"Characteristics[Primary Accession Number]"&#9;</xsl:text>
+  <xsl:text>"Comment[Scientific Name]"&#9;</xsl:text>
+  <xsl:text>"Characteristics[Taxonomic ID]"&#9;</xsl:text>
+  <xsl:text>"Characteristics[Description]"&#9;</xsl:text>
   <xsl:for-each select="$distinct-characteristic-terms/terms/term">
-   <xsl:value-of select="concat('&#9;Characteristics[', ., ']')"/>
+   <xsl:value-of select="isa:quotes(concat('Characteristics[', ., ']'))"/> <xsl:text>&#9;</xsl:text>
   </xsl:for-each>
  </xsl:template>
  
@@ -205,12 +204,12 @@ STUDY
   <xsl:result-document href="{concat($acc-number, '/', 'a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
    <xsl:variable name="my-exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
    <!-- Create the header -->
-   <xsl:text>Sample Name&#9;</xsl:text>
-   <xsl:text>Protocol REF&#9;</xsl:text>
-   <xsl:text>Parameter Value[library strategy]&#9;</xsl:text>
-   <xsl:text>Parameter Value[library source]&#9;</xsl:text>
-   <xsl:text>Parameter Value[library selection]&#9;</xsl:text>
-   <xsl:text>Parameter Value[library layout]&#9;</xsl:text>
+   <xsl:text>"Sample Name"&#9;</xsl:text>
+   <xsl:text>"Protocol REF"&#9;</xsl:text>
+   <xsl:text>"Parameter Value[library strategy]"&#9;</xsl:text>
+   <xsl:text>"Parameter Value[library source]"&#9;</xsl:text>
+   <xsl:text>"Parameter Value[library selection]"&#9;</xsl:text>
+   <xsl:text>"Parameter Value[library layout]"&#9;</xsl:text>
    
    <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]) > 0) 
     then 'Parameter Value[target_taxon]&#9;' else ''"/>
@@ -225,16 +224,16 @@ STUDY
    <xsl:value-of select="if (count($my-exp/ROOT/EXPERIMENT/DESIGN/DESIGN_DESCRIPTION[contains(., 'pcr_cond: ')]) > 0) 
     then 'Parameter Value[pcr_conditions]&#9;' else ''"/>
    
-   <xsl:text>Labeled Extract Name&#9;</xsl:text>
-   <xsl:text>Protocol REF&#9;</xsl:text>
-   <xsl:text>Parameter Value[read information {index;type;class;base coord}]&#9;</xsl:text>
-   <xsl:text>Parameter Value[sequencing instrument]&#9;</xsl:text>
-   <xsl:text>Performer&#9;</xsl:text>
-   <xsl:text>Date&#9;</xsl:text>
-   <xsl:text>Assay Name&#9;</xsl:text>
-   <xsl:text>Raw Data File&#9;</xsl:text>
-   <xsl:text>Comment[File checksum]&#9;</xsl:text>
-   <xsl:text>Comment[File checksum method]&#10;</xsl:text>
+   <xsl:text>"Labeled Extract Name"&#9;</xsl:text>
+   <xsl:text>"Protocol REF"&#9;</xsl:text>
+   <xsl:text>"Parameter Value[read information {index;type;class;base coord}]"&#9;</xsl:text>
+   <xsl:text>"Parameter Value[sequencing instrument]"&#9;</xsl:text>
+   <xsl:text>"Performer"&#9;</xsl:text>
+   <xsl:text>"Date"&#9;</xsl:text>
+   <xsl:text>"Assay Name"&#9;</xsl:text>
+   <xsl:text>"Raw Data File"&#9;</xsl:text>
+   <xsl:text>"Comment[File checksum]"&#9;</xsl:text>
+   <xsl:text>"Comment[File checksum method]"&#10;</xsl:text>
    <xsl:apply-templates select="exp">
     <xsl:with-param name="my-exp" select="$my-exp"/>
    </xsl:apply-templates>
@@ -248,123 +247,124 @@ STUDY
  
  <xsl:template match="STUDY">
   <xsl:variable name="sra-isa-mapping" select="document('sra-isa-measurement_type_mapping.xml')"/>
-  <xsl:text>Study Identifier&#9;</xsl:text>
+  <xsl:text>"Study Identifier"&#9;</xsl:text>
   <xsl:value-of select="if (@accession) then concat('&quot;',@accession,'&quot;') else '&quot;-&quot;'"/>
   <xsl:text>&#10;</xsl:text>
   
-  <xsl:value-of select="concat('Study Title&#9;', DESCRIPTOR/STUDY_TITLE, '&#10;')"/>
-  <xsl:value-of select="concat('Study Submission Date&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>   
-  <xsl:value-of select="concat('Study Public Release Date&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>
+  <xsl:value-of select="concat('&quot;Study Title&quot;&#9;', isa:quotes(DESCRIPTOR/STUDY_TITLE), '&#10;')"/>
+  <xsl:value-of select="concat('&quot;Study Submission Date&quot;&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>   
+  <xsl:value-of select="concat('&quot;Study Public Release Date&quot;&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>
   
-  <xsl:text>Study Description&#9;</xsl:text>
-  <xsl:value-of select="DESCRIPTOR/STUDY_ABSTRACT"/>
-  <xsl:value-of select="substring-before(DESCRIPTOR/STUDY_DESCRIPTION,'\r')"/>
+  <xsl:text>"Study Description"&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes(DESCRIPTOR/STUDY_ABSTRACT)"/>
+  <xsl:value-of select="isa:quotes(substring-before(DESCRIPTOR/STUDY_DESCRIPTION,'\r'))"/>
   <xsl:text>&#10;</xsl:text>
   
-  <xsl:text>Study File Name&#10;</xsl:text>
-  <xsl:text>STUDY DESIGN DESCRIPTORS&#10;</xsl:text>
+  <xsl:text>"Study File Name"&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes(concat('s_', $acc-number, '.txt'))"/><xsl:text>&#10;</xsl:text>
+  <xsl:text>"STUDY DESIGN DESCRIPTORS"&#10;</xsl:text>
 
   <xsl:apply-templates select="DESCRIPTOR/STUDY_TYPE"/>
 
-  <xsl:text>Study Design Type Term Accession Number&#10;</xsl:text>
-  <xsl:text>Study Design Type Term Source REF&#10;</xsl:text>
-  <xsl:text>STUDY PUBLICATIONS&#10;</xsl:text>
-  <xsl:text>Study PubMed ID&#9;</xsl:text>
+  <xsl:text>"Study Design Type Term Accession Number"&#10;</xsl:text>
+  <xsl:text>"Study Design Type Term Source REF"&#10;</xsl:text>
+  <xsl:text>"STUDY PUBLICATIONS"&#10;</xsl:text>
+  <xsl:text>"Study PubMed ID"&#9;</xsl:text>
 
   <xsl:apply-templates select="STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]"/>
 
   <xsl:text>
-Study Publication DOI
-Study Publication Author List
-Study Publication Title
-Study Publication Status
-Study Publication Status Term Accession Number
-Study Publication Status Term Source REF 
+"Study Publication DOI"
+"Study Publication Author List"
+"Study Publication Title"
+"Study Publication Status"
+"Study Publication Status Term Accession Number"
+"Study Publication Status Term Source REF"
 </xsl:text>
-  <xsl:text>STUDY FACTORS&#10;</xsl:text>
-  <xsl:text>Study Factor Name&#10;</xsl:text>
-  <xsl:text>Study Factor Type&#10;</xsl:text>
-  <xsl:text>Study Factor Type Term Accession Number&#10;</xsl:text>
-  <xsl:text>Study Factor Type Term Source REF&#10;</xsl:text>
+  <xsl:text>"STUDY FACTORS&#10;</xsl:text>
+  <xsl:text>"Study Factor Name"&#10;</xsl:text>
+  <xsl:text>"Study Factor Type"&#10;</xsl:text>
+  <xsl:text>"Study Factor Type Term Accession Number"&#10;</xsl:text>
+  <xsl:text>"Study Factor Type Term Source REF"&#10;</xsl:text>
   
-  <xsl:text>STUDY ASSAYS&#10;</xsl:text>
+  <xsl:text>"STUDY ASSAYS"&#10;</xsl:text>
   
-  <xsl:text>Study Assay Measurement Type</xsl:text>
+  <xsl:text>"Study Assay Measurement Type"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
 <!--   <xsl:value-of select="concat('&#9;&quot;', lower-case(@library-strategy), '&quot;')"/>-->
    <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@isa, '&quot;') else concat('&#9;&quot;','other','&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Measurement Type Term Accession Number</xsl:text>
+  <xsl:text>"Study Assay Measurement Type Term Accession Number"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@accnum, '&quot;') else '&#9;&quot;&quot;'"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Measurement Type Term Source REF</xsl:text>
+  <xsl:text>"Study Assay Measurement Type Term Source REF"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@resource, '&quot;') else '&#9;&quot;&quot;'"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Technology Type</xsl:text>
+  <xsl:text>"Study Assay Technology Type"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="concat('&#9;', '&quot;nucleic acid sequencing&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Technology Type Term Accession Number</xsl:text>
+  <xsl:text>"Study Assay Technology Type Term Accession Number"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="concat('&#9;', '&quot;&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
 
-  <xsl:text>Study Assay Technology Type Term Source REF</xsl:text>
+  <xsl:text>"Study Assay Technology Type Term Source REF"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="concat('&#9;', '&quot;&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
   
-  <xsl:text>Study Assay Technology Platform&#10;</xsl:text>
+  <xsl:text>"Study Assay Technology Platform"&#10;</xsl:text>
 
-  <xsl:text>Study Assay File Names</xsl:text>
+  <xsl:text>"Study Assay File Names"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="concat('&#9;&quot;a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
   
-  <xsl:text>STUDY PROTOCOLS&#10;</xsl:text>
-  <xsl:text>Study Protocol Name&#10;</xsl:text>
-  <xsl:text>Study Protocol Type&#9;</xsl:text>
-  <xsl:text>library construction&#10;</xsl:text>
-  <xsl:text>Study Protocol Type Term Accession Number&#10;</xsl:text>
-  <xsl:text>Study Protocol Type Term Source REF&#10;</xsl:text>
-  <xsl:text>Study Protocol Description</xsl:text>
+  <xsl:text>"STUDY PROTOCOLS"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Name"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Type"&#9;</xsl:text>
+  <xsl:text>"library construction"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Type Term Accession Number"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Type Term Source REF"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Description"</xsl:text>
   <xsl:for-each select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id(.)=generate-id(key('expprotlookupid',.)[1])]">
    <xsl:text>&#9;</xsl:text>
-   <xsl:value-of select="substring-before(substring-after(.,'&#xa;'),'&#xa;')"/>
+   <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'&#xa;'),'&#xa;'))"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
-  <xsl:text>Study Protocol URI&#10;</xsl:text>
-  <xsl:text>Study Protocol Version&#10;</xsl:text>
-  <xsl:text>Study Protocol Parameters Name&#10;</xsl:text>
-  <xsl:text>Study Protocol Parameters Term Accession Number&#10;</xsl:text>
-  <xsl:text>Study Protocol Parameters Term Source REF&#10;</xsl:text>
-  <xsl:text>Study Protocol Components Name&#10;</xsl:text>
-  <xsl:text>Study Protocol Components Type&#10;</xsl:text>
-  <xsl:text>Study Protocol Components Type Term Accession Number&#10;</xsl:text>
-  <xsl:text>Study Protocol Components Type Term Source REF&#10;</xsl:text>
+  <xsl:text>"Study Protocol URI"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Version"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Parameters Name"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Parameters Term Accession Number"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Parameters Term Source REF"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Components Name"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Components Type"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Components Type Term Accession Number"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Components Type Term Source REF"&#10;</xsl:text>
  </xsl:template>
 
  <xsl:template match="DESCRIPTOR/STUDY_TYPE">
-  <xsl:text>Study Design Type&#9;</xsl:text>
-  <xsl:value-of select="@existing_study_type"/>
+  <xsl:text>"Study Design Type"&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes(@existing_study_type)"/>
   <xsl:text>&#10;</xsl:text>
  </xsl:template>
 
  <xsl:template match="STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]">
-  <xsl:value-of select="following-sibling::ID/."/>
+  <xsl:value-of select="isa:quotes(following-sibling::ID/.)"/>
   <xsl:text>&#9;</xsl:text>
  </xsl:template>
 
@@ -381,7 +381,7 @@ Study Publication Status Term Source REF
   <xsl:variable name="my-sample" select="./SAMPLE_ATTRIBUTES"/>
   <xsl:for-each select="$distinct-characteristic-terms/terms/term">
    <xsl:variable name="my-term" select="current()"/>
-   <xsl:value-of select="if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else ''"/>
+   <xsl:value-of select="isa:quotes(if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else '')"/>
    <xsl:text>&#9;</xsl:text>
   </xsl:for-each>
  
@@ -391,7 +391,7 @@ Study Publication Status Term Source REF
  </xsl:template>
  
  <xsl:template match="@alias | @accession | @refname">
-  <xsl:value-of select="."/>
+  <xsl:value-of select="isa:quotes(.)"/>
  </xsl:template>
  
  <xsl:template match="SAMPLE_NAME">
@@ -401,7 +401,7 @@ Study Publication Status Term Source REF
  </xsl:template>
  
  <xsl:template match="COMMON_NAME | SCIENTIFIC_NAME | TAXON_ID">
-  <xsl:value-of select="."/>
+  <xsl:value-of select="isa:quotes(.)"/>
   <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
@@ -413,7 +413,7 @@ Study Publication Status Term Source REF
   <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@refname"/>
   <xsl:text>&#9;</xsl:text>
 
-  <xsl:text>library preparation&#9;</xsl:text>
+  <xsl:text>"library preparation"&#9;</xsl:text>
 
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY"/>
   <xsl:text>&#9;</xsl:text>
@@ -433,19 +433,19 @@ Study Publication Status Term Source REF
   <xsl:choose>
    <xsl:when test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI">
     <xsl:if test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
-     <xsl:value-of select="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/@locus_name"/>
+     <xsl:value-of select="isa:quotes(DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/@locus_name)"/>
      <xsl:text>&#9;</xsl:text>
     </xsl:if>
    </xsl:when>
    <xsl:otherwise>
     <xsl:choose>
      <xsl:when test="contains(DESIGN/DESIGN_DESCRIPTION/.,'target_gene: ')">
-      <xsl:value-of select="substring-before(substring-after(DESIGN/DESIGN_DESCRIPTION/.,'target_gene: '),'target_subfragment:')"/>
+      <xsl:value-of select="isa:quotes(substring-before(substring-after(DESIGN/DESIGN_DESCRIPTION/.,'target_gene: '),'target_subfragment:'))"/>
       <xsl:text>&#9;</xsl:text>
      </xsl:when>
      <xsl:otherwise>
       <xsl:text/>
-      <xsl:text>NULL</xsl:text>
+      <xsl:text>"NULL"</xsl:text>
       <xsl:text>&#9;</xsl:text>
      </xsl:otherwise>
     </xsl:choose>
@@ -462,14 +462,14 @@ Study Publication Status Term Source REF
    <xsl:when test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI">
     <xsl:if test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
      <xsl:text>(</xsl:text>
-     <xsl:value-of select="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/DB"/>
+     <xsl:value-of select="isa:quotes(DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/DB)"/>
      <xsl:text>:</xsl:text>
-     <xsl:value-of select="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/ID"/>
+     <xsl:value-of select="isa:quotes(DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/ID)"/>
      <xsl:text>) </xsl:text>
     </xsl:if>
    </xsl:when>
    <xsl:otherwise>
-    <xsl:text>NULL</xsl:text>
+    <xsl:text>"NULL"</xsl:text>
     <xsl:text/>
    </xsl:otherwise>
   </xsl:choose>
@@ -485,7 +485,7 @@ Study Publication Status Term Source REF
 
   <xsl:choose>
    <xsl:when test="DESIGN/SPOT_DESCRIPTOR">
-    <xsl:text>Sequencing Protocol</xsl:text>
+    <xsl:text>"Sequencing Protocol"</xsl:text>
     <xsl:text>&#9;</xsl:text>
     <xsl:for-each select="DESIGN/SPOT_DESCRIPTOR/SPOT_DECODE_SPEC/READ_SPEC">
      <xsl:value-of select="READ_INDEX/."/>;<xsl:value-of select="READ_CLASS/."
@@ -517,39 +517,39 @@ Study Publication Status Term Source REF
     <xsl:text>&#9;</xsl:text>
    </xsl:otherwise>
   </xsl:choose>
-  <xsl:text>md5&#10;</xsl:text>
+  <xsl:text>"md5"&#10;</xsl:text>
  </xsl:template>
  
  <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY | DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE | DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SELECTION">
-  <xsl:value-of select="."/>
+  <xsl:value-of select="isa:quotes(.)"/>
  </xsl:template>
  
  <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/SINGLE">
-  <xsl:value-of select="'single'"/>
+  <xsl:value-of select="isa:quotes('single')"/>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]" mode="target-taxon">
-  <xsl:value-of select="substring-before(substring-after(.,'target_taxon: '),'target_gene:')"/>
+  <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'target_taxon: '),'target_gene:'))"/>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]" mode="target-subfragment">
-  <xsl:value-of select="substring-before(substring-after(.,'target_subfragment: '),'mid:')"/>
+  <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'target_subfragment: '),'mid:'))"/>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]" mode="mid">
-  <xsl:value-of select="substring-before(substring-after(.,'mid: '),'pcr_primers:')"/>
+  <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'mid: '),'pcr_primers:'))"/>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]" mode="pcr-primers">
-  <xsl:value-of select="substring-before(substring-after(.,'pcr_primers: '),'pcr_cond:')"/>
+  <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'pcr_primers: '),'pcr_cond:'))"/>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]" mode="pcr-cond">
-  <xsl:value-of select="substring-after(.,'pcr_cond: ')"/>
+  <xsl:value-of select="isa:quotes(substring-after(.,'pcr_cond: '))"/>
  </xsl:template>
  
  <xsl:template match="PLATFORM//INSTRUMENT_MODEL">
-  <xsl:value-of select="."/>
+  <xsl:value-of select="isa:quotes(.)"/>
   <xsl:text>&#9;</xsl:text>
  </xsl:template>
 
@@ -562,7 +562,7 @@ Study Publication Status Term Source REF
    <xsl:for-each select="tokenize($parsedlink, '\n')">
     <xsl:if test="not(contains(.,'fastq_ftp'))">
      <xsl:for-each select="tokenize(., '\t')">
-      <xsl:value-of select="."/>
+      <xsl:value-of select="isa:quotes(.)"/>
       <xsl:text>&#9;</xsl:text>
      </xsl:for-each>
     </xsl:if>
