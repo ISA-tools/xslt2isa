@@ -14,7 +14,7 @@ test datasets:
 SRA030397 -> targeted metagenomics application
 SRA000266 -> targeted metagenomics application
 ERA148766 -> 
-SRA095866 ->
+ SRA095866 ->
 
 representing submission 
 
@@ -43,8 +43,6 @@ SRA schema version considered:
  <xsl:key name="expprotlookupid" match="/ROOT/EXPERIMENT/DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL" use="."/>
 
  <xsl:variable name="url" select="concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml')"/>
-
- <xsl:variable name="protocols" select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id() = generate-id(key('protocols',.)[1])]"/>
  
  <xsl:variable name="experiments-sources-strategies">
   <xsl:call-template name="process-lib-strategies-sources">
@@ -57,7 +55,7 @@ SRA schema version considered:
    <xsl:with-param name="exp-sources-strategies" select="$experiments-sources-strategies"/>
   </xsl:call-template>
  </xsl:variable>
- 
+
  <xsl:variable name="samples-characteristics">
   <xsl:call-template name="process-samples-attributes">
    <xsl:with-param name="acc-number" select="$acc-number"/>
@@ -69,7 +67,13 @@ SRA schema version considered:
    <xsl:with-param name="characteristics" select="$samples-characteristics"/>
   </xsl:call-template>
  </xsl:variable>
-
+ 
+ <xsl:variable name="distinct-exp-protocol-descriptions">
+  <xsl:call-template name="generate-distinct-protocols-description">
+   <xsl:with-param name="protocol" select="$experiments-sources-strategies"/>
+  </xsl:call-template>
+ </xsl:variable> 
+ 
  <xsl:template match="/">
   <xsl:apply-templates select="document($url)" mode="go"/>
  </xsl:template>
@@ -93,9 +97,9 @@ SRA schema version considered:
    <xsl:text>#SRA Document:</xsl:text>    <xsl:value-of select="isa:quotes($acc-number)"/><xsl:text>&#10;</xsl:text>
    <xsl:text>"ONTOLOGY SOURCE REFERENCE"&#10;</xsl:text>
    <xsl:text>"Term Source Name"&#9;</xsl:text>
-   <xsl:value-of select="isa:quotes('ENA-CV')"/>
+   <xsl:value-of select="isa:quotes('OBI')"/>
    <xsl:text>&#10;"Term Source File"&#9;</xsl:text>
-   <xsl:value-of select="isa:quotes('ENA-CV.obo')"/><xsl:text>&#10;</xsl:text>
+   <xsl:value-of select="isa:quotes('http://purl.obolibrary.org/obo/OBI.owl')"/><xsl:text>&#10;</xsl:text>
    <xsl:text>"Term Source Version"&#9;</xsl:text>
     <xsl:value-of select="isa:quotes('1')"/><xsl:text>&#10;</xsl:text>
    <xsl:text>"Term Source Description"&#9;</xsl:text>
@@ -341,10 +345,10 @@ SRA schema version considered:
   <xsl:text>"Study Protocol Type Term Accession Number"&#10;</xsl:text>
   <xsl:text>"Study Protocol Type Term Source REF"&#10;</xsl:text>
   <xsl:text>"Study Protocol Description"</xsl:text>
-  <xsl:for-each select="//LIBRARY_CONSTRUCTION_PROTOCOL[generate-id(.)=generate-id(key('expprotlookupid',.)[1])]">
-   <xsl:text>&#9;</xsl:text>
-   <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'&#xa;'),'&#xa;'))"/>
+  <xsl:for-each select="$distinct-exp-protocol-descriptions/descriptions/description">
+   <xsl:value-of select="concat('&#9;', isa:quotes(@protocoldescription))"/>
   </xsl:for-each>
+
   <xsl:text>&#10;</xsl:text>
   <xsl:text>"Study Protocol URI"&#10;</xsl:text>
   <xsl:text>"Study Protocol Version"&#10;</xsl:text>
@@ -513,7 +517,6 @@ SRA schema version considered:
     <xsl:apply-templates select="EXPERIMENT_LINKS/EXPERIMENT_LINK/XREF_LINK/DB[contains(., 'ENA-FASTQ-FILES')]"/>
    </xsl:when>
    <xsl:otherwise>
-    <xsl:text/>
     <xsl:text>&#9;</xsl:text>
    </xsl:otherwise>
   </xsl:choose>
@@ -567,7 +570,6 @@ SRA schema version considered:
      </xsl:for-each>
     </xsl:if>
    </xsl:for-each>
-   <xsl:text>&#9;</xsl:text>
   </xsl:if>
  </xsl:template>
  

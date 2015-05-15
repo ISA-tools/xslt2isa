@@ -24,6 +24,16 @@
      <xsl:import-schema schema-location="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd"/>
      
     -->
+    
+    <xsl:template name="generate-distinct-protocols-description">
+        <xsl:param name="protocol" required="yes"/>
+        <descriptions>
+            <xsl:for-each-group select="$protocol/studies/study" group-by="@protocoldescription">
+                <description protocoldescription="{ current-grouping-key() }"/>
+            </xsl:for-each-group>
+        </descriptions>
+    </xsl:template> 
+    
     <xsl:template name="process-lib-strategies-sources">
         <xsl:param name="acc-number" required="yes"/>
         <xsl:variable name="experiment-ids" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml'))/ROOT/SUBMISSION/SUBMISSION_LINKS/SUBMISSION_LINK/XREF_LINK/DB[contains(.,'NA-EXPERIMENT')]/following-sibling::ID"/>
@@ -39,7 +49,7 @@
     
     <xsl:template match="EXPERIMENT" mode="get-studies">
         <xsl:param name="id" required="yes"/>
-        <study acc-number="{ $id }" accession="{ @accession }" library-strategy="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY }" library-source="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE }"/>
+        <study acc-number="{ $id }" accession="{ @accession }" library-strategy="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY }" library-source="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE }"  protocoldescription="{ DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_CONSTRUCTION_PROTOCOL }"/>
     </xsl:template>
     
     <xsl:template name="generate-distinct-exp-sources-strategies">
@@ -107,4 +117,5 @@
             </xsl:for-each-group>
         </terms>
     </xsl:template>
+    
 </xsl:stylesheet>
