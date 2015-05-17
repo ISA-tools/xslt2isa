@@ -339,9 +339,16 @@ SRA schema version considered:
   <xsl:text>&#10;</xsl:text>
   
   <xsl:text>"STUDY PROTOCOLS"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Name"&#10;</xsl:text>
+  <xsl:text>"Study Protocol Name"&#9;</xsl:text>
+  <xsl:for-each select="$distinct-exp-protocol-descriptions/descriptions/description">
+   <xsl:value-of select="concat('&#9;', isa:quotes('library preparation'))"/>
+  </xsl:for-each>
+  <xsl:text>&#9;"nucleic acid sequencing"&#10;</xsl:text>
   <xsl:text>"Study Protocol Type"&#9;</xsl:text>
-  <xsl:text>"library construction"&#10;</xsl:text>
+  <xsl:for-each select="$distinct-exp-protocol-descriptions/descriptions/description">
+   <xsl:value-of select="concat('&#9;', isa:quotes('library preparation'))"/>
+  </xsl:for-each>
+  <xsl:text>&#9;"nucleic acid sequencing"&#10;</xsl:text>
   <xsl:text>"Study Protocol Type Term Accession Number"&#10;</xsl:text>
   <xsl:text>"Study Protocol Type Term Source REF"&#10;</xsl:text>
   <xsl:text>"Study Protocol Description"</xsl:text>
@@ -420,21 +427,26 @@ SRA schema version considered:
   <xsl:text>"library preparation"&#9;</xsl:text>
 
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY"/>
-  <xsl:text>&#9;</xsl:text>
+ <!-- <xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE"/>
-  <xsl:text>&#9;</xsl:text>
+<!--  <xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SELECTION"/>
-  <xsl:text>&#9;</xsl:text>
+  <!--<xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/SINGLE"/>
-  <xsl:text>&#9;</xsl:text>
+  <!--<xsl:text>&#9;</xsl:text>-->
+  
+  <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/PAIRED"/>
+  <!--<xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]" mode="target-taxon"/>
-  <xsl:text>&#9;</xsl:text>
-  
-  <xsl:choose>
+  <!--<xsl:text>&#9;</xsl:text>-->
+ 
+  <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS"/>
+
+ <!-- <xsl:choose>
    <xsl:when test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI">
     <xsl:if test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
      <xsl:value-of select="isa:quotes(DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/@locus_name)"/>
@@ -455,53 +467,30 @@ SRA schema version considered:
     </xsl:choose>
    </xsl:otherwise>
   </xsl:choose>
-
+-->
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]" mode="target-subfragment"/>
-  <xsl:text>&#9;</xsl:text>
+  <!--<xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]" mode="mid"/>
-  <xsl:text>&#9;</xsl:text>
+<!--  <xsl:text>&#9;</xsl:text>-->
 
-  <xsl:choose>
-   <xsl:when test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI">
-    <xsl:if test="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
-     <xsl:text>(</xsl:text>
-     <xsl:value-of select="isa:quotes(DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/DB)"/>
-     <xsl:text>:</xsl:text>
-     <xsl:value-of select="isa:quotes(DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS/PROBE_SET/ID)"/>
-     <xsl:text>) </xsl:text>
-    </xsl:if>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text>"NULL"</xsl:text>
-    <xsl:text/>
-   </xsl:otherwise>
-  </xsl:choose>
-
+   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]" mode="pcr-primers"/>
-  <xsl:text>&#9;</xsl:text>
+<!--  <xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]" mode="pcr-cond"/>
-  <xsl:text>&#9;</xsl:text>
+ <!-- <xsl:text>&#9;</xsl:text>-->
 
   <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@accession"/>
   <xsl:text>&#9;</xsl:text>
 
-  <xsl:choose>
-   <xsl:when test="DESIGN/SPOT_DESCRIPTOR">
-    <xsl:text>"Sequencing Protocol"</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:for-each select="DESIGN/SPOT_DESCRIPTOR/SPOT_DECODE_SPEC/READ_SPEC">
-     <xsl:value-of select="READ_INDEX/."/>;<xsl:value-of select="READ_CLASS/."
-      />;<xsl:value-of select="READ_TYPE/."/>;<xsl:value-of select="BASE_COORD/."
-     />|</xsl:for-each>
-   </xsl:when>
-   <xsl:otherwise>
-    <xsl:text/>
-   </xsl:otherwise>
-  </xsl:choose>
+  <xsl:text>"nucleic acid sequencing"</xsl:text>
   <xsl:text>&#9;</xsl:text>
-  
+
+
+  <xsl:apply-templates select="DESIGN/SPOT_DESCRIPTOR"/>
+  <xsl:text>&#9;</xsl:text>
+   
   <xsl:apply-templates select="PLATFORM//INSTRUMENT_MODEL"/>
 
   <!-- a TAB as placeholder for Performer-->
@@ -525,30 +514,64 @@ SRA schema version considered:
  
  <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY | DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE | DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SELECTION">
   <xsl:value-of select="isa:quotes(.)"/>
+  <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
  <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/SINGLE">
   <xsl:value-of select="isa:quotes('single')"/>
+  <xsl:text>&#9;</xsl:text>
+ </xsl:template>
+ 
+  <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/PAIRED">
+   <xsl:value-of select="isa:quotes('paired')"/>
+   <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]" mode="target-taxon">
   <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'target_taxon: '),'target_gene:'))"/>
+  <xsl:text>&#9;</xsl:text>
+ </xsl:template>
+ 
+ <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS">
+   <xsl:choose>
+   <xsl:when test="./PROBE_SET/DB">
+    <xsl:variable name="db" select="."></xsl:variable>
+    <xsl:variable name="db_id" select="following-sibling::ID/."></xsl:variable>
+    <xsl:value-of select="isa:quotes(concat(@locus_name,' (',$db,'.',$db_id,')'))"/>
+    <xsl:text>&#9;</xsl:text>
+  </xsl:when>
+  <xsl:otherwise>
+   <xsl:value-of select="isa:quotes(@locus_name)"/>
+   <xsl:text>&#9;</xsl:text>
+  </xsl:otherwise>
+ </xsl:choose>
+ </xsl:template>
+ 
+ <xsl:template match="DESIGN/SPOT_DESCRIPTOR">
+    <xsl:for-each select="./SPOT_DECODE_SPEC/READ_SPEC">
+     <xsl:text>{</xsl:text> <xsl:value-of select="READ_INDEX/."/><xsl:text>;</xsl:text><xsl:value-of select="READ_CLASS/."/>
+     <xsl:text>;</xsl:text><xsl:value-of select="READ_TYPE/."/><xsl:text>;</xsl:text><xsl:value-of select="BASE_COORD/."/><xsl:text>}</xsl:text>
+    </xsl:for-each>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]" mode="target-subfragment">
   <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'target_subfragment: '),'mid:'))"/>
+  <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]" mode="mid">
   <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'mid: '),'pcr_primers:'))"/>
+  <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]" mode="pcr-primers">
   <xsl:value-of select="isa:quotes(substring-before(substring-after(.,'pcr_primers: '),'pcr_cond:'))"/>
+  <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
  <xsl:template match="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]" mode="pcr-cond">
   <xsl:value-of select="isa:quotes(substring-after(.,'pcr_cond: '))"/>
+  <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
  <xsl:template match="PLATFORM//INSTRUMENT_MODEL">
