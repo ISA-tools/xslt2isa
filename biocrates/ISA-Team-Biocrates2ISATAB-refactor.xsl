@@ -35,8 +35,15 @@ DOI:
 -->
 
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xpath-default-namespace="http://www.biocrates.com/metstat/result/xml_1.0"> 
- <xsl:output method="text"/>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:isa="http://www.isa-tools.org/"
+    exclude-result-prefixes="isa" xpath-default-namespace="http://www.biocrates.com/metstat/result/xml_1.0"> 
+ 
+    <xsl:import href="../sra/isa-functions.xsl"/> 
+   
+    <xsl:output method="text" encoding="UTF-8"/>
+    <xsl:strip-space elements="*"/>
     
     <!-- declaring all keys for lookups -->
     <xsl:key name="metabolitelookupid"  match="metabolite"  use="@identifier"/>
@@ -48,7 +55,6 @@ DOI:
     <xsl:key name="measure_by_metabolite" match="measure" use="@metabolite"/>   
     <xsl:key name="plateInfo" match="plate" use="@plateBarcode"/>   
     <xsl:key name="run_polarity" match="injection" use="@polarity"/>   
-    
    
     <xsl:key name="injection" match="injection" use="@polarity"/>
     
@@ -71,11 +77,7 @@ DOI:
     <xsl:key name="injection-measures" match="measure" use="@metabolite"/>
     <xsl:variable name="injection-measures" select="/data/plate/well/injection/measure[generate-id()=generate-id(key('injection-measures', @metabolite)[1])]/@metabolite"/>
 
-
-
-
     <!--<xsl:key name="polarity_by_plate" match="injection/@polarity" use="concat(@plateBarcode,@usedOP)"/>-->
-
 
     <xsl:key name="run-metabolites" match="measure" use="@metabolite"/>
     <xsl:key name="usedOPlist" match="plate" use="@usedOP"/>
@@ -87,9 +89,6 @@ DOI:
     <!-- $max is used for padding empty cell in the s_study.txt as some 'sample' have no such attributes -->
     <xsl:variable name="max" select="max(data/plate/well/sample/count(sampleInfoExport))" as="xs:integer"/> 
    
-
-    
-    
 
 
     
@@ -106,17 +105,17 @@ DOI:
 
 <!--BEGIN a block of commented lines to record some provenance information -->
 <!-- this information may be used by Metabolights -->   
-<xsl:text>#BIOCRATES software version: </xsl:text>  <xsl:value-of select="@swVersion"/>
+<xsl:text>"#BIOCRATES software version:"&#9;</xsl:text>  <xsl:value-of select="isa:quotes(@swVersion)"/>
 <xsl:text>
 </xsl:text>
-<xsl:text>#BIOCRATES document filename: </xsl:text>
-    <xsl:value-of select="base-uri()"/>
+<xsl:text>"#BIOCRATES document filename:"&#9;</xsl:text>
+    <xsl:value-of select="isa:quotes(base-uri())"/>
 <xsl:text>
 </xsl:text>
-<xsl:text>#BIOCRATES export date: </xsl:text>  <xsl:value-of select="substring-before(@dateExport,'T')"/>
+<xsl:text>"#BIOCRATES export date:"&#9;</xsl:text>  <xsl:value-of select="isa:quotes(substring-before(@dateExport,'T'))"/>
 <xsl:text>
 </xsl:text>
-<xsl:text>#ISATab transformation by: Isatools-Biocrates2ISATab.xsl </xsl:text>
+<xsl:text>"#ISATab transformation by: Isatools-Biocrates2ISATab.xsl"</xsl:text>
 <!-- END of the comment block -->
 
 
@@ -135,300 +134,256 @@ DOI:
 
 <xsl:text>
 </xsl:text>
-<xsl:text>ONTOLOGY SOURCE REFERENCE</xsl:text>
+<xsl:text>"ONTOLOGY SOURCE REFERENCE"</xsl:text>
 <xsl:text>
 </xsl:text>
 
-<xsl:text>Term Source Name&#9;OBI&#9;PSI-MS</xsl:text> 
+<xsl:text>"Term Source Name"&#9;"OBI"&#9;"PSI-MS"</xsl:text> 
 <xsl:text></xsl:text>
 <xsl:text>
 </xsl:text>
 
-<xsl:text>Term Source File&#9;http://obi-ontology.org&#9;http://psi-ms.sf.net</xsl:text>
+<xsl:text>"Term Source File"&#9;"http://obi-ontology.org"&#9;"http://psi-ms.sf.net"</xsl:text>
 <xsl:text></xsl:text>
 <xsl:text>
 </xsl:text>
 
-<xsl:text>Term Source Version&#9;1&#9;1</xsl:text>
+<xsl:text>"Term Source Version"&#9;"1"&#9;"1"</xsl:text>
 <xsl:text></xsl:text>
 <xsl:text>
 </xsl:text>
-<xsl:text>Term Source Description&#9;The Ontology for Biomedical Investigation&#9;PSI Mass Spectrometry</xsl:text>
+<xsl:text>"Term Source Description"&#9;"The Ontology for Biomedical Investigation"&#9;"PSI Mass Spectrometry"</xsl:text>
 <xsl:text></xsl:text>
 
 <xsl:text>
-INVESTIGATION
-Investigation Identifier
-Investigation Title
-Investigation Description
-Investigation Submission Date
-Investigation Public Release Date
-INVESTIGATION PUBLICATIONS
-Investigation PubMed ID
-Investigation Publication DOI
-Investigation Publication Author List
-Investigation Publication Title
-Investigation Publication Status
-Investigation Publication Status Term Accession Number
-Investigation Publication Status Term Source REF
-INVESTIGATION CONTACTS
-Investigation Person Last Name
-Investigation Person First Name
-Investigation Person Mid Initials
-Investigation Person Email
-Investigation Person Phone
-Investigation Person Fax
-Investigation Person Address
-Investigation Person Affiliation
-Investigation Person Roles
-Investigation Person Roles Term Accession Number
-Investigation Person Roles Term Source REF
+"INVESTIGATION"
+"Investigation Identifier"
+"Investigation Title"
+"Investigation Description"
+"Investigation Submission Date"
+"Investigation Public Release Date"
+"INVESTIGATION PUBLICATIONS"
+"Investigation PubMed ID"
+"Investigation Publication DOI"
+"Investigation Publication Author List"
+"Investigation Publication Title"
+"Investigation Publication Status"
+"Investigation Publication Status Term Accession Number"
+"Investigation Publication Status Term Source REF"
+"INVESTIGATION CONTACTS"
+"Investigation Person Last Name"
+"Investigation Person First Name"
+"Investigation Person Mid Initials"
+"Investigation Person Email"
+"Investigation Person Phone"
+"Investigation Person Fax"
+"Investigation Person Address"
+"Investigation Person Affiliation"
+"Investigation Person Roles"
+"Investigation Person Roles Term Accession Number"
+"Investigation Person Roles Term Source REF"
 
-STUDY
-Study Identifier</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-   <xsl:value-of select="/data/project[1]/@identifier"/>
+"STUDY"
+"Study Identifier"</xsl:text>
+<xsl:value-of select="concat('&#9;',isa:quotes(/data/project[1]/@identifier))"/>
 <xsl:text>
-Study Title</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="/data/project[1]/@ProjectName"/>    
+"Study Title"</xsl:text>
+<xsl:value-of select="concat('&#9;',isa:quotes(/data/project[1]/@ProjectName))"/>    
 <xsl:text>
-Study Submission Date
-Study Public Release Date
-Study Description
-Study File Name</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-
-        <xsl:text>s_study_biocrates.txt</xsl:text>
+"Study Submission Date"
+"Study Public Release Date"
+"Study Description"
+"Study File Name"</xsl:text>
+<xsl:text>&#9;"s_study_biocrates.txt"</xsl:text>
     
 <xsl:text>
-STUDY DESIGN DESCRIPTORS
-Study Design Type
-Study Design Type Term Accession Number
-Study Design Type Term Source REF
-STUDY PUBLICATIONS
-Study PubMed ID
-Study Publication DOI
-Study Publication Author List
-Study Publication Title
-Study Publication Status
-Study Publication Status Term Accession Number
-Study Publication Status Term Source REF
-STUDY FACTORS
-Study Factor Name
-Study Factor Type
-Study Factor Type Term Accession Number
-Study Factor Type Term Source REF
-STUDY ASSAYS
-Study Assay Measurement Type</xsl:text>
+"STUDY DESIGN DESCRIPTORS"
+"Study Design Type"
+"Study Design Type Term Accession Number"
+"Study Design Type Term Source REF"
+"STUDY PUBLICATIONS"
+"Study PubMed ID"
+"Study Publication DOI"
+"Study Publication Author List"
+"Study Publication Title"
+"Study Publication Status"
+"Study Publication Status Term Accession Number"
+"Study Publication Status Term Source REF"
+"STUDY FACTORS"
+"Study Factor Name"
+"Study Factor Type"
+"Study Factor Type Term Accession Number"
+"Study Factor Type Term Source REF"
+"STUDY ASSAYS"
+"Study Assay Measurement Type"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">
-        
-        <xsl:text>metabolite profiling</xsl:text>
+    <xsl:if test="count($positiveModeCount) > 0">      
+        <xsl:text>"metabolite profiling"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>metabolite profiling</xsl:text>
+        <xsl:text>"metabolite profiling"</xsl:text>
         <xsl:text>&#9;</xsl:text>
-    </xsl:if>  
-    
+    </xsl:if>     
 <xsl:text>
-Study Assay Measurement Type Term Source REF</xsl:text>
+"Study Assay Measurement Type Term Source REF"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">
-        
-        <xsl:text>OBI</xsl:text>
+    <xsl:if test="count($positiveModeCount) > 0">     
+        <xsl:text>"OBI"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>OBI</xsl:text>
+        <xsl:text>"OBI"</xsl:text>
         <xsl:text>&#9;</xsl:text>
-    </xsl:if>  
-    
+    </xsl:if>     
 <xsl:text>
-Study Assay Measurement Type Term Accession Number</xsl:text>
+"Study Assay Measurement Type Term Accession Number"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">
-        
-        <xsl:text>http://purl.obolibrary.org/obo/OBI_0000366</xsl:text>
+    <xsl:if test="count($positiveModeCount) > 0">     
+        <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000366"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>http://purl.obolibrary.org/obo/OBI_0000366</xsl:text>
+        <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000366"</xsl:text>
         <xsl:text>&#9;</xsl:text>
-    </xsl:if>  
-    
+    </xsl:if>     
 <xsl:text>
-Study Assay Technology Type</xsl:text>
+"Study Assay Technology Type"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">
-        
-        <xsl:text>mass spectrometry</xsl:text>
+    <xsl:if test="count($positiveModeCount) > 0">     
+        <xsl:text>"mass spectrometry"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>mass spectrometry</xsl:text>
+        <xsl:text>"mass spectrometry"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if> 
 <xsl:text>
-Study Assay Technology Type Term Source REF</xsl:text>
+"Study Assay Technology Type Term Source REF"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">
-        
-        <xsl:text>OBI</xsl:text>
+    <xsl:if test="count($positiveModeCount) > 0">      
+        <xsl:text>"OBI"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>OBI</xsl:text>
+        <xsl:text>"OBI"</xsl:text>
         <xsl:text>&#9;</xsl:text>
-    </xsl:if>  
-    
+    </xsl:if>    
 <xsl:text>
-Study Assay Technology Type Term Accession Number</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">
-        
-        <xsl:text>http://purl.obolibrary.org/obo/OBI_0000470</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>   
-    <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>http://purl.obolibrary.org/obo/OBI_0000470</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>  
-    
-<xsl:text>
-Study Assay Technology Platform</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">
-        
-        <xsl:text>Biocrates</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>   
-    <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>Biocrates</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>  
-    
-<xsl:text>
-Study Assay File Name</xsl:text>
+"Study Assay Technology Type Term Accession Number"</xsl:text>
     <xsl:text>&#9;</xsl:text>
     <xsl:if test="count($positiveModeCount) > 0">       
-        <xsl:text>a_biocrates_assay_positive_mode.txt</xsl:text>
+        <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000470"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>a_biocrates_assay_negative_mode.txt</xsl:text>
+        <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000470"</xsl:text>
+        <xsl:text>&#9;</xsl:text>
+    </xsl:if>      
+<xsl:text>
+"Study Assay Technology Platform"</xsl:text>
+    <xsl:text>&#9;</xsl:text>
+    <xsl:if test="count($positiveModeCount) > 0">        
+        <xsl:text>"Biocrates"</xsl:text>
+        <xsl:text>&#9;</xsl:text>
+    </xsl:if>   
+    <xsl:if test="count($negativeModeCount) > 0">
+        <xsl:text>"Biocrates"</xsl:text>
+        <xsl:text>&#9;</xsl:text>
+    </xsl:if>      
+<xsl:text>
+"Study Assay File Name"</xsl:text>
+    <xsl:text>&#9;</xsl:text>
+    <xsl:if test="count($positiveModeCount) > 0">       
+        <xsl:text>"a_biocrates_assay_positive_mode.txt"</xsl:text>
+        <xsl:text>&#9;</xsl:text>
+    </xsl:if>   
+    <xsl:if test="count($negativeModeCount) > 0">
+        <xsl:text>"a_biocrates_assay_negative_mode.txt"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if> 
 <xsl:text>
 </xsl:text>
-<xsl:text>STUDY PROTOCOLS
-Study Protocol Name</xsl:text>
+<xsl:text>"STUDY PROTOCOLS"
+"Study Protocol Name"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <xsl:text>sample collection&#9;</xsl:text>
-    <xsl:text>extraction/derivatization&#9;</xsl:text>
+    <xsl:text>"sample collection"&#9;</xsl:text>
+    <xsl:text>"extraction/derivatization"&#9;</xsl:text>
         
         <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
-            <xsl:value-of select="."/>  <xsl:text>&#9;</xsl:text>      
+            <xsl:value-of select="isa:quotes(.)"/>  <xsl:text>&#9;</xsl:text>      
         </xsl:for-each> 
-   <!-- <xsl:for-each select="plate"> 
-        <xsl:value-of select="@usedOP"/>
-     <xsl:text>&#9;</xsl:text>
-    </xsl:for-each> -->
+
     <xsl:if test="count($positiveModeCount) > 0">       
-        <xsl:text>MS acquisition in positive mode</xsl:text>
+        <xsl:text>"MS acquisition in positive mode"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>MS acquisition in negative mode</xsl:text>
+        <xsl:text>"MS acquisition in negative mode"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if> 
-    <xsl:text>biocrates analysis&#9;</xsl:text>
-Study Protocol Type<xsl:text>&#9;</xsl:text>
-    <xsl:text>sample collection&#9;</xsl:text>
-    <xsl:text>material separation&#9;</xsl:text>
+    <xsl:text>"biocrates analysis"&#9;</xsl:text>
+"Study Protocol Type"<xsl:text>&#9;</xsl:text>
+    <xsl:text>"sample collection"&#9;</xsl:text>
+    <xsl:text>"material separation"&#9;</xsl:text>
         <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
-            <xsl:text>sample preparation&#9;</xsl:text>        
+            <xsl:text>"sample preparation"&#9;</xsl:text>        
         </xsl:for-each>
-       <!-- <xsl:for-each select="plate"> 
-            <xsl:text>sample preparation&#9;</xsl:text>
-        </xsl:for-each>-->
     
     <xsl:if test="count($positiveModeCount) > 0">       
-        <xsl:text>data acquisition</xsl:text>
+        <xsl:text>"data acquisition"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>data acquisition</xsl:text>
+        <xsl:text>"data acquisition"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if> 
-    <xsl:text>data transformation&#9;</xsl:text>
+    <xsl:text>"data transformation"&#9;</xsl:text>
 <xsl:text>    
-Study Protocol Type Term Accession Number
-Study Protocol Type Term Source REF
-Study Protocol Description
-Study Protocol URI
-Study Protocol Version
-Study Protocol Parameters Name
-Study Protocol Parameters Name Term Accession Number
-Study Protocol Parameters Name Term Source REF
-Study Protocol Components Name
-Study Protocol Components Type
-Study Protocol Components Type Term Accession Number
-Study Protocol Components Type Term Source REF
-STUDY CONTACTS   
-Study Person Last Name</xsl:text> 
-<xsl:for-each select="contact">
+"Study Protocol Type Term Accession Number"
+"Study Protocol Type Term Source REF"
+"Study Protocol Description"
+"Study Protocol URI"
+"Study Protocol Version"
+"Study Protocol Parameters Name"
+"Study Protocol Parameters Name Term Accession Number"
+"Study Protocol Parameters Name Term Source REF"
+"Study Protocol Components Name"
+"Study Protocol Components Type"
+"Study Protocol Components Type Term Accession Number"
+"Study Protocol Components Type Term Source REF"
+"STUDY CONTACTS"  
+"Study Person Last Name"</xsl:text> 
+        <xsl:apply-templates select="contact" mode="lastname"/>
+<!--<xsl:for-each select="contact">
     <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="substring-before(@ContactPerson,' ')"/>
-</xsl:for-each>
+    <xsl:value-of select="isa:quotes(substring-before(@ContactPerson,' '))"/>
+</xsl:for-each>-->
         
 <xsl:text>
-Study Person First Name</xsl:text> 
-        <xsl:for-each select="contact">
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="substring-after(@ContactPerson,' ')"/>
-        </xsl:for-each>
+"Study Person First Name"</xsl:text>
+        <xsl:apply-templates select="contact" mode="firstname"/>
  <xsl:text>       
-Study Person Mid Initials
-Study Person Email</xsl:text> 
-        <xsl:for-each select="contact">
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="@Email"/>
-        </xsl:for-each>
+"Study Person Mid Initials"
+"Study Person Email"</xsl:text> 
+        <xsl:apply-templates select="contact" mode="email"/>
  <xsl:text> 
-Study Person Phone</xsl:text> 
-        <xsl:for-each select="contact">
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="@Phone"/>
-        </xsl:for-each>
+"Study Person Phone"</xsl:text> 
+        <xsl:apply-templates select="contact" mode="phone"/>
  <xsl:text> 
-Study Person Fax
-Study Person Address</xsl:text> 
-        <xsl:for-each select="contact">
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="@Street"/>
-            <xsl:text>, </xsl:text>
-            <xsl:value-of select="@City"/>
-            <xsl:text>, </xsl:text>
-            <xsl:value-of select="@ZipCode"/>
-            <xsl:text>, </xsl:text>
-            <xsl:value-of select="@Country"/>
-        </xsl:for-each>
+"Study Person Fax"
+"Study Person Address"</xsl:text> 
+    <xsl:apply-templates select="contact" mode="address"/>
  <xsl:text> 
-Study Person Affiliation</xsl:text> 
-        <xsl:for-each select="contact">
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="@CompanyName"/>
-        </xsl:for-each>
+"Study Person Affiliation"</xsl:text> 
+        <xsl:apply-templates select="contact" mode="affiliation"/>        
  <xsl:text> 
-Study Person Roles
-Study Person Roles Term Accession Number
-Study Person Roles Term Source REF
+"Study Person Roles"
+"Study Person Roles Term Accession Number"
+"Study Person Roles Term Source REF"
 </xsl:text>
 
-    
-    </xsl:result-document>
+</xsl:result-document>
     
     <!-- template invocation to create ISA s_study table -->
     <xsl:call-template name="study"></xsl:call-template>
@@ -448,8 +403,32 @@ Study Person Roles Term Source REF
     <xsl:call-template name="metabolite_desc_nega"/>  --> 
 
 </xsl:template>
- 
 
+<xsl:template  match="contact" mode="lastname">
+    <xsl:value-of select="if (@ContactPerson != '') then concat('&#9;',isa:quotes(substring-after(@ContactPerson,' '))) else (concat('&#9;&quot;','&quot;'))"/>
+</xsl:template>
+    
+<xsl:template  match="contact" mode="firstname">
+    <xsl:value-of select="if (@ContactPerson != '') then concat('&#9;',isa:quotes(substring-before(@ContactPerson,' '))) else (concat('&#9;&quot;','&quot;'))"/>
+</xsl:template>
+
+<xsl:template  match="contact" mode="affiliation">
+    <xsl:value-of select="if (@CompanyName != '') then concat('&#9;',isa:quotes(@CompanyName)) else (concat('&#9;&quot;','&quot;'))"/>
+</xsl:template>
+    
+<xsl:template match="contact" mode="address" >
+    <xsl:value-of select="concat('&#9;',isa:quotes(concat(@Street,', ',@City,', ',@ZipCode,', ',@Country)))"/>  
+</xsl:template>
+
+<xsl:template match="contact" mode="phone" >
+    <xsl:value-of select="if (@Phone != '') then concat('&#9;',isa:quotes(@Phone)) else (concat('&#9;&quot;','&quot;'))"/>  
+</xsl:template>
+    
+<xsl:template match="contact" mode="email" >
+    <xsl:value-of select="if (@Email != '') then concat('&#9;',isa:quotes(@Email)) else (concat('&#9;&quot;','&quot;'))"/>  
+</xsl:template> 
+    
+    
 
 <!-- ****************************************************** -->
 <xsl:template match="metabolite" name="metabolite_desc_posi">
@@ -1036,60 +1015,30 @@ Study Person Roles Term Source REF
     <xsl:apply-templates select="injection"/>     
 </xsl:template>
 
-<!--
-<xsl:template match="injection" name="injection">
-    <xsl:text>
-    </xsl:text> 
-    <xsl:value-of select="@injectionTime"/>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="@injectionNumber"/>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="@runNumber"/>
-    <xsl:text>&#9;</xsl:text>   
-     <xsl:apply-templates select="measure"/> 
-    <xsl:call-template name="measure"/>  
-</xsl:template>
--->
-
-<!--
-        <xsl:template match="plate" name="file_by_polarity_by_plate" priority="1">
-    <xsl:for-each select="plate/well/injection">
-        <xsl:variable name="usedOP" select="ancestor::plate/@usedOP"/>
-        <xsl:variable name='plateBarcode' select="ancestor::plate/@plateBarcode"/>
-        <xsl:result-document href="concat('output/',$usedOP,'-',$plateBarcode',{@polarity}-maf.txt)"> 
-            <xsl:for-each select="/data/plate/well/injection/measure[generate-id(.)=generate-id(key('run-metabolites', @metabolite)[1])]/@metabolite">              
-                <xsl:text>metabolite:</xsl:text><xsl:value-of select="."/>        
-            </xsl:for-each>           
-        </xsl:result-document>
-    </xsl:for-each>
-</xsl:template>
-    -->
-    
 
 
 <!-- ****************************************************** -->
 <!--     template to create ISA s_study table               -->
-<xsl:template match="sample"  name="study" priority="1">
+    <xsl:template name="study" match="sample"  priority="1">
     
-
     <xsl:variable name="studyfile" select="concat('output/',data,'s_study_biocrates.txt')[normalize-space()]"/>
-   
     <xsl:value-of select="$studyfile[normalize-space()]" /> 
     <xsl:result-document href="{$studyfile}">
         <xsl:copy-of select=".[normalize-space()]"></xsl:copy-of>
     
-    <xsl:text>Source Name</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Characteristics[barcode identifier]</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Characteristics[material role]</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Characteristics[chemical compound]</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Characteristics[Organism]</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Term Source REF</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Term Accession Number</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Characteristics[Organism part]</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Term Source REF</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Term Accession Number</xsl:text><xsl:text>&#9;</xsl:text>     <xsl:for-each select="/data/sample/sampleInfoExport[generate-id(.)=generate-id(key('sampleinfo-features', @feature)[1])]/@feature">    
+    <xsl:text>"Source Name"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Characteristics[barcode identifier]"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Characteristics[material role]"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Characteristics[chemical compound]"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Characteristics[Organism]"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Term Source REF"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Term Accession Number"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Characteristics[Organism part]"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Term Source REF"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Term Accession Number"</xsl:text><xsl:text>&#9;</xsl:text>
+        <xsl:for-each select="/data/sample/sampleInfoExport[generate-id(.)=generate-id(key('sampleinfo-features', @feature)[1])]/@feature">    
             <!-- <xsl:sort/> -->     
-            <xsl:text>Characteristics[</xsl:text>
+            <xsl:text>"Characteristics["</xsl:text>
             <xsl:choose>
                 <xsl:when test="contains(.,'(') or contains(.,')')">
                     <xsl:variable name="this" select="translate(.,'(','-')"/>
@@ -1099,243 +1048,170 @@ Study Person Roles Term Source REF
                 <xsl:value-of select="."/>
                     </xsl:otherwise>   
             </xsl:choose>
-            <xsl:text>]&#9;</xsl:text>  
-     </xsl:for-each>        
-        
-    <xsl:text>Protocol REF</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Date</xsl:text><xsl:text>&#9;</xsl:text> 
+            <xsl:text>]"&#9;</xsl:text>  
+     </xsl:for-each>              
+    <xsl:text>"Protocol REF"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Date"</xsl:text><xsl:text>&#9;</xsl:text> 
  <!--   <xsl:text>Parameter Value[plate info]</xsl:text><xsl:text>&#9;</xsl:text> 
     <xsl:text>Parameter Value[well position]</xsl:text><xsl:text>&#9;</xsl:text>  -->
-    <xsl:text>Sample Name</xsl:text><xsl:text>&#9;</xsl:text>
-    <xsl:text>Material Type</xsl:text><xsl:text>&#9;</xsl:text>
-
-<xsl:apply-templates select="sample" mode="sample_record"/>
+    <xsl:text>"Sample Name"</xsl:text><xsl:text>&#9;</xsl:text>
+    <xsl:text>"Material Type"</xsl:text><xsl:text>&#9;</xsl:text>
         
-
-
+    <xsl:apply-templates select="sample" mode="sample_record"/>
+        
     </xsl:result-document>
- 
  </xsl:template>
     
-<xsl:template match="sample" mode="sample_record">
-    <xsl:variable name="biocrates2isa-cv-mapping" select="document('ISA-Team-Biocrates2ISA-CV-mapping.xml')"/>
+<xsl:template match="sample" mode="sample_record">  
 <xsl:text>
 </xsl:text>
          <xsl:choose>
-             <xsl:when test="./@sampleType !='SAMPLE'">
-                 <xsl:choose>
-                     <xsl:when test="./@SampleIdentifier !=''">
-                         <xsl:choose>
-                             <xsl:when test="contains(./@SampleIdentifier,':') or contains(./@SampleIdentifier,'+')">
-                                 <xsl:variable name="one" select="translate(./@SampleIdentifier,':','-')"/>
-                                 <xsl:value-of select="translate($one,'+',' and ')"/> 
-                             </xsl:when>
-                          <!--   <xsl:when test="contains(./@SampleIdentifier,'+')">
-                                 <xsl:value-of select="translate(./@SampleIdentifier,'+',' and ')"/>  
-                             </xsl:when> -->
-                             <xsl:otherwise>
-                                 <xsl:value-of select="./@SampleIdentifier"/>
-                              </xsl:otherwise>
-                         </xsl:choose>
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="./@sampleType"/>
-                     </xsl:otherwise>
-                 </xsl:choose>
-                 
-                 <xsl:text>&#9;</xsl:text> 
-                 
-                 <xsl:choose>
-                     <xsl:when test="./@barcode !=''">
-                         <xsl:value-of select="./@barcode"/>
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:text>none reported</xsl:text> 
-                     </xsl:otherwise>
-                 </xsl:choose>
-                 
+             <xsl:when test="@sampleType !='SAMPLE'">
+                 <xsl:call-template name="sample_material_name"></xsl:call-template>                
+                 <xsl:text>&#9;</xsl:text>               
+                 <xsl:value-of select="if (@barcode != '') then isa:quotes(@barcode) else concat('&#9;&quot;','none reported','&quot;&#9;')"/>
                  <xsl:text>&#9;</xsl:text>
-                 
-                 <xsl:choose>
-                     <xsl:when test="@sampleType='BLANK'">
-                         <xsl:text>negative control</xsl:text>
-                     </xsl:when>
-                     <xsl:when test="contains(@sampleType,'QC_')">
-                         <xsl:text>positive control</xsl:text>
-                     </xsl:when>
-                     <xsl:when test="contains(@sampleType,'ZERO_')">
-                         <xsl:text>negative control</xsl:text>
-                     </xsl:when>
-                     <xsl:when test="contains(@sampleType,'STANDARD_')">
-                         <xsl:text>positive control</xsl:text>
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:text></xsl:text>
-                     </xsl:otherwise>
-                 </xsl:choose>
+                 <xsl:call-template name="sampleType"></xsl:call-template>                 
                  <xsl:text>&#9;</xsl:text>
-                 <xsl:value-of select="@Material"/>
+                 <xsl:value-of select="isa:quotes(@Material)"/>
                  <xsl:text>&#9;</xsl:text>
-                 <xsl:text>not applicable</xsl:text>
+                 <xsl:text>"not applicable"</xsl:text>
                  <xsl:text>&#9;</xsl:text>
                  <xsl:text>&#9;</xsl:text>
                  <xsl:text>&#9;</xsl:text>
-                 <xsl:text>not applicable</xsl:text>
+                 <xsl:text>"not applicable"</xsl:text>
                  <xsl:text>&#9;&#9;&#9;</xsl:text>
              </xsl:when>
              <xsl:otherwise>
-                 <xsl:choose>
-                     <xsl:when test="@SampleIdentifier !=''">
-                         <xsl:choose>
-                             <xsl:when test="@SampleIdentifier !=''">
-                                 <xsl:choose>
-                                     <xsl:when test="contains(@SampleIdentifier,':') or contains(@SampleIdentifier,'+')">
-                                         <xsl:variable name="one" select="translate(@SampleIdentifier,':','-')"/>
-                                         <xsl:value-of select="translate($one,'+',' and ')"/> 
-                                     </xsl:when>
-                                     <!--   <xsl:when test="contains(./@SampleIdentifier,'+')">
-                                 <xsl:value-of select="translate(./@SampleIdentifier,'+',' and ')"/>  
-                             </xsl:when> -->
-                                     <xsl:otherwise>
-                                         <xsl:value-of select="@SampleIdentifier"/>
-                                     </xsl:otherwise>
-                                 </xsl:choose>
-                             </xsl:when>
-                             <xsl:otherwise>
-                                 <xsl:value-of select="@sampleType"/>
-                             </xsl:otherwise>
-                         </xsl:choose>
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="@sampleType"/>
-                         <xsl:text>none reported</xsl:text>                   
-                     </xsl:otherwise>
-                 </xsl:choose>
-                 <xsl:text>&#9;</xsl:text> 
-                 <xsl:choose>
-                     <xsl:when test="@barcode !=''">
-                         <xsl:value-of select="@barcode"/>
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:text>none reported</xsl:text> 
-                     </xsl:otherwise>
-                 </xsl:choose>
-                 <xsl:text>&#9;</xsl:text>   
-                 <xsl:text>specimen</xsl:text>
+                 <xsl:call-template name="sample_material_name"></xsl:call-template>        
                  <xsl:text>&#9;</xsl:text>
-                 <xsl:text>not applicable</xsl:text>
+                 <xsl:value-of select="if (@barcode != '') then isa:quotes(@barcode) else concat('&#9;&quot;','none reported','&quot;&#9;')"/>
+                 <xsl:text>&#9;</xsl:text>   
+                 <xsl:text>"specimen"</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
+                 <xsl:text>"not applicable"</xsl:text>
 
-                 <xsl:variable name="this" select="@Species"></xsl:variable>
-               <!--  <xsl:value-of select="$this"/>-->
-                 
-                 <xsl:value-of select="if ($biocrates2isa-cv-mapping/mapping/replace-species/element[@biocrates_label=$this]) then concat('&#9;&quot;', $biocrates2isa-cv-mapping/mapping/replace-species/element[@biocrates_label=$this]/@ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>
+                <!-- <xsl:variable name="biocrates2isa-cv-mapping" select="document('ISA-Team-Biocrates2ISA-CV-mapping.xml')"/>
+                 <xsl:variable name="species_var" select="@Species"></xsl:variable>
+                 <xsl:text>&#9;</xsl:text><xsl:value-of select="$species_var"/>
+                 <xsl:value-of select="$biocrates2isa-cv-mapping"/>
+                 <xsl:for-each select="$biocrates2isa-cv-mapping/mapping/replacement/element">
+                     
+                     <xsl:text>&#9;§§§</xsl:text> <xsl:value-of select="$species_var"/>
+                     <xsl:value-of select="@biocrates_label"/>
+                     <xsl:value-of select="if (./element/@biocrates_label=$species_var) then concat('&#9;&quot;', current()/@biocrates_label, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>
+                <!-\-   <xsl:value-of select="if (@biocrates_label=$this) then concat('&#9;&quot;', @ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>-\->
+                 </xsl:for-each>-->
+      
                  <xsl:text>&#9;</xsl:text> 
-                 <!--<xsl:choose>
+                 <xsl:choose>
                      <xsl:when test="@Species !=''">
                          <xsl:choose>
                              <xsl:when test="lower-case(@Species)='mouse'">
-                                 <xsl:text>Mus musculus</xsl:text>
-                                 <xsl:text>&#9;NCBITax&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_10090</xsl:text>
+                                 <xsl:text>"Mus musculus"</xsl:text>
+                                 <xsl:text>&#9;"NCBITax"&#9;</xsl:text>
+                                 <xsl:text>"http://purl.obolibrary.org/obo/NCBITaxon_10090"</xsl:text>
                              </xsl:when>
                              <xsl:when test="lower-case(@Species)='rat'">
-                                 <xsl:text>Rattus norvegicus</xsl:text>
-                                 <xsl:text>&#9;NCBITax&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_10116</xsl:text>
+                                 <xsl:text>"Rattus norvegicus"</xsl:text>
+                                 <xsl:text>&#9;"NCBITax"&#9;</xsl:text>
+                                 <xsl:text>"http://purl.obolibrary.org/obo/NCBITaxon_10116"</xsl:text>
                              </xsl:when>                             
                              <xsl:when test="@Species='human'">
-                                 <xsl:text>Homo sapiens</xsl:text>
-                                 <xsl:text>&#9;NCBITax&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_9606</xsl:text>
+                                 <xsl:text>"Homo sapiens"</xsl:text>
+                                 <xsl:text>&#9;"NCBITax"&#9;</xsl:text>
+                                 <xsl:text>"http://purl.obolibrary.org/obo/NCBITaxon_9606"</xsl:text>
                              </xsl:when>
                              <xsl:otherwise>
-                                 <xsl:value-of select="@Species"/>
-                                 <xsl:text>&#9;</xsl:text>
-                                 <xsl:text>&#9;</xsl:text>
+                                 <xsl:value-of select="isa:quotes(@Species)"/>
+                                 <xsl:text>""&#9;</xsl:text>
+                                 <xsl:text>""&#9;</xsl:text>
                              </xsl:otherwise>
                          </xsl:choose>
                      </xsl:when>
                      <xsl:otherwise>
-                         <xsl:text>none reported</xsl:text> 
+                         <xsl:text>"none reported"</xsl:text> 
                      </xsl:otherwise>
-                 </xsl:choose>-->
+                 </xsl:choose>
  
                  <xsl:text>&#9;</xsl:text>
                 
                  <xsl:choose>
-                     <xsl:when test="./@Material">
+                     <xsl:when test="@Material">
                          <xsl:choose>
-                             <xsl:when test="./@Material = 'brain tissue'">
+                             <xsl:when test="@Material = 'brain tissue'">
                                  <xsl:text>brain</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0000955</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'breast tissue'">
+                             <xsl:when test="@Material = 'breast tissue'">
                                  <xsl:text>mammary gland</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001911</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'fat'">
+                             <xsl:when test="@Material = 'fat'">
                                  <xsl:text>adipose tissue</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001013</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'heart tissue'">
+                             <xsl:when test="@Material = 'heart tissue'">
                                  <xsl:text>heart</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0000948</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'kidney tissue'">
+                             <xsl:when test="@Material = 'kidney tissue'">
                                  <xsl:text>kidney</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002113</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'liver tissue'">
+                             <xsl:when test="@Material = 'liver tissue'">
                                  <xsl:text>liver</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002107</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'lung tissue'">
+                             <xsl:when test="@Material = 'lung tissue'">
                                  <xsl:text>lung</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002048</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'muscle tissue'">
-                                 <xsl:value-of select="./@Material"/>
+                             <xsl:when test="@Material = 'muscle tissue'">
+                                 <xsl:value-of select="@Material"/>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002385</xsl:text>
                              </xsl:when>                            
-                             <xsl:when test="./@Material = 'plasma'">
+                             <xsl:when test="@Material = 'plasma'">
                                  <xsl:text>blood plasma</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001969</xsl:text>
                              </xsl:when> 
-                             <xsl:when test="./@Material = 'prostate tissue'">
+                             <xsl:when test="@Material = 'prostate tissue'">
                                  <xsl:text>prostate gland</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002367</xsl:text>
                              </xsl:when>
-                             <xsl:when test="./@Material = 'spleen tissue'">
+                             <xsl:when test="@Material = 'spleen tissue'">
                                  <xsl:text>spleen</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002106</xsl:text>
                              </xsl:when> 
-                             <xsl:when test="./@Material = 'serum'">
-                                 <xsl:value-of select="./@Material"/>
+                             <xsl:when test="@Material = 'serum'">
+                                 <xsl:value-of select="@Material"/>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001977</xsl:text>
                              </xsl:when> 
-                             <xsl:when test="./@Material = 'sweat'">
+                             <xsl:when test="@Material = 'sweat'">
                                  <xsl:text>sweat</xsl:text>
                                  <xsl:text>&#9;UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001089</xsl:text>
                              </xsl:when> 
-                             <xsl:when test="./@Material = 'urine'">
+                             <xsl:when test="@Material = 'urine'">
                                  <xsl:text>urine</xsl:text>
                                  <xsl:text>UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001088</xsl:text>
                              </xsl:when>                             
-                             <xsl:when test="./@Material = 'bile'">
+                             <xsl:when test="@Material = 'bile'">
                                  <xsl:text>bile</xsl:text>
                                  <xsl:text>UBERON&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001970</xsl:text>
@@ -1344,7 +1220,7 @@ Study Person Roles Term Source REF
                        
                      </xsl:when>
                      <xsl:otherwise>
-                         <xsl:value-of select="./@sampleType"/>
+                         <xsl:value-of select="isa:quotes(@sampleType)"/>
                      </xsl:otherwise>
                  </xsl:choose>
                  
@@ -1356,67 +1232,67 @@ Study Person Roles Term Source REF
         <!--Note: muenchian transform -->
         <xsl:variable name="sampleinfoexport" select="key('feature-by-sample', @identifier)"/>
         <xsl:for-each select="$sampleinfo-features">              
-            <xsl:value-of select="$sampleinfoexport[@feature = current()]/@value"/><xsl:text>&#9;</xsl:text>
-        </xsl:for-each> 
-    
+            <xsl:value-of select="concat('&quot;', $sampleinfoexport[@feature = current()]/@value, ' &quot;')"/><xsl:text>&#9;</xsl:text>
+        </xsl:for-each>   
                   
-         <xsl:text>sample collection</xsl:text>
+         <xsl:text>"sample collection"</xsl:text>
+         <xsl:text>&#9;</xsl:text>    
+         <xsl:value-of select="if (@collectionDate != '') then isa:quotes(substring-before(@collectionDate,'T')) else concat('&#9;&quot;','&quot;&#9;')"/>
          <xsl:text>&#9;</xsl:text>
     
-        <xsl:apply-templates select="sample" mode="collection_date"/>
-        <xsl:choose>
-             <xsl:when test="@collectionDate !=''">
-                 <xsl:value-of select="substring-before(@collectionDate,'T')"/>
-             </xsl:when>
-             <xsl:otherwise>
-                 <xsl:text>none reported</xsl:text>
-             </xsl:otherwise>
-         </xsl:choose>
-
-         <xsl:text>&#9;</xsl:text>
-
-     <!--    <xsl:value-of select="/data/plate/@plateInfo"/>
-         <xsl:text>&#9;</xsl:text>
-         <xsl:value-of select="@wellPosition"/>
-         <xsl:text>&#9;</xsl:text> -->
-
-         <xsl:choose>
-             <xsl:when test="./@SampleIdentifier !=''">
-                 <xsl:choose>
-                     <xsl:when test="./@SampleIdentifier !=''">
-                         <xsl:choose>
-                             <xsl:when test="contains(./@SampleIdentifier,':') or contains(./@SampleIdentifier,'+')">
-                                 <xsl:variable name="one" select="translate(./@SampleIdentifier,':','-')"/>
-                                 <xsl:value-of select="translate($one,'+',' and ')"/> 
-                             </xsl:when>
-                             <!--   <xsl:when test="contains(./@SampleIdentifier,'+')">
-                                 <xsl:value-of select="translate(./@SampleIdentifier,'+',' and ')"/>  
-                             </xsl:when> -->
-                             <xsl:otherwise>
-                                 <xsl:value-of select="./@SampleIdentifier"/>
-                             </xsl:otherwise>
-                         </xsl:choose>
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="./@sampleType"/>
-                     </xsl:otherwise>
-                 </xsl:choose>
-             </xsl:when>
-             <xsl:otherwise>
-                 <xsl:value-of select="./@sampleType"/> 
-             </xsl:otherwise>
-         </xsl:choose>
+        <xsl:call-template name="sample_material_name"/>
     
         <xsl:text>&#9;</xsl:text>    
-        <xsl:value-of select="lower-case(./@sampleType)"/>
+        <xsl:value-of select="isa:quotes(lower-case(@sampleType))"/>
+</xsl:template>    
 
+<xsl:template name="sample_material_name" match="sample">
+    <xsl:choose>
+        <xsl:when test="@SampleIdentifier !=''">
+            <xsl:choose>
+                <xsl:when test="@SampleIdentifier !=''">
+                    <xsl:choose>
+                        <xsl:when test="contains(@SampleIdentifier,':') or contains(@SampleIdentifier,'+')">
+                            <xsl:variable name="one" select="translate(@SampleIdentifier,':','-')"/>
+                            <xsl:value-of select="isa:quotes(translate($one,'+',' and '))"/> 
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="isa:quotes(@SampleIdentifier)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="isa:quotes(@sampleType)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:value-of select="isa:quotes(@sampleType)"/> 
+        </xsl:otherwise>
+    </xsl:choose>    
+</xsl:template>
+    
+<xsl:template name="sampleType" match="sample">
+    <xsl:choose>
+        <xsl:when test="@sampleType='BLANK'">
+            <xsl:text>"negative control"</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains(@sampleType,'QC_')">
+            <xsl:text>"positive control"</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains(@sampleType,'ZERO_')">
+            <xsl:text>"negative control"</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains(@sampleType,'STANDARD_')">
+            <xsl:text>"positive control"</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:text>""</xsl:text>
+        </xsl:otherwise>
+    </xsl:choose>    
 </xsl:template>    
  
-<xsl:template match="sample" mode="collection_date">
-    <xsl:value-of select="@collectionDate"></xsl:value-of>
-</xsl:template> 
- 
-<xsl:template match="plate" name="assay-negativeMode" priority="1">
+<xsl:template name="assay-negativeMode" match="plate"  priority="1">
 
     <xsl:variable name="assaynegativefile" select="concat('output/',data,'a_biocrates_assay_negative_mode.txt')[normalize-space()]"></xsl:variable>
     <xsl:value-of select="$assaynegativefile[normalize-space()]" /> 
@@ -1452,237 +1328,16 @@ Study Person Roles Term Source REF
         <xsl:text>Derived Spectral Data File</xsl:text><xsl:text>&#9;</xsl:text>
 <xsl:text>
 </xsl:text>        
-        <!--<xsl:variable name="polarity" select='./injection/@polarity'></xsl:variable>-->
-           <xsl:for-each select="//well">
-          
-            <xsl:variable name="wellposition" select="@wellPosition"></xsl:variable>
-            <xsl:for-each select="child::injection">
-            <xsl:choose>    
-            <xsl:when test="contains(lower-case(@polarity), 'negative')">
-              
-            <xsl:choose>
-                <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
-                    <xsl:choose>                       
-                        <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                            <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                            <xsl:value-of select="translate($one,'+',' and ')"/> 
-                           <!-- <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/> -->
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>
-                       <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                            <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>-->
-                        <xsl:otherwise>
-                            <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>
-                    <!-- <xsl:text>none reported</xsl:text> -->
-                    <xsl:text>&#9;</xsl:text> 
-                </xsl:otherwise>
-            </xsl:choose> 
-            <xsl:text>extraction/derivatization</xsl:text>
-            <xsl:text>&#9;</xsl:text>
-                <xsl:choose>
-                    <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
-                        <xsl:choose>                       
-                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                <xsl:value-of select="translate($one,'+',' and ')"/> 
-                                <!-- <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/> -->
-                                <xsl:text>&#9;</xsl:text>
-                            </xsl:when>
-                            <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                            <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>-->
-                            <xsl:otherwise>
-                                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                <xsl:text>&#9;</xsl:text>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                        <!--<xsl:choose>
-                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':')">
-                                <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                <xsl:text>&#9;</xsl:text>
-                            </xsl:when>
-                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                                <xsl:text>&#9;</xsl:text>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                <xsl:text>&#9;</xsl:text>
-                            </xsl:otherwise>
-                        </xsl:choose>-->
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>
-                        <!-- <xsl:text>none reported</xsl:text> -->
-                        <xsl:text>&#9;</xsl:text> 
-                    </xsl:otherwise>
-                    
-                </xsl:choose>    
-                <xsl:value-of select="ancestor::plate/@usedOP"/>
-            <xsl:text>&#9;</xsl:text> 
-             <xsl:choose>   
-                <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT1-')">
-               <!-- <xsl:value-of select="substring-after(/data/plateInfo/@usedOP,'KIT1-')">
-                </xsl:value-of> -->
-                <xsl:text>Biocrates p150 Kit</xsl:text>
-                <xsl:text>&#9;</xsl:text>
-            </xsl:when>
-                <xsl:when test="starts-with(ancestor::plate/@usedOPP,'KIT2-')">
-                <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT2-')">
-                </xsl:value-of> -->
-                <xsl:text>Biocrates p180 LCMS Part</xsl:text>
-                <xsl:text>&#9;</xsl:text>
-            </xsl:when>
-                <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT3-')">
-                <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT3-')">
-                </xsl:value-of> -->
-                <xsl:text>Biocrates p180 FIA Part</xsl:text>
-                <xsl:text>&#9;</xsl:text>
-            </xsl:when>
-                <xsl:when test="starts-with(ancestor::plate/@usedOP,'ST17-')">
-                <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'ST17-')">
-                </xsl:value-of> -->
-                <xsl:text>Biocrates Stero17 Kit</xsl:text>
-                <xsl:text>&#9;</xsl:text>
-            </xsl:when>
-                <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD01-')">
-                <!--  <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD01-')">
-                </xsl:value-of> -->
-                <xsl:text>Biocrates MetaDis Kit LCMS Part</xsl:text>
-                <xsl:text>&#9;</xsl:text>
-            </xsl:when> 
-                <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD02-')">
-                <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD02-')">
-                </xsl:value-of> -->
-                <xsl:text>Biocrates MetaDis Kit FIA Part</xsl:text>
-                <xsl:text>&#9;</xsl:text>
-            </xsl:when> 
-            <xsl:otherwise>
-                <xsl:text>not reported&#9;</xsl:text>
-            </xsl:otherwise>
-            </xsl:choose>     
-            <xsl:value-of select="ancestor::plate/@plateBarcode"/>
-            <xsl:text>&#9;</xsl:text>
-                <xsl:value-of select="$wellposition"/>
-            <xsl:text>&#9;</xsl:text>
-
-            <!-- <xsl:text>$instrument</xsl:text>
-            <xsl:text>&#9;</xsl:text>
-            <xsl:text>$column</xsl:text>
-            <xsl:text>&#9;</xsl:text>-->
-            <xsl:call-template name="instrument"></xsl:call-template>
-            <!--<xsl:text>$MSinstrument</xsl:text>
-            <xsl:text>&#9;</xsl:text>-->
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="@acquisitionMethod"/>
-            <xsl:text>&#9;</xsl:text>
-                
-            <xsl:choose>    
-                <xsl:when test="contains(@acquisitionMethod, 'FIA')">
-                    <xsl:text>flow injection analysis</xsl:text>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:text>PSI-MS&#9;</xsl:text>
-                    <xsl:text>http://purl.obolibrary.org/obo/MS_1000058&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
-                                       
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:text>liquid chromatography separation</xsl:text>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:text>PSI-MS&#9;</xsl:text>
-                    <xsl:text>http://purl.obolibrary.org/obo/MS_1002271&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
-                    
-                </xsl:otherwise>                   
-            </xsl:choose>   
-
-            <xsl:value-of select="lower-case(@polarity)"/>
-            <xsl:text> scan&#9;</xsl:text>
-                <xsl:text>PSI-MS&#9;</xsl:text>
-                <xsl:text>http://purl.obolibrary.org/obo/MS_1000129&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
-
-                <xsl:value-of select="ancestor::plate/@runNumber"/>
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="@injectionNumber"/>
-            <xsl:text>&#9;</xsl:text> 
-                <xsl:value-of select="substring-before(@injectionTime,'T')"/>
-            <xsl:text>&#9;</xsl:text> 
-                <xsl:value-of select="ancestor::plate/@usedOP"/><xsl:text>_</xsl:text>                     
-                <xsl:value-of select="ancestor::plate/@plateBarcode"/><xsl:text>_</xsl:text>
-                <xsl:value-of select="$wellposition"/><xsl:text>_</xsl:text>
-                <xsl:value-of select="ancestor::plate/@runNumber"/><xsl:text>_</xsl:text>
-                <xsl:value-of select="@injectionNumber"/><xsl:text>_</xsl:text>
-                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/><xsl:text>_</xsl:text>
-                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@barcode"/><xsl:text>_</xsl:text>
-                <xsl:choose>
-                    <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
-                        <xsl:choose>                       
-                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                <xsl:value-of select="translate($one,'+',' and ')"/> 
-                                <!-- <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/> -->
-                            </xsl:when>
-                            <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                            <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>-->
-                            <xsl:otherwise>
-                                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                        
-                     <!--   <xsl:choose>
-                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':')">
-                                <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>                               
-                            </xsl:when>
-                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>                              
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>                               
-                            </xsl:otherwise>
-                        </xsl:choose> -->
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>
-                        <!-- <xsl:text>none reported</xsl:text> -->
-                         
-                    </xsl:otherwise>
-                </xsl:choose>
-                <xsl:text>&#9;</xsl:text>
-    
-                <xsl:value-of select="@rawDataFileName"/>
-                <xsl:text>&#9;</xsl:text>
-            <xsl:text>biocrates analysis</xsl:text>
-            <xsl:text>&#9;</xsl:text>
-            <xsl:value-of select="/data/@swVersion"/>
-            <xsl:text>&#9;</xsl:text>
-            <xsl:text>DT_</xsl:text>
-                <xsl:value-of select="ancestor::plate/@usedOP"/>
-                <xsl:text>_</xsl:text>
-                <xsl:value-of select="ancestor::plate/@plateBarcode"/>
-            <xsl:text>&#9;</xsl:text>
-                <xsl:value-of select="ancestor::plate/@usedOP"/>
-                <xsl:text>_</xsl:text>
-                <xsl:value-of select="ancestor::plate/@plateBarcode"/>
-            <xsl:text>_maf-negative.txt</xsl:text>
-            <xsl:text>&#9;</xsl:text> 
-<xsl:text>
-</xsl:text>
-         </xsl:when>
-    </xsl:choose>
-   </xsl:for-each>
-        </xsl:for-each>
-       
+        <xsl:apply-templates select="//well" mode="negative"/>     
 </xsl:result-document>
 </xsl:template>
+
+ <xsl:template name="wellnegative" match="//well" mode="negative">      
+        <xsl:apply-templates select="injection" mode="polarity">
+            <xsl:with-param name="polarity">negative</xsl:with-param>
+        </xsl:apply-templates>
+</xsl:template>
+
 
 <xsl:template match="plate" name="assay-positiveMode" priority="1">
     <xsl:variable name="assaypositivefile" select="concat('output/',data,'a_biocrates_assay_positive_mode.txt')[normalize-space()]"></xsl:variable>
@@ -1719,262 +1374,206 @@ Study Person Roles Term Source REF
         <xsl:text>Data Transformation Name</xsl:text><xsl:text>&#9;</xsl:text>
         <xsl:text>Derived Spectral Data File</xsl:text><xsl:text>&#9;</xsl:text>
 <xsl:text>
-</xsl:text>        
-        <!-- <xsl:variable name="polarity" select='./injection/@polarity'></xsl:variable> -->
-        <xsl:for-each select="//well">
-            <xsl:variable name="wellposition" select="@wellPosition"></xsl:variable>
-            <xsl:for-each select="child::injection">                
-            <xsl:choose> 
-                <xsl:when test="contains(lower-case(@polarity), 'positive')">
-                       <xsl:choose>
-                           <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
-                               <xsl:choose>                       
-                                   <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                       <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                       <xsl:value-of select="translate($one,'+',' and ')"/> 
-                                       <!-- <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/> -->
-                                       <xsl:text>&#9;</xsl:text>
-                                   </xsl:when>
-                                   <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
+</xsl:text>  
+        <xsl:apply-templates select="//well" mode="positive"/> 
+    </xsl:result-document>
+ </xsl:template>
+  
+<xsl:template name="wellpositive" match="//well" mode="positive">      
+    <xsl:apply-templates select="injection" mode="polarity">
+            <xsl:with-param name="polarity">positive</xsl:with-param>
+        </xsl:apply-templates>
+</xsl:template>    
+
+<xsl:template name="injection" match="injection" mode="polarity">
+    <xsl:param name="polarity"/>
+    <xsl:variable name="wellposition" select="parent::well/@wellPosition"></xsl:variable>
+   
+        <xsl:choose>    
+            <xsl:when test="contains(lower-case(@polarity), $polarity)">                  
+                <xsl:choose>
+                    <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
+                        <xsl:choose>                       
+                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
+                                <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
+                                <xsl:value-of select="translate($one,'+',' and ')"/> 
+                                <!-- <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/> -->
+                                <xsl:text>&#9;</xsl:text>
+                            </xsl:when>
+                            <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
                             <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
                             <xsl:text>&#9;</xsl:text>
                         </xsl:when>-->
-                                   <xsl:otherwise>
-                                       <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                       <xsl:text>&#9;</xsl:text>
-                                   </xsl:otherwise>
-                               </xsl:choose>
-                          <!--     <xsl:choose>
-                                   <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':')">
-                                       <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                       <xsl:text>&#9;</xsl:text>
-                                   </xsl:when>
-                                   <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                       <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                                       <xsl:text>&#9;</xsl:text>
-                                   </xsl:when>
-                                   <xsl:otherwise>
-                                       <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                       <xsl:text>&#9;</xsl:text>
-                                   </xsl:otherwise>
-                               </xsl:choose> -->
-                           </xsl:when>
-                           <xsl:otherwise>
-                               <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>
-                               <!-- <xsl:text>none reported</xsl:text> -->
-                               <xsl:text>&#9;</xsl:text> 
-                           </xsl:otherwise>
-                    </xsl:choose> 
-                    <xsl:text>extraction/derivatization</xsl:text>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:choose>
-                        <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
-                            <xsl:choose>                       
-                                <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                    <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                    <xsl:value-of select="translate($one,'+',' and ')"/> 
-                                    <!-- <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/> -->
-                                    <xsl:text>&#9;</xsl:text>
-                                </xsl:when>
-                                <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
+                            <xsl:otherwise>
+                                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
+                                <xsl:text>&#9;</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>
+                        <!-- <xsl:text>none reported</xsl:text> -->
+                        <xsl:text>&#9;</xsl:text> 
+                    </xsl:otherwise>
+                </xsl:choose> 
+                <xsl:text>"extraction/derivatization"</xsl:text>
+                <xsl:text>&#9;</xsl:text>
+                <xsl:choose>
+                    <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
+                        <xsl:choose>                       
+                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
+                                <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
+                                <xsl:value-of select="isa:quotes(translate($one,'+',' and '))"/> 
+                                <!-- <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/> -->
+                                <xsl:text>&#9;</xsl:text>
+                            </xsl:when>
+                            <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
                             <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
                             <xsl:text>&#9;</xsl:text>
                         </xsl:when>-->
-                                <xsl:otherwise>
-                                    <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                    <xsl:text>&#9;</xsl:text>
-                                </xsl:otherwise>
-                            </xsl:choose>  
-                       <!--     <xsl:choose>
-                                <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':')">
-                                    <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                    <xsl:text>&#9;</xsl:text>
-                                </xsl:when>
-                                <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                    <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                                    <xsl:text>&#9;</xsl:text>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                    <xsl:text>&#9;</xsl:text>
-                                </xsl:otherwise>
-                            </xsl:choose> -->
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>
-                            <!-- <xsl:text>none reported</xsl:text> -->
-                            <xsl:text>&#9;</xsl:text> 
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:value-of select="ancestor::plate/@usedOP"/>
-                    <xsl:text>&#9;</xsl:text>      
-                    <xsl:choose>   
-                        <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT1-')">
-                            <!-- <xsl:value-of select="substring-after(/data/plateInfo/@usedOP,'KIT1-')">
+                            <xsl:otherwise>
+                                <xsl:value-of select="isa:quotes(key('samplelookupid',parent::well/@sample)/@SampleIdentifier)"/>
+                                <xsl:text>&#9;</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <!--<xsl:choose>
+                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':')">
+                                <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
+                                <xsl:text>&#9;</xsl:text>
+                            </xsl:when>
+                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
+                                <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
+                                <xsl:text>&#9;</xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
+                                <xsl:text>&#9;</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>-->
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="isa:quotes(key('samplelookupid',parent::well/@sample)/@sampleType)"/>
+                        <xsl:text>&#9;</xsl:text> 
+                    </xsl:otherwise>                        
+                </xsl:choose>
+                
+                <xsl:value-of select="concat(isa:quotes(ancestor::plate/@usedOP),'&#9;')"/>
+                
+                <xsl:choose>   
+                    <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT1-')">
+                        <!-- <xsl:value-of select="substring-after(/data/plateInfo/@usedOP,'KIT1-')">
                 </xsl:value-of> -->
-                            <xsl:text>Biocrates p150 Kit</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>
-                        <xsl:when test="starts-with(ancestor::plate/@usedOPP,'KIT2-')">
-                            <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT2-')">
+                        <xsl:text>"Biocrates p150 Kit"</xsl:text>
+                        <xsl:text>&#9;</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with(ancestor::plate/@usedOPP,'KIT2-')">
+                        <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT2-')">
                 </xsl:value-of> -->
-                            <xsl:text>Biocrates p180 LCMS Part</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>
-                        <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT3-')">
-                            <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT3-')">
+                        <xsl:text>"Biocrates p180 LCMS Part"</xsl:text>
+                        <xsl:text>&#9;</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with(ancestor::plate/@usedOP,'KIT3-')">
+                        <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'KIT3-')">
                 </xsl:value-of> -->
-                            <xsl:text>Biocrates p180 FIA Part</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>
-                        <xsl:when test="starts-with(ancestor::plate/@usedOP,'ST17-')">
-                            <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'ST17-')">
+                        <xsl:text>"Biocrates p180 FIA Part"</xsl:text>
+                        <xsl:text>&#9;</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with(ancestor::plate/@usedOP,'ST17-')">
+                        <!--<xsl:value-of select="substring-after(child::plateInfo/@usedOP,'ST17-')">
                 </xsl:value-of> -->
-                            <xsl:text>Biocrates Stero17 Kit</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>
-                        <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD01-')">
-                            <!--  <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD01-')">
+                        <xsl:text>"Biocrates Stero17 Kit"&#9;</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD01-')">
+                        <!--  <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD01-')">
                 </xsl:value-of> -->
-                            <xsl:text>Biocrates MetaDis Kit LCMS Part</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when> 
-                        <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD02-')">
-                            <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD02-')">
+                        <xsl:text>"Biocrates MetaDis Kit LCMS Part"&#9;</xsl:text>
+                    </xsl:when> 
+                    <xsl:when test="starts-with(ancestor::plate/@usedOP,'MD02-')">
+                        <!-- <xsl:value-of select="substring-after(child::plateInfo/@usedOP,'MD02-')">
                 </xsl:value-of> -->
-                            <xsl:text>Biocrates MetaDis Kit FIA Part</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when> 
-                        <xsl:otherwise>
-                            <xsl:text>not reported&#9;</xsl:text>
-                        </xsl:otherwise>
-                    </xsl:choose>     
-                    <xsl:value-of select="ancestor::plate/@plateBarcode"/>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:value-of select="$wellposition"/>
-                    <xsl:text>&#9;</xsl:text>
-                    
-                  <!--  <xsl:text>$instrument</xsl:text>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:text>$column</xsl:text>
-                    <xsl:text>&#9;</xsl:text> -->
-                    <xsl:call-template name="instrument"></xsl:call-template>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:value-of select="@acquisitionMethod"/>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:choose>    
-                        <xsl:when test="contains(@acquisitionMethod, 'FIA')">
-                            <xsl:text>flow injection analysis</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                            <xsl:text>PSI-MS&#9;</xsl:text>
-                            <xsl:text>http://purl.obolibrary.org/obo/MS_1000058&#9;</xsl:text> <!--http://purl.obolibrary.org/obo/ -->                   
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:text>liquid chromatography separation</xsl:text>
-                            <xsl:text>&#9;</xsl:text>
-                            <xsl:text>PSI-MS&#9;</xsl:text>
-                            <xsl:text>http://purl.obolibrary.org/obo/MS_1002271&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
-                        </xsl:otherwise>                   
-                    </xsl:choose>
-                    <xsl:value-of select="lower-case(@polarity)"/>
-                    <xsl:text> scan&#9;</xsl:text>
-                    <xsl:text>PSI-MS&#9;</xsl:text>
-                    <xsl:text>http://purl.obolibrary.org/obo/   MS_1000130&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
-                    <xsl:value-of select="ancestor::plate/@runNumber"/>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:value-of select="@injectionNumber"/>
-                    <xsl:text>&#9;</xsl:text> 
-                    <xsl:value-of select="substring-before(@injectionTime,'T')"/>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:value-of select="ancestor::plate/@usedOP"/><xsl:text>_</xsl:text>                     
+                        <xsl:text>"Biocrates MetaDis Kit FIA Part"&#9;</xsl:text>
+                    </xsl:when> 
+                    <xsl:otherwise>
+                        <xsl:text>"not reported"&#9;</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>     
+                <xsl:value-of select="concat(isa:quotes(ancestor::plate/@plateBarcode),'&#9;')"/>
+                
+                <xsl:value-of select="isa:quotes($wellposition)"/>
+                <xsl:text>&#9;</xsl:text>
+                
+                <xsl:call-template name="instrument"></xsl:call-template>
+                <xsl:text>&#9;</xsl:text>
+                
+                <xsl:value-of select="isa:quotes(@acquisitionMethod)"/>
+                <xsl:text>&#9;</xsl:text>
+                
+                <xsl:choose>    
+                    <xsl:when test="contains(@acquisitionMethod, 'FIA')">
+                        <xsl:text>"flow injection analysis"&#9;</xsl:text>
+                        <xsl:text>"PSI-MS"&#9;</xsl:text>
+                        <xsl:text>"http://purl.obolibrary.org/obo/MS_1000058"&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->                            
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>"liquid chromatography separation"&#9;</xsl:text>
+                        <xsl:text>"PSI-MS"&#9;</xsl:text>
+                        <xsl:text>"http://purl.obolibrary.org/obo/MS_1002271"&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->                            
+                    </xsl:otherwise>                   
+                </xsl:choose>   
+                
+                <xsl:value-of select="concat(isa:quotes(concat(lower-case(@polarity), ' scan')),'&#9;')"/>
+                <xsl:text>"PSI-MS"&#9;</xsl:text>
+                <xsl:text>"http://purl.obolibrary.org/obo/MS_1000129"&#9;</xsl:text><!--http://purl.obolibrary.org/obo/ -->
+                
+                <xsl:value-of select="isa:quotes(ancestor::plate/@runNumber)"/>
+                <xsl:text>&#9;</xsl:text>
+                
+                <xsl:value-of select="isa:quotes(@injectionNumber)"/>
+                <xsl:text>&#9;</xsl:text>
+                
+                <xsl:value-of select="isa:quotes(substring-before(@injectionTime,'T'))"/>
+                <xsl:text>&#9;"</xsl:text>
+                
+                <xsl:value-of select="concat(ancestor::plate/@usedOP, '_',ancestor::plate/@plateBarcode, '_',$wellposition,'_',ancestor::plate/@runNumber, '_',@injectionNumber,'_',key('samplelookupid',parent::well/@sample)/@sampleType,'_',key('samplelookupid',parent::well/@sample)/@barcode,'_')"/>
+                <!--                    <xsl:value-of select="ancestor::plate/@usedOP"/><xsl:text>_</xsl:text>                     
                     <xsl:value-of select="ancestor::plate/@plateBarcode"/><xsl:text>_</xsl:text>
                     <xsl:value-of select="$wellposition"/><xsl:text>_</xsl:text>
                     <xsl:value-of select="ancestor::plate/@runNumber"/><xsl:text>_</xsl:text>
                     <xsl:value-of select="@injectionNumber"/><xsl:text>_</xsl:text>
                     <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/><xsl:text>_</xsl:text>
-                    <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@barcode"/><xsl:text>_</xsl:text>
-                    <xsl:choose>
-                        <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
-                            <xsl:choose>                       
-                                <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                    <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                    <xsl:value-of select="translate($one,'+',' and ')"/> 
-                                </xsl:when>
-                                <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                            <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                            <xsl:text>&#9;</xsl:text>
-                        </xsl:when>-->
-                                <xsl:otherwise>
-                                    <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                         <!--   <xsl:choose>
-                                <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':')">
-                                    <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
-                                </xsl:when>
-                                <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
-                                    <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
-                                </xsl:otherwise>
-                            </xsl:choose> -->
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>
-                            <!-- <xsl:text>none reported</xsl:text> -->
-                        </xsl:otherwise>
-                    </xsl:choose> 
-                    <xsl:text>&#9;</xsl:text>
-                    
-                   
-                    <xsl:value-of select="@rawDataFileName"/>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:text>biocrates analysis</xsl:text>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:value-of select="/data/@swVersion"/>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:text>DT_</xsl:text>
-                    <xsl:value-of select="ancestor::plate/@usedOP"/>
-                    <xsl:text>_</xsl:text>
-                    <xsl:value-of select="ancestor::plate/@plateBarcode"/>
-                    <xsl:text>&#9;</xsl:text>
-                    <xsl:value-of select="ancestor::plate/@usedOP"/>
-                    <xsl:text>_</xsl:text>
-                    <xsl:value-of select="ancestor::plate/@plateBarcode"/>
-                    <xsl:text>_maf-positive.txt</xsl:text>
-                    <xsl:text>&#9;</xsl:text> 
-                    <xsl:text>
+                    <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@barcode"/><xsl:text>_</xsl:text>-->                   
+                <xsl:choose>
+                    <xsl:when test="key('samplelookupid',parent::well/@sample)/@SampleIdentifier !=''">
+                        <xsl:choose>                       
+                            <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':') or contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
+                                <xsl:variable name="one" select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,':','-')"/>
+                                <xsl:value-of select="translate($one,'+',' and ')"/> 
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@sampleType"/>                           
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:text>"&#9;</xsl:text>
+                
+                <xsl:value-of select="isa:quotes(@rawDataFileName)"/>
+                <xsl:text>&#9;</xsl:text>
+                <xsl:text>"biocrates analysis"</xsl:text>
+                <xsl:text>&#9;</xsl:text>
+                <xsl:value-of select="isa:quotes(/data/@swVersion)"/>
+                <xsl:text>&#9;</xsl:text>                  
+                <xsl:value-of select="isa:quotes(concat('DT_',ancestor::plate/@usedOP, '_',ancestor::plate/@plateBarcode, '_',ancestor::plate/@usedOP,'_',ancestor::plate/@plateBarcode))"/>
+                <xsl:text>&#9;</xsl:text>                  
+                <xsl:value-of select="isa:quotes(concat('DT_',ancestor::plate/@usedOP, '_',ancestor::plate/@plateBarcode, '_',ancestor::plate/@usedOP,'_',ancestor::plate/@plateBarcode, '_maf-',$polarity,'.txt'))"/>
+<xsl:text>
 </xsl:text>
-                </xsl:when>
-            </xsl:choose>
-            </xsl:for-each>
-        </xsl:for-each>
-        
-        <xsl:text>
-</xsl:text>   
-    </xsl:result-document>
-    </xsl:template>
-
-<!-- <xsl:template match="measure" name="measure">
-        <xsl:value-of select="@metabolite"/>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="key('metabolitelookupid',@metabolite)/@metaboliteClass"/>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="key('metabolitelookupid',@metabolite)/@signal"/>
-        <xsl:text>&#9;</xsl:text>  
-        <xsl:value-of select="@status"/>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="@intensity"/>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="@concentration"/>
-        <xsl:text>&#9;</xsl:text>
-        <xsl:value-of select="@intensityIstd"/>
-        <xsl:text>&#9;</xsl:text> 
-        <xsl:value-of select="@internalStdRetentionTime"/>
-        <xsl:text>&#9;</xsl:text>    
-        <xsl:value-of select="@concentrationIstd"/>   
-</xsl:template> -->
+            </xsl:when>
+        </xsl:choose>
+</xsl:template>
 
 
 <!-- //////////////////HELPER TEMPLATE/////////////// -->
@@ -2148,7 +1747,7 @@ Study Person Roles Term Source REF
                 </xsl:if>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:text>none reported&#9;</xsl:text>
+                <xsl:text>"none reported"&#9;</xsl:text>
                 <xsl:text>&#9;</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
