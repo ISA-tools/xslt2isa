@@ -1070,8 +1070,11 @@ Study Person Roles Term Source REF
 <!-- ****************************************************** -->
 <!--     template to create ISA s_study table               -->
 <xsl:template match="sample"  name="study" priority="1">
-    <xsl:variable name="studyfile" select="concat('output/',data,'s_study_biocrates.txt')[normalize-space()]"></xsl:variable>
-        <xsl:value-of select="$studyfile[normalize-space()]" /> 
+    
+    <xsl:variable name="biocrates2isa-cv-mapping" select="document('ISA-Team-Biocrates2ISA-CV-mapping.xml')"/>
+    <xsl:variable name="studyfile" select="concat('output/',data,'s_study_biocrates.txt')[normalize-space()]"/>
+   
+    <xsl:value-of select="$studyfile[normalize-space()]" /> 
     <xsl:result-document href="{$studyfile}">
         <xsl:copy-of select=".[normalize-space()]"></xsl:copy-of>
     
@@ -1146,18 +1149,18 @@ Study Person Roles Term Source REF
                  <xsl:text>&#9;</xsl:text>
                  
                  <xsl:choose>
-                     <xsl:when test="./@sampleType='BLANK'">
+                     <xsl:when test="@sampleType='BLANK'">
                          <xsl:text>negative control</xsl:text>
                      </xsl:when>
-                     <xsl:when test="contains(./@sampleType,'QC_')">
+                     <xsl:when test="contains(@sampleType,'QC_')">
                          <xsl:text>positive control</xsl:text>
                      </xsl:when>
-                     <xsl:when test="contains(./@sampleType,'ZERO_')">
+                     <xsl:when test="contains(@sampleType,'ZERO_')">
                          <xsl:text>negative control</xsl:text>
                          <xsl:text>&#9;</xsl:text>
                          <xsl:text>&#9;</xsl:text>
                      </xsl:when>
-                     <xsl:when test="contains(./@sampleType,'STANDARD_')">
+                     <xsl:when test="contains(@sampleType,'STANDARD_')">
                          <xsl:text>positive control</xsl:text>
                      </xsl:when>
                      <xsl:otherwise>
@@ -1167,7 +1170,7 @@ Study Person Roles Term Source REF
 
                 <!-- <xsl:value-of select="./sample/@sampleType"/> -->
                  <xsl:text>&#9;</xsl:text>
-                 <xsl:value-of select="./@Material"/>
+                 <xsl:value-of select="@Material"/>
                  <xsl:text>&#9;</xsl:text>
                  <xsl:text>not applicable</xsl:text>
                  <xsl:text>&#9;</xsl:text>
@@ -1180,36 +1183,36 @@ Study Person Roles Term Source REF
              </xsl:when>
              <xsl:otherwise>
                  <xsl:choose>
-                     <xsl:when test="./@SampleIdentifier !=''">
+                     <xsl:when test="@SampleIdentifier !=''">
                          <xsl:choose>
-                             <xsl:when test="./@SampleIdentifier !=''">
+                             <xsl:when test="@SampleIdentifier !=''">
                                  <xsl:choose>
-                                     <xsl:when test="contains(./@SampleIdentifier,':') or contains(./@SampleIdentifier,'+')">
-                                         <xsl:variable name="one" select="translate(./@SampleIdentifier,':','-')"/>
+                                     <xsl:when test="contains(@SampleIdentifier,':') or contains(@SampleIdentifier,'+')">
+                                         <xsl:variable name="one" select="translate(@SampleIdentifier,':','-')"/>
                                          <xsl:value-of select="translate($one,'+',' and ')"/> 
                                      </xsl:when>
                                      <!--   <xsl:when test="contains(./@SampleIdentifier,'+')">
                                  <xsl:value-of select="translate(./@SampleIdentifier,'+',' and ')"/>  
                              </xsl:when> -->
                                      <xsl:otherwise>
-                                         <xsl:value-of select="./@SampleIdentifier"/>
+                                         <xsl:value-of select="@SampleIdentifier"/>
                                      </xsl:otherwise>
                                  </xsl:choose>
                              </xsl:when>
                              <xsl:otherwise>
-                                 <xsl:value-of select="./@sampleType"/>
+                                 <xsl:value-of select="@sampleType"/>
                              </xsl:otherwise>
                          </xsl:choose>
                      </xsl:when>
                      <xsl:otherwise>
-                         <xsl:value-of select="./@sampleType"/>
+                         <xsl:value-of select="@sampleType"/>
                          <xsl:text>none reported</xsl:text>                   
                      </xsl:otherwise>
                  </xsl:choose>
                  <xsl:text>&#9;</xsl:text> 
                  <xsl:choose>
-                     <xsl:when test="./@barcode !=''">
-                         <xsl:value-of select="./@barcode"/>
+                     <xsl:when test="@barcode !=''">
+                         <xsl:value-of select="@barcode"/>
                      </xsl:when>
                      <xsl:otherwise>
                          <xsl:text>none reported</xsl:text> 
@@ -1222,27 +1225,29 @@ Study Person Roles Term Source REF
                  <xsl:text>&#9;</xsl:text>
                  <xsl:text>not applicable</xsl:text>
                  <xsl:text>&#9;</xsl:text>
-                 
-                 <xsl:choose>
-                     <xsl:when test="./@Species !=''">
+                 <xsl:variable name="this" select="@Species"></xsl:variable>
+                 <xsl:value-of select="$this"/>
+                 <xsl:value-of select="if ($biocrates2isa-cv-mapping/mapping/replace-species/element[@biocrates_label=$this]) then concat('&#9;&quot;', $biocrates2isa-cv-mapping/mapping/replace-species/element[@biocrates_label=$this]/@ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;')"/>
+                 <!--<xsl:choose>
+                     <xsl:when test="@Species !=''">
                          <xsl:choose>
-                             <xsl:when test="lower-case(./@Species)='mouse'">
+                             <xsl:when test="lower-case(@Species)='mouse'">
                                  <xsl:text>Mus musculus</xsl:text>
                                  <xsl:text>&#9;NCBITax&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_10090</xsl:text>
                              </xsl:when>
-                             <xsl:when test="lower-case(./@Species)='rat'">
+                             <xsl:when test="lower-case(@Species)='rat'">
                                  <xsl:text>Rattus norvegicus</xsl:text>
                                  <xsl:text>&#9;NCBITax&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_9606</xsl:text>
+                                 <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_10116</xsl:text>
                              </xsl:when>                             
-                             <xsl:when test="./@Species='Human'">
+                             <xsl:when test="@Species='human'">
                                  <xsl:text>Homo sapiens</xsl:text>
                                  <xsl:text>&#9;NCBITax&#9;</xsl:text>
                                  <xsl:text>http://purl.obolibrary.org/obo/NCBITaxon_9606</xsl:text>
                              </xsl:when>
                              <xsl:otherwise>
-                                 <xsl:value-of select="./@Species"/>
+                                 <xsl:value-of select="@Species"/>
                                  <xsl:text>&#9;</xsl:text>
                                  <xsl:text>&#9;</xsl:text>
                              </xsl:otherwise>
@@ -1251,11 +1256,11 @@ Study Person Roles Term Source REF
                      <xsl:otherwise>
                          <xsl:text>none reported</xsl:text> 
                      </xsl:otherwise>
-                 </xsl:choose>
+                 </xsl:choose>-->
  
                  <xsl:text>&#9;</xsl:text>
- 
-                 <xsl:choose>
+                
+<!--                 <xsl:choose>
                      <xsl:when test="./@Material">
                          <xsl:choose>
                              <xsl:when test="./@Material = 'brain tissue'">
@@ -1344,7 +1349,7 @@ Study Person Roles Term Source REF
                      <xsl:otherwise>
                          <xsl:value-of select="./@sampleType"/>
                      </xsl:otherwise>
-                 </xsl:choose>
+                 </xsl:choose>-->
                  
                  <xsl:text>&#9;</xsl:text>
                

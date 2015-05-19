@@ -522,7 +522,7 @@ SRA schema version considered:
   <xsl:text>&#9;</xsl:text>
  </xsl:template>
  
-  <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/PAIRED">
+ <xsl:template match="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/PAIRED">
    <xsl:value-of select="isa:quotes('paired')"/>
    <xsl:text>&#9;</xsl:text>
  </xsl:template>
