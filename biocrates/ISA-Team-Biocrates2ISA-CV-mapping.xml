@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mapping name="alfie">
-    <replacement>
-        <element biocrateslabel="brain tissue" ontoterm="brain" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000955"/>
-        <element biocrateslabel="breast tissue" ontoterm="mammary gland" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001911"/>
-        <element biocrateslabel="fat" ontoterm="adipose tissue" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001013"/>
-        <element biocrateslabel="heart tissue" ontoterm="heart" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000948"/>
+<root xmlns="http://www.biocrates.com/metstat/result/xml_1.0">
+    <mapping-replacement>
+        <element biocrateslabel="brain tissue" ontoterm="brain" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000955">My</element>
+        <element biocrateslabel="breast tissue" ontoterm="mammary gland" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001911">Name</element>
+        <element biocrateslabel="fat" ontoterm="adipose tissue" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001013">is</element>
+        <element biocrateslabel="heart tissue" ontoterm="heart" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000948">Alfie</element>
         <element biocrateslabel="kidney tissue" ontoterm="kidney" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002113"/>
         <element biocrateslabel="liver tissue" ontoterm="liver" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002107"/>
         <element biocrateslabel="lung tissue" ontoterm="lung" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002048"/>
@@ -19,5 +19,5 @@
         <element biocrateslabel="mouse" ontoterm="Mus musculus" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_10090"/>
         <element biocrateslabel="rat" ontoterm="Rattus norvegicus" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_10116"/>
         <element biocrateslabel="human" ontoterm="Homo sapiens" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-    </replacement> 
-</mapping>
+    </mapping-replacement> 
+</root>

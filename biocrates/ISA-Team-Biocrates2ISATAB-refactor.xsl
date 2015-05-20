@@ -89,7 +89,7 @@ DOI:
     <!-- $max is used for padding empty cell in the s_study.txt as some 'sample' have no such attributes -->
     <xsl:variable name="max" select="max(data/plate/well/sample/count(sampleInfoExport))" as="xs:integer"/> 
     
-    <xsl:variable name="biocrates2isa-cv-mapping" select="document('ISA-Team-Biocrates2ISA-CV-mapping.xml')"/>
+    
    
 
 
@@ -1095,16 +1095,10 @@ DOI:
                  <xsl:variable name="species_var" select="@Species"></xsl:variable>
                  <xsl:text>&#9;!!!</xsl:text><xsl:value-of select="$species_var"/>
 
+                 <xsl:call-template name="mapping-replacement">
+                     <xsl:with-param name="species_var" select="$species_var"/>
+                 </xsl:call-template>
                  
-                 <xsl:value-of select="$biocrates2isa-cv-mapping/mapping/@name"/>
-                 <xsl:for-each select="$biocrates2isa-cv-mapping/mapping/replacement/element">
-              
-                     <xsl:text>&#9;</xsl:text>
-                     <xsl:text>hello</xsl:text>
-                     <xsl:value-of select="@biocrateslabel"/>
-                     <xsl:value-of select="if (@biocrateslabel=$species_var) then concat('&#9;&quot;', @biocrateslabel, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>
-                <!--   <xsl:value-of select="if (@biocrates_label=$this) then concat('&#9;&quot;', @ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>-->
-                 </xsl:for-each>
   
                  
                  
@@ -1247,7 +1241,14 @@ DOI:
     
         <xsl:text>&#9;</xsl:text>    
         <xsl:value-of select="isa:quotes(lower-case(@sampleType))"/>
-</xsl:template>    
+</xsl:template>   
+    
+<xsl:template name="mapping-replacement">
+    <xsl:param name="species_var"/>
+    <xsl:variable name="mapping" select="document('ISA-Team-Biocrates2ISA-CV-mapping.xml')"/>
+    <xsl:text>&#9;</xsl:text>
+    <xsl:value-of select="if ($mapping/root/mapping-replacement/element[@biocrateslabel=$species_var]) then concat('&#9;&quot;', @biocrateslabel, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>
+</xsl:template>
 
 <xsl:template name="sample_material_name" match="sample">
     <xsl:choose>
