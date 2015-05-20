@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mapping>
+<mapping name="alfie">
     <replacement>
-        <element biocrates_label="brain tissue" ontoterm="brain" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000955"/>
-        <element biocrates_label="breast tissue" ontoterm="mammary gland" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001911"/>
-        <element biocrates_label="fat" ontoterm="adipose tissue" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001013"/>
-        <element biocrates_label="heart tissue" ontoterm="heart" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000948"/>
-        <element biocrates_label="kidney tissue" ontoterm="kidney" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002113"/>
-        <element biocrates_label="liver tissue" ontoterm="liver" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002107"/>
-        <element biocrates_label="lung tissue" ontoterm="lung" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002048"/>
-        <element biocrates_label="muscle tissue" ontoterm="muscle" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002385"/>
-        <element biocrates_label="plasma tissue" ontoterm="plasma" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001969"/>
-        <element biocrates_label="prostate tissue" ontoterm="prostate" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002367"/> 
-        <element biocrates_label="spleen tissue" ontoterm="spleen" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002106"/>  
-        <element biocrates_label="prostate tissue" ontoterm="serum" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001977"/>  
-        <element biocrates_label="sweat" ontoterm="sweat" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001089"/>  
-        <element biocrates_label="urine" ontoterm="urine" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001088"/>  
-        <element biocrates_label="bile" ontoterm="bile" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001970"/> 
-        <element biocrates_label="mouse" ontoterm="Mus musculus" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_10090"/>
-        <element biocrates_label="rat" ontoterm="Rattus norvegicus" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_10116"/>
-        <element biocrates_label="human" ontoterm="Homo sapiens" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <element biocrateslabel="brain tissue" ontoterm="brain" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000955"/>
+        <element biocrateslabel="breast tissue" ontoterm="mammary gland" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001911"/>
+        <element biocrateslabel="fat" ontoterm="adipose tissue" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001013"/>
+        <element biocrateslabel="heart tissue" ontoterm="heart" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0000948"/>
+        <element biocrateslabel="kidney tissue" ontoterm="kidney" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002113"/>
+        <element biocrateslabel="liver tissue" ontoterm="liver" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002107"/>
+        <element biocrateslabel="lung tissue" ontoterm="lung" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002048"/>
+        <element biocrateslabel="muscle tissue" ontoterm="muscle" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002385"/>
+        <element biocrateslabel="plasma tissue" ontoterm="plasma" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001969"/>
+        <element biocrateslabel="prostate tissue" ontoterm="prostate" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002367"/> 
+        <element biocrateslabel="spleen tissue" ontoterm="spleen" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002106"/>  
+        <element biocrateslabel="prostate tissue" ontoterm="serum" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001977"/>  
+        <element biocrateslabel="sweat" ontoterm="sweat" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001089"/>  
+        <element biocrateslabel="urine" ontoterm="urine" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001088"/>  
+        <element biocrateslabel="bile" ontoterm="bile" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001970"/> 
+        <element biocrateslabel="mouse" ontoterm="Mus musculus" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_10090"/>
+        <element biocrateslabel="rat" ontoterm="Rattus norvegicus" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_10116"/>
+        <element biocrateslabel="human" ontoterm="Homo sapiens" ontosource="NCBITax" url="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
     </replacement> 
 </mapping>
