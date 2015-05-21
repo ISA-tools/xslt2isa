@@ -1040,7 +1040,7 @@ DOI:
     <xsl:text>"Term Accession Number"</xsl:text><xsl:text>&#9;</xsl:text>
         <xsl:for-each select="/data/sample/sampleInfoExport[generate-id(.)=generate-id(key('sampleinfo-features', @feature)[1])]/@feature">    
             <!-- <xsl:sort/> -->     
-            <xsl:text>"Characteristics["</xsl:text>
+            <xsl:text>"Characteristics[</xsl:text>
             <xsl:choose>
                 <xsl:when test="contains(.,'(') or contains(.,')')">
                     <xsl:variable name="this" select="translate(.,'(','-')"/>
@@ -1083,143 +1083,27 @@ DOI:
                  <xsl:text>&#9;&#9;&#9;</xsl:text>
              </xsl:when>
              <xsl:otherwise>
-                <!-- <xsl:call-template name="sample_material_name"/> -->       
+                 <xsl:call-template name="sample_material_name"/>        
                  <xsl:text>&#9;</xsl:text>
                  <xsl:value-of select="if (@barcode != '') then isa:quotes(@barcode) else concat('&#9;&quot;','none reported','&quot;&#9;')"/>
                  <xsl:text>&#9;</xsl:text>   
                  <xsl:text>"specimen"</xsl:text>
-                 <xsl:text>&#9;&#9;&#9;</xsl:text>
+                 <xsl:text>&#9;</xsl:text>
                  <xsl:text>"not applicable"</xsl:text>
               
                  
                  <xsl:variable name="species_var" select="@Species"></xsl:variable>
-                 <xsl:text>&#9;!!!</xsl:text><xsl:value-of select="$species_var"/>
-
+                 
                  <xsl:call-template name="mapping-replacement">
-                     <xsl:with-param name="species_var" select="$species_var"/>
+                          <xsl:with-param name="species_param" select="$species_var"/>
                  </xsl:call-template>
-
-  
+               
                  
+                 <xsl:variable name="material_var" select="@Material"></xsl:variable>
                  
-                 <xsl:text>&#9;</xsl:text> 
-<!--                 <xsl:choose>
-                     <xsl:when test="@Species !=''">
-                         <xsl:choose>
-                             <xsl:when test="lower-case(@Species)='mouse'">
-                                 <xsl:text>"Mus musculus"</xsl:text>
-                                 <xsl:text>&#9;"NCBITax"&#9;</xsl:text>
-                                 <xsl:text>"http://purl.obolibrary.org/obo/NCBITaxon_10090"</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="lower-case(@Species)='rat'">
-                                 <xsl:text>"Rattus norvegicus"</xsl:text>
-                                 <xsl:text>&#9;"NCBITax"&#9;</xsl:text>
-                                 <xsl:text>"http://purl.obolibrary.org/obo/NCBITaxon_10116"</xsl:text>
-                             </xsl:when>                             
-                             <xsl:when test="@Species='human'">
-                                 <xsl:text>"Homo sapiens"</xsl:text>
-                                 <xsl:text>&#9;"NCBITax"&#9;</xsl:text>
-                                 <xsl:text>"http://purl.obolibrary.org/obo/NCBITaxon_9606"</xsl:text>
-                             </xsl:when>
-                             <xsl:otherwise>
-                                 <xsl:value-of select="isa:quotes(@Species)"/>
-                                 <xsl:text>""&#9;</xsl:text>
-                                 <xsl:text>""&#9;</xsl:text>
-                             </xsl:otherwise>
-                         </xsl:choose>
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:text>"none reported"</xsl:text> 
-                     </xsl:otherwise>
-                 </xsl:choose>-->
- 
-                 <xsl:text>&#9;</xsl:text>
-                
-                 <xsl:choose>
-                     <xsl:when test="@Material">
-                         <xsl:choose>
-                             <xsl:when test="@Material = 'brain tissue'">
-                                 <xsl:text>brain</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0000955</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'breast tissue'">
-                                 <xsl:text>mammary gland</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001911</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'fat'">
-                                 <xsl:text>adipose tissue</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001013</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'heart tissue'">
-                                 <xsl:text>heart</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0000948</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'kidney tissue'">
-                                 <xsl:text>kidney</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002113</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'liver tissue'">
-                                 <xsl:text>liver</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002107</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'lung tissue'">
-                                 <xsl:text>lung</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002048</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'muscle tissue'">
-                                 <xsl:value-of select="@Material"/>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002385</xsl:text>
-                             </xsl:when>                            
-                             <xsl:when test="@Material = 'plasma'">
-                                 <xsl:text>blood plasma</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001969</xsl:text>
-                             </xsl:when> 
-                             <xsl:when test="@Material = 'prostate tissue'">
-                                 <xsl:text>prostate gland</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002367</xsl:text>
-                             </xsl:when>
-                             <xsl:when test="@Material = 'spleen tissue'">
-                                 <xsl:text>spleen</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0002106</xsl:text>
-                             </xsl:when> 
-                             <xsl:when test="@Material = 'serum'">
-                                 <xsl:value-of select="@Material"/>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001977</xsl:text>
-                             </xsl:when> 
-                             <xsl:when test="@Material = 'sweat'">
-                                 <xsl:text>sweat</xsl:text>
-                                 <xsl:text>&#9;UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001089</xsl:text>
-                             </xsl:when> 
-                             <xsl:when test="@Material = 'urine'">
-                                 <xsl:text>urine</xsl:text>
-                                 <xsl:text>UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001088</xsl:text>
-                             </xsl:when>                             
-                             <xsl:when test="@Material = 'bile'">
-                                 <xsl:text>bile</xsl:text>
-                                 <xsl:text>UBERON&#9;</xsl:text>
-                                 <xsl:text>http://purl.obolibrary.org/obo/UBERON_0001970</xsl:text>
-                             </xsl:when>  
-                         </xsl:choose>
-                       
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="isa:quotes(@sampleType)"/>
-                     </xsl:otherwise>
-                 </xsl:choose>
+                 <xsl:call-template name="mapping-replacement">
+                     <xsl:with-param name="species_param" select="$material_var"/>
+                 </xsl:call-template>
                  
                  <xsl:text>&#9;</xsl:text>             
              </xsl:otherwise>
@@ -1234,7 +1118,7 @@ DOI:
                   
          <xsl:text>"sample collection"</xsl:text>
          <xsl:text>&#9;</xsl:text>    
-         <xsl:value-of select="if (@collectionDate != '') then isa:quotes(substring-before(@collectionDate,'T')) else concat('&#9;&quot;','&quot;&#9;')"/>
+         <xsl:value-of select="if (@collectionDate != '') then isa:quotes(substring-before(@collectionDate,'T')) else concat('&quot;','&quot;')"/>
          <xsl:text>&#9;</xsl:text>
     
         <xsl:call-template name="sample_material_name"/>
@@ -1244,10 +1128,17 @@ DOI:
 </xsl:template>   
     
 <xsl:template name="mapping-replacement">
-    <xsl:param name="species_var"/>
+    <xsl:param name="species_param"/>
     <xsl:variable name="mapping" select="document('ISA-Team-Biocrates2ISA-CV-mapping.xml')"/>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="if ($mapping/root/mapping-replacement/element[@biocrateslabel=$species_var]) then concat('&#9;&quot;', @biocrateslabel, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>
+<!--    <xsl:text>&#9;</xsl:text><xsl:value-of select="$species_param"/>
+    <xsl:text>&#9;</xsl:text><xsl:value-of select="$mapping/root/mapping-replacement/element[1]/@biocrateslabel"/>-->
+<!--    <xsl:value-of select="if ($mapping/root/mapping-replacement/element[@biocrateslabel=$species_param]) then concat('&#9;&quot;',$mapping/root/mapping-replacement/element/@ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>-->
+    
+    <xsl:for-each select="$mapping/root/mapping-replacement/element">
+        <xsl:if test="@biocrateslabel=$species_param">
+            <xsl:value-of select="concat('&#9;&quot;',@ontoterm, '&quot;','&#9;&quot;',@ontosource, '&quot;&#9;&quot;',@url,'&quot;')"/>
+        </xsl:if>           
+    </xsl:for-each>    
 </xsl:template>
 
 <xsl:template name="sample_material_name" match="sample">
