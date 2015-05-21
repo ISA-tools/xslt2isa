@@ -1083,7 +1083,7 @@ DOI:
                  <xsl:text>&#9;&#9;&#9;</xsl:text>
              </xsl:when>
              <xsl:otherwise>
-                 <xsl:call-template name="sample_material_name"/>        
+                <!-- <xsl:call-template name="sample_material_name"/> -->       
                  <xsl:text>&#9;</xsl:text>
                  <xsl:value-of select="if (@barcode != '') then isa:quotes(@barcode) else concat('&#9;&quot;','none reported','&quot;&#9;')"/>
                  <xsl:text>&#9;</xsl:text>   
@@ -1096,13 +1096,13 @@ DOI:
                  <xsl:text>&#9;!!!</xsl:text><xsl:value-of select="$species_var"/>
 
                  
-                 <xsl:value-of select="$biocrates2isa-cv-mapping/mapping/@name"/>
+                 <xsl:value-of select="count($biocrates2isa-cv-mapping/mapping/@name)"/>
                  <xsl:for-each select="$biocrates2isa-cv-mapping/mapping/replacement/element">
               
                      <xsl:text>&#9;</xsl:text>
                      <xsl:text>hello</xsl:text>
                      <xsl:value-of select="@biocrateslabel"/>
-                     <xsl:value-of select="if (@biocrateslabel=$species_var) then concat('&#9;&quot;', @biocrateslabel, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>
+                     <xsl:value-of select="if (@biocrateslabel=$species_var) then concat('&#9;&quot;', @ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>
                 <!--   <xsl:value-of select="if (@biocrates_label=$this) then concat('&#9;&quot;', @ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>-->
                  </xsl:for-each>
   
