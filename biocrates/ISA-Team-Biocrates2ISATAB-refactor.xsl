@@ -140,21 +140,21 @@ DOI:
 <xsl:text>
 </xsl:text>
 
-<xsl:text>"Term Source Name"&#9;"OBI"&#9;"PSI-MS"</xsl:text> 
+<xsl:text>"Term Source Name"&#9;"OBI"&#9;"PSI-MS"&#9;"UBERON"&#9;"NCBITax"</xsl:text> 
 <xsl:text></xsl:text>
 <xsl:text>
 </xsl:text>
 
-<xsl:text>"Term Source File"&#9;"http://obi-ontology.org"&#9;"http://psi-ms.sf.net"</xsl:text>
+<xsl:text>"Term Source File"&#9;"http://purl.org/obo/obi.owl"&#9;"http://psi-ms.sf.net"&#9;"http://purl.org/obo/uberon.owl"&#9;"http://purl.org/obo/NCBITax.owl"</xsl:text>
 <xsl:text></xsl:text>
 <xsl:text>
 </xsl:text>
 
-<xsl:text>"Term Source Version"&#9;"1"&#9;"1"</xsl:text>
+<xsl:text>"Term Source Version"&#9;"1"&#9;"1"&#9;"1"&#9;"1"</xsl:text>
 <xsl:text></xsl:text>
 <xsl:text>
 </xsl:text>
-<xsl:text>"Term Source Description"&#9;"The Ontology for Biomedical Investigation"&#9;"PSI Mass Spectrometry"</xsl:text>
+<xsl:text>"Term Source Description"&#9;"The Ontology for Biomedical Investigation"&#9;"PSI Mass Spectrometry"&#9;"Uber-anatomy ontology"&#9;"NCBI Taxonomy"</xsl:text>
 <xsl:text></xsl:text>
 
 <xsl:text>
@@ -326,24 +326,56 @@ DOI:
     </xsl:if> 
     <xsl:text>"biocrates analysis"&#9;</xsl:text>
 "Study Protocol Type"<xsl:text>&#9;</xsl:text>
-    <xsl:text>"sample collection"&#9;</xsl:text>
+    <xsl:text>"specimen collection"&#9;</xsl:text>
     <xsl:text>"material separation"&#9;</xsl:text>
         <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
-            <xsl:text>"sample preparation"&#9;</xsl:text>        
+            <xsl:text>"sample preparation for assay"&#9;</xsl:text>        
         </xsl:for-each>
     
     <xsl:if test="count($positiveModeCount) > 0">       
-        <xsl:text>"data acquisition"</xsl:text>
+        <xsl:text>"data collection"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
     <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>"data acquisition"</xsl:text>
+        <xsl:text>"data collection"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if> 
     <xsl:text>"data transformation"&#9;</xsl:text>
 <xsl:text>    
-"Study Protocol Type Term Accession Number"
-"Study Protocol Type Term Source REF"
+"Study Protocol Type Term Accession Number"</xsl:text>
+    <xsl:text>&#9;</xsl:text>
+    <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000659"&#9;</xsl:text>
+    <xsl:text>"http://purl.obolibrary.org/obo/OBI_0302884"&#9;</xsl:text>
+    <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
+            <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000073"&#9;</xsl:text>        
+    </xsl:for-each>
+        <xsl:if test="count($positiveModeCount) > 0">       
+            <xsl:text>"http://purl.obolibrary.org/obo/OBI_0600013"</xsl:text>
+            <xsl:text>&#9;</xsl:text>
+        </xsl:if>   
+        <xsl:if test="count($negativeModeCount) > 0">
+            <xsl:text>"http://purl.obolibrary.org/obo/OBI_0600013"</xsl:text>
+            <xsl:text>&#9;</xsl:text>
+        </xsl:if> 
+        <xsl:text>"http://purl.obolibrary.org/obo/OBI_0200000"&#9;</xsl:text>
+<xsl:text>        
+"Study Protocol Type Term Source REF"</xsl:text>
+    <xsl:text>&#9;</xsl:text>
+    <xsl:text>"OBI"&#9;</xsl:text>
+    <xsl:text>"OBI"&#9;</xsl:text>
+    <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
+            <xsl:text>"OBI"&#9;</xsl:text>        
+    </xsl:for-each>
+        <xsl:if test="count($positiveModeCount) > 0">       
+            <xsl:text>"OBI"</xsl:text>
+            <xsl:text>&#9;</xsl:text>
+        </xsl:if>   
+        <xsl:if test="count($negativeModeCount) > 0">
+            <xsl:text>"OBI"</xsl:text>
+            <xsl:text>&#9;</xsl:text>
+        </xsl:if> 
+        <xsl:text>"OBI"&#9;</xsl:text>
+<xsl:text>
 "Study Protocol Description"
 "Study Protocol URI"
 "Study Protocol Version"
@@ -356,12 +388,7 @@ DOI:
 "Study Protocol Components Type Term Source REF"
 "STUDY CONTACTS"  
 "Study Person Last Name"</xsl:text> 
-        <xsl:apply-templates select="contact" mode="lastname"/>
-<!--<xsl:for-each select="contact">
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="isa:quotes(substring-before(@ContactPerson,' '))"/>
-</xsl:for-each>-->
-        
+        <xsl:apply-templates select="contact" mode="lastname"/>        
 <xsl:text>
 "Study Person First Name"</xsl:text>
         <xsl:apply-templates select="contact" mode="firstname"/>
@@ -407,11 +434,11 @@ DOI:
 </xsl:template>
 
 <xsl:template  match="contact" mode="lastname">
-    <xsl:value-of select="if (@ContactPerson != '') then concat('&#9;',isa:quotes(substring-after(@ContactPerson,' '))) else (concat('&#9;&quot;','&quot;'))"/>
+    <xsl:value-of select="if (@ContactPerson != '') then concat('&#9;',isa:quotes(substring-before(@ContactPerson,' '))) else (concat('&#9;&quot;','&quot;'))"/>
 </xsl:template>
     
 <xsl:template  match="contact" mode="firstname">
-    <xsl:value-of select="if (@ContactPerson != '') then concat('&#9;',isa:quotes(substring-before(@ContactPerson,' '))) else (concat('&#9;&quot;','&quot;'))"/>
+    <xsl:value-of select="if (@ContactPerson != '') then concat('&#9;',isa:quotes(substring-after(@ContactPerson,' '))) else (concat('&#9;&quot;','&quot;'))"/>
 </xsl:template>
 
 <xsl:template  match="contact" mode="affiliation">
@@ -1123,8 +1150,9 @@ DOI:
     
         <xsl:call-template name="sample_material_name"/>
     
-        <xsl:text>&#9;</xsl:text>    
-        <xsl:value-of select="isa:quotes(lower-case(@sampleType))"/>
+        <xsl:text>&#9;</xsl:text>  
+        <xsl:call-template name="sampleType"/>  
+<!--        <xsl:value-of select="isa:quotes(lower-case(@sampleType))"/>-->
 </xsl:template>   
     
 <xsl:template name="mapping-replacement">
@@ -1182,7 +1210,7 @@ DOI:
             <xsl:text>"positive control"</xsl:text>
         </xsl:when>
         <xsl:otherwise>
-            <xsl:text>""</xsl:text>
+            <xsl:text>"specimen"</xsl:text>
         </xsl:otherwise>
     </xsl:choose>    
 </xsl:template>    
