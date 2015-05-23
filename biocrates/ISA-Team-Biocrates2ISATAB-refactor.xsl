@@ -89,39 +89,19 @@ DOI:
     <!-- $max is used for padding empty cell in the s_study.txt as some 'sample' have no such attributes -->
     <xsl:variable name="max" select="max(data/plate/well/sample/count(sampleInfoExport))" as="xs:integer"/> 
     
+    <xsl:template match="/">
+     <xsl:apply-templates/>
+    </xsl:template>      
     
-   
-
-
-    
-<xsl:template match="data" priority="1">
-    
+<xsl:template match="data">
     <xsl:variable name="investigationfile" select="concat('output/',data,'i_inv_biocrates.txt')[normalize-space()]"></xsl:variable>
-    <xsl:value-of select="$investigationfile[normalize-space()]"/> 
-    
+    <xsl:value-of select="$investigationfile[normalize-space()]"/>     
     <!-- this is used to generated separate output files -->
     <xsl:result-document href="{$investigationfile}">
-        <xsl:copy-of select=".[normalize-space()]"></xsl:copy-of>
-    
-
-
-<!--BEGIN a block of commented lines to record some provenance information -->
-<!-- this information may be used by Metabolights -->   
-<xsl:text>"#BIOCRATES software version:"&#9;</xsl:text>  <xsl:value-of select="isa:quotes(@swVersion)"/>
-<xsl:text>
-</xsl:text>
-<xsl:text>"#BIOCRATES document filename:"&#9;</xsl:text>
-    <xsl:value-of select="isa:quotes(base-uri())"/>
-<xsl:text>
-</xsl:text>
-<xsl:text>"#BIOCRATES export date:"&#9;</xsl:text>  <xsl:value-of select="isa:quotes(substring-before(@dateExport,'T'))"/>
-<xsl:text>
-</xsl:text>
-<xsl:text>"#ISATab transformation by: Isatools-Biocrates2ISATab.xsl"</xsl:text>
-<!-- END of the comment block -->
-
-
-  
+        <xsl:copy-of select=".[normalize-space()]"/>
+        <xsl:call-template name="generate-header-comments"/>
+        
+<!-- TODO: (I am not sure what this for-each is for) But perhaps it can be refactor into a template-->        
 <xsl:for-each select="data">
     <xsl:value-of select="@swVersion"/>
 <xsl:text>
@@ -131,75 +111,20 @@ DOI:
 </xsl:text>            
 </xsl:for-each>
     
-    
 <!-- creates ISA i_investigation file -->
-
-<xsl:text>
-</xsl:text>
-<xsl:text>"ONTOLOGY SOURCE REFERENCE"</xsl:text>
-<xsl:text>
-</xsl:text>
-
-<xsl:text>"Term Source Name"&#9;"OBI"&#9;"PSI-MS"&#9;"UBERON"&#9;"NCBITax"</xsl:text> 
-<xsl:text></xsl:text>
-<xsl:text>
-</xsl:text>
-
-<xsl:text>"Term Source File"&#9;"http://purl.org/obo/obi.owl"&#9;"http://psi-ms.sf.net"&#9;"http://purl.org/obo/uberon.owl"&#9;"http://purl.org/obo/NCBITax.owl"</xsl:text>
-<xsl:text></xsl:text>
-<xsl:text>
-</xsl:text>
-
-<xsl:text>"Term Source Version"&#9;"1"&#9;"1"&#9;"1"&#9;"1"</xsl:text>
-<xsl:text></xsl:text>
-<xsl:text>
-</xsl:text>
-<xsl:text>"Term Source Description"&#9;"The Ontology for Biomedical Investigation"&#9;"PSI Mass Spectrometry"&#9;"Uber-anatomy ontology"&#9;"NCBI Taxonomy"</xsl:text>
-<xsl:text></xsl:text>
-
-<xsl:text>
-"INVESTIGATION"
-"Investigation Identifier"
-"Investigation Title"
-"Investigation Description"
-"Investigation Submission Date"
-"Investigation Public Release Date"
-"INVESTIGATION PUBLICATIONS"
-"Investigation PubMed ID"
-"Investigation Publication DOI"
-"Investigation Publication Author List"
-"Investigation Publication Title"
-"Investigation Publication Status"
-"Investigation Publication Status Term Accession Number"
-"Investigation Publication Status Term Source REF"
-"INVESTIGATION CONTACTS"
-"Investigation Person Last Name"
-"Investigation Person First Name"
-"Investigation Person Mid Initials"
-"Investigation Person Email"
-"Investigation Person Phone"
-"Investigation Person Fax"
-"Investigation Person Address"
-"Investigation Person Affiliation"
-"Investigation Person Roles"
-"Investigation Person Roles Term Accession Number"
-"Investigation Person Roles Term Source REF"
-
-"STUDY"
-"Study Identifier"</xsl:text>
-<xsl:value-of select="concat('&#9;',isa:quotes(/data/project[1]/@identifier))"/>
-<xsl:text>
-"Study Title"</xsl:text>
-<xsl:value-of select="concat('&#9;',isa:quotes(/data/project[1]/@ProjectName))"/>    
-<xsl:text>
-"Study Submission Date"
-"Study Public Release Date"
-"Study Description"
-"Study File Name"</xsl:text>
-<xsl:text>&#9;"s_study_biocrates.txt"</xsl:text>
+        <xsl:call-template name="generate-ontology-section"/>
+        <xsl:call-template name="generate-investigation-section"/>
+        
+        <!-- TODO: Put the "STUDY" section in its own template name for code readabiltity -->
+<xsl:text>&#10;"STUDY"&#10;</xsl:text>
+        <xsl:value-of select="isa:single-name-value('Study Identifier', /data/project[1]/@identifier)"/>
+        <xsl:value-of select="isa:single-name-value('Study Title', /data/project[1]/@ProjectName)"/>
+        <xsl:value-of select="isa:single-name-value('Study Submission Date', '')"/>
+        <xsl:value-of select="isa:single-name-value('Study Public Release Date', '')"/>
+        <xsl:value-of select="isa:single-name-value('Study Description', '')"/>
+        <xsl:value-of select="isa:single-name-value('Study File Name', 's_study_biocrates.txt')"/>
     
-<xsl:text>
-"STUDY DESIGN DESCRIPTORS"
+<xsl:text>"STUDY DESIGN DESCRIPTORS"
 "Study Design Type"
 "Study Design Type Term Accession Number"
 "Study Design Type Term Source REF"
@@ -219,28 +144,17 @@ DOI:
 "STUDY ASSAYS"
 "Study Assay Measurement Type"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">      
-        <xsl:text>"metabolite profiling"</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>   
-    <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>"metabolite profiling"</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>     
+    <xsl:value-of select="if (count($positiveModeCount) > 0) then concat(isa:quotes('metabolite profiling'), '&#9;') else ''"/>
+    <xsl:value-of select="if (count($negativeModeCount) > 0) then concat(isa:quotes('metabolite profiling'), '&#9;') else ''"/>     
 <xsl:text>
 "Study Assay Measurement Type Term Source REF"</xsl:text>
-    <xsl:text>&#9;</xsl:text>
-    <xsl:if test="count($positiveModeCount) > 0">     
-        <xsl:text>"OBI"</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>   
-    <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>"OBI"</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>     
+<xsl:text>&#9;</xsl:text>
+    <xsl:value-of select="if (count($positiveModeCount) > 0) then concat(isa:quotes('OBI'), '&#9;') else ''"/>
+    <xsl:value-of select="if (count($negativeModeCount) > 0) then concat(isa:quotes('OBI'), '&#9;') else ''"/>         
 <xsl:text>
 "Study Assay Measurement Type Term Accession Number"</xsl:text>
     <xsl:text>&#9;</xsl:text>
+    <!-- TODO: Tidy up (same as above) -->
     <xsl:if test="count($positiveModeCount) > 0">     
         <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000366"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -252,6 +166,7 @@ DOI:
 <xsl:text>
 "Study Assay Technology Type"</xsl:text>
     <xsl:text>&#9;</xsl:text>
+    <!-- TODO: Tidy up (same as above) -->
     <xsl:if test="count($positiveModeCount) > 0">     
         <xsl:text>"mass spectrometry"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -263,6 +178,7 @@ DOI:
 <xsl:text>
 "Study Assay Technology Type Term Source REF"</xsl:text>
     <xsl:text>&#9;</xsl:text>
+    <!-- TODO: Tidy up (same as above) -->
     <xsl:if test="count($positiveModeCount) > 0">      
         <xsl:text>"OBI"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -274,6 +190,7 @@ DOI:
 <xsl:text>
 "Study Assay Technology Type Term Accession Number"</xsl:text>
     <xsl:text>&#9;</xsl:text>
+    <!-- TODO: Tidy up (same as above) -->
     <xsl:if test="count($positiveModeCount) > 0">       
         <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000470"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -285,6 +202,7 @@ DOI:
 <xsl:text>
 "Study Assay Technology Platform"</xsl:text>
     <xsl:text>&#9;</xsl:text>
+    <!-- TODO: Tidy up (same as above) -->
     <xsl:if test="count($positiveModeCount) > 0">        
         <xsl:text>"Biocrates"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -296,6 +214,7 @@ DOI:
 <xsl:text>
 "Study Assay File Name"</xsl:text>
     <xsl:text>&#9;</xsl:text>
+    <!-- TODO: Tidy up (same as above) -->    
     <xsl:if test="count($positiveModeCount) > 0">       
         <xsl:text>"a_biocrates_assay_positive_mode.txt"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -315,11 +234,12 @@ DOI:
         <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
             <xsl:value-of select="isa:quotes(.)"/>  <xsl:text>&#9;</xsl:text>      
         </xsl:for-each> 
-
+    <!-- TODO: Tidy up (same as above) -->
     <xsl:if test="count($positiveModeCount) > 0">       
         <xsl:text>"MS acquisition in positive mode"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
+    <!-- TODO: Tidy up (same as above) -->    
     <xsl:if test="count($negativeModeCount) > 0">
         <xsl:text>"MS acquisition in negative mode"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -331,11 +251,12 @@ DOI:
         <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
             <xsl:text>"sample preparation for assay"&#9;</xsl:text>        
         </xsl:for-each>
-    
+    <!-- TODO: Tidy up (same as above) -->
     <xsl:if test="count($positiveModeCount) > 0">       
         <xsl:text>"data collection"</xsl:text>
         <xsl:text>&#9;</xsl:text>
     </xsl:if>   
+    <!-- TODO: Tidy up (same as above) -->    
     <xsl:if test="count($negativeModeCount) > 0">
         <xsl:text>"data collection"</xsl:text>
         <xsl:text>&#9;</xsl:text>
@@ -349,10 +270,12 @@ DOI:
     <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
             <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000073"&#9;</xsl:text>        
     </xsl:for-each>
+        <!-- TODO: Tidy up (same as above) -->
         <xsl:if test="count($positiveModeCount) > 0">       
             <xsl:text>"http://purl.obolibrary.org/obo/OBI_0600013"</xsl:text>
             <xsl:text>&#9;</xsl:text>
-        </xsl:if>   
+        </xsl:if>
+        <!-- TODO: Tidy up (same as above) -->
         <xsl:if test="count($negativeModeCount) > 0">
             <xsl:text>"http://purl.obolibrary.org/obo/OBI_0600013"</xsl:text>
             <xsl:text>&#9;</xsl:text>
@@ -366,10 +289,12 @@ DOI:
     <xsl:for-each select="/data/plate[generate-id(.)=generate-id(key('usedOPlist', @usedOP)[1])]/@usedOP">              
             <xsl:text>"OBI"&#9;</xsl:text>        
     </xsl:for-each>
+        <!-- TODO: Tidy up (same as above) -->
         <xsl:if test="count($positiveModeCount) > 0">       
             <xsl:text>"OBI"</xsl:text>
             <xsl:text>&#9;</xsl:text>
-        </xsl:if>   
+        </xsl:if>
+        <!-- TODO: Tidy up (same as above) -->
         <xsl:if test="count($negativeModeCount) > 0">
             <xsl:text>"OBI"</xsl:text>
             <xsl:text>&#9;</xsl:text>
@@ -415,7 +340,7 @@ DOI:
 </xsl:result-document>
     
     <!-- template invocation to create ISA s_study table -->
-    <xsl:call-template name="study"></xsl:call-template>
+    <xsl:call-template name="study"/>
 <xsl:text>
 </xsl:text>
     <!-- template invocation to create ISA a_assay table for positive mode acquisition -->
@@ -432,6 +357,57 @@ DOI:
     <xsl:call-template name="metabolite_desc_nega"/>  --> 
 
 </xsl:template>
+    
+    <xsl:template name="generate-header-comments">
+        <!--BEGIN a block of commented lines to record some provenance information -->
+        <!-- this information may be used by Metabolights -->
+        <xsl:value-of select="isa:single-name-value('#BIOCRATES software version:', @swVersion)"/>
+        <xsl:value-of select="isa:single-name-value('#BIOCRATES document filename:', base-uri())"/>
+        <xsl:value-of select="isa:single-name-value('#BIOCRATES export date:', substring-before(@dateExport,'T'))"/>
+        <xsl:text>"#ISATab transformation by: Isatools-Biocrates2ISATab.xsl"</xsl:text>
+        <!-- END of the comment block -->
+    </xsl:template>
+    
+    <xsl:template name="generate-ontology-section">
+        <xsl:text>&#10;"ONTOLOGY SOURCE REFERENCE"&#10;</xsl:text>
+        <xsl:text>"Term Source Name"&#9;"OBI"&#9;"PSI-MS"&#9;"UBERON"&#9;"NCBITax"&#10;</xsl:text> 
+        <xsl:text>"Term Source File"&#9;"http://purl.org/obo/obi.owl"&#9;"http://psi-ms.sf.net"&#9;"http://purl.org/obo/uberon.owl"&#9;"http://purl.org/obo/NCBITax.owl"&#10;</xsl:text>
+        <xsl:text>"Term Source Version"&#9;"1"&#9;"1"&#9;"1"&#9;"1"&#10;</xsl:text>
+        <xsl:text>"Term Source Description"&#9;"The Ontology for Biomedical Investigation"&#9;"PSI Mass Spectrometry"&#9;"Uber-anatomy ontology"&#9;"NCBI Taxonomy"</xsl:text>        
+    </xsl:template>
+    
+    <xsl:template name="generate-investigation-section">
+        <!-- TODO: Need to add the blank quotes if there is no values. For example: "Investigation Identifier:" "".
+            Perhaps this can be done using <xsl:value-of select="isa:single-name-value('Investigation Identifier', '')"/>
+        -->
+        <xsl:text>
+"INVESTIGATION"
+"Investigation Identifier"
+"Investigation Title"
+"Investigation Description"
+"Investigation Submission Date"
+"Investigation Public Release Date"
+"INVESTIGATION PUBLICATIONS"
+"Investigation PubMed ID"
+"Investigation Publication DOI"
+"Investigation Publication Author List"
+"Investigation Publication Title"
+"Investigation Publication Status"
+"Investigation Publication Status Term Accession Number"
+"Investigation Publication Status Term Source REF"
+"INVESTIGATION CONTACTS"
+"Investigation Person Last Name"
+"Investigation Person First Name"
+"Investigation Person Mid Initials"
+"Investigation Person Email"
+"Investigation Person Phone"
+"Investigation Person Fax"
+"Investigation Person Address"
+"Investigation Person Affiliation"
+"Investigation Person Roles"
+"Investigation Person Roles Term Accession Number"
+"Investigation Person Roles Term Source REF"</xsl:text>
+    </xsl:template>
 
 <xsl:template  match="contact" mode="lastname">
     <xsl:value-of select="if (@ContactPerson != '') then concat('&#9;',isa:quotes(substring-before(@ContactPerson,' '))) else (concat('&#9;&quot;','&quot;'))"/>
@@ -479,6 +455,7 @@ DOI:
         <xsl:text>Comment[scan type]</xsl:text><xsl:text>&#9;</xsl:text> 
         
         <!-- creates a set of Quantitation Type headers for each of the samples -->
+        <!-- TODO: I think this for-each can be replace by xsl:template -->
         <xsl:for-each select="//injection[lower-case(@polarity) ='positive']">
             
             <xsl:value-of select="ancestor::plate/@usedOP"/><xsl:text>_</xsl:text>                     
@@ -787,7 +764,7 @@ DOI:
         <xsl:variable name="datafile" select="concat('output/',$usedOP,'-maf-negative.txt')[normalize-space()]"></xsl:variable>
         <xsl:value-of select="$datafile[normalize-space()]" /> 
         <xsl:result-document href="{$datafile}">
-            <xsl:copy-of select=".[normalize-space()]"></xsl:copy-of>
+            <xsl:copy-of select=".[normalize-space()]"/>
             
             <!-- formatting follows MzTAB & EMBL-EBI Metabolights Metabolite Assignment File specifications -->
             <xsl:text>database_identifier</xsl:text><xsl:text>&#9;</xsl:text>
@@ -801,6 +778,7 @@ DOI:
             <xsl:text>Comment[scan type]</xsl:text><xsl:text>&#9;</xsl:text> 
             
             <!-- creates a set of Quantitation Type headers for each of the samples -->
+            <!-- TODO: I think this for-each can be replaced by an xsl:template -->
             <xsl:for-each select="//injection[lower-case(@polarity) ='negative']">
                     
                <!-- [SOP][_][PlateBarcode][_][WellPosition][_][AcquisitionMethodIndex][_][RunNumber][_][InjectionNr][_][SampleType ID][_][SampleBarcode][_][sample identifier if setting is set][.wiff] -->             
@@ -1035,6 +1013,7 @@ DOI:
 </xsl:template> 
 
 <xsl:template match="well">
+    <!-- TODO: I think the xsl:text and xsl:value here can be tidied up -->
     <xsl:text>
     </xsl:text>     
     <xsl:text>well:</xsl:text>
@@ -1162,6 +1141,7 @@ DOI:
     <xsl:text>&#9;</xsl:text><xsl:value-of select="$mapping/root/mapping-replacement/element[1]/@biocrateslabel"/>-->
 <!--    <xsl:value-of select="if ($mapping/root/mapping-replacement/element[@biocrateslabel=$species_param]) then concat('&#9;&quot;',$mapping/root/mapping-replacement/element/@ontoterm, '&quot;') else concat('&#9;&quot;','other-species','&quot;&#9;')"/>-->
     
+    <!-- TODO: I think that this can be done by not using an xsl:for-each -->
     <xsl:for-each select="$mapping/root/mapping-replacement/element">
         <xsl:if test="@biocrateslabel=$species_param">
             <xsl:value-of select="concat('&#9;&quot;',@ontoterm, '&quot;','&#9;&quot;',@ontosource, '&quot;&#9;&quot;',@url,'&quot;')"/>
