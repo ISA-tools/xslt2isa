@@ -1275,7 +1275,7 @@ DOI:
         <xsl:text>Parameter Value[kit name]</xsl:text><xsl:text>&#9;</xsl:text> 
         <xsl:text>Parameter Value[plate ID]</xsl:text><xsl:text>&#9;</xsl:text>
         <xsl:text>Parameter Value[plate position]</xsl:text><xsl:text>&#9;</xsl:text>
-      <!--  <xsl:text>Parameter Value[chromatography instrument]</xsl:text><xsl:text>&#9;</xsl:text>
+      <!--<xsl:text>Parameter Value[chromatography instrument]</xsl:text><xsl:text>&#9;</xsl:text>
         <xsl:text>Parameter Value[chromatography column]</xsl:text><xsl:text>&#9;</xsl:text> -->
         <xsl:text>Parameter Value[mass spectrometry instrument]</xsl:text><xsl:text>&#9;</xsl:text>
         <xsl:text>Term Source REF</xsl:text><xsl:text>&#9;</xsl:text>
