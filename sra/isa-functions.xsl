@@ -10,4 +10,9 @@
         <xsl:value-of select="concat('&quot;', $input, '&quot;')"/>
     </xsl:function>
     
+    <xsl:function name="isa:single-name-value" as="xs:string">
+        <xsl:param name="name" as="xs:string"/>
+        <xsl:param name="value" as="xs:string"/>
+        <xsl:value-of select="concat('&quot;', $name, '&quot;', '&#9;', '&quot;', $value, '&quot;', '&#10;')"/>
+    </xsl:function>
 </xsl:stylesheet>
