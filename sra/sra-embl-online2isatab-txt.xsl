@@ -14,7 +14,7 @@ test datasets:
 SRA030397 -> targeted metagenomics application
 SRA000266 -> targeted metagenomics application
 ERA148766 -> 
- SRA095866 ->
+SRA095866 ->
 
 representing submission 
 
@@ -83,7 +83,7 @@ SRA schema version considered:
  </xsl:template>
 
  <xsl:template match="SUBMISSION" mode="go">
-  <xsl:variable name="broker-name" select="@broker_name"/> 
+  <xsl:variable name="broker-name" select="if (@broker_name) then @broker_name else ''"/> 
   <xsl:apply-templates>
    <xsl:with-param name="broker-name" select="$broker-name" tunnel="yes"/>
   </xsl:apply-templates>
