@@ -106,7 +106,7 @@ SRA schema version considered:
     <xsl:value-of select="isa:quotes('Controlled Terminology for SRA/ENA schema')"/>
    <xsl:text>
 "INVESTIGATION"
-"Investigation Identitifier"
+"Investigation Identifier"
 "Investigation Title"
 "Investigation Description"
 "Investigation Submission Date"
