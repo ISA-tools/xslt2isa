@@ -93,7 +93,7 @@ SRA schema version considered:
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-STUDY')]">
   <xsl:param name="broker-name" required="yes" tunnel="yes"/>
   <xsl:variable name="study" select="following-sibling::ID"/>
-  <xsl:result-document href="{concat($acc-number, '/', 'i_', $acc-number, '.txt')}" method="text">
+  <xsl:result-document href="{concat('output/', $acc-number, '/', 'i_', $acc-number, '.txt')}" method="text">
    <xsl:text>#SRA Document:</xsl:text>    <xsl:value-of select="isa:quotes($acc-number)"/><xsl:text>&#10;</xsl:text>
    <xsl:text>"ONTOLOGY SOURCE REFERENCE"&#10;</xsl:text>
    <xsl:text>"Term Source Name"&#9;</xsl:text>
@@ -179,7 +179,7 @@ SRA schema version considered:
  </xsl:template>
 
  <xsl:template match="XREF_LINK/DB[contains(.,'NA-SAMPLE')]">
-  <xsl:result-document href="{concat($acc-number, '/', 's_', $acc-number, '.txt')}" method="text">
+  <xsl:result-document href="{concat('output/', $acc-number, '/', 's_', $acc-number, '.txt')}" method="text">
    <xsl:variable name="samples-ids" select="following-sibling::ID"/>
    <xsl:call-template name="generate-study-header"/>
    <xsl:text>&#9;"Sample Name"&#10;</xsl:text>
@@ -205,7 +205,7 @@ SRA schema version considered:
  </xsl:template>
  
  <xsl:template match="experiments/experiment" mode="distinct-exp">
-  <xsl:result-document href="{concat($acc-number, '/', 'a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
+  <xsl:result-document href="{concat('output/', $acc-number, '/', 'a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
    <xsl:variable name="my-exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
    <!-- Create the header -->
    <xsl:text>"Sample Name"&#9;</xsl:text>
