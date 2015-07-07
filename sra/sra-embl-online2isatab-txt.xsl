@@ -149,7 +149,7 @@ SRA schema version considered:
   <xsl:result-document href="{concat('output/', $acc-number, '/', 's_', $acc-number, '.txt')}" method="text">
    <xsl:variable name="samples-ids" select="following-sibling::ID"/>
    <xsl:call-template name="generate-study-header"/>
-   <xsl:text>&#9;"Sample Name"&#10;</xsl:text>
+   <xsl:text>"Sample Name"&#10;</xsl:text>
    <xsl:for-each select="tokenize($samples-ids, ',')">
     <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/', . , '&amp;display=xml'))/ROOT/SAMPLE"/>
    </xsl:for-each>
@@ -159,6 +159,7 @@ SRA schema version considered:
  <xsl:template name="generate-study-header">
   <xsl:text>"Source Name"&#9;</xsl:text>
   <xsl:text>"Characteristics[Primary Accession Number]"&#9;</xsl:text>
+  <xsl:text>"Comment[Common Name]"&#9;</xsl:text>
   <xsl:text>"Comment[Scientific Name]"&#9;</xsl:text>
   <xsl:text>"Characteristics[Taxonomic ID]"&#9;</xsl:text>
   <xsl:text>"Characteristics[Description]"&#9;</xsl:text>
@@ -294,8 +295,8 @@ SRA schema version considered:
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
   
-  <xsl:text>"Study Assay Technology Platform"&#10;</xsl:text>
-
+  <xsl:value-of select="isa:single-name-value('Study Assay Technology Platform', '')"/>
+  
   <xsl:text>"Study Assay File Name"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="concat('&#9;&quot;a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt&quot;')"/>
@@ -342,8 +343,10 @@ SRA schema version considered:
  </xsl:template>
 
  <xsl:template match="SAMPLE">
+  <!-- Source Name -->
   <xsl:apply-templates select="@alias"/>
   <xsl:text>&#9;</xsl:text>
+  <!-- Characteristics[Primary Accession Number] -->
   <xsl:apply-templates select="@accession"/>
   <xsl:text>&#9;</xsl:text>
   
@@ -379,7 +382,7 @@ SRA schema version considered:
  </xsl:template>
  
  <xsl:template match="DESCRIPTION">
-  <xsl:value-of select="substring-before(.,'&#xa;')"/>
+  <xsl:value-of select="isa:quotes(substring-before(.,'&#xa;'))"/>
  </xsl:template>
  
  <xsl:template match="EXPERIMENT">
@@ -389,22 +392,16 @@ SRA schema version considered:
   <xsl:text>"library preparation"&#9;</xsl:text>
 
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_STRATEGY"/>
- <!-- <xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SOURCE"/>
-<!--  <xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_SELECTION"/>
-  <!--<xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/SINGLE"/>
-  <!--<xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/LIBRARY_LAYOUT/PAIRED"/>
-  <!--<xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(., 'target_taxon: ')]" mode="target-taxon"/>
-  <!--<xsl:text>&#9;</xsl:text>-->
  
   <xsl:apply-templates select="DESIGN/LIBRARY_DESCRIPTOR/TARGETED_LOCI/LOCUS"/>
 
