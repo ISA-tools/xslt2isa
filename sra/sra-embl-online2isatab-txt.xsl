@@ -332,7 +332,7 @@ SRA schema version considered:
   
   <xsl:text>"Study Assay Technology Platform"&#10;</xsl:text>
 
-  <xsl:text>"Study Assay File Names"</xsl:text>
+  <xsl:text>"Study Assay File Name"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
    <xsl:value-of select="concat('&#9;&quot;a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt&quot;')"/>
   </xsl:for-each>
