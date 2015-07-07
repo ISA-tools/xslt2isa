@@ -428,17 +428,12 @@ SRA schema version considered:
   </xsl:choose>
 -->
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'target_subfragment: ')]" mode="target-subfragment"/>
-  <!--<xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'mid: ')]" mode="mid"/>
-<!--  <xsl:text>&#9;</xsl:text>-->
 
-   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_primers: ')]" mode="pcr-primers"/>
-<!--  <xsl:text>&#9;</xsl:text>-->
   
   <xsl:apply-templates select="DESIGN/DESIGN_DESCRIPTION[contains(.,'pcr_cond: ')]" mode="pcr-cond"/>
- <!-- <xsl:text>&#9;</xsl:text>-->
 
   <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@accession"/>
   <xsl:text>&#9;</xsl:text>
@@ -446,16 +441,15 @@ SRA schema version considered:
   <xsl:text>"nucleic acid sequencing"</xsl:text>
   <xsl:text>&#9;</xsl:text>
 
-
   <xsl:apply-templates select="DESIGN/SPOT_DESCRIPTOR"/>
   <xsl:text>&#9;</xsl:text>
    
   <xsl:apply-templates select="PLATFORM//INSTRUMENT_MODEL"/>
 
   <!-- a TAB as placeholder for Performer-->
-  <xsl:text>&#9;</xsl:text>
+  <xsl:text>""&#9;</xsl:text>
   <!-- another TAB as placeholder for Date-->
-  <xsl:text>&#9;</xsl:text>
+  <xsl:text>""&#9;</xsl:text>
 
   <xsl:apply-templates select="@accession"/>
   <xsl:text>&#9;</xsl:text>
