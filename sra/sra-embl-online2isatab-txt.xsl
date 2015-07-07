@@ -128,8 +128,7 @@ SRA schema version considered:
 "STUDY"
 <xsl:value-of select="isa:single-name-value('Comment[SRA broker]', $broker-name)"/>
    <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
-   
-   <xsl:text>"STUDY CONTACTS"&#10;</xsl:text>
+   <xsl:text>&#10;"STUDY CONTACTS"&#10;</xsl:text>
    <xsl:value-of select="isa:single-name-value('Comment[SRA broker]', $broker-name)"/>
    <xsl:value-of select="isa:single-name-value('Study Person Last Name', substring-before(CONTACTS/CONTACT/@name,' '))"/>
    <xsl:value-of select="isa:single-name-value('Study Person First Name', substring-after(CONTACTS/CONTACT/@name,' '))"/>
@@ -239,28 +238,42 @@ SRA schema version considered:
   <xsl:value-of select="isa:single-name-value('Study Design Type Term Accession Number', '')"/>
   <xsl:value-of select="isa:single-name-value('Study Design Type Term Source REF', '')"/>
   
-  <xsl:text>"STUDY PUBLICATIONS"</xsl:text>
-  <xsl:apply-templates select="STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]"/>
+  <xsl:text>"STUDY PUBLICATIONS"&#10;</xsl:text>
+  <xsl:text>"Study PubMed ID"</xsl:text>
+  <xsl:choose>
+   <xsl:when test="count(STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]) > 0">
+    <xsl:apply-templates select="STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]"/>
+   </xsl:when>
+   <xsl:otherwise>
+    <xsl:text>&#9;""</xsl:text>
+   </xsl:otherwise>
+  </xsl:choose>
 
-  <xsl:text>
-"Study Publication DOI"&#9;""
-"Study Publication Author List"&#9;""
-"Study Publication Title"&#9;""
-"Study Publication Status"&#9;""
-"Study Publication Status Term Accession Number"&#9;""
-"Study Publication Status Term Source REF"&#9;""
-</xsl:text>
-  <xsl:text>"STUDY FACTORS&#10;</xsl:text>
+  <xsl:variable name="study-pub-count" select="count(STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')])"/>
+  <xsl:variable name="study-pub-headings">
+   <headings>
+    <heading>Study Publication DOI</heading>
+    <heading>Study Publication Author List</heading>
+    <heading>Study Publication Title</heading>
+    <heading>Study Publication Status</heading>
+    <heading>Study Publication Status Term Accession Number</heading>
+    <heading>Study Publication Status Term Source REF</heading>
+   </headings>
+  </xsl:variable>
+  <xsl:call-template name="create-list-items">
+   <xsl:with-param name="headings" select="$study-pub-headings"/>
+   <xsl:with-param name="iterations" select="$study-pub-count"/>
+  </xsl:call-template>
+  
+  <xsl:text>&#10;"STUDY FACTORS"&#10;</xsl:text>
   <xsl:value-of select="isa:single-name-value('Study Factor Name', '')"/>
   <xsl:value-of select="isa:single-name-value('Study Factor Type', '')"/>
   <xsl:value-of select="isa:single-name-value('Study Factor Type Term Accession Number', '')"/>
   <xsl:value-of select="isa:single-name-value('Study Factor Type Term Source REF', '')"/>
   
   <xsl:text>"STUDY ASSAYS"&#10;</xsl:text>
-  
   <xsl:text>"Study Assay Measurement Type"</xsl:text>
   <xsl:for-each select="$distinct-exp-sources-strategies/experiments/experiment">
-<!--   <xsl:value-of select="concat('&#9;&quot;', lower-case(@library-strategy), '&quot;')"/>-->
    <xsl:value-of select="if ($sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]) then concat('&#9;&quot;', $sra-isa-mapping/mapping/pairs/measurement[lower-case(@SRA_strategy)=lower-case(current()/@library-strategy)]/@isa, '&quot;') else concat('&#9;&quot;','other','&quot;')"/>
   </xsl:for-each>
   <xsl:text>&#10;</xsl:text>
@@ -304,32 +317,65 @@ SRA schema version considered:
   <xsl:text>&#10;</xsl:text>
   
   <xsl:text>"STUDY PROTOCOLS"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Name"&#9;</xsl:text>
+  <xsl:text>"Study Protocol Name"</xsl:text>
   <xsl:for-each select="$distinct-exp-protocol-descriptions/descriptions/description">
    <xsl:value-of select="concat('&#9;', isa:quotes('library preparation'))"/>
   </xsl:for-each>
   <xsl:text>&#9;"nucleic acid sequencing"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Type"&#9;</xsl:text>
+  <xsl:text>"Study Protocol Type"</xsl:text>
   <xsl:for-each select="$distinct-exp-protocol-descriptions/descriptions/description">
    <xsl:value-of select="concat('&#9;', isa:quotes('library preparation'))"/>
   </xsl:for-each>
-  <xsl:text>&#9;"nucleic acid sequencing"&#10;</xsl:text>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Type Term Accession Number', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Type Term Source REF', '')"/>
-  
+  <xsl:text>&#9;"nucleic acid sequencing"</xsl:text>
+  <xsl:variable name="study-protocol-count" select="count($distinct-exp-protocol-descriptions/descriptions/description)"/>
+  <xsl:variable name="study-protocol-headings-1">
+   <headings>
+    <heading>Study Protocol Type Term Accession Number</heading>
+    <heading>Study Protocol Type Term Source REF</heading>
+   </headings>
+  </xsl:variable>
+  <xsl:call-template name="create-list-items">
+   <xsl:with-param name="headings" select="$study-protocol-headings-1"/>
+   <xsl:with-param name="iterations" select="$study-protocol-count + 1"/>
+  </xsl:call-template>
+  <xsl:text>&#10;</xsl:text>
   <xsl:text>"Study Protocol Description"</xsl:text>
   <xsl:for-each select="$distinct-exp-protocol-descriptions/descriptions/description">
    <xsl:value-of select="concat('&#9;', isa:quotes(@protocoldescription))"/>
   </xsl:for-each>
-  <xsl:value-of select="isa:single-name-value('Study Protocol URI', '')"/> 
-  <xsl:value-of select="isa:single-name-value('Study Protocol Version', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Parameters Name', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Parameters Term Accession Number', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Parameters Term Source REF', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Components Name', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Components Type', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Components Type Term Accession Number', '')"/>
-  <xsl:value-of select="isa:single-name-value('Study Protocol Components Type Term Source REF', '')"/>
+  <xsl:text>&#9;""</xsl:text>
+  <xsl:variable name="study-protocol-headings-2">
+   <headings>
+    <heading>Study Protocol URI</heading>
+    <heading>Study Protocol Version</heading>
+    <heading>Study Protocol Parameters Name</heading>
+    <heading>Study Protocol Parameters Term Accession Number</heading>
+    <heading>Study Protocol Parameters Term Source REF</heading>
+    <heading>Study Protocol Components Name</heading>
+    <heading>Study Protocol Components Type</heading>
+    <heading>Study Protocol Components Type Term Accession Number</heading>
+    <heading>Study Protocol Components Type Term Source REF</heading>
+   </headings>
+  </xsl:variable>
+  <xsl:call-template name="create-list-items">
+   <xsl:with-param name="headings" select="$study-protocol-headings-2"/>
+   <xsl:with-param name="iterations" select="$study-protocol-count + 1"/>
+  </xsl:call-template>
+ </xsl:template>
+ 
+ <xsl:template name="create-list-items">
+  <xsl:param name="headings" required="yes"/>
+  <xsl:param name="iterations" required="yes"/>
+  <xsl:for-each select="$headings/headings/heading">
+   <xsl:value-of select="concat('&#10;', isa:quotes(.))"/>
+   <xsl:for-each select="1 to $iterations">
+    <xsl:text>&#9;""</xsl:text>
+   </xsl:for-each>
+   <xsl:if test="$iterations = 0">
+    <xsl:text>&#9;""</xsl:text>
+   </xsl:if> 
+  </xsl:for-each>
+  
  </xsl:template>
 
  <xsl:template match="DESCRIPTOR/STUDY_TYPE">
@@ -339,20 +385,20 @@ SRA schema version considered:
  </xsl:template>
 
  <xsl:template match="STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]">
-  <xsl:value-of select="isa:single-name-value('Study PubMed ID', following-sibling::ID/.)"/>
+  <xsl:text>&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes(following-sibling::ID/.)"/>
  </xsl:template>
 
  <xsl:template match="SAMPLE">
   <!-- Source Name -->
-  <xsl:apply-templates select="@alias"/>
-  <xsl:text>&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes-tab(@alias)"/>
   <!-- Characteristics[Primary Accession Number] -->
-  <xsl:apply-templates select="@accession"/>
-  <xsl:text>&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes-tab(@accession)"/>
   
-  <xsl:apply-templates select="./SAMPLE_NAME"/>
-  <xsl:apply-templates select="./DESCRIPTION"/>
-  <xsl:text>&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes-tab(./SAMPLE_NAME/COMMON_NAME)"/>
+  <xsl:value-of select="isa:quotes-tab(./SAMPLE_NAME/SCIENTIFIC_NAME)"/>
+  <xsl:value-of select="isa:quotes-tab(./SAMPLE_NAME/TAXON_ID)"/>
+  <xsl:value-of select="isa:quotes-tab(/DESCRIPTION)"/>
   
   <xsl:variable name="my-sample" select="./SAMPLE_ATTRIBUTES"/>
   <xsl:for-each select="$distinct-characteristic-terms/terms/term">
@@ -361,19 +407,12 @@ SRA schema version considered:
    <xsl:text>&#9;</xsl:text>
   </xsl:for-each>
  
-  <xsl:apply-templates select="@alias"/>
-  <xsl:text>&#9;</xsl:text>
+  <xsl:value-of select="isa:quotes-tab(@alias)"/>
   <xsl:text>&#10;</xsl:text>
  </xsl:template>
  
  <xsl:template match="@alias | @accession | @refname">
   <xsl:value-of select="isa:quotes(.)"/>
- </xsl:template>
- 
- <xsl:template match="SAMPLE_NAME">
-  <xsl:apply-templates select="COMMON_NAME"/>  
-  <xsl:apply-templates select="SCIENTIFIC_NAME"/>
-  <xsl:apply-templates select="TAXON_ID"/>
  </xsl:template>
  
  <xsl:template match="COMMON_NAME | SCIENTIFIC_NAME | TAXON_ID">
@@ -532,6 +571,8 @@ SRA schema version considered:
   <xsl:text>&#9;</xsl:text>
  </xsl:template>
 
+ <!-- TODO: If it is too lines, then we concatenate -->
+ <!-- http://www.ebi.ac.uk/ena/data/warehouse/filereport?accession=SRX201979&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes -->
  <xsl:template match="EXPERIMENT_LINKS/EXPERIMENT_LINK/XREF_LINK/DB[contains(., 'ENA-FASTQ-FILES')]">
   <xsl:variable name="file" select="following-sibling::ID/."/>
   <xsl:if test="contains($file,'&amp;result=read_run&amp;fields=run_accession,fastq_ftp')">
