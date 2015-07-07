@@ -96,85 +96,52 @@ SRA schema version considered:
   <xsl:result-document href="{concat('output/', $acc-number, '/', 'i_', $acc-number, '.txt')}" method="text">
    <xsl:text>#SRA Document:</xsl:text>    <xsl:value-of select="isa:quotes($acc-number)"/><xsl:text>&#10;</xsl:text>
    <xsl:text>"ONTOLOGY SOURCE REFERENCE"&#10;</xsl:text>
-   <xsl:text>"Term Source Name"&#9;</xsl:text>
-   <xsl:value-of select="isa:quotes('OBI')"/>
-   <xsl:text>&#10;"Term Source File"&#9;</xsl:text>
-   <xsl:value-of select="isa:quotes('http://purl.obolibrary.org/obo/OBI.owl')"/><xsl:text>&#10;</xsl:text>
-   <xsl:text>"Term Source Version"&#9;</xsl:text>
-    <xsl:value-of select="isa:quotes('1')"/><xsl:text>&#10;</xsl:text>
-   <xsl:text>"Term Source Description"&#9;</xsl:text>
-    <xsl:value-of select="isa:quotes('Controlled Terminology for SRA/ENA schema')"/>
-   <xsl:text>
-"INVESTIGATION"
-"Investigation Identifier"
-"Investigation Title"
-"Investigation Description"
-"Investigation Submission Date"
-"Investigation Public Release Date"
+   <xsl:value-of select="isa:single-name-value('Term Source Name', 'OBI')"/>
+   <xsl:value-of select="isa:single-name-value('Term Source File', 'http://purl.obolibrary.org/obo/OBI.owl')"/>
+   <xsl:value-of select="isa:single-name-value('Term Source Version', '1')"/>
+   <xsl:value-of select="isa:single-name-value('Term Source Description', 'Controlled Terminology for SRA/ENA schema')"/>"INVESTIGATION"
+"Investigation Identifier"&#9;""
+"Investigation Title"&#9;""
+"Investigation Description"&#9;""
+"Investigation Submission Date"&#9;""
+"Investigation Public Release Date"&#9;""
 "INVESTIGATION PUBLICATIONS"
-"Investigation PubMed ID"
-"Investigation Publication DOI"
-"Investigation Publication Author List"
-"Investigation Publication Title"
-"Investigation Publication Status"
-"Investigation Publication Status Term Accession Number"
-"Investigation Publication Status Term Source REF"
+"Investigation PubMed ID"&#9;""
+"Investigation Publication DOI"&#9;""
+"Investigation Publication Author List"&#9;""
+"Investigation Publication Title"&#9;""
+"Investigation Publication Status"&#9;""
+"Investigation Publication Status Term Accession Number"&#9;""
+"Investigation Publication Status Term Source REF"&#9;""
 "INVESTIGATION CONTACTS"
-"Investigation Person Last Name"
-"Investigation Person First Name"
-"Investigation Person Mid Initials"
-"Investigation Person Email"
-"Investigation Person Phone"
-"Investigation Person Fax"
-"Investigation Person Address"
-"Investigation Person Affiliation"
-"Investigation Person Roles"
-"Investigation Person Roles Term Accession Number"
-"Investigation Person Roles Term Source REF"
+"Investigation Person Last Name"&#9;""
+"Investigation Person First Name"&#9;""
+"Investigation Person Mid Initials"&#9;""
+"Investigation Person Email"&#9;""
+"Investigation Person Phone"&#9;""
+"Investigation Person Fax"&#9;""
+"Investigation Person Address"&#9;""
+"Investigation Person Affiliation"&#9;""
+"Investigation Person Roles"&#9;""
+"Investigation Person Roles Term Accession Number"&#9;""
+"Investigation Person Roles Term Source REF"&#9;""
 "STUDY"
-</xsl:text>
-   <xsl:text>"Comment[SRA broker]"&#9;</xsl:text>
-   <xsl:value-of select="isa:quotes($broker-name)"/>
-   <xsl:text>&#10;</xsl:text>
+<xsl:value-of select="isa:single-name-value('Comment[SRA broker]', $broker-name)"/>
    <xsl:apply-templates select="document(concat('http://www.ebi.ac.uk/ena/data/view/',$study,'&amp;display=xml'))/ROOT/STUDY"/>
    
    <xsl:text>"STUDY CONTACTS"&#10;</xsl:text>
-   <xsl:text>"Study Person Last Name"</xsl:text>
-   <xsl:if test="CONTACTS/CONTACT">
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="isa:quotes(substring-before(CONTACTS/CONTACT/@name,' '))"/>
-   </xsl:if>
-   <xsl:text>&#10;</xsl:text>
-   <xsl:text>"Study Person First Name"</xsl:text>
-   <xsl:if test="CONTACTS/CONTACT">
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="isa:quotes(substring-after(CONTACTS/CONTACT/@name,' '))"/>    
-   </xsl:if>
-   <xsl:text>&#10;</xsl:text>
-   <xsl:text>"Study Person Mid Initials"&#10;</xsl:text>
-   <xsl:text>"Study Person Email"</xsl:text>
-   <xsl:if test="CONTACTS/CONTACT">
-    <xsl:text>&#9;</xsl:text>
-    <xsl:value-of select="isa:quotes(CONTACTS/CONTACT/@inform_on_status)"/>
-   </xsl:if>
-   <xsl:text>&#10;</xsl:text>
-   <xsl:text>"Study Person Phone"</xsl:text>
-   <xsl:if test="CONTACTS/CONTACT"> 
-    <xsl:text>&#9;</xsl:text>
-    <xsl:text>"-"</xsl:text>
-   </xsl:if>
-   <xsl:text>&#10;</xsl:text>
-   <xsl:text>"Study Person Fax"</xsl:text>
-   <xsl:if test="CONTACTS/CONTACT">
-    <xsl:text>&#9;</xsl:text>
-    <xsl:text>"-"</xsl:text>
-   </xsl:if>
-   <xsl:text>&#10;</xsl:text>
-   <xsl:text>"Study Person Address"&#10;</xsl:text>
-   <xsl:text>"Study Person Affiliation"&#10;</xsl:text>
-   <xsl:text>"Study Person Roles"&#10;</xsl:text>
-   <xsl:text>"Study Person Roles Term Accession Number"&#10;</xsl:text>
-   <xsl:text>"Study Person Roles Term Source REF"&#10;</xsl:text>
+   <xsl:value-of select="isa:single-name-value('Comment[SRA broker]', $broker-name)"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Last Name', substring-before(CONTACTS/CONTACT/@name,' '))"/>
+   <xsl:value-of select="isa:single-name-value('Study Person First Name', substring-after(CONTACTS/CONTACT/@name,' '))"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Mid Initials', '')"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Email', CONTACTS/CONTACT/@inform_on_status)"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Phone', if (CONTACTS/CONTACT) then '-' else '')"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Fax', if (CONTACTS/CONTACT) then '-' else '')"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Address', '')"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Affiliation', '')"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Roles', '')"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Roles Term Accession Number', '')"/>
+   <xsl:value-of select="isa:single-name-value('Study Person Roles Term Source REF', '')"/>
   </xsl:result-document>
  </xsl:template>
 
@@ -251,13 +218,11 @@ SRA schema version considered:
  
  <xsl:template match="STUDY">
   <xsl:variable name="sra-isa-mapping" select="document('sra-isa-measurement_type_mapping.xml')"/>
-  <xsl:text>"Study Identifier"&#9;</xsl:text>
-  <xsl:value-of select="if (@accession) then concat('&quot;',@accession,'&quot;') else '&quot;-&quot;'"/>
-  <xsl:text>&#10;</xsl:text>
-  
-  <xsl:value-of select="concat('&quot;Study Title&quot;&#9;', isa:quotes(DESCRIPTOR/STUDY_TITLE), '&#10;')"/>
-  <xsl:value-of select="concat('&quot;Study Submission Date&quot;&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>   
-  <xsl:value-of select="concat('&quot;Study Public Release Date&quot;&#9;', SRA/SUBMISSION/@submission_date, '&#10;')"/>
+ 
+  <xsl:value-of select="isa:single-name-value('Study Identifier', @accession)"/>
+  <xsl:value-of select="isa:single-name-value('Study Title', DESCRIPTOR/STUDY_TITLE)"/>
+  <xsl:value-of select="isa:single-name-value('Study Submission Date', SRA/SUBMISSION/@submission_date)"/> 
+  <xsl:value-of select="isa:single-name-value('Study Public Release Date', SRA/SUBMISSION/@submission_date)"/> 
   
   <xsl:text>"Study Description"&#9;</xsl:text>
   <xsl:value-of select="isa:quotes(DESCRIPTOR/STUDY_ABSTRACT)"/>
@@ -270,26 +235,25 @@ SRA schema version considered:
 
   <xsl:apply-templates select="DESCRIPTOR/STUDY_TYPE"/>
 
-  <xsl:text>"Study Design Type Term Accession Number"&#10;</xsl:text>
-  <xsl:text>"Study Design Type Term Source REF"&#10;</xsl:text>
-  <xsl:text>"STUDY PUBLICATIONS"&#10;</xsl:text>
-  <xsl:text>"Study PubMed ID"&#9;</xsl:text>
-
+  <xsl:value-of select="isa:single-name-value('Study Design Type Term Accession Number', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Design Type Term Source REF', '')"/>
+  
+  <xsl:text>"STUDY PUBLICATIONS"</xsl:text>
   <xsl:apply-templates select="STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]"/>
 
   <xsl:text>
-"Study Publication DOI"
-"Study Publication Author List"
-"Study Publication Title"
-"Study Publication Status"
-"Study Publication Status Term Accession Number"
-"Study Publication Status Term Source REF"
+"Study Publication DOI"&#9;""
+"Study Publication Author List"&#9;""
+"Study Publication Title"&#9;""
+"Study Publication Status"&#9;""
+"Study Publication Status Term Accession Number"&#9;""
+"Study Publication Status Term Source REF"&#9;""
 </xsl:text>
   <xsl:text>"STUDY FACTORS&#10;</xsl:text>
-  <xsl:text>"Study Factor Name"&#10;</xsl:text>
-  <xsl:text>"Study Factor Type"&#10;</xsl:text>
-  <xsl:text>"Study Factor Type Term Accession Number"&#10;</xsl:text>
-  <xsl:text>"Study Factor Type Term Source REF"&#10;</xsl:text>
+  <xsl:value-of select="isa:single-name-value('Study Factor Name', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Factor Type', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Factor Type Term Accession Number', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Factor Type Term Source REF', '')"/>
   
   <xsl:text>"STUDY ASSAYS"&#10;</xsl:text>
   
@@ -349,23 +313,22 @@ SRA schema version considered:
    <xsl:value-of select="concat('&#9;', isa:quotes('library preparation'))"/>
   </xsl:for-each>
   <xsl:text>&#9;"nucleic acid sequencing"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Type Term Accession Number"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Type Term Source REF"&#10;</xsl:text>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Type Term Accession Number', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Type Term Source REF', '')"/>
+  
   <xsl:text>"Study Protocol Description"</xsl:text>
   <xsl:for-each select="$distinct-exp-protocol-descriptions/descriptions/description">
    <xsl:value-of select="concat('&#9;', isa:quotes(@protocoldescription))"/>
   </xsl:for-each>
-
-  <xsl:text>&#10;</xsl:text>
-  <xsl:text>"Study Protocol URI"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Version"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Parameters Name"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Parameters Term Accession Number"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Parameters Term Source REF"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Components Name"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Components Type"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Components Type Term Accession Number"&#10;</xsl:text>
-  <xsl:text>"Study Protocol Components Type Term Source REF"&#10;</xsl:text>
+  <xsl:value-of select="isa:single-name-value('Study Protocol URI', '')"/> 
+  <xsl:value-of select="isa:single-name-value('Study Protocol Version', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Parameters Name', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Parameters Term Accession Number', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Parameters Term Source REF', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Components Name', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Components Type', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Components Type Term Accession Number', '')"/>
+  <xsl:value-of select="isa:single-name-value('Study Protocol Components Type Term Source REF', '')"/>
  </xsl:template>
 
  <xsl:template match="DESCRIPTOR/STUDY_TYPE">
@@ -375,8 +338,7 @@ SRA schema version considered:
  </xsl:template>
 
  <xsl:template match="STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(., 'pubmed')]">
-  <xsl:value-of select="isa:quotes(following-sibling::ID/.)"/>
-  <xsl:text>&#9;</xsl:text>
+  <xsl:value-of select="isa:single-name-value('Study PubMed ID', following-sibling::ID/.)"/>
  </xsl:template>
 
  <xsl:template match="SAMPLE">
