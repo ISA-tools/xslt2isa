@@ -118,4 +118,30 @@
         </terms>
     </xsl:template>
     
+    <xsl:template name="generate-rawdatafile-structure">
+        <xsl:param name="parsedlink" required="yes"/>
+        <links>
+        <xsl:for-each select="tokenize($parsedlink, '\n')">
+            <xsl:if test="not(contains(.,'fastq_ftp')) and string-length(.) > 0">
+               <link> 
+                <xsl:for-each select="tokenize(., '\t')">
+                   <xsl:choose>
+                       <xsl:when test="contains(.,'.fastq.gz')">
+                           <xsl:attribute name="raw-data-file">
+                               <xsl:value-of select="."/>
+                           </xsl:attribute>
+                       </xsl:when>
+                       <xsl:otherwise>
+                           <xsl:attribute name="file-checksum">
+                               <xsl:value-of select="."/>
+                           </xsl:attribute>
+                       </xsl:otherwise>
+                   </xsl:choose>
+                </xsl:for-each>
+               </link>
+            </xsl:if>
+        </xsl:for-each>
+        </links>
+    </xsl:template>
+    
 </xsl:stylesheet>

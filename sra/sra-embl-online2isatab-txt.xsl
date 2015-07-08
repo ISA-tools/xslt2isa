@@ -571,22 +571,48 @@ SRA schema version considered:
   <xsl:text>&#9;</xsl:text>
  </xsl:template>
 
- <!-- TODO: If it is too lines, then we concatenate -->
- <!-- http://www.ebi.ac.uk/ena/data/warehouse/filereport?accession=SRX201979&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes -->
+ <!-- If it is more than one line then we concatenate with a semi-colon -->
+ <!-- http://www.ebi.ac.uk/ena/data/warehouse/filereport?accession=SRX201979&result=read_run&fields=fastq_ftp,fastq_md5 -->
  <xsl:template match="EXPERIMENT_LINKS/EXPERIMENT_LINK/XREF_LINK/DB[contains(., 'ENA-FASTQ-FILES')]">
   <xsl:variable name="file" select="following-sibling::ID/."/>
   <xsl:if test="contains($file,'&amp;result=read_run&amp;fields=run_accession,fastq_ftp')">
    <xsl:variable name="base" select="substring-before($file,'&amp;result=read_run&amp;fields=run_accession,fastq_ftp')"/>
    <xsl:variable name="link" select="concat($base,'&amp;result=read_run&amp;fields=fastq_ftp,fastq_md5')"/>
    <xsl:variable name="parsedlink" select="unparsed-text($link)"/>
-   <xsl:for-each select="tokenize($parsedlink, '\n')">
-    <xsl:if test="not(contains(.,'fastq_ftp'))">
-     <xsl:for-each select="tokenize(., '\t')">
-      <xsl:value-of select="isa:quotes(.)"/>
-      <xsl:text>&#9;</xsl:text>
-     </xsl:for-each>
-    </xsl:if>
+   
+   <xsl:variable name="rawdatafile-structure">
+    <xsl:call-template name="generate-rawdatafile-structure">
+     <xsl:with-param name="parsedlink" select="$parsedlink"/>
+    </xsl:call-template>
+   </xsl:variable>
+   
+   <xsl:text>"</xsl:text>
+   <xsl:for-each select="$rawdatafile-structure/links/link">
+    <xsl:choose>
+     <xsl:when test="following-sibling::node()">
+      <xsl:value-of select="concat(@raw-data-file, ';')"/>  
+     </xsl:when>
+     <xsl:otherwise>
+      <xsl:value-of select="@raw-data-file"/>
+     </xsl:otherwise>
+    </xsl:choose>
    </xsl:for-each>
+   <xsl:text>"</xsl:text>
+   <xsl:text>&#9;</xsl:text>
+   
+   <xsl:text>"</xsl:text>
+   <xsl:for-each select="$rawdatafile-structure/links/link">
+    <xsl:choose>
+     <xsl:when test="following-sibling::node()">
+      <xsl:value-of select="concat(@file-checksum, ';')"/>  
+     </xsl:when>
+     <xsl:otherwise>
+      <xsl:value-of select="@file-checksum"/>
+     </xsl:otherwise>
+    </xsl:choose>
+   </xsl:for-each>
+   <xsl:text>"</xsl:text>
+   <xsl:text>&#9;</xsl:text>
   </xsl:if>
  </xsl:template>
  
