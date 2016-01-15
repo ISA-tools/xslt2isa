@@ -57,9 +57,6 @@ DOI:
     <xsl:key name="run_polarity" match="injection" use="@polarity"/>   
    
     <xsl:key name="injection" match="injection" use="@polarity"/>
-    
-   <!-- <xsl:key name="features-by-sample"  match="sampleInfoExport" use="preceding-sibling::sampleInfoExport/@feature" />-->
-
     <xsl:key name="platebarcodelookupid" match="plate" use="@plateBarcode"/>
 
     <!-- keys and variables needed for the muenchian transform/muenchian grouping --> 
@@ -76,9 +73,6 @@ DOI:
     <xsl:key name="measure-by-injection" match="measure" use="ancestor::injection[1]/@rawDataFileName"/>
     <xsl:key name="injection-measures" match="measure" use="@metabolite"/>
     <xsl:variable name="injection-measures" select="/data/plate/well/injection/measure[generate-id()=generate-id(key('injection-measures', @metabolite)[1])]/@metabolite"/>
-
-    <!--<xsl:key name="polarity_by_plate" match="injection/@polarity" use="concat(@plateBarcode,@usedOP)"/>-->
-
     <xsl:key name="run-metabolites" match="measure" use="@metabolite"/>
     <xsl:key name="usedOPlist" match="plate" use="@usedOP"/>
 
@@ -100,18 +94,7 @@ DOI:
     <xsl:result-document href="{$investigationfile}">
         <xsl:copy-of select=".[normalize-space()]"/>
         <xsl:call-template name="generate-header-comments"/>
-        
-<!-- TODO: (I am not sure what this for-each is for) But perhaps it can be refactor into a template-->        
-<xsl:for-each select="data">
-    <xsl:value-of select="@swVersion"/>
-<xsl:text>
-</xsl:text>            
-    <xsl:value-of select="@concentrationUnit"/>
-<xsl:text>
-</xsl:text>            
-</xsl:for-each>
-    
-<!-- creates ISA i_investigation file -->
+        <!-- creates ISA i_investigation file -->
         <xsl:call-template name="generate-ontology-section"/>
         <xsl:call-template name="generate-investigation-section"/>
         
@@ -154,15 +137,8 @@ DOI:
 <xsl:text>
 "Study Assay Measurement Type Term Accession Number"</xsl:text>
     <xsl:text>&#9;</xsl:text>
-    <!-- TODO: Tidy up (same as above) -->
-    <xsl:if test="count($positiveModeCount) > 0">     
-        <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000366"</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>   
-    <xsl:if test="count($negativeModeCount) > 0">
-        <xsl:text>"http://purl.obolibrary.org/obo/OBI_0000366"</xsl:text>
-        <xsl:text>&#9;</xsl:text>
-    </xsl:if>     
+    <xsl:value-of select="if (count($positiveModeCount) > 0) then concat(isa:quotes('http://purl.obolibrary.org/obo/OBI_0000366'), '&#9;') else ''"/>
+    <xsl:value-of select="if (count($negativeModeCount) > 0) then concat(isa:quotes('http://purl.obolibrary.org/obo/OBI_0000366'), '&#9;') else ''"/>             
 <xsl:text>
 "Study Assay Technology Type"</xsl:text>
     <xsl:text>&#9;</xsl:text>
