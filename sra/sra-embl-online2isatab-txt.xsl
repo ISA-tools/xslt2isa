@@ -425,7 +425,8 @@ SRA schema version considered:
  </xsl:template>
  
  <xsl:template match="EXPERIMENT">
-  <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@refname"/>
+  <!--<xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@refname"/>-->
+  <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@accession"/>
   <xsl:text>&#9;</xsl:text>
 
   <xsl:text>"library preparation"&#9;</xsl:text>

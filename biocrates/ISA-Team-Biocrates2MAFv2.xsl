@@ -16,7 +16,8 @@
 		<xsl:variable name="distinct-column-names-with-metabolite" select="distinct-values(well/injection/measure/@*/name(.))"/>
 		<xsl:variable name="distinct-column-names" select="$distinct-column-names-with-metabolite[. != 'metabolite']"/>
 		<xsl:for-each-group select="." group-by="well/injection/@polarity">
-			<xsl:result-document href="{concat('output/', @usedOP, '-', @plateBarcode, '-', lower-case(current-grouping-key()), '-maf.txt')}">
+			<xsl:result-document href="{concat('output/DT_', @usedOP, '_', @plateBarcode, '_', lower-case(current-grouping-key()), '_maf.txt')}">
+			
 				<xsl:for-each select="current-group()">
 					<xsl:call-template name="write-out-to-file">												
 						<xsl:with-param name="polarity" select="current-grouping-key()" tunnel="yes"/>
@@ -30,7 +31,7 @@
 	<xsl:template name="write-out-to-file">		
 		<xsl:param name="polarity" required="yes" tunnel="yes"/>			
 		<!-- Create the column headers -->				
-		<xsl:text>metabolite identifier&#9;CHEBI identifier&#9;</xsl:text>
+		<xsl:text>metabolite identifier&#9;database identifier&#9;</xsl:text>
 		<xsl:apply-templates select="well/injection[@polarity = $polarity]" mode="header"/>
 		<xsl:apply-templates select="preceding-sibling::metabolite">			
 			<xsl:with-param name="plate-barcode" select="@plateBarcode" tunnel="yes"/>

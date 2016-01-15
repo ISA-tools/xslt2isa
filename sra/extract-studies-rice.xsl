@@ -39,7 +39,8 @@
         <xsl:variable name="experiment-ids" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', $acc-number, '&amp;display=xml'))/ROOT/STUDY/STUDY_LINKS/STUDY_LINK/XREF_LINK/DB[contains(.,'NA-EXPERIMENT')]/following-sibling::ID"/>
         <studies>
             <xsl:for-each select="tokenize($experiment-ids, ',')">
-                <xsl:variable name="experiment-document-lib-desc" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', ., '&amp;display=xml'))/ROOT"/>
+                <xsl:variable name="experiment-document-lib-desc" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', . , '&amp;display=xml'))/ROOT"/>
+                <xsl:value-of select="document(concat('http://www.ebi.ac.uk/ena/data/view/', . , '&amp;display=xml'))"/>
                 <xsl:apply-templates select="$experiment-document-lib-desc/EXPERIMENT" mode="get-studies">
                     <xsl:with-param name="id" select="."/>
                 </xsl:apply-templates>                
@@ -141,7 +142,7 @@
                </link>
             </xsl:if>
         </xsl:for-each>
-        </links>
+        </links>         
     </xsl:template>
     
 </xsl:stylesheet>

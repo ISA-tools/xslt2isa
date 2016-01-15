@@ -170,8 +170,10 @@ SRA schema version considered:
  </xsl:template>
  
  <xsl:template match="experiments/experiment" mode="distinct-exp">
-  <xsl:result-document href="{concat('output/', $acc-number, '/', 'a_', lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
+  <xsl:result-document href="{concat('output/', $acc-number, '/', 'a_', $acc-number, lower-case(@library-strategy), '-', lower-case(@library-source), '.txt')}" method="text">
    <xsl:variable name="my-exp" select="document(concat('http://www.ebi.ac.uk/ena/data/view/', @acc-number, '&amp;display=xml'))"/>
+ <!--  <xsl:value-of select="$my-exp"/> -->
+   
    <!-- Create the header -->
    <xsl:text>"Sample Name"&#9;</xsl:text>
    <xsl:text>"Protocol REF"&#9;</xsl:text>
@@ -212,6 +214,9 @@ SRA schema version considered:
  <xsl:template match="exp">
   <xsl:param name="my-exp" required="yes"/>
   <xsl:apply-templates select="$my-exp/ROOT/EXPERIMENT[@accession = current()/@accession]"/>
+  <!--<xsl:value-of select="$my-exp"/><xsl:text>THERE&#9;</xsl:text>-->
+<!--    <xsl:value-of select="$my-exp/ROOT/EXPERIMENT[@accession = current()/@accession]"></xsl:value-of><xsl:text>&#9;</xsl:text>-->
+  <!--  -->
  </xsl:template>
  
  <xsl:template name="generate-rest-of-study">
@@ -401,11 +406,12 @@ SRA schema version considered:
   <xsl:variable name="my-sample" select="./SAMPLE_ATTRIBUTES"/>
   <xsl:for-each select="$distinct-characteristic-terms/terms/term">
    <xsl:variable name="my-term" select="current()"/>
-   <xsl:value-of select="isa:quotes(if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else '')"/>
+   <xsl:value-of select="if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else ''"/>
+<!--   <xsl:value-of select="isa:quotes(if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else '')"/>-->
    <xsl:text>&#9;</xsl:text>
   </xsl:for-each>
  
-  <xsl:value-of select="isa:quotes-tab(@alias)"/>
+  <xsl:value-of select="isa:quotes-tab(@accession)"/>
   <xsl:text>&#10;</xsl:text>
  </xsl:template>
  
@@ -423,7 +429,8 @@ SRA schema version considered:
  </xsl:template>
  
  <xsl:template match="EXPERIMENT">
-  <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@refname"/>
+ <!-- <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@refname"/>-->
+  <xsl:apply-templates select="DESIGN/SAMPLE_DESCRIPTOR/@accession"/>
   <xsl:text>&#9;</xsl:text>
 
   <xsl:text>"library preparation"&#9;</xsl:text>
@@ -590,6 +597,7 @@ SRA schema version considered:
    <xsl:text>"</xsl:text>
    <xsl:text>&#9;</xsl:text>
   </xsl:if>
+   
  </xsl:template>
  
  <xsl:template match="text() | @*"/>  

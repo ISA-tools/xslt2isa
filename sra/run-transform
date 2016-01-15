@@ -7,7 +7,7 @@
 # [terminal] chmod 755 run-transform
 # To run the script, type in:
 # [terminal] ./run-transform
-
+java -cp /Applications/oxygen/lib/saxon9ee.jar com.saxonica.Transform blank.xml sra-embl-online2isatab-rice-txt.xsl acc-number="ERP005654"
 java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
 java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA030397"
 java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA000266"

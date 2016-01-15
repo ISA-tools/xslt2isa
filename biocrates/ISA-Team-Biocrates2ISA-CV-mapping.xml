@@ -17,7 +17,7 @@
         <element biocratesid="59" biocrateslabel="kidney tissue" ontoterm="kidney" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002113"/>
         <element biocratesid="501" biocrateslabel="fat" ontoterm="adipose tissue" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001013"/>
         <element biocratesid="599" biocrateslabel="other tissue" ontoterm="other tissue" ontosource="" url=""/>
-     
+        <element biocratesid="" biocrateslabel="unspecified" ontoterm="not reported" ontosource="" url=""/>     
         <element biocratesid="6" biocrateslabel="Cells" ontoterm="liver" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0002107"/>
         <element biocratesid="32" biocrateslabel="cell culture supernatant" ontoterm="cell culture supernatant" ontosource="OBI" url="http://purl.obolibrary.org/obo/OBI_1000023"/>
         <element biocratesid="345" biocrateslabel="Mitochondria" ontoterm="mitochondria" ontosource="" url="http://purl.obolibrary.org/obo/OBI_1000024"/>
@@ -57,8 +57,6 @@
         <element biocratesid="70" biocrateslabel="cerebro-spinal fluid" ontoterm="cerebro-spinal fluid" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001970"/>
         <element biocratesid="71" biocrateslabel="synovial fluid" ontoterm="synovial fluid" ontosource="UBERON" url="http://purl.obolibrary.org/obo/UBERON_0001090"/>
         <element biocratesid="72" biocrateslabel="effluate" ontoterm="effluate" ontosource="" url=""/>
-        
-        
         
         
     </mapping-replacement> 

@@ -1,0 +1,25 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	"NCBITAXON"	"OBI_BCGO"	"PATO"	"OBI"	"UO"	"CL"	"CHEBI"	
+Term Source File	"http://data.bioontology.org/ontologies/NCBITAXON"	"http://data.bioontology.org/ontologies/OBI_BCGO"	"http://data.bioontology.org/ontologies/PATO"	"http://data.bioontology.org/ontologies/OBI"	"http://data.bioontology.org/ontologies/UO"	"http://data.bioontology.org/ontologies/CL"	"http://data.bioontology.org/ontologies/CHEBI"	
+Term Source Version	"2"	"8"	"160"	"21"	"42"	"43"	"78"	
+Term Source Description	"National Center for Biotechnology Information (NCBI) Organismal Classification"	"Beta Cell Genomics Ontology"	"Phenotypic Quality Ontology"	"Ontology for Biomedical Investigations"	"Units of Measurement Ontology"	"Cell Ontology"	"Chemical Entities of Biological Interest Ontology"
+INVESTIGATION
+Investigation Identifier	"Nicotiana Attenuata"
+Investigation Title	"Nicotiana Attenuata"
+Investigation Description	"Imported from ProfileAnalysis"
+INVESTIGATION CONTACTS
+Investigation Person Last Name	"User"
+Investigation Person First Name	"Demo"
+Investigation Person Email	""
+Investigation Person Phone	""
+Investigation Person Fax	""
+Investigation Person Affiliation	""
+Investigation Person Roles	"author"
+STUDY
+Study Identifier	"Nicotiana Attenuata"
+Study Title	"Nicotiana Attenuata"
+Study File Name	"s_Nicotiana Attenuata-1.txt"
+STUDY FACTORS
+Study Factor Name	"Type"
+STUDY ASSAYS
+Study Assay File Name	"a_metabolome.txt"

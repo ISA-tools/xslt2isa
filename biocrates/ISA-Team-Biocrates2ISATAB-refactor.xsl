@@ -94,7 +94,7 @@ DOI:
     </xsl:template>      
     
 <xsl:template match="data">
-    <xsl:variable name="investigationfile" select="concat('output/',data,'i_inv_biocrates.txt')[normalize-space()]"></xsl:variable>
+    <xsl:variable name="investigationfile" select="concat('output-TUM-LC-merge-1and2/',data,'i_inv_biocrates.txt')[normalize-space()]"></xsl:variable>
     <xsl:value-of select="$investigationfile[normalize-space()]"/>     
     <!-- this is used to generated separate output files -->
     <xsl:result-document href="{$investigationfile}">
@@ -438,7 +438,7 @@ DOI:
 <!-- ****************************************************** -->
 <xsl:template match="metabolite" name="metabolite_desc_posi">
 
-    <xsl:variable name="datafile" select="concat('output/',data,'maf-positive.txt')[normalize-space()]"></xsl:variable>
+    <xsl:variable name="datafile" select="concat('output-TUM-LC-merge-1and2/',data,'maf-positive.txt')[normalize-space()]"></xsl:variable>
     <xsl:value-of select="$datafile[normalize-space()]" /> 
     <xsl:result-document href="{$datafile}">
         <xsl:copy-of select=".[normalize-space()]"></xsl:copy-of>  
@@ -761,7 +761,7 @@ DOI:
 <!-- ****************************************************** -->
 <xsl:template match="metabolite" name="metabolite_desc_nega">
     <xsl:variable name="usedOP" select="@usedOP"/>
-        <xsl:variable name="datafile" select="concat('output/',$usedOP,'-maf-negative.txt')[normalize-space()]"></xsl:variable>
+        <xsl:variable name="datafile" select="concat('output-TUM-LC-merge-1and2/',$usedOP,'-maf-negative.txt')[normalize-space()]"></xsl:variable>
         <xsl:value-of select="$datafile[normalize-space()]" /> 
         <xsl:result-document href="{$datafile}">
             <xsl:copy-of select=".[normalize-space()]"/>
@@ -1029,7 +1029,7 @@ DOI:
 <!--     template to create ISA s_study table               -->
     <xsl:template name="study" match="sample"  priority="1">
     
-    <xsl:variable name="studyfile" select="concat('output/',data,'s_study_biocrates.txt')[normalize-space()]"/>
+    <xsl:variable name="studyfile" select="concat('output-TUM-LC-merge-1and2/',data,'s_study_biocrates.txt')[normalize-space()]"/>
     <xsl:value-of select="$studyfile[normalize-space()]" /> 
     <xsl:result-document href="{$studyfile}">
         <xsl:copy-of select=".[normalize-space()]"></xsl:copy-of>
@@ -1101,14 +1101,14 @@ DOI:
                  <xsl:variable name="species_var" select="@Species"></xsl:variable>
                  
                  <xsl:call-template name="mapping-replacement">
-                          <xsl:with-param name="species_param" select="$species_var"/>
+                          <xsl:with-param name="mapping-param" select="$species_var"/>
                  </xsl:call-template>
                
                  
                  <xsl:variable name="material_var" select="@Material"></xsl:variable>
                  
                  <xsl:call-template name="mapping-replacement">
-                     <xsl:with-param name="species_param" select="$material_var"/>
+                     <xsl:with-param name="mapping-param" select="$material_var"/>
                  </xsl:call-template>
                  
                  <xsl:text>&#9;</xsl:text>             
@@ -1135,7 +1135,7 @@ DOI:
 </xsl:template>   
     
 <xsl:template name="mapping-replacement">
-    <xsl:param name="species_param"/>
+    <xsl:param name="mapping-param"/>
     <xsl:variable name="mapping" select="document('ISA-Team-Biocrates2ISA-CV-mapping.xml')"/>
 <!--    <xsl:text>&#9;</xsl:text><xsl:value-of select="$species_param"/>
     <xsl:text>&#9;</xsl:text><xsl:value-of select="$mapping/root/mapping-replacement/element[1]/@biocrateslabel"/>-->
@@ -1143,7 +1143,7 @@ DOI:
     
     <!-- TODO: I think that this can be done by not using an xsl:for-each -->
     <xsl:for-each select="$mapping/root/mapping-replacement/element">
-        <xsl:if test="@biocrateslabel=$species_param">
+        <xsl:if test="@biocrateslabel=$mapping-param">
             <xsl:value-of select="concat('&#9;&quot;',@ontoterm, '&quot;','&#9;&quot;',@ontosource, '&quot;&#9;&quot;',@url,'&quot;')"/>
         </xsl:if>           
     </xsl:for-each>    
@@ -1197,7 +1197,7 @@ DOI:
  
 <xsl:template name="assay-negativeMode" match="plate"  priority="1">
 
-    <xsl:variable name="assaynegativefile" select="concat('output/',data,'a_biocrates_assay_negative_mode.txt')[normalize-space()]"></xsl:variable>
+    <xsl:variable name="assaynegativefile" select="concat('output-TUM-LC-merge-1and2/',data,'a_biocrates_assay_negative_mode.txt')[normalize-space()]"></xsl:variable>
     <xsl:value-of select="$assaynegativefile[normalize-space()]" /> 
     <xsl:result-document href="{$assaynegativefile}">
     
@@ -1243,7 +1243,7 @@ DOI:
 
 
 <xsl:template match="plate" name="assay-positiveMode" priority="1">
-    <xsl:variable name="assaypositivefile" select="concat('output/',data,'a_biocrates_assay_positive_mode.txt')[normalize-space()]"></xsl:variable>
+    <xsl:variable name="assaypositivefile" select="concat('output-TUM-LC-merge-1and2/',data,'a_biocrates_assay_positive_mode.txt')[normalize-space()]"></xsl:variable>
     <xsl:value-of select="$assaypositivefile[normalize-space()]" /> 
     <xsl:result-document href="{$assaypositivefile}">
         <xsl:copy-of select=".[normalize-space()]"></xsl:copy-of>
@@ -1306,7 +1306,7 @@ DOI:
                             <!-- <xsl:when test="contains(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+')">
                             <xsl:value-of select="translate(key('samplelookupid',parent::well/@sample)/@SampleIdentifier,'+',' and ')"/>
                             <xsl:text>&#9;</xsl:text>
-                        </xsl:when>-->
+                        <"/xsl:when>-->
                             <xsl:otherwise>
                                 <xsl:value-of select="key('samplelookupid',parent::well/@sample)/@SampleIdentifier"/>
                                 <xsl:text>&#9;</xsl:text>
@@ -1469,9 +1469,11 @@ DOI:
                 <xsl:text>&#9;</xsl:text>
                 <xsl:value-of select="isa:quotes(/data/@swVersion)"/>
                 <xsl:text>&#9;</xsl:text>                  
-                <xsl:value-of select="isa:quotes(concat('DT_',ancestor::plate/@usedOP, '_',ancestor::plate/@plateBarcode, '_',ancestor::plate/@usedOP,'_',ancestor::plate/@plateBarcode))"/>
+                <xsl:value-of select="isa:quotes(concat('DT_',ancestor::plate/@usedOP, '_',ancestor::plate/@plateBarcode))"/>
                 <xsl:text>&#9;</xsl:text>                  
-                <xsl:value-of select="isa:quotes(concat('DT_',ancestor::plate/@usedOP, '_',ancestor::plate/@plateBarcode, '_',ancestor::plate/@usedOP,'_',ancestor::plate/@plateBarcode, '_maf-',$polarity,'.txt'))"/>
+                <xsl:value-of select="isa:quotes(concat('DT_',ancestor::plate/@usedOP, '_',ancestor::plate/@plateBarcode,'_',$polarity,'_maf.txt'))"/>
+                
+               
 <xsl:text>
 </xsl:text>
             </xsl:when>
