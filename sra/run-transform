@@ -25,10 +25,16 @@ echo "Using saxon..." $SAXON_JAR_PATH
 
 
 #java -cp $SAXON_JAR_PATH com.saxonica.Transform blank.xml sra-embl-online2isatab-rice-txt.xsl acc-number="ERP005654"
+
 java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
 java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA030397"
 java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA000266"
 java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="ERA148766"
 java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
 java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA095866"
+
+java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-rice-txt.xsl acc-number="SRP000032" outputdir="./output/"
+java -jar $SAXON_JAR_PATH blank.xml sra-study-embl-online2isatab.xsl acc-number="SRA108974" outputdir="./output/"
+
+
 echo "Finish transformation"

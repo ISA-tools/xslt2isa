@@ -406,7 +406,7 @@ SRA schema version considered:
   <xsl:variable name="my-sample" select="./SAMPLE_ATTRIBUTES"/>
   <xsl:for-each select="$distinct-characteristic-terms/terms/term">
    <xsl:variable name="my-term" select="current()"/>
-    <xsl:value-of select="isa:quotes(if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else '')"/>
+    <xsl:value-of select="if ($my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]) then $my-sample/SAMPLE_ATTRIBUTE/TAG[.=$my-term]/following-sibling::VALUE else ''"/>
    <xsl:text>&#9;</xsl:text>
   </xsl:for-each>
  
