@@ -5,13 +5,30 @@
 # You would need saxon9ee.jar and change the path to point to the Saxon compiler.
 # First you would need to change the permission of the script. At a terminal, type in:
 # [terminal] chmod 755 run-transform
+
 # To run the script, type in:
+# [terminal] ./run-transform <path to saxon jar>
+
+# or use the DEFAULT_SAXON_JAR_PATH by running
 # [terminal] ./run-transform
-java -cp /Applications/oxygen/lib/saxon9ee.jar com.saxonica.Transform blank.xml sra-embl-online2isatab-rice-txt.xsl acc-number="ERP005654"
-java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
-java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA030397"
-java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA000266"
-java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="ERA148766"
-java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
-java -jar /Applications/oxygen/lib/saxon9ee.jar blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA095866"
+
+
+DEFAULT_SAXON_JAR_PATH="/Applications/oxygen/lib/saxon9ee.jar"
+SAXON_JAR_PATH=$1
+
+if [ "$SAXON_JAR_PATH" = ""  ]
+then
+    SAXON_JAR_PATH=DEFAULT_SAXON_JAR_PATH
+fi
+
+echo "Using saxon..." $SAXON_JAR_PATH
+
+
+#java -cp $SAXON_JAR_PATH com.saxonica.Transform blank.xml sra-embl-online2isatab-rice-txt.xsl acc-number="ERP005654"
+java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
+java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA030397"
+java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA000266"
+java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="ERA148766"
+java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA060827"
+java -jar $SAXON_JAR_PATH blank.xml sra-embl-online2isatab-txt.xsl acc-number="SRA095866"
 echo "Finish transformation"
